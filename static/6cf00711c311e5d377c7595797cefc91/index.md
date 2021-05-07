@@ -1,0 +1,15 @@
+---
+title: Power
+date: "2019-04-26"
+tags:
+  - typography
+  - poster
+  - software
+featured: false
+featuredImage: "./thumb.png"
+published: true
+---
+
+<div class="video-wrapper">
+  <video src="./video.mp4" controls loop muted></video>
+</div>
