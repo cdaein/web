@@ -1,0 +1,8 @@
+How It Is Set Up
+---
+
+GATSBY-SOURCE branch has all the gatsby source code. make sure you don't commit sensitive files such as .env, etc.
+
+when this source is built, it will be pushed to MASTER branch, which will be used for serving the paperdove.com website. 
+
+"npm run deploy"
