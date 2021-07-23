@@ -1,0 +1,2 @@
+(self.webpackChunkpaperdove=self.webpackChunkpaperdove||[]).push([[228],{2775:function(t,e,a){"use strict";a.d(e,{KYK:function(){return r}});var n=a(1046);function r(t){return(0,n.w_)({tag:"svg",attr:{viewBox:"0 0 24 24"},child:[{tag:"path",attr:{d:"M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"}}]})(t)}}}]);
+//# sourceMappingURL=252f366e-4feaa2c46846c9bb50a5.js.map
