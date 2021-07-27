@@ -1,6 +1,6 @@
 ---
 title: New York Times
-date: "2020-06-23"
+date: "2020-09-21"
 tags:
   - editorial
   - web

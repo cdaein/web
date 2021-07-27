@@ -50,6 +50,7 @@ const AboutPage = () => {
             <ul>
               <li>The New York Times, New York</li>
               <li>Pentagram, New York</li>
+              <li>Currents New Media, Santa Fe</li>
               <li>yU+co, Los Angeles</li>
             </ul>
 
@@ -94,7 +95,7 @@ const AboutPage = () => {
             <h3>Lectures and Presentations</h3>
             <ul>
               <li>
-                Faculty at Maryland Institute College of Art, USA, 2016-Present
+                Faculty at Maryland Institute College of Art, USA, 2016-2021
               </li>
               <li>
                 Presenter at AICAD Symposium: Include Me!, Otis College of Art

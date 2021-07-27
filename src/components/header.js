@@ -36,6 +36,7 @@ const Header = () => {
             <a
               target="_blank"
               href="https://www.hicetnunc.xyz/tz/tz1WXTdGdwD6g24vJp7vpjWVR8LuFpisUcoc"
+              rel="noreferrer noopener"
             >
               NFT
             </a>
