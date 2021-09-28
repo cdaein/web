@@ -25,11 +25,14 @@ const AboutPage = () => {
               Dae In Chung is a designer, animator and educator. His main
               interests lie in exploring and expressing rhythms and movements
               using a variety of media, including animation, printed forms and
-              interactive applications. He studied Experimental Animation at California Institute of the Arts.
-              His design and animation work has been shown around the world including
-              Centre Pompidou website, the New York Times, and many film festivals, etc. He has also worked on
-              various commercial projects in graphic design and motion graphics. His work has been recognized by{" "}
-              Type Directors Club, Korean Society of Typography, Graphis Award, IdN, CA Magazine Korea, PAGE Magazine, etc.
+              interactive applications. He studied Experimental Animation at
+              California Institute of the Arts. His design and animation work
+              has been shown around the world including Centre Pompidou website,
+              the New York Times, and many film festivals, etc. He has also
+              worked on various commercial projects in graphic design and motion
+              graphics. His work has been recognized by Type Directors Club,
+              Korean Society of Typography, Graphis Award, IdN, CA Magazine
+              Korea, PAGE Magazine, etc.
             </p>
 
             <h3>Services</h3>
@@ -38,7 +41,10 @@ const AboutPage = () => {
                 Design tools and systems (generative identity, branding, logo,
                 etc.)
               </li>
-              <li>Expressive typography work (branding, editorial, installation, etc.)</li>
+              <li>
+                Expressive typography work (branding, editorial, installation,
+                etc.)
+              </li>
               <li>
                 Interaction design (website design/development, interactive
                 poster, etc.)
@@ -65,8 +71,10 @@ const AboutPage = () => {
             <h3>Selected Exhibitions</h3>
             <ul>
               <li>
-                Demo Festival, Amsterdam, The Netherlands, Nov. 2019
+                La Cinémathèque Temporaire du Collectif Jeune Cinéma, Paris,
+                France, 2021
               </li>
+              <li>Demo Festival, Amsterdam, The Netherlands, Nov. 2019</li>
               <li>Centre Pompidou Web Screening, France, 2019</li>
               <li>Type Directors Club 62 Exhibition, New York, 2016</li>
               <li>Society of Korean Typography Group Exhibition, 2015</li>
@@ -117,8 +125,8 @@ const AboutPage = () => {
                 <p>
                   I am always looking for exciting challenges and opportunities.
                   Please feel free to{" "}
-                  <a href={`mailto:${site.siteMetadata.email}`}>contact me</a> for any
-                  inquiries.
+                  <a href={`mailto:${site.siteMetadata.email}`}>contact me</a>{" "}
+                  for any inquiries.
                 </p>
               </div>
             </div>
