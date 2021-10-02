@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { MdArrowBack } from "react-icons/md";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 // import "../styles/debug.css"
 
 export const query = graphql`
@@ -27,7 +27,7 @@ const PostTemplate = (props) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={`${post.frontmatter.title}, ${new Date(
           post.frontmatter.date
         ).getFullYear()}`}

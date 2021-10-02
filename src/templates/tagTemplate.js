@@ -5,7 +5,7 @@ import Masonry from "react-masonry-component";
 import Img from "gatsby-image";
 import { MdArrowBack } from "react-icons/md";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 // reference:
 // https://www.gatsbyjs.com/docs/adding-tags-and-categories-to-blog-posts/
@@ -26,7 +26,7 @@ const TagTemplate = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <SEO title={tagHeader} />
+      <Seo title={tagHeader} />
       <main>
         <div className="container tag-page">
           

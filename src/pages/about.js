@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 const AboutPage = () => {
   // this is a page/not component: I can just use pageQuery instead?
@@ -17,7 +17,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title="About" />
+      <Seo title="About" />
       <main>
         <div className="container post-page">
           <div className="left">
@@ -42,7 +42,7 @@ const AboutPage = () => {
                 etc.)
               </li>
               <li>
-                Expressive typography work (branding, editorial, installation,
+                Expressive typography work (branding, editorial, illustration,
                 etc.)
               </li>
               <li>
@@ -91,6 +91,12 @@ const AboutPage = () => {
 
             <h3>Selected Awards and Publications</h3>
             <ul>
+              <li>
+                <a href="https://www.nytimes.com/interactive/2021/01/14/multimedia/year-in-illustration.html">
+                  The Year In Illustration
+                </a>{" "}
+                by The New York Times, 2020
+              </li>
               <li>AIGA Frontier Reader, USA, 2019</li>
               <li>The T Magazine, Korea, 2017</li>
               <li>LetterSeed 13 Typography Journal, Korea, 2016</li>

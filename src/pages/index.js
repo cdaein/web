@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Masonry from "react-masonry-component"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 class IndexPage extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class IndexPage extends Component {
 
     return (
       <Layout>
-        <SEO title={this.props.data.site.siteMetadata.tagline} />
+        <Seo title={this.props.data.site.siteMetadata.tagline} />
         <main>
           <div className="container">
             <Masonry
