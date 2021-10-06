@@ -6,7 +6,7 @@ tags:
   - web
   - animation
   - software
-featured: false
+featured: true
 featuredImage: "./thumb.png"
 published: true
 ---
