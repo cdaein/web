@@ -5,7 +5,7 @@ tags:
   - editorial
   - web
   - animation
-featured: true
+featured: false
 featuredImage: "./thumb.png"
 published: true
 ---
@@ -15,4 +15,3 @@ published: true
 </div>
 
 Animated illustration for the New York Times story, [Youtube's Ban on Misinformation](https://www.nytimes.com/2021/10/05/technology/youtube-misinformation.html).
-f

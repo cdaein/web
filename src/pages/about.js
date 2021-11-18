@@ -134,6 +134,7 @@ const AboutPage = () => {
                   <a href={`mailto:${site.siteMetadata.email}`}>contact me</a>{" "}
                   for any inquiries.
                 </p>
+                <p><a href="https://linktr.ee/dae2nc">Linktree</a></p>
               </div>
             </div>
           </div>
