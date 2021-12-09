@@ -127,7 +127,7 @@ main {
   color: black;
   opacity: 1;
 }
-.thumbnail h3 {
+.thumbnail .post-title {
   letter-spacing: 0.2px;
   margin: 0;
   padding: 0;
@@ -240,10 +240,10 @@ footer .container {
   padding: $side-padding;
 }
 footer p {
-  color: #aaa;
+  color: #666;
 }
 footer p a {
-  color: #aaa;
+  color: #666;
 }
 
 /****************************** Masonry stuff *****/

@@ -87,10 +87,10 @@ class IndexPage extends Component {
                         </div>
                       </div>
                       <div className="text-wrapper">
-                        <h3 className="post-title">
+                        <h2 className="post-title">
                           {post.frontmatter.title},{" "}
                           {new Date(post.frontmatter.date).getFullYear()}
-                        </h3>
+                        </h2>
                       </div>
                     </Link>
                   </div>
