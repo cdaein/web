@@ -22,7 +22,7 @@ class IndexPage extends Component {
       })
     }
 
-    console.log(this.state.layoutReady)
+    // console.log(this.state.layoutReady)
   }
 
   render() {
