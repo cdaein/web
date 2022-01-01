@@ -1,6 +1,6 @@
 ---
 title: New Day
-date: "2022-01-01"
+date: "2022-01-01T12:00:00Z"
 tags:
   - poster
   - web
