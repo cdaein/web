@@ -1,0 +1,22 @@
+---
+title: New Day
+date: "2022-01-01"
+tags:
+  - poster
+  - web
+  - motion
+  - software
+featured: true
+featuredImage: "./thumb.png"
+published: true
+---
+
+<div class="video-wrapper">
+  <video src="./video-converted.mp4" controls loop muted></video>
+</div>
+
+A motion poster created with a custom software. 
+
+<div class="video-wrapper">
+  <video src="./process-converted.mp4" controls loop muted></video>
+</div>
