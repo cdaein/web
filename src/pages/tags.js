@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import kebabCase from "lodash/kebabCase";
+// import kebabCase from "lodash/kebabCase";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
@@ -23,7 +23,8 @@ const TagsPage = ({
           <ul>
             {group.map((tag) => (
               <li key={tag.fieldValue}>
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
+                {/* <Link to={`/tags/${kebabCase(tag.fieldValue)}`}> */}
+                <Link to={`/tags/${tag.fieldValue}`}>
                   {tag.fieldValue} ({tag.totalCount})
                 </Link>
               </li>

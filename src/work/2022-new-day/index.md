@@ -6,6 +6,7 @@ tags:
   - web
   - motion
   - software
+  - MDS1
 featured: false
 featuredImage: "./thumb.png"
 published: true
@@ -15,8 +16,8 @@ published: true
   <video src="./video-converted.mp4" controls loop muted></video>
 </div>
 
-A motion poster created with a custom software. 
-
 <div class="video-wrapper">
   <video src="./process-converted.mp4" controls loop muted></video>
 </div>
+
+A motion poster that celebrates a new year. Created with Modular Design System One, a web-based custom software that I made with JavaScript. 

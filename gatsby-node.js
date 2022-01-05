@@ -66,12 +66,13 @@ exports.createPages = ({ graphql, actions }) => {
 
     tags.forEach((tag) => {
       createPage({
-        path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+        // path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+        path: `/tags/${tag.fieldValue}/`,
         component: tagTemplate,
         context: {
-          tag: tag.fieldValue
-        }
-      })
+          tag: tag.fieldValue,
+        },
+      });
     });
   });
 };
