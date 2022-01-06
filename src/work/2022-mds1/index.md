@@ -2,6 +2,7 @@
 title: Modular Design System One
 date: "2022-01-04T12:00:00Z"
 tags:
+  - app
   - web
   - software
   - typography
