@@ -71,19 +71,39 @@ const AboutPage = () => {
             <h3>Selected Exhibitions</h3>
             <ul>
               <li>
-                La Cinémathèque Temporaire du Collectif Jeune Cinéma, Paris,
-                France, 2021
+                <a href="https://cjcinema.org/agenda/2021/septembre/cinematheque-temporaire-du-cjc-27/">
+                  La Cinémathèque Temporaire du Collectif Jeune Cinéma
+                </a>
+                , Paris, France, 2021
               </li>
-              <li>Demo Festival, Amsterdam, The Netherlands, Nov. 2019</li>
-              <li>Centre Pompidou Web Screening, France, 2019</li>
+              <li>
+                <a href="https://demofestival.com">Demo Festival</a>, Amsterdam,
+                The Netherlands, Nov. 2019
+              </li>
+              <li>
+                <a href="https://www.centrepompidou.fr/fr/videos/tag/mon-oeil">
+                  Centre Pompidou Mon Œil Screening
+                </a>
+                , France, 2019
+              </li>
               <li>Type Directors Club 62 Exhibition, New York, 2016</li>
               <li>Society of Korean Typography Group Exhibition, 2015</li>
               <li>Outdoor Vision Fest, Santa Fe, 2012</li>
               <li>London International Film Festival, UK, 2009</li>
               <li>Rome Film Festival, Italy, 2008</li>
-              <li>Ann Arbor Film Festival, Ann Arbor, 2008</li>
+              <li>
+                <a href="http://media.aadl.org/documents/pdf/aaff/aaff_46_program.pdf">
+                  Ann Arbor Film Festival
+                </a>
+                , Ann Arbor, 2008
+              </li>
               <li>Animation Block Party, Brooklyn, 2007</li>
-              <li>Collectif Jeune Cinéma, Paris, France, 2007</li>
+              <li>
+                <a href="https://old.cjcinema.org/pages/fiche_auteur.php?auteur=38">
+                  Collectif Jeune Cinéma
+                </a>
+                , Paris, France, 2007
+              </li>
               <li>
                 Melbourne Int’l Animation Festival, Australia, 2007 and 2009
               </li>
@@ -134,7 +154,9 @@ const AboutPage = () => {
                   <a href={`mailto:${site.siteMetadata.email}`}>contact me</a>{" "}
                   for any inquiries.
                 </p>
-                <p><a href="https://linktr.ee/dae2nc">Linktree</a></p>
+                <p>
+                  <a href="https://linktr.ee/dae2nc">Linktree</a>
+                </p>
               </div>
             </div>
           </div>
