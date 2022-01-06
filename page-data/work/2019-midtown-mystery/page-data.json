@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/work/2019-midtown-mystery/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Midtown Mystery","date":"2019-05-15","tags":["typography","motion","poster","software"],"featuredImage":{"publicURL":"/static/16cdbfe759740a050ea545618d977503/thumb.png"}},"html":"<p><img src=\"/bcc220f885f639d913385adb70b6df0a/animated.gif\" alt=\"animated gif\"></p>","excerpt":"animated gif"}},"pageContext":{"slug":"/work/2019-midtown-mystery/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}

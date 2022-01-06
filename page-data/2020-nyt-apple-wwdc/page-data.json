@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/2020-nyt-apple-wwdc/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"New York Times","date":"2020-06-23","tags":["editorial","web","animation","software"],"featuredImage":{"publicURL":"/static/e265d291a042073513da5e2ff08d5dae/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/9c1187222af14d8f039b7c71c87be058/video.mp4\" controls loop muted></video>\n</div>\n<p>Animated illustration for the New York Times story, <a href=\"https://www.nytimes.com/2020/06/23/technology/apple-announces-new-privacy-features.html\">Apple Announces New Privacy Features</a>.</p>","excerpt":"Animated illustration for the New York Times story, Apple Announces New Privacy Features."}},"pageContext":{"slug":"/2020-nyt-apple-wwdc/"}},
+    "staticQueryHashes": ["2382245587","2413290850"]}

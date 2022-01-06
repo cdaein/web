@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/work/2021-nyt-tech-profit/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"New York Times","date":"2021-02-10","tags":["editorial","web","animation","software"],"featuredImage":{"publicURL":"/static/23ab5d85298437ced94aab2141f57a3c/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/8e505bd0c6bde8c86611ca9f5f985948/video.mp4\" controls loop muted></video>\n</div>\n<p>Animated illustration for the New York Times story, <a href=\"https://www.nytimes.com/2021/02/10/technology/profits-steer-our-digital-future.html\">Profits Steer Our Digital Future</a>.</p>","excerpt":"Animated illustration for the New York Times story, Profits Steer Our Digital Future."}},"pageContext":{"slug":"/work/2021-nyt-tech-profit/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}

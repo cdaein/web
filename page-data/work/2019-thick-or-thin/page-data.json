@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/work/2019-thick-or-thin/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Thick or Thin","date":"2019-05-26","tags":["typography","motion","poster","software"],"featuredImage":{"publicURL":"/static/97706f0acdbea279440a4d76191e614f/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/c89ea817686fe199bdfc390e8e73afec/video.mp4\" controls loop muted></video>\n</div>","excerpt":""}},"pageContext":{"slug":"/work/2019-thick-or-thin/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}

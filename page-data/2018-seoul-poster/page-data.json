@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/2018-seoul-poster/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Seoul","date":"2018-05-28","tags":["typography","motion","poster","web","software"],"featuredImage":{"publicURL":"/static/70e02668160f1c82a1897b3ba6c4b494/thumb.png"}},"html":"<p><img src=\"/3749ba8dbe50998495c82d5591fd5586/animated.gif\" alt=\"Build the System poster\"></p>\n<p>This poster is my visual response to visiting Seoul in the Summer of 2018. It was very humid and hot. I was soaked wet with sweat everyday. I wanted to find some personal space and relax but everywhere I went, it was filled with people. And a lot of talking. We were talking about tensions and changes between South, North Korea and the United States. And the Summit. I felt energies, hopes and confusions. The city was constantly moving.</p>","excerpt":"Build the System poster This poster is my visual response to visiting Seoul in the Summer of 2018. It was very humid and hot. I was soaked…"}},"pageContext":{"slug":"/2018-seoul-poster/"}},
+    "staticQueryHashes": ["2382245587","2413290850"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/2020-nyt-internet-fracture/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"New York Times","date":"2020-08-23","tags":["editorial","web","animation","software"],"featuredImage":{"publicURL":"/static/caccde1077a97eb84b108034b3141a78/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/f98330b593d579e03949d48ab78f9e17/video.mp4\" controls loop muted></video>\n</div>\n<p>Animated illustration for the New York Times story, <em><a href=\"https://www.nytimes.com/2020/08/17/technology/trump-tiktok-wechat-ban.html\">Trump’s Attacks on TikTok and WeChat Could Further Fracture the Internet</a>.</em></p>","excerpt":"Animated illustration for the New York Times story, Trump’s Attacks on TikTok and WeChat Could Further Fracture the Internet."}},"pageContext":{"slug":"/2020-nyt-internet-fracture/"}},
+    "staticQueryHashes": ["2382245587","2413290850"]}

@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/work/2020-nyt-facebook-qanon/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"New York Times","date":"2020-09-21","tags":["editorial","web","animation","software"],"featuredImage":{"publicURL":"/static/d0a0920db61b5e16aa40f277239a4055/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/edd158da212ee0e02975cb4394c4b2cb/video.mp4\" controls loop muted></video>\n</div>\n<p>Animated illustration for the New York Times story, <a href=\"https://www.nytimes.com/2020/09/21/technology/facebook-qanon.html\">How Facebook Can Slow QAnon for Real</a>.</p>","excerpt":"Animated illustration for the New York Times story, How Facebook Can Slow QAnon for Real."}},"pageContext":{"slug":"/work/2020-nyt-facebook-qanon/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}

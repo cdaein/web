@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/work/2019-rabbit-hole/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Rabbit Hole","date":"2019-06-03","tags":["typography","interactive","poster","web","software"],"featuredImage":{"publicURL":"/static/e6ff385e8df04ec8ee954ec6a2b9239c/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/ec1933d022d345c363da59ae9a00bc63/video.mp4\" controls loop muted></video>\n</div>\n<div class=\"video-wrapper\">\n  <video src=\"/8608d1a9894b097c611a977a7e0b04df/recording.mp4\" controls muted></video>\n</div>\n<p><a href=\"https://exp.paperdove.com/rabbithole\">https://exp.paperdove.com/rabbithole</a></p>\n<p>An interactive web poster inspired by Alice's Adventures in Wonderland. Best viewed on mobile with motion sensor enabled.</p>","excerpt":"https://exp.paperdove.com/rabbithole An interactive web poster inspired by Alice's Adventures in Wonderland. Best viewed on mobile with…"}},"pageContext":{"slug":"/work/2019-rabbit-hole/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}

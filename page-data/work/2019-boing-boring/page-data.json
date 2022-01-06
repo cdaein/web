@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/work/2019-boing-boring/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Boing Boring","date":"2019-04-24","tags":["typography","motion","poster","software"],"featuredImage":{"publicURL":"/static/262ffc77f0ab7353e9b56fb558499b43/thumb.png"}},"html":"<p><img src=\"/88059b42a159c7a84f3fc7e913408a7b/animated.gif\" alt=\"animated gif\"></p>","excerpt":"animated gif"}},"pageContext":{"slug":"/work/2019-boing-boring/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}

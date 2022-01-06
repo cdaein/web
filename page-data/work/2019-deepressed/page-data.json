@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/work/2019-deepressed/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Deepressed","date":"2019-06-09","tags":["typography","web","interactive","poster","software"],"featuredImage":{"publicURL":"/static/3f2c8a1be0ccdf781e018fe75547a9cf/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/11055fdc979b3f7b9566c07c64727ef8/recording.mp4\" controls loop muted></video>\n</div>\n<p><a href=\"https://exp.paperdove.com/deepressed\">https://exp.paperdove.com/deepressed</a></p>\n<p>An interactive web poster using motion sensor.</p>","excerpt":"https://exp.paperdove.com/deepressed An interactive web poster using motion sensor."}},"pageContext":{"slug":"/work/2019-deepressed/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}

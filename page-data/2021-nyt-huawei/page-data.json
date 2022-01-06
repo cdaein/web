@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/2021-nyt-huawei/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"New York Times","date":"2021-11-02","tags":["editorial","web","animation"],"featuredImage":{"publicURL":"/static/9e1650d0c791d173a558deb0da901baa/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/580f60d440365c48d293b8e0efa63677/video.mp4\" controls loop muted></video>\n</div>\n<p>Animated illustration for the New York Times story, <a href=\"https://www.nytimes.com/2021/11/02/technology/huawei-us-policy.html\">The Strange Saga of Huawei</a>.</p>","excerpt":"Animated illustration for the New York Times story, The Strange Saga of Huawei."}},"pageContext":{"slug":"/2021-nyt-huawei/"}},
+    "staticQueryHashes": ["2382245587","2413290850"]}
