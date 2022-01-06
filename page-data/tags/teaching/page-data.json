@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-tag-template-js","path":"/tags/teaching/","result":{"data":{"allMarkdownRemark":{"totalCount":0,"edges":[]}},"pageContext":{"tag":"teaching"}},"staticQueryHashes":["2382245587","2413290850"]}
+{
+    "componentChunkName": "component---src-templates-tag-template-js",
+    "path": "/tags/teaching/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":0,"edges":[]}},"pageContext":{"tag":"teaching"}},
+    "staticQueryHashes": ["2382245587","2413290850"]}

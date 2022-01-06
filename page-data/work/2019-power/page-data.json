@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-post-template-js","path":"/work/2019-power/","result":{"data":{"markdownRemark":{"frontmatter":{"title":"Power","date":"2019-04-26","tags":["typography","poster","software"],"featuredImage":{"publicURL":"/static/479148f5c4575112fed91d9b897c96f0/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/ed31136047446b2294be4ac03c8fc6c8/video.mp4\" controls loop muted></video>\n</div>","excerpt":""}},"pageContext":{"slug":"/work/2019-power/"}},"staticQueryHashes":["2382245587","2413290850"]}
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/work/2019-power/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Power","date":"2019-04-26","tags":["typography","poster","software"],"featuredImage":{"publicURL":"/static/479148f5c4575112fed91d9b897c96f0/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/ed31136047446b2294be4ac03c8fc6c8/video.mp4\" controls loop muted></video>\n</div>","excerpt":""}},"pageContext":{"slug":"/work/2019-power/"}},
+    "staticQueryHashes": ["2382245587","2413290850"]}
