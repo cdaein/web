@@ -64,6 +64,8 @@ exports.createPages = ({ graphql, actions }) => {
 
     const tags = result.data.tagsGroup.group;
 
+    console.log(tags);
+
     tags.forEach((tag) => {
       createPage({
         // path: `/tags/${_.kebabCase(tag.fieldValue)}/`,

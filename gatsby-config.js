@@ -10,7 +10,7 @@ module.exports = {
     tagline: "Design + Motion + Interaction",
     siteURL: `https://paperdove.com`,
     author: "Dae In Chung",
-    email: "cdaein@gmail.com"
+    email: "cdaein@gmail.com",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -20,6 +20,13 @@ module.exports = {
       options: {
         name: "src",
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "work",
+        path: `${__dirname}/content/work/`,
       },
     },
     `gatsby-plugin-sharp`,
@@ -39,14 +46,14 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-video',
+            resolve: "gatsby-remark-video",
             options: {
               width: 800,
-              height: 'auto',
-              preload: 'auto',
+              height: "auto",
+              preload: "auto",
               muted: true,
-              autoplay: true
-            }
+              autoplay: true,
+            },
           },
           {
             resolve: "gatsby-remark-embed-video",
@@ -74,4 +81,4 @@ module.exports = {
       },
     },
   ],
-}
+};
