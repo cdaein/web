@@ -119,7 +119,12 @@ const AboutPage = () => {
               </li>
               <li>AIGA Frontier Reader, USA, 2019</li>
               <li>The T Magazine, Korea, 2017</li>
-              <li>LetterSeed 13 Typography Journal, Korea, 2016</li>
+              <li>
+                <a href="https://agbook.co.kr/book/1922/">
+                  LetterSeed 13 Typography Journal
+                </a>
+                , Korea, 2016
+              </li>
               <li>Type Directors Club 62 Communication Design, USA, 2016</li>
               <li>
                 Best of the Show Award, Korean Society of Typography, 2015

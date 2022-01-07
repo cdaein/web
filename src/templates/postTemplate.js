@@ -6,7 +6,7 @@ import Seo from "../components/seo";
 // import "../styles/debug.css"
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
@@ -68,7 +68,10 @@ const PostTemplate = (props) => {
                         textTransform: "capitalize",
                       }}
                     >
-                      <Link to={`/tags/${tag}`} style={{ border: "none" }}>
+                      <Link
+                        to={`/tags/${tag.toLowerCase()}`}
+                        style={{ border: "none" }}
+                      >
                         {tag}
                       </Link>
                     </li>

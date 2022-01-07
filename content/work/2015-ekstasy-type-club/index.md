@@ -5,7 +5,7 @@ tags:
 - interactive
 - typography
 - software
-- Tool
+- tool
 featured: true
 featuredImage: "./files/thumb2.png"
 published: true

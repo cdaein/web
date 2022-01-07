@@ -69,7 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
     tags.forEach((tag) => {
       createPage({
         // path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-        path: `/tags/${tag.fieldValue}/`,
+        path: `/tags/${tag.fieldValue.toLowerCase()}/`,
         component: tagTemplate,
         context: {
           tag: tag.fieldValue,
