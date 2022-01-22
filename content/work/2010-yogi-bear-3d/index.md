@@ -3,9 +3,10 @@ title: Yogi Bear 3D
 date: "2010-11-01"
 tags:
   - motion
-  - title sequence
+  - title
 featured: false
 featuredImage: "./files/02.jpg"
+published: true
 ---
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/21071233" width="640" height="360" frameborder="0" allowfullscreen></iframe>

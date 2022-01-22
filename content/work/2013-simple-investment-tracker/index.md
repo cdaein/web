@@ -2,6 +2,7 @@
 title: Simple Investment Tracker
 date: "2013-03-01"
 tags:
+- app
 - interactive
 - software
 featured: true

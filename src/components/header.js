@@ -35,7 +35,7 @@ const Header = () => {
             </Link>
             <a
               target="_blank"
-              href="https://objkt.com/profile/tz1WXTdGdwD6g24vJp7vpjWVR8LuFpisUcoc"
+              href="https://versum.xyz/user/cdaein"
               rel="noreferrer noopener"
             >
               NFT

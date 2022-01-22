@@ -6,6 +6,7 @@ tags:
   - web
 featured: false
 featuredImage: "./files/04.jpg"
+published: true
 ---
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/44444276" width="640" height="360" frameborder="0" allowfullscreen></iframe>
