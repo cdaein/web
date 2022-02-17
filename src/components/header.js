@@ -35,10 +35,10 @@ const Header = () => {
             </Link>
             <a
               target="_blank"
-              href="https://versum.xyz/user/cdaein"
+              href="https://versum.xyz/user/tz1WXTdGdwD6g24vJp7vpjWVR8LuFpisUcoc"
               rel="noreferrer noopener"
             >
-              NFT
+              Shop
             </a>
             <Link to="/about" className="nav-link">
               About
