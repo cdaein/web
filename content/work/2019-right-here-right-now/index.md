@@ -6,6 +6,7 @@ tags:
   - motion
   - poster
   - software
+  - NFT
 featured: false
 featuredImage: "./thumb.png"
 published: true
@@ -13,3 +14,4 @@ published: true
 
 ![animated gif](./animated.gif)
 
+You can purchase the poster as [a limited edition digital NFT](https://teia.art/objkt/23756). 

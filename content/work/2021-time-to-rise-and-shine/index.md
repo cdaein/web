@@ -8,6 +8,7 @@ tags:
   - software
   - typography
   - MDS1
+  - NFT
 featured: false
 featuredImage: "./thumb.png"
 published: true
@@ -21,5 +22,5 @@ published: true
   <video src="./process-converted.mp4" controls loop muted></video>
 </div>
 
-A motion poster created with Modular Design System One, a web-based custom software that I made with JavaScript. You can purchase the poster as [a limited edition digital NFT](https://objkt.com/asset/hicetnunc/599594).
+A motion poster created with Modular Design System One, a web-based custom software that I made with JavaScript. You can purchase the poster as [a limited edition digital NFT](https://teia.art/objkt/599594). 
 
