@@ -1,32 +1,32 @@
-import React, { Component } from "react"
-import { graphql, Link } from "gatsby"
-import Masonry from "react-masonry-component"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import React, { Component } from "react";
+import { graphql, Link } from "gatsby";
+import Masonry from "react-masonry-component";
+import Img from "gatsby-image";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 class IndexPage extends Component {
   constructor(props) {
-    super(props)
-    this.handleLayoutReady = this.handleLayoutReady.bind(this)
+    super(props);
+    this.handleLayoutReady = this.handleLayoutReady.bind(this);
 
     this.state = {
       layoutReady: false,
-    }
+    };
   }
 
   handleLayoutReady() {
     if (!this.state.layoutReady) {
       this.setState({
         layoutReady: true,
-      })
+      });
     }
 
     // console.log(this.state.layoutReady)
   }
 
   render() {
-    const edges = this.props.data.allMarkdownRemark.edges
+    const edges = this.props.data.allMarkdownRemark.edges;
 
     const masonryOptions = {
       itemSelector: ".grid-item",
@@ -34,7 +34,7 @@ class IndexPage extends Component {
       percentPosition: true,
       transitionDuration: "0s",
       // initLayout: false,
-    }
+    };
 
     return (
       <Layout>
@@ -44,7 +44,7 @@ class IndexPage extends Component {
             <Masonry
               className="grid"
               options={masonryOptions}
-              onLayoutComplete={laidoutItems =>
+              onLayoutComplete={(laidoutItems) =>
                 this.handleLayoutReady(laidoutItems)
               }
               style={{
@@ -53,18 +53,18 @@ class IndexPage extends Component {
               }}
             >
               <div className="grid-sizer"></div>
-              {edges.map(edge => {
-                const post = edge.node
+              {edges.map((edge) => {
+                const post = edge.node;
 
-                let cls = "grid-item"
+                let cls = "grid-item";
                 if (post.frontmatter.featured) {
-                  cls += " double"
+                  cls += " double";
                 }
 
                 const aspectRatio =
                   post.frontmatter.featuredImage.childImageSharp.fluid
-                    .aspectRatio
-                const paddingTop = `${(1 / aspectRatio) * 100}%`
+                    .aspectRatio;
+                const paddingTop = `${(1 / aspectRatio) * 100}%`;
 
                 return (
                   <div className={`grid-item thumbnail ${cls}`} key={post.id}>
@@ -94,13 +94,13 @@ class IndexPage extends Component {
                       </div>
                     </Link>
                   </div>
-                )
+                );
               })}
             </Masonry>
           </div>
         </main>
       </Layout>
-    )
+    );
   }
 }
 
@@ -111,10 +111,13 @@ export const data = graphql`
         tagline
       }
     }
-    allMarkdownRemark(sort: {
-      fields: [frontmatter___date], order: DESC}, 
-      filter: {frontmatter: {published: {eq: true}}}) 
-    {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        fileAbsolutePath: { regex: "//work//" }
+        frontmatter: { published: { eq: true } }
+      }
+    ) {
       edges {
         node {
           id
@@ -129,10 +132,7 @@ export const data = graphql`
             featuredImage {
               publicURL
               childImageSharp {
-                fluid(
-                  maxWidth: 800
-                  toFormat: WEBP  
-                ) {
+                fluid(maxWidth: 800, toFormat: WEBP) {
                   ...GatsbyImageSharpFluid
                   aspectRatio
                 }
@@ -143,6 +143,6 @@ export const data = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

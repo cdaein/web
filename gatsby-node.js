@@ -21,12 +21,20 @@ exports.createPages = ({ graphql, actions }) => {
 
   const postTemplate = path.resolve("./src/templates/postTemplate.js");
   const tagTemplate = path.resolve("./src/templates/tagTemplate.js");
+  const blogTemplate = path.resolve("./src/templates/blogTemplate.js");
 
+  /**
+   * postsRemark - work posts only (in /work/ directory)
+   * tagsGroup - work tags only (for now)
+   */
   return graphql(`
     {
       postsRemark: allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { published: { eq: true } } }
+        filter: {
+          fileAbsolutePath: { regex: "//work//" }
+          frontmatter: { published: { eq: true } }
+        }
       ) {
         edges {
           node {
@@ -39,9 +47,28 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-      tagsGroup: allMarkdownRemark(limit: 2000) {
+
+      tagsGroup: allMarkdownRemark(
+        limit: 2000
+        filter: { frontmatter: { published: { eq: true } } }
+      ) {
         group(field: frontmatter___tags) {
           fieldValue
+        }
+      }
+
+      blogPostsRemark: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { fileAbsolutePath: { regex: "//blog//" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              slug
+              date
+            }
+          }
         }
       }
     }
@@ -51,7 +78,6 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     const posts = result.data.postsRemark.edges;
-
     posts.forEach((post) => {
       createPage({
         path: post.node.fields.slug,
@@ -63,9 +89,6 @@ exports.createPages = ({ graphql, actions }) => {
     });
 
     const tags = result.data.tagsGroup.group;
-
-    // console.log(tags);
-
     tags.forEach((tag) => {
       createPage({
         // path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
@@ -73,6 +96,18 @@ exports.createPages = ({ graphql, actions }) => {
         component: tagTemplate,
         context: {
           tag: tag.fieldValue,
+        },
+      });
+    });
+
+    const blogPosts = result.data.blogPostsRemark.edges;
+    blogPosts.forEach((post) => {
+      const slug = post.node.frontmatter.slug;
+      createPage({
+        path: slug,
+        component: blogTemplate,
+        context: {
+          slug,
         },
       });
     });

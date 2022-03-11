@@ -25,8 +25,23 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/draft`,
+        name: `draft`,
+        ignore: process.env.NODE_ENV === `production` ? [`**/draft`] : [],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: "work",
         path: `${__dirname}/content/work/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "blog",
+        path: `${__dirname}/content/blog/`,
       },
     },
     `gatsby-plugin-sharp`,

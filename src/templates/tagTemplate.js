@@ -29,7 +29,6 @@ const TagTemplate = ({ pageContext, data }) => {
       <Seo title={tagHeader} />
       <main>
         <div className="container tag-page">
-          
           <div style={{ padding: 25 }}>
             <h1>{tagHeader}</h1>
             <div className="back-button">
@@ -130,11 +129,14 @@ export default TagTemplate;
 
 // note the use of $tag coming from pageContext
 export const pageQuery = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] }, published: { eq: true } } }
+      filter: {
+        fileAbsolutePath: { regex: "//work//" }
+        frontmatter: { tags: { in: [$tag] }, published: { eq: true } }
+      }
     ) {
       totalCount
       edges {
