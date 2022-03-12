@@ -32,7 +32,8 @@ function Seo({ description, lang, meta, title, image }) {
   );
 
   const metaDescription = description || site.siteMetadata.tagline;
-  const metaImage = image || allMarkdownRemark.nodes[0].frontmatter.featuredImage.publicURL;
+  const metaImage =
+    image || allMarkdownRemark.nodes[0].frontmatter.featuredImage.publicURL;
 
   return (
     <Helmet

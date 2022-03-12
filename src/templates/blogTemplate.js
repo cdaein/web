@@ -21,6 +21,10 @@ const StyledMarkdown = styled.div`
     font-style: italic;
   }
 
+  em {
+    font-style: italic;
+  }
+
   figure figcaption {
     margin-top: 10px;
     font-size: 0.8rem;

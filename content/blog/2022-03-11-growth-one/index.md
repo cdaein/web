@@ -1,7 +1,7 @@
 ---
 title: Growth One Generative NFT
 slug: '/growth-one-generative-nft'
-date: "2022-03-11"
+date: "2022-03-12"
 tags:
   - process
   - NFT
@@ -32,11 +32,7 @@ As the organism starts to grow, it loosely resembles structures found in nature 
 Finding the right balance of these parameters, or fxhash features as they call them, was not easy. The simulation can be unexpected and some results were not good. Sometimes, there was no growth at all. It required a lot of manual tweaking. Although the simulation itself is automated, finding the *right* range, *right* amount of variations is where each artist is going to use their own judgement. I ran well over a thousand randomized testings to make sure the system will stand any random hash values fed into it. But honestly, I am not entirely sure if I have caught every subjectively bad case.
 
 ## Real-time Growth Simulation
-Early on, for debugging purpose, I was switching back and forth between running the whole simulation in a loop and running the same simulation in real-time to see what is really happening. This real-time simulation usually takes anywhere between 5 to 30 minutes. It is intentionally very tedious and inefficient process due to my decision to only add one node at a time and use custom search/accept rules, and I enjoyed watching the organism evolve. Every step of the growing process reveals something interesting about the organism. The building process is never finished as it will continue to grow if it is given more time and space. As I really enjoyed watching this real-time growth over a long period of time, I decided to include it in the token using a URL parameter. Below is a compressed time-lapse video of the growth simulation.
-
-<div class="video-wrapper">
-  <video src="./010.mp4" controls loop muted></video>
-</div>
+Early on, for debugging purpose, I was switching back and forth between running the whole simulation in a loop and running the same simulation in real-time to see what is really happening. This real-time simulation usually takes anywhere between 5 to 30 minutes. It is intentionally very tedious and inefficient process due to my decision to only add one node at a time and use custom search/accept rules, and I enjoyed watching the organism evolve. Every step of the growing process reveals something interesting about the organism. The building process is never finished as it will continue to grow if it is given more time and space. As I really enjoyed watching this real-time growth over a long period of time, I decided to include it in the token using a URL parameter.
 
 ## Edges
 The nodes are connected by an edge, which is basically a line connecting one node to another. When the nodes are connected with lines, it reveals the relationship, passage of time, the process of growing. The aspect of showing the growth simulation as sequential and that it relies on previous state of the structure was important to me. So, colors are used to convey the growth process by shifting hue and saturation per generation. I like that the colors are not only used as decorative elements, but also to reveal a story about the growth as we see all over in nature - geologic formation, shellfish, trees, etc. It was not my goal to simulate the reality, but it is always an inspiration, and in this case, the colors of the coral reef was fascinating to me with its stark contrast and uncanny combinations of colors.
