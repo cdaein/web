@@ -9,8 +9,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // const slug = path.basename(node.fileAbsolutePath, ".md")
     const value = createFilePath({ node, getNode });
     createNodeField({
-      name: "slug",
       node,
+      name: "slug",
       value,
     });
   }

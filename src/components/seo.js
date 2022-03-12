@@ -67,9 +67,17 @@ function Seo({ description, lang, meta, title, image }) {
           property: `og:image`,
           content: `${site.siteMetadata.siteURL}${metaImage}`,
         },
+        // {
+        //   property: `og:image:width`,
+        //   content: `${site.siteMetadata.siteURL}${metaImage}`,
+        // },
+        // {
+        //   property: `og:image:height`,
+        //   content: `${site.siteMetadata.siteURL}${metaImage}`,
+        // },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -84,7 +92,7 @@ function Seo({ description, lang, meta, title, image }) {
           content: metaDescription,
         },
         {
-          name: `twitter:image`,
+          name: `twitter:image:src`,
           content: `${site.siteMetadata.siteURL}${metaImage}`,
         },
       ].concat(meta)}

@@ -1,6 +1,6 @@
 ---
 title: Growth One Generative NFT
-slug: '/growth-one-generative-nft'
+slug: '/growth-one-generative-nft/'
 date: "2022-03-12"
 tags:
   - process
