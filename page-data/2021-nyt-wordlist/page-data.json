@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-post-template-js",
     "path": "/2021-nyt-wordlist/",
     "result": {"data":{"markdownRemark":{"frontmatter":{"title":"New York Times","date":"2021-10-06","tags":["editorial","web","animation","software"],"featuredImage":{"publicURL":"/static/9709df99470349d5ac04fe42618d37ca/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/f6d48905468cf2aaa8a6b1017e628b16/video.mp4\" controls loop muted></video>\n</div>\n<p>Animated illustration for the New York Times story, <a href=\"https://www.nytimes.com/2021/10/06/crosswords/wordlists-for-constructing-puzzles.html\">How Word Lists Help — or Hurt — Crossword Puzzles</a>.</p>","excerpt":"Animated illustration for the New York Times story, How Word Lists Help — or Hurt — Crossword Puzzles."}},"pageContext":{"slug":"/2021-nyt-wordlist/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}
+    "staticQueryHashes": ["1706422957","2413290850"]}

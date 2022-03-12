@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpaperdove=self.webpackChunkpaperdove||[]).push([[524],{8080:function(e,n,t){t.r(n);var a=t(7294),l=(t(5444),t(967));t(3751);n.default=function(){return a.createElement(l.Z,null,a.createElement("main",null,a.createElement("div",{className:"container"},a.createElement("h2",null," BLOG "))))}}}]);
+//# sourceMappingURL=component---src-pages-blog-index-js-043736fdda985af70ce7.js.map

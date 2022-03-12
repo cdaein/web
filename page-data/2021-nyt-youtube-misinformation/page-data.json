@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-post-template-js",
     "path": "/2021-nyt-youtube-misinformation/",
     "result": {"data":{"markdownRemark":{"frontmatter":{"title":"New York Times","date":"2021-10-05","tags":["editorial","web","animation"],"featuredImage":{"publicURL":"/static/40dc6401a310e70aa3ae43cd35d4bfea/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/44d70fbc628ee7fed571f6336551c52c/video.mp4\" controls loop muted></video>\n</div>\n<p>Animated illustration for the New York Times story, <a href=\"https://www.nytimes.com/2021/10/05/technology/youtube-misinformation.html\">Youtube's Ban on Misinformation</a>.</p>","excerpt":"Animated illustration for the New York Times story, Youtube's Ban on Misinformation."}},"pageContext":{"slug":"/2021-nyt-youtube-misinformation/"}},
-    "staticQueryHashes": ["2382245587","2413290850"]}
+    "staticQueryHashes": ["1706422957","2413290850"]}
