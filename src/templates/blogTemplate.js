@@ -1,29 +1,35 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import styled from "@emotion/styled";
+import moment from "moment";
 import { MdArrowBack } from "react-icons/md";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 // import "../styles/debug.css"
 
-export const query = graphql`
-  query ($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        date
-        tags
-        featuredImage {
-          publicURL
-        }
-      }
-      html
-      excerpt
-    }
+// this overrides global styling of markdown (ie. work)
+const StyledMarkdown = styled.div`
+  --side-padding-double: 50px;
+
+  h2 {
+    border-bottom: 2px solid black;
+    display: inline-block;
+  }
+  h3 {
+    border: none;
+    display: block;
+    font-style: italic;
+  }
+
+  figure figcaption {
+    margin-top: 10px;
+    font-size: 0.8rem;
   }
 `;
 
 const blogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
+  const date = post.frontmatter.date; // string
 
   return (
     <Layout>
@@ -37,7 +43,9 @@ const blogPostTemplate = (props) => {
       <main>
         <div className="container post-page">
           <div className="left">
-            <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+            <StyledMarkdown
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            ></StyledMarkdown>
             <div className="back-button">
               <Link to="/" style={{ border: "none" }}>
                 <MdArrowBack />
@@ -56,7 +64,7 @@ const blogPostTemplate = (props) => {
               <h2>
                 {post.frontmatter.title}
                 <br />
-                {new Date(post.frontmatter.date).getFullYear()}
+                {moment(new Date(date)).format("MMM Do, YYYY")}
               </h2>
               <h3>Tags</h3>
               <ul>
@@ -68,12 +76,12 @@ const blogPostTemplate = (props) => {
                         textTransform: "capitalize",
                       }}
                     >
-                      <Link
+                      {/* <Link
                         to={`/tags/${tag.toLowerCase()}`}
                         style={{ border: "none" }}
-                      >
-                        {tag}
-                      </Link>
+                      > */}
+                      {tag}
+                      {/* </Link> */}
                     </li>
                   );
                 })}
@@ -85,5 +93,22 @@ const blogPostTemplate = (props) => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query ($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        date
+        tags
+        featuredImage {
+          publicURL
+        }
+      }
+      html
+      excerpt
+    }
+  }
+`;
 
 export default blogPostTemplate;

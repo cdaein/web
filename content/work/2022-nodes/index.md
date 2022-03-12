@@ -6,7 +6,7 @@ tags:
   - motion
   - software
   - web
-featured: true
+featured: false
 featuredImage: "./thumb.png"
 published: true
 ---

@@ -127,9 +127,10 @@ p {
   max-height: 100%;
 }
 
-.post-page span.gatsby-resp-image-wrapper {
+.post-page figure.gatsby-resp-image-figure {
   margin-bottom: $side-padding-double;
 }
+
 .post-page .gatsby-resp-iframe-wrapper {
   background-color: #e0e0e0;
   margin-bottom: $side-padding-double;

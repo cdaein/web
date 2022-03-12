@@ -1,8 +1,9 @@
 ---
-title: Notes on Growth One Generative NFT
-slug: '/notes-on-growth-one-generative-nft'
+title: Growth One Generative NFT
+slug: '/growth-one-generative-nft'
 date: "2022-03-11"
 tags:
+  - process
   - NFT
 featured: false
 featuredImage: "./thumb.png"
@@ -10,12 +11,48 @@ published: false
 
 ---
 
-[Growth One](https://www.fxhash.xyz/generative/10249) is a generative NFT released on fxhash.
+![24 minted tokens](./thumb.png "24 minted tokens from Growth One")
 
-## Motivation
+[Growth One](https://www.fxhash.xyz/generative/10249) is my first generative NFT project that was launched on fxhash, and lives on the Tezos blockchain. 
 
-motivation.
+This project visualizes a growth simulation of a virtual micro organism that follows simple rules. The growth algorithm is somewhat based on Diffusion-Limited Aggregation or DLA. I was introduced to the algorithm some years ago by one of the Coding Train videos, and liked its organic quality and the simplicity of code implementation. Thinking about ideas for a generative NFT, I naturally thought about this algorithm. For this project, though, I did not reference any existing code because I wanted to create my own custom version with a different way to grow the virtual organism. And in terms of visualizing, I went for a graphical representation.
 
-## Process
+## Seed Nodes
+Where I spent most time was building the growth simulation method. The organism starts with a few seed nodes, the number of which is randomly assigned for each token. Then, there is the seed layout, the value of which is used for a horizontal, circular or random placement of the seed nodes.
 
-...
+![token #5](./placements.png "From left: Token #5 with random seed nodes placement; Token #7 with horizontal placement; Token #10 with circular placement")
+
+## Search & Accept
+After the seed nodes are placed, a search node is added one at a time. The seed nodes want to grow themselves and the search nodes want to be added to an existing structure. But instead of the existing nodes accepting any and all new search nodes that come close, I added a few conditions to make the growth process more varied and interesting. If we only check for the minimum distance as an acceptable condition, the inner nodes will not get a chance to grow. there's a threshold so sometimes search nodes go past the closest nodes to attach to others. This condition resulted in some interesting variations especially with circular layouts because the structure can grow both outwards and inwards.
+
+![examples of innter growth](./inner-growth.png "Examples of inner growth. From left: Token #9 and #13")
+
+As the organism starts to grow, it loosely resembles structures found in nature such as coral reef or fungus. While creating it, I encountered many interesting and beautiful emerging visual structures, but at the same time, I couldn't help but associating it with pathogens growing out of control.
+
+Finding the right balance of these parameters, or fxhash features as they call them, was not easy. The simulation can be unexpected and some results were not good. Sometimes, there was no growth at all. It required a lot of manual tweaking. Although the simulation itself is automated, finding the *right* range, *right* amount of variations is where each artist is going to use their own judgement. I ran well over a thousand randomized testings to make sure the system will stand any random hash values fed into it. But honestly, I am not entirely sure if I have caught every subjectively bad case.
+
+## Real-time Growth Simulation
+Early on, for debugging purpose, I was switching back and forth between running the whole simulation in a loop and running the same simulation in real-time to see what is really happening. This real-time simulation usually takes anywhere between 5 to 30 minutes. It is intentionally very tedious and inefficient process due to my decision to only add one node at a time and use custom search/accept rules, and I enjoyed watching the organism evolve. Every step of the growing process reveals something interesting about the organism. The building process is never finished as it will continue to grow if it is given more time and space. As I really enjoyed watching this real-time growth over a long period of time, I decided to include it in the token using a URL parameter. Below is a compressed time-lapse video of the growth simulation.
+
+<div class="video-wrapper">
+  <video src="./010.mp4" controls loop muted></video>
+</div>
+
+## Edges
+The nodes are connected by an edge, which is basically a line connecting one node to another. When the nodes are connected with lines, it reveals the relationship, passage of time, the process of growing. The aspect of showing the growth simulation as sequential and that it relies on previous state of the structure was important to me. So, colors are used to convey the growth process by shifting hue and saturation per generation. I like that the colors are not only used as decorative elements, but also to reveal a story about the growth as we see all over in nature - geologic formation, shellfish, trees, etc. It was not my goal to simulate the reality, but it is always an inspiration, and in this case, the colors of the coral reef was fascinating to me with its stark contrast and uncanny combinations of colors.
+
+![differences in colors](./colors.png "Colors are different based on seeds and generations. From left: Token #4, #17, and #23")
+
+## NFT Features
+Generative NFTs on the fxhash platform can have fxhash features, which statistically define the characteristics of each token from the whole series. It also tells us how *rare* each variation is compared to all the others. In this particular project, I did not really go after the rarity value. The initial randomized parameters do affect the result a lot, but it takes search nodes to travel at least a few hundreds of times to be accepted by the structure and complete the growth. And for each search and accept iteration, the parameters are updated further. So, the stated rarity in the feature descriptions cannot fully convey or represent the interesting quality of the end result.
+
+## Reflections
+This was my first generative NFT project so the whole process was an experiment for me. I have experience with code-based, parametric work mainly in the context of graphic design and typography, but releasing a generative system on an immutable blockchain was quite a different experience. 
+
+Normally, when working with such systems, I generate many variations with randomized parameters, and pick and choose the ones that I feel most interesting and engaging. I take a role of a creator as well as a curator. But with a generative NFT, at least on fxhash, I cannot pre-curate the result as the whole system relies on a transaction hash which is randomly assigned at the time of minting. So, I had to make sure that any variation that can be generated will look consistent as a whole, and at the same time, distinctive enough from each other. And of course, as a visual artifact, it should *look appealing* as well. Finding this balance was harder than I first thought. I had to smooth out my choice of parameters to make sure they all look good enough on average. It's just a different way of working instead of hand-picking a few excellent variations. This also opened the door for me to explore further the parameter space that I didn't know existed.
+
+I am now asking myself how I should design my program - whether the hash should only affect the initial conditions or dictate the result. In this type of simulation-based work, the hash and the pre-defined features tell only a half of the story because many iterations of the simulation can result in unexpected and surprising result which cannot be examined by only looking at the initially defined features.
+
+Also, the probability distribution I set in my code was not exactly reflected in the minted tokens. you have to flip the coins many times to get an even probability, but for my project with the maximum edition of 128, and much less actually minted, that distribution was skewed quite a bit. If it were fully minted and had a larger edition count, I think it would have made a difference. I think I also had a skewed perspective as I was testing thousands of times before minting. That to me was a disappointment. After all, I put a lot of time and effort to make sure there will be a lot of unique variations. It is unfortunate that many of the variations will never see the light of day.
+
+This project didn't get minted as many times as I had hoped but the whole experience of learning and creating was very valuable for me. I very much enjoyed the whole process. If anything, NFT gave me motivation to push forward, finish and release the piece out in the world. If it weren't for that, I would have just tinker with it for some time and moved on. It could have been one of many incomplete code files in my computer. I would like to continue to experiment with this new method of creating and releasing my work.

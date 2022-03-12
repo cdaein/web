@@ -11,6 +11,9 @@ module.exports = {
     siteURL: `https://paperdove.com`,
     author: "Dae In Chung",
     email: "cdaein@gmail.com",
+    versum:
+      "https://versum.xyz/user/tz1WXTdGdwD6g24vJp7vpjWVR8LuFpisUcoc/created",
+    fxhash: "https://www.fxhash.xyz/u/Daeinc",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -58,6 +61,8 @@ module.exports = {
               linkImagesToOriginal: false,
               quality: 60,
               withWebp: true,
+              showCaptions: ["title"],
+              // markdownCaptions: true, // caption uses MD, not raw text
             },
           },
           {
@@ -84,6 +89,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-remark-smartypants`,
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
