@@ -12,12 +12,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (!isBlog && node.internal.type === "MarkdownRemark") {
     const value = createFilePath({ node, getNode });
 
-    // splitted array includes empty elements, so filter them out. ex. [ '', '2021-nyt-wordlist', '' ]
+    // splitted array includes empty elements, so filter them out. ex. [ '', '2021-xx-xx-nyt-wordlist', '' ]
     const dirs = value.split("/").filter((el) => el !== "");
     const dir = dirs[dirs.length - 1]; // only the post name (exclude any sub-folder names) as string
-    const words = dir.split("-"); // split year portion
-    words.shift(); // remove first element (year)
-    const newv = "/" + words.join("-") + "/"; // don't forget slashes for the final path
+    const words = dir.split("-"); // split date portions
+    const wordsSliced = words.slice(3, words.length); // remove first elements (year, month, day)
+    const newv = "/" + wordsSliced.join("-") + "/"; // don't forget slashes for the final path
 
     createNodeField({
       node,
