@@ -27,7 +27,7 @@ const StyledMarkdown = styled.div`
 
   figure figcaption {
     margin-top: 10px;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 `;
 

@@ -12,6 +12,7 @@ published: true
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/21071233" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ![yogi bear screenshot 1](./files/01.jpg)
+
 ![yogi bear screenshot 2](./files/02.jpg)
 
 Main-on-end film title sequence animation produced at yU+co.

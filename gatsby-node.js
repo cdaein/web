@@ -5,13 +5,24 @@ const { createFilePath } = require("gatsby-source-filesystem");
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === "MarkdownRemark") {
-    // const slug = path.basename(node.fileAbsolutePath, ".md")
+  // test for 'blog' posts -> then, don't create slug node as blog posts have slug in frontmatter
+  const re = new RegExp("blog");
+  const isBlog = re.test(node.fileAbsolutePath);
+
+  if (!isBlog && node.internal.type === "MarkdownRemark") {
     const value = createFilePath({ node, getNode });
+
+    // splitted array includes empty elements, so filter them out. ex. [ '', '2021-nyt-wordlist', '' ]
+    const dirs = value.split("/").filter((el) => el !== "");
+    const dir = dirs[dirs.length - 1]; // only the post name (exclude any sub-folder names) as string
+    const words = dir.split("-"); // split year portion
+    words.shift(); // remove first element (year)
+    const newv = "/" + words.join("-") + "/"; // don't forget slashes for the final path
+
     createNodeField({
       node,
       name: "slug",
-      value,
+      value: newv,
     });
   }
 };
