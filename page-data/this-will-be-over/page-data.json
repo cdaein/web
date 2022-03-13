@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/this-will-be-over/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"This Will Be Over","date":"2021-12-23","tags":["poster","web","motion","software","typography","MDS1"],"featuredImage":{"publicURL":"/static/efb7c6256687f9bac25157331ceb2e6b/thumb.jpg"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/730363ae54a1e014dc36dc23b661c9cb/video-converted.mp4\" controls loop muted></video>\n</div>\n<div class=\"video-wrapper\">\n  <video src=\"/c71125685e39fdcddc69e2209f787cc0/process-converted.mp4\" controls loop muted></video>\n</div>\n<p>A motion poster created with Modular Design System One, a web-based custom software that I made with JavaScript.</p>","excerpt":"A motion poster created with Modular Design System One, a web-based custom software that I made with JavaScript."}},"pageContext":{"slug":"/this-will-be-over/"}},
+    "staticQueryHashes": ["1706422957","2413290850"]}

@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/2019-intercultural-dialogues/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Intercultural Dialogues","date":"2019-10-20","tags":["typography","motion","poster","software"],"featuredImage":{"publicURL":"/static/44a9f8d7d8bf8875d836ba5601b289ba/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/9f87259e25156e21b048d2a01504a726/video.mp4\" controls loop muted></video>\n</div>\n<p>We need intercultural dialogues for our sustainable future.</p>","excerpt":"We need intercultural dialogues for our sustainable future."}},"pageContext":{"slug":"/2019-intercultural-dialogues/"}},
-    "staticQueryHashes": ["1706422957","2413290850"]}

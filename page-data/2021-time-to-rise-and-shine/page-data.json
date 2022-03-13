@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/2021-time-to-rise-and-shine/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Time To Rise And Shine","date":"2021-12-23","tags":["poster","web","motion","software","typography","MDS1","NFT"],"featuredImage":{"publicURL":"/static/983d64ab9139aa558728fb38586a346a/thumb.jpg"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/d344559cc02aeed47a7cefdc6456e827/video-converted.mp4\" controls loop muted></video>\n</div>\n<div class=\"video-wrapper\">\n  <video src=\"/b5196626ae0114c71bed3c7234977708/process-converted.mp4\" controls loop muted></video>\n</div>\n<p>A motion poster created with Modular Design System One, a web-based custom software that I made with JavaScript. You can purchase the poster as <a href=\"https://teia.art/objkt/599594\">a limited edition digital NFT</a>.</p>","excerpt":"A motion poster created with Modular Design System One, a web-based custom software that I made with JavaScript. You can purchase the poster…"}},"pageContext":{"slug":"/2021-time-to-rise-and-shine/"}},
-    "staticQueryHashes": ["1706422957","2413290850"]}

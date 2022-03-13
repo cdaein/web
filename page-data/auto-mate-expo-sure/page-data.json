@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/auto-mate-expo-sure/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Auto Mate Expo Sure","date":"2019-05-14","tags":["typography","motion","poster","software"],"featuredImage":{"publicURL":"/static/ad9c3384402e29e02cecca842169a51c/thumb.png"}},"html":"<p><img src=\"/0fad3a8140d787d1903f48a219a27c36/animated.gif\" alt=\"animated gif\"></p>\n<div class=\"video-wrapper\">\n  <video src=\"/fb8935cae5a2097418d6762cecf1bf31/video.mp4\" controls loop muted></video>\n</div>","excerpt":"animated gif"}},"pageContext":{"slug":"/auto-mate-expo-sure/"}},
+    "staticQueryHashes": ["1706422957","2413290850"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/new-day/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"New Day","date":"2022-01-01T12:00:00Z","tags":["poster","web","motion","software","MDS1"],"featuredImage":{"publicURL":"/static/edf1bb2460b347e52f5455f28c2cf444/thumb.jpg"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/34d673b19e938b351477219f45777d0a/video-converted.mp4\" controls loop muted></video>\n</div>\n<div class=\"video-wrapper\">\n  <video src=\"/d2e9e7bb12ebab4e323ff492d1655253/process-converted.mp4\" controls loop muted></video>\n</div>\n<p>A motion poster that celebrates a new year. Created with Modular Design System One, a web-based custom software that I made with JavaScript.</p>","excerpt":"A motion poster that celebrates a new year. Created with Modular Design System One, a web-based custom software that I made with JavaScript."}},"pageContext":{"slug":"/new-day/"}},
+    "staticQueryHashes": ["1706422957","2413290850"]}

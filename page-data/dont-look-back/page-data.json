@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/dont-look-back/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Don’t Look Back","date":"2019-05-23","tags":["typography","motion","poster","software","NFT"],"featuredImage":{"publicURL":"/static/ce065bef9a84ef8c20ac00b1e26aff08/thumb.png"}},"html":"<p><img src=\"/6229bd8c21ff4b78e481c17bc4878e49/animated.gif\" alt=\"animated gif\"></p>\n<p>You can purchase the poster as <a href=\"https://teia.art/objkt/22343\">a limited edition digital NFT</a>.</p>","excerpt":"animated gif You can purchase the poster as a limited edition digital NFT."}},"pageContext":{"slug":"/dont-look-back/"}},
+    "staticQueryHashes": ["1706422957","2413290850"]}

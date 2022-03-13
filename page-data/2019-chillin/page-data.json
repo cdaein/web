@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/2019-chillin/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Chillin’","date":"2019-06-12","tags":["typography","web","interactive","poster","software"],"featuredImage":{"publicURL":"/static/455bd49886c7a0ea973bf5bcc8950ea6/02.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/501e4e1cc52b6929be39e96a651df91c/recording.mp4\" controls loop muted></video>\n</div>\n<div class=\"video-wrapper\">\n  <video src=\"/9cbd6dcb9f4835d3ad06f079645082c9/video.mp4\" controls loop muted></video>\n</div>\n<p><a href=\"https://exp.paperdove.com/chillin\">https://exp.paperdove.com/chillin</a></p>\n<p>Interactive web poster. You can write your message and save as image. Best viewed on mobile with motion sensor enabled.</p>\n<h3>Technologies</h3>\n<p>p5js in Webgl mode, matterjs for physics simulation</p>","excerpt":"https://exp.paperdove.com/chillin Interactive web poster. You can write your message and save as image. Best viewed on mobile with motion…"}},"pageContext":{"slug":"/2019-chillin/"}},
-    "staticQueryHashes": ["1706422957","2413290850"]}

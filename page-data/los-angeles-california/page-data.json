@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-js",
+    "path": "/los-angeles-california/",
+    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"Los Angeles California","date":"2019-03-12","tags":["typography","motion","poster","software"],"featuredImage":{"publicURL":"/static/45a5cf48bd17cc8a8a6605e90081a71a/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/cd9b978141d598e5ccc456a21ce105bc/video.mp4\" controls loop muted></video>\n</div>\n<p>I always miss LA.</p>","excerpt":"I always miss LA."}},"pageContext":{"slug":"/los-angeles-california/"}},
+    "staticQueryHashes": ["1706422957","2413290850"]}
