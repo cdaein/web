@@ -1,7 +1,7 @@
 ---
 title: Growth One Generative NFT
 slug: '/growth-one-generative-nft/'
-date: "2022-03-12"
+date: "2022-03-12T12:00:00Z"
 tags:
   - process
   - NFT
@@ -13,9 +13,9 @@ published: false
 
 ![24 minted tokens](./thumb.jpg "24 minted tokens from Growth One")
 
-[Growth One](https://www.fxhash.xyz/generative/10249) is my first generative NFT project that was launched on fxhash, and lives on the Tezos blockchain. 
+[Growth One](https://www.fxhash.xyz/generative/10249) is my first generative NFT project that was released on fxhash on March 4th, 2022, and lives on the Tezos blockchain. 
 
-This project visualizes a growth simulation of a virtual micro organism that follows simple rules. The growth algorithm is somewhat based on Diffusion-Limited Aggregation or DLA. I was introduced to the algorithm some years ago by one of the Coding Train videos, and liked its organic quality and the simplicity of code implementation. Thinking about ideas for a generative NFT, I naturally thought about this algorithm. For this project, though, I did not reference any existing code because I wanted to create my own custom version with a different way to grow the virtual organism. And in terms of visualizing, I went for a graphical representation.
+This project visualizes a growth simulation of a virtual micro organism that follows simple rules. The growth algorithm is somewhat based on Diffusion-Limited Aggregation or DLA. I was introduced to the algorithm some years ago by one of the Coding Train videos, and liked its organic quality and the simplicity of code implementation. Thinking about ideas for a generative NFT, I naturally thought about this algorithm. For this project, though, I did not reference any existing code because I wanted to create my own custom version with a different way to grow the virtual organism.
 
 ## Seed Nodes
 Where I spent most time was building the growth simulation method. The organism starts with a few seed nodes, the number of which is randomly assigned for each token. Then, there is the seed layout, the value of which is used for a horizontal, circular or random placement of the seed nodes.
@@ -51,4 +51,4 @@ I am now asking myself how I should design my program - whether the hash should 
 
 Also, the probability distribution I set in my code was not exactly reflected in the minted tokens. you have to flip the coins many times to get an even probability, but for my project with the maximum edition of 128, and much less actually minted, that distribution was skewed quite a bit. If it were fully minted and had a larger edition count, I think it would have made a difference. I think I also had a skewed perspective as I was testing thousands of times before minting. That to me was a disappointment. After all, I put a lot of time and effort to make sure there will be a lot of unique variations. It is unfortunate that many of the variations will never see the light of day.
 
-This project didn't get minted as many times as I had hoped but the whole experience of learning and creating was very valuable for me. I very much enjoyed the whole process. If anything, NFT gave me motivation to push forward, finish and release the piece out in the world. If it weren't for that, I would have just tinker with it for some time and moved on. It could have been one of many incomplete code files in my computer. I would like to continue to experiment with this new method of creating and releasing my work.
+This project didn't get minted as many times as I had hoped but the whole experience of learning and creating was very valuable for me. I very much enjoyed the whole process. If anything, NFT gave me motivation to push forward, finish and release the piece out in the world. If it weren't for that, I would have just tinkered with it for some time and moved on. It could have been one of many incomplete code files in my computer. I would like to continue to experiment with this new method of creating and releasing my work.
