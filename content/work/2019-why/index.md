@@ -8,7 +8,7 @@ tags:
   - poster
   - software
 featured: false
-featuredImage: "./thumb2.png"
+featuredImage: "./thumb2.jpg"
 published: true
 ---
 

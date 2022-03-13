@@ -8,7 +8,7 @@ tags:
   - software
   - NFT
 featured: false
-featuredImage: "./thumb.png"
+featuredImage: "./thumb.jpg"
 published: true
 ---
 

@@ -9,7 +9,7 @@ tags:
   - MDS1
   - tool
 featured: true
-featuredImage: "./thumb.png"
+featuredImage: "./thumb.jpg"
 published: true
 ---
 

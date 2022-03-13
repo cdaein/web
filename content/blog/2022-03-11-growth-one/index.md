@@ -6,12 +6,12 @@ tags:
   - process
   - NFT
 featured: false
-featuredImage: "./thumb.png"
+featuredImage: "./thumb.jpg"
 published: false
 
 ---
 
-![24 minted tokens](./thumb.png "24 minted tokens from Growth One")
+![24 minted tokens](./thumb.jpg "24 minted tokens from Growth One")
 
 [Growth One](https://www.fxhash.xyz/generative/10249) is my first generative NFT project that was launched on fxhash, and lives on the Tezos blockchain. 
 

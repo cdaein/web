@@ -6,7 +6,7 @@ tags:
   - web
   - animation
 featured: false
-featuredImage: "./thumb.png"
+featuredImage: "./thumb.jpg"
 published: true
 ---
 

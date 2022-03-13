@@ -7,7 +7,7 @@ tags:
   - software
   - web
 featured: false
-featuredImage: "./thumb.png"
+featuredImage: "./thumb.jpg"
 published: true
 ---
 

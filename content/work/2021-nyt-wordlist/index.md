@@ -7,7 +7,7 @@ tags:
   - animation
   - software
 featured: true
-featuredImage: "./thumb.png"
+featuredImage: "./thumb.jpg"
 published: true
 ---
 
