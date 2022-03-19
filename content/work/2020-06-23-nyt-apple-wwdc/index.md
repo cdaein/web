@@ -16,3 +16,5 @@ published: true
 </div>
 
 Animated illustration for the New York Times story, [Apple Announces New Privacy Features](https://www.nytimes.com/2020/06/23/technology/apple-announces-new-privacy-features.html).
+
+I sampled the Apple logo to determine the size of each cube, and added sine-based animation on top. Created with Processing programming language.
