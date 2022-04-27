@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tag-template-js",
+    "path": "/tags/faq/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":0,"edges":[]}},"pageContext":{"tag":"FAQ"}},
+    "staticQueryHashes": ["1706422957","2413290850"]}
