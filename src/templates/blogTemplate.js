@@ -42,7 +42,11 @@ const blogPostTemplate = (props) => {
           post.frontmatter.date
         ).getFullYear()}`}
         description={post.excerpt}
-        image={post.frontmatter.featuredImage.publicURL}
+        image={
+          post.frontmatter.featuredImage
+            ? post.frontmatter.featuredImage.publicURL
+            : null
+        }
       />
       <main>
         <div className="container post-page">
@@ -72,23 +76,25 @@ const blogPostTemplate = (props) => {
               </h2>
               <h3>Tags</h3>
               <ul>
-                {post.frontmatter.tags.map((tag) => {
-                  return (
-                    <li
-                      key={tag}
-                      style={{
-                        textTransform: "capitalize",
-                      }}
-                    >
-                      {/* <Link
+                {!post.frontmatter.tags
+                  ? null
+                  : post.frontmatter.tags.map((tag) => {
+                      return (
+                        <li
+                          key={tag}
+                          style={{
+                            textTransform: "capitalize",
+                          }}
+                        >
+                          {/* <Link
                         to={`/tags/${tag.toLowerCase()}`}
                         style={{ border: "none" }}
                       > */}
-                      {tag}
-                      {/* </Link> */}
-                    </li>
-                  );
-                })}
+                          {tag}
+                          {/* </Link> */}
+                        </li>
+                      );
+                    })}
               </ul>
             </div>
           </div>
