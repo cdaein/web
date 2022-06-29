@@ -10,7 +10,7 @@ module.exports = {
     tagline: "Design + Motion + Interaction",
     siteURL: `https://paperdove.com`,
     author: "Dae In Chung",
-    email: "cdaein@gmail.com",
+    email: "cdaein-at-gmail-dot-com",
     versum:
       "https://versum.xyz/user/tz1WXTdGdwD6g24vJp7vpjWVR8LuFpisUcoc/created",
     fxhash: "https://www.fxhash.xyz/u/Daeinc",

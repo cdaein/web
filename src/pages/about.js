@@ -31,8 +31,8 @@ const AboutPage = () => {
               the New York Times, and many film festivals, etc. He has also
               worked on various commercial projects in graphic design and motion
               graphics. His work has been recognized by Type Directors Club,
-              Korean Society of Typography, Graphis Award, IdN, CA Magazine
-              Korea, PAGE Magazine, etc.
+              Korean Society of Typography, IdN, CA Magazine Korea, PAGE
+              Magazine, etc.
             </p>
 
             <h3>Services</h3>
@@ -70,6 +70,16 @@ const AboutPage = () => {
 
             <h3>Selected Exhibitions</h3>
             <ul>
+              <li>
+                <a href="https://unblockgaudi.xyz/week-section">
+                  Unblock Gaudi Digital Art via Blockchain
+                </a>{" "}
+                at{" "}
+                <a href="https://www.museumangewandtekunst.de/en/visit/exhibitions/unblock-gaudi/">
+                  Museum Angewandte Kunst
+                </a>
+                , Frankfurt am Main, Germany, 2022
+              </li>
               <li>
                 <a href="https://cjcinema.org/agenda/2021/septembre/cinematheque-temporaire-du-cjc-27/">
                   La Cinémathèque Temporaire du Collectif Jeune Cinéma
