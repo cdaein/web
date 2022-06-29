@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-js",
-    "path": "/world-archery-asia/",
-    "result": {"data":{"markdownRemark":{"frontmatter":{"title":"World Archery Asia","date":"2021-01-10","tags":["web","motion"],"featuredImage":{"publicURL":"/static/894c1ae0f0dc18cd1ce547d6eb60ccba/thumb.png"}},"html":"<div class=\"video-wrapper\">\n  <video src=\"/4c480eb9805ae26d4e0aa3760f459624/video.mp4\" controls loop muted></video>\n</div>\n<p>Motion graphics intro for the World Archery Asia Youtube series.</p>","excerpt":"Motion graphics intro for the World Archery Asia Youtube series."}},"pageContext":{"slug":"/world-archery-asia/"}},
-    "staticQueryHashes": ["1706422957","2413290850"]}
