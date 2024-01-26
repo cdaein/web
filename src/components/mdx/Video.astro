@@ -1,0 +1,25 @@
+---
+const { src, width, height } = Astro.props;
+---
+
+<div class="video-wrapper">
+  <video
+    src={src}
+    width={width}
+    height={height}
+    controls
+    loop
+    muted
+    playsinline
+  >
+  </video>
+</div>
+
+{
+  /* <div className="video-wrapper">
+        <video controls muted loop>
+          {mp4 ? <source type="video/mp4" src={mp4}></source> : null}
+          {webm ? <source type="video/webm" src={webm}></source> : null}
+        </video>
+      </div> */
+}

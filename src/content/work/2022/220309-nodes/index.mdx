@@ -1,0 +1,24 @@
+---
+title: Nodes
+date: 2022-03-09T12:00:00Z
+tags:
+  - generative
+  - motion
+  - software
+  - web
+featured: false
+cover: ./files/thumb.jpg
+published: true
+---
+
+import Video from "@components/mdx/Video.astro";
+import vid1 from "./files/01.mp4";
+import vid2 from "./files/02.mp4";
+import vid3 from "./files/03.mp4";
+
+<Video src={vid1} />
+
+A series of experiments exploring motion and connections. I created a network of nodes with a custom growth simulation algorithm that is similar to Diffusion-Limited Aggregation. Each node is created sequentially and remembers its parents and children. By animating the nodes over generations, we get an interesting insight into the makeup of the network.
+
+<Video src={vid2} />
+<Video src={vid3} />
