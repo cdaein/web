@@ -11,7 +11,7 @@ import type { ImageMetadata } from "astro";
 
 interface Props {
   title: string;
-  numCols: number;
+  maxCols: number;
 }
 interface Iteration {
   name: string;
@@ -23,8 +23,7 @@ interface Iteration {
   };
 }
 
-// TODO: numCols => maxCols (depending on fully-minted or not)
-const { numCols, title } = Astro.props;
+const { maxCols, title } = Astro.props;
 
 // get data from local JSON files
 const tokenData = await getEntry("fxhash", title);
@@ -32,21 +31,21 @@ const collection = tokenData!.data.entireCollection as Iteration[];
 
 // first, get all token images
 const allTokenImagesObj = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/content/work/**/tokens/*.png",
+  "/src/content/work/**/tokens/*.png"
 );
 
 // filter the ones that belong to current token (via props.title)
 // then, use to find the object string key in <Image />
 // https://docs.astro.build/en/recipes/dynamically-importing-images/
 const imagePaths = Object.keys(allTokenImagesObj).filter((key) =>
-  key.includes(title),
+  key.includes(title)
 );
 ---
 
-<style define:vars={{ numCols }}>
+<style define:vars={{ maxCols }}>
   div.thumbnail-grid {
     display: grid;
-    grid-template-columns: repeat(var(--numCols), 1fr);
+    grid-template-columns: repeat(var(--maxCols), 1fr);
     gap: 4px 4px;
   }
   div.thumbnail-image {

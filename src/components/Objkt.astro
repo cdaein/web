@@ -9,7 +9,7 @@ import path from "node:path";
 
 interface Props {
   title: string;
-  numCols: number;
+  maxCols: number;
 }
 interface Token {
   name: string;
@@ -29,7 +29,7 @@ interface Token {
   }[];
 }
 
-const { numCols, title } = Astro.props;
+const { maxCols, title } = Astro.props;
 
 // get data from local JSON files
 // need to do sorting because other data is sorted by image filenames (allTokenImagesObj)
@@ -60,10 +60,10 @@ const collection = tokenData.filter((token, i) => {
 });
 ---
 
-<style define:vars={{ numCols }}>
+<style define:vars={{ maxCols }}>
   div.thumbnail-grid {
     display: grid;
-    grid-template-columns: repeat(var(--numCols), 1fr);
+    grid-template-columns: repeat(var(--maxCols), 1fr);
     gap: 4px 4px;
   }
   div.thumbnail-image {

@@ -5,12 +5,15 @@ import { z, defineCollection } from "astro:content";
 const workCollection = defineCollection({
   type: "content",
   schema: z.object({
+    /** Work post title */
     title: z.string(),
+    /** (optional) post description */
     description: z.string().optional(),
     date: z.date(),
     // category: z.enum(["digital art", "commission"]).optional(),
     tags: z.array(z.string()),
     featured: z.boolean(),
+    /** Cover image URL */
     cover: z.string().optional(),
     published: z.boolean(),
   }),
