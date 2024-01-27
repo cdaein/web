@@ -1,0 +1,67 @@
+---
+import data from "@data/activities";
+import ActivityListItem from "@components/mdx/ActivityListItem.astro";
+import type { Activity } from "@data/activities";
+
+type Props = {
+  slug: string;
+  /** Separate list per activity type */
+  byType?: boolean;
+};
+
+const { slug, byType = false } = Astro.props;
+
+const activities = data.filter((act: Activity) => act.slug === slug);
+
+const sortedActivities = activities.reduce(
+  (acc: Record<Activity["type"], Activity[]>, activity) => {
+    const { type } = activity;
+    acc[type] = acc[type] || [];
+    acc[type].push(activity);
+    return acc;
+  },
+  {} as Record<Activity["type"], Activity[]>
+);
+
+console.log(sortedActivities);
+
+// all activity types (keys only)
+const activityTypes = Object.keys(
+  sortedActivities
+) as (keyof typeof sortedActivities)[];
+
+const typeLUT = {
+  award: "Awards",
+  event: "Events",
+  exhibition: "Exhibitions",
+  featured: "Featured",
+  interview: "Interviews",
+  lecture: "Lectures",
+  publication: "Publications",
+};
+
+const mapHeader = (type: Activity["type"]) => typeLUT[type];
+---
+
+{
+  byType ? (
+    activityTypes.map((type) => (
+      <section>
+        <h1>{mapHeader(type)}</h1>
+        <ul>
+          {sortedActivities[type].map((act) => (
+            <ActivityListItem data={act} />
+          ))}
+        </ul>
+      </section>
+    ))
+  ) : (
+    <section>
+      <ul>
+        {activities.map((act) => (
+          <ActivityListItem data={act} />
+        ))}
+      </ul>
+    </section>
+  )
+}

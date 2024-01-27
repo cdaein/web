@@ -2,9 +2,9 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import { parseSlug } from "@scripts/utils";
+import ActivityList from "@components/mdx/ActivityList.astro";
 
 export async function getStaticPaths() {
-  // REVIEW: is there a way to combine collections?
   const workEntries = await getCollection("work");
   const writingEntries = await getCollection("writing");
 
@@ -12,7 +12,6 @@ export async function getStaticPaths() {
 
   return entries.map((entry) => {
     // entry.slug format: YYYY/YYMMDD-work-title
-    // ex: "2022/220304-growth-one"
     const slug = parseSlug(entry.slug);
 
     return {
@@ -26,6 +25,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title="test work post">
+<Layout title={entry.data.title}>
   <Content />
+  <ActivityList slug={Astro.params.slug} />
 </Layout>

@@ -1,0 +1,26 @@
+---
+// TODO:
+// - handle multiple links
+
+import type { Activity } from "@data/activities";
+
+const { data } = Astro.props as { data: Activity };
+const { date, title, role, place, city, country, link } = data;
+---
+
+<li>
+  {role && <span>{role} at </span>}
+  {
+    link ? (
+      <a href={Array.isArray(link) ? link[0] : link}>
+        <span>{title}</span>
+      </a>
+    ) : (
+      <span>{title}</span>
+    )
+  }
+  {place && <span>{place}</span>}
+  {city && <span>{city}</span>}
+  {country && <span>{country}</span>}
+  <span> {new Date(date).getFullYear()}</span>
+</li>
