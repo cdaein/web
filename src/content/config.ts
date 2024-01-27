@@ -29,8 +29,14 @@ const writingCollection = defineCollection({
   }),
 });
 
+const fxhashCollection = defineCollection({
+  type: "data",
+  // TODO: define schema (but it's a lot!!)
+});
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   work: workCollection,
   writing: writingCollection,
+  fxhash: fxhashCollection,
 };

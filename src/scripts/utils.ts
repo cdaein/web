@@ -1,3 +1,7 @@
+export function ipfsToHttps(path: string) {
+  return `https://ipfs.io/ipfs/${path.slice(7)}`;
+}
+
 export function parseSlug(path: string) {
   const subpaths = path.split("/");
   const testStr = subpaths[subpaths.length - 1];

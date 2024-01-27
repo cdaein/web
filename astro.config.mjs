@@ -11,10 +11,13 @@ export default defineConfig({
       // extendMarkdownConfig: false,
       // rehypePlugins: [rehypeFigure],
     }),
-    tailwind(),
+    tailwind({
+      // Example: Allow writing nested CSS declarations
+      // alongside Tailwind's syntax
+      nesting: true,
+    }),
   ],
   markdown: {
     // rehypePlugins: [rehypeFigure],
   },
 });
-

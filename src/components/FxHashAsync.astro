@@ -1,0 +1,97 @@
+---
+// NOTE:
+// - this component is to get live data from fxhash.
+// - can be useful for projects that are still minting.
+// - WIP and not finished.
+
+// TODO:
+// - lazyload fxhash images only on visible.
+
+interface Props {
+  numCols: number;
+  tokenName: string;
+}
+interface Objkt {
+  name: string;
+  generationHash: string;
+  metadata: {
+    thumbnailUri: string;
+    generatorUri: string;
+    // TODO: use this instead of concat strings
+    artifactUri: string; // full ipfs url including unique hash
+  };
+}
+
+const { numCols, tokenName } = Astro.props;
+
+const response = await fetch(`https://api.fxhash.xyz/graphql`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    query: `
+      query getCollection($userId: String) {
+        user(id: $userId) {
+          name
+          generativeTokens {
+            name
+            entireCollection {
+              name
+              generationHash
+              metadata 
+            }
+          }
+        }
+      }
+    `,
+    variables: {
+      // TODO: put the user ID into a separate file along with other data
+      userId: "tz1WXTdGdwD6g24vJp7vpjWVR8LuFpisUcoc",
+    },
+  }),
+});
+const json = await response.json();
+console.log(json);
+
+// all project from user
+const objkts = json.data.user.generativeTokens;
+// single project
+const objkt = objkts.filter((objkt: Objkt) => objkt.name === tokenName)[0];
+---
+
+<style define:vars={{ numCols }}>
+  div.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--numCols), 1fr);
+  }
+  div.thumbnail-box {
+    margin: 0 !important;
+    padding: 0;
+
+    img {
+      display: block;
+    }
+    img:hover {
+      border: 2px lightgray solid;
+    }
+  }
+</style>
+
+<p>Click a thumbnail image below to see a live version.</p>
+<div class="thumbnail-grid">
+  {
+    objkt.entireCollection.map((token: Objkt) => {
+      const thumbUrl = `https://ipfs.io/ipfs/${token.metadata.thumbnailUri.slice(7)}`;
+      const liveUrl = `https://ipfs.io/ipfs/${token.metadata.generatorUri.slice(
+        7,
+      )}/?fxhash=${token.generationHash}`;
+      return (
+        <div class="thumbnail-box" id={token.generationHash}>
+          <a href={liveUrl} target="_blank">
+            {/* <h2>{token.name}</h2> */}
+            <img src={thumbUrl} alt="thumbnail" loading="lazy" />
+          </a>
+        </div>
+      );
+    })
+  }
+</div>

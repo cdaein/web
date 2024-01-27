@@ -1,0 +1,3050 @@
+{
+  "name": "Growth One",
+  "createdAt": "2022-03-04T13:52:04.000Z",
+  "author": {
+    "name": "Daeinc"
+  },
+  "generativeUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+  "metadata": {
+    "name": "Growth One",
+    "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+    "childrenDescription": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+    "tags": [
+      "simulation",
+      "artificial life",
+      "growth",
+      "structure"
+    ],
+    "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooXm2w6UdSZoKrbkSKAvgQps49fSxT2ESHa3E151kN3TGhUnY4U",
+    "displayUri": "ipfs://QmWePKqw4kudpAFLR1Xj3jdfAX1i5kzMF2Wu4iMkPHf8E7",
+    "thumbnailUri": "ipfs://Qmd8nHazVa4wV38hpmVEReSF3zgS6AoagJHMF758vYJqBy",
+    "generativeUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+    "authenticityHash": "b004055d7f69f9d381d8a397c9683ef189dc21cc997ecbc8105724bd791a7238",
+    "previewHash": "ooXm2w6UdSZoKrbkSKAvgQps49fSxT2ESHa3E151kN3TGhUnY4U",
+    "capture": {
+      "mode": "CANVAS",
+      "triggerMode": "FN_TRIGGER",
+      "gpu": false,
+      "canvasSelector": "canvas"
+    },
+    "settings": {
+      "exploration": {
+        "preMint": {
+          "enabled": true,
+          "hashConstraints": null
+        },
+        "postMint": {
+          "enabled": true,
+          "hashConstraints": null
+        }
+      }
+    },
+    "symbol": "FXGEN",
+    "decimals": 0,
+    "version": "0.2"
+  },
+  "tags": [
+    "simulation",
+    "artificial life",
+    "growth",
+    "structure"
+  ],
+  "thumbnailUri": "ipfs://Qmd8nHazVa4wV38hpmVEReSF3zgS6AoagJHMF758vYJqBy",
+  "entireCollection": [
+    {
+      "metadata": {
+        "name": "Growth One #1",
+        "iterationHash": "opGSW14UeWEYUAFe58MLEzJB6BfEj6tyvjSuLHp3m1F2Zh8iXtx",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opGSW14UeWEYUAFe58MLEzJB6BfEj6tyvjSuLHp3m1F2Zh8iXtx",
+        "displayUri": "ipfs://QmZk8p8WkJkVfXRYobVa3vtZwPQv8EFkAZYRZAMJ9GxakH",
+        "thumbnailUri": "ipfs://QmZAwWuP7u6HYjjhY9T2YwVSfdTRoG574yBcNnXXLJquTd",
+        "authenticityHash": "075f15496e7028d21c0e713317089b4381126b6f74042d3ad25615a4cd084315",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 3
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #1",
+      "iteration": 1,
+      "thumbnailUri": "ipfs://QmZAwWuP7u6HYjjhY9T2YwVSfdTRoG574yBcNnXXLJquTd"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #2",
+        "iterationHash": "oorerfePioBN8cWmphW3EYgWCCyvT6YRQRh1Hz1ua3xNSgcLn7V",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oorerfePioBN8cWmphW3EYgWCCyvT6YRQRh1Hz1ua3xNSgcLn7V",
+        "displayUri": "ipfs://QmWdJjWjhqgPzpEr8TefwLL3zWt4tD9TfFFuVTBe4Gx1pe",
+        "thumbnailUri": "ipfs://QmPTSfttehU9kRsPcjADBWePprUKXK7RsYXHcGNxVuPiCt",
+        "authenticityHash": "cb2076a68c74d1187b29259913291fe5c60e73124a49329c844f4eaca0a5b6f8",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 1
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #2",
+      "iteration": 2,
+      "thumbnailUri": "ipfs://QmPTSfttehU9kRsPcjADBWePprUKXK7RsYXHcGNxVuPiCt"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #3",
+        "iterationHash": "oo3EmbHZfi4mwq1LpJXoRzCdumsRNfkqgq4EUrfW9yrRS8xkoKt",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oo3EmbHZfi4mwq1LpJXoRzCdumsRNfkqgq4EUrfW9yrRS8xkoKt",
+        "displayUri": "ipfs://QmS7CJ1CBPAP2QsARFiRFBiLoCVZD7dX7qEicc4iPyXFiM",
+        "thumbnailUri": "ipfs://QmbEQ9hhTcPZEHGMf2eiKpzinwYALbxpsP3v23uZiuWE9B",
+        "authenticityHash": "e0c1e74ff54697cde1d6017dd927d5e2b8796d402815141cdcc7a3c141db7718",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 3
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #3",
+      "iteration": 3,
+      "thumbnailUri": "ipfs://QmbEQ9hhTcPZEHGMf2eiKpzinwYALbxpsP3v23uZiuWE9B"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #4",
+        "iterationHash": "opYjnh3iV9X73nCFvbwnF1bxA28pfGeUKTETbDRdNsZqeqLzoF3",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opYjnh3iV9X73nCFvbwnF1bxA28pfGeUKTETbDRdNsZqeqLzoF3",
+        "displayUri": "ipfs://QmSmku6FHTXsveM6FRtsHpMFhCtmud9Z3BhAMEw9J6RYsZ",
+        "thumbnailUri": "ipfs://QmcyCXmqzYqUxsKz5euXS4NW6ZUVzPT9nECFgM1gUPYRN4",
+        "authenticityHash": "6630a3669a748a4bf2fabf13121c56e879ce24a75f5b596d89525e6fcd97cc6b",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #4",
+      "iteration": 4,
+      "thumbnailUri": "ipfs://QmcyCXmqzYqUxsKz5euXS4NW6ZUVzPT9nECFgM1gUPYRN4"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #5",
+        "iterationHash": "oo56PDjA7duviP8iA2BVPvk63WkizTWcgMe31Wq8sBcCH9vTYsD",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oo56PDjA7duviP8iA2BVPvk63WkizTWcgMe31Wq8sBcCH9vTYsD",
+        "displayUri": "ipfs://QmQDEtZ9Zj9tKFoneRALP4AsWpQt1f6nk9cVMo6MCpcSXf",
+        "thumbnailUri": "ipfs://QmaE4u2K2Doi56R1tHx9cP9jRt1hcaM6anCpXe3QrZ3R9P",
+        "authenticityHash": "d84b2400fc7c621eb7bd9cdf2093ecf12204111423f9747d781eb44799be4c5f",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #5",
+      "iteration": 5,
+      "thumbnailUri": "ipfs://QmaE4u2K2Doi56R1tHx9cP9jRt1hcaM6anCpXe3QrZ3R9P"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #6",
+        "iterationHash": "onvofSyCzD61RzA4cYRc2u4PZBL7qQoHJFEYiHG4UXEVAvakf4Q",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onvofSyCzD61RzA4cYRc2u4PZBL7qQoHJFEYiHG4UXEVAvakf4Q",
+        "displayUri": "ipfs://QmYYdxZGiiRr7aR3iuJXmQZsw18DqU9VsLP18cCxWT2RCN",
+        "thumbnailUri": "ipfs://QmeaTM6XZCvwAvvbGUC48cbfqQvnrRntdu6yjiXhGA7iTy",
+        "authenticityHash": "5ca490b481c9189c3579295c2d89b2df9fb41de616e9d2af3e1d5a187d410947",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 7
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #6",
+      "iteration": 6,
+      "thumbnailUri": "ipfs://QmeaTM6XZCvwAvvbGUC48cbfqQvnrRntdu6yjiXhGA7iTy"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #7",
+        "iterationHash": "oooVkrSmhQemNPiRkFDS49C6f3k8Z5pJBCQSEBDDPdiTEdVHFh7",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oooVkrSmhQemNPiRkFDS49C6f3k8Z5pJBCQSEBDDPdiTEdVHFh7",
+        "displayUri": "ipfs://QmbqTsBkoMUi867v5MEwskckUWwfAairDmbURUnJN33bQE",
+        "thumbnailUri": "ipfs://QmTvnxWJ2eqmaYgWU6zP9pHcNN36PdBmGg1EzVH94LY3Gx",
+        "authenticityHash": "dece723398fb15f12f188f6183f0641cea80e131ca80144c02613cbae9b29ee1",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #7",
+      "iteration": 7,
+      "thumbnailUri": "ipfs://QmTvnxWJ2eqmaYgWU6zP9pHcNN36PdBmGg1EzVH94LY3Gx"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #8",
+        "iterationHash": "opXZ9TnKUcWzhnarzqHHDBz3Go8SoXtre6LHactFEmKMpDdLCmk",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opXZ9TnKUcWzhnarzqHHDBz3Go8SoXtre6LHactFEmKMpDdLCmk",
+        "displayUri": "ipfs://QmZXEByUPLjibKHkY9buyN91dGSmQW9Sq3tvAARZ4r7bda",
+        "thumbnailUri": "ipfs://QmNecMtszFR2BgRZ1ANSy7t7ToP8rMi8CrjgdzcezQ8mgD",
+        "authenticityHash": "ea6c98b3b4848e630f200bf4e1ad294ebe6d351b5772cdf1c236a63161a70bf5",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 1
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #8",
+      "iteration": 8,
+      "thumbnailUri": "ipfs://QmNecMtszFR2BgRZ1ANSy7t7ToP8rMi8CrjgdzcezQ8mgD"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #9",
+        "iterationHash": "opADtis2znwd4G2dasPpNoXhaH7dLmctTcgMpYkrd6MpyZeJibG",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opADtis2znwd4G2dasPpNoXhaH7dLmctTcgMpYkrd6MpyZeJibG",
+        "displayUri": "ipfs://QmRqG4a2t9XaxKzmBJkfqz1NoS8tiyWy5kcw75Ju5549Fa",
+        "thumbnailUri": "ipfs://QmNmYYcx5qxYdQFgb9bSHqTCaHAf3rErq1F6DvfAd8gkpL",
+        "authenticityHash": "160d38deae51bcec99c10ecad12f3729943ee8469d6260923c0d7ff37d823184",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "low"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #9",
+      "iteration": 9,
+      "thumbnailUri": "ipfs://QmNmYYcx5qxYdQFgb9bSHqTCaHAf3rErq1F6DvfAd8gkpL"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #10",
+        "iterationHash": "ooRbo9JHgAqEvqKieZKS7TE2Ap4SSUje8xFoGsy84mfAka39g1w",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooRbo9JHgAqEvqKieZKS7TE2Ap4SSUje8xFoGsy84mfAka39g1w",
+        "displayUri": "ipfs://QmYxEJMwARkK5sgt1sKtEjTTgzDeqpYTi8xJCR98ih75iA",
+        "thumbnailUri": "ipfs://QmS7PqZfBUSCiXas6Bnchvh71Ag6m6cFPKim7X2BaotTyZ",
+        "authenticityHash": "b39925057354e62abc17196c4812b3184f9389d40a6991b4a0ff15088e77d8e7",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #10",
+      "iteration": 10,
+      "thumbnailUri": "ipfs://QmS7PqZfBUSCiXas6Bnchvh71Ag6m6cFPKim7X2BaotTyZ"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #11",
+        "iterationHash": "onnQNQYo4vFQwCzRK1rcY3acoY7w3QitVdWrUMpgtd3ph3XNrXD",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onnQNQYo4vFQwCzRK1rcY3acoY7w3QitVdWrUMpgtd3ph3XNrXD",
+        "displayUri": "ipfs://QmRJf7ytrD3c893CvmSAgJNLFvuaswQAxiFpDPEtezBrbX",
+        "thumbnailUri": "ipfs://QmfGLMa5mTWcj2oKHzmkNJzvGkVu4Dzej2K1d1PVah8jHH",
+        "authenticityHash": "368c6b608055de7bc18464a11fe59c66e0d4644ddc00fc3cc410339f6f1c7944",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #11",
+      "iteration": 11,
+      "thumbnailUri": "ipfs://QmfGLMa5mTWcj2oKHzmkNJzvGkVu4Dzej2K1d1PVah8jHH"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #12",
+        "iterationHash": "opJxwxQAS2x2fu2AKnYz9qRGTfSy4uySCvoqJJADkZZHzT7qxXZ",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opJxwxQAS2x2fu2AKnYz9qRGTfSy4uySCvoqJJADkZZHzT7qxXZ",
+        "displayUri": "ipfs://QmdzA3yLtLyR4AkDcDEj12GQ2Jv7ywrRRmd3gAKpgcHBTB",
+        "thumbnailUri": "ipfs://QmUBBjEyCmxbwJQ1nRMsifC7vRe1HyRxGEM4Xo6rHbcym1",
+        "authenticityHash": "d5ada40e8d0abefa9e69a87a4db526ad1937362ffcd3b66d1b4038819df9f8d0",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 8
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #12",
+      "iteration": 12,
+      "thumbnailUri": "ipfs://QmUBBjEyCmxbwJQ1nRMsifC7vRe1HyRxGEM4Xo6rHbcym1"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #13",
+        "iterationHash": "opEdkNJiU1Yb98JpvBLMVRFxkbb28MQG2brUPTvtsipFXvcVMG9",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opEdkNJiU1Yb98JpvBLMVRFxkbb28MQG2brUPTvtsipFXvcVMG9",
+        "displayUri": "ipfs://QmNfrPrzN5fgUBstMYQFtQaMpFag8gNPLh5UCaU8K22UDm",
+        "thumbnailUri": "ipfs://QmY1z5gkMekDoWKEtDQhz1awZhbgEm3A6EyMiKDDRXd8Wg",
+        "authenticityHash": "593b3fb7a9ebe4d3d344254ffb720d00dd1638f8480235661b91ff0fb5091bab",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #13",
+      "iteration": 13,
+      "thumbnailUri": "ipfs://QmY1z5gkMekDoWKEtDQhz1awZhbgEm3A6EyMiKDDRXd8Wg"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #14",
+        "iterationHash": "onpQyqEipLq82wBkArStJVEsj5rCTqWqGPNjgMtEcGkHFR2ZU1d",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onpQyqEipLq82wBkArStJVEsj5rCTqWqGPNjgMtEcGkHFR2ZU1d",
+        "displayUri": "ipfs://QmdNP4vyZPfik5TUPgtytdBS3eAzynzQvaJdZ1JqNDAMuK",
+        "thumbnailUri": "ipfs://QmRiNWLxtF1v92jJDNfHk6tUHPjY6Z4LgapTHE58439aM4",
+        "authenticityHash": "8351e4eab488f7e5bff20f9984bb30666ab25224b073f0b250ed7bbfb1c81088",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #14",
+      "iteration": 14,
+      "thumbnailUri": "ipfs://QmRiNWLxtF1v92jJDNfHk6tUHPjY6Z4LgapTHE58439aM4"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #15",
+        "iterationHash": "op11cASAXbMQ9PK2XP7k5cVJBZevHg1usdMMhE2fXzKp4kz72Wm",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=op11cASAXbMQ9PK2XP7k5cVJBZevHg1usdMMhE2fXzKp4kz72Wm",
+        "displayUri": "ipfs://QmTDQs3r2QNNznPcNYcKJgafJKJDDGgPv4ZMKgRperDMfh",
+        "thumbnailUri": "ipfs://QmSq5j9ePVcDu5SifDKfA9CmTSzXkLvpRfFyhrDB8PCKtn",
+        "authenticityHash": "6ddb057f2b85a63f4bffbd0b98ccf9d05f05dc36722a92dd8162dcd941c48545",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 7
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #15",
+      "iteration": 15,
+      "thumbnailUri": "ipfs://QmSq5j9ePVcDu5SifDKfA9CmTSzXkLvpRfFyhrDB8PCKtn"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #16",
+        "iterationHash": "op9EBr1dpSXnJJXiwoUErChC2dnFhrZqX7tQw3r2iwW7uYpEfMa",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=op9EBr1dpSXnJJXiwoUErChC2dnFhrZqX7tQw3r2iwW7uYpEfMa",
+        "displayUri": "ipfs://QmVpMNbt8JWmNpG7SP99R63zFxMqFmXKaJMjzDw3FSkr8U",
+        "thumbnailUri": "ipfs://QmWz7kdZdEhrGJuZAhmByuhPGjPCDXCtRiojyuiaz3LKL4",
+        "authenticityHash": "bb93dbd26f703091de6c28cddf7ff5b4ca7b844d08f6d03135e47477f9adb468",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "low"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #16",
+      "iteration": 16,
+      "thumbnailUri": "ipfs://QmWz7kdZdEhrGJuZAhmByuhPGjPCDXCtRiojyuiaz3LKL4"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #17",
+        "iterationHash": "oouA9c4ttoSWLxXJfgfKRUFKi1t5wiaKcu5ayP8gTPVSMGqkGYh",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oouA9c4ttoSWLxXJfgfKRUFKi1t5wiaKcu5ayP8gTPVSMGqkGYh",
+        "displayUri": "ipfs://QmWfS6H5JY2Lu24Y2kYFNHcjwP21zy4PyqXT2d5YwyFS3q",
+        "thumbnailUri": "ipfs://QmdnrLebvaC3S75p8fmTaWLANycM81FZsVgNWPgdsFLAam",
+        "authenticityHash": "278d8eda497769af384c4b211642febdfa5e6782b8b053349608ba38c5f991e4",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #17",
+      "iteration": 17,
+      "thumbnailUri": "ipfs://QmdnrLebvaC3S75p8fmTaWLANycM81FZsVgNWPgdsFLAam"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #18",
+        "iterationHash": "op9m9xi68BfDisfw7Ee88Z7TXR9MnMEEnMwZnACmdDfdsJ2K1YC",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=op9m9xi68BfDisfw7Ee88Z7TXR9MnMEEnMwZnACmdDfdsJ2K1YC",
+        "displayUri": "ipfs://QmSt2UhwChmZQdV5rqzMF7ntSiWjgSwVgSrBvoSJUA4wKf",
+        "thumbnailUri": "ipfs://QmeobzgYjyK1itCzBEzX3Er5SS1YCoz2T3ETJPZFtKRmrr",
+        "authenticityHash": "55968ad5ba88e4ed7a452f22aac1f48f97a75d01be688c4c347355fb9a62fff8",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 8
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #18",
+      "iteration": 18,
+      "thumbnailUri": "ipfs://QmeobzgYjyK1itCzBEzX3Er5SS1YCoz2T3ETJPZFtKRmrr"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #19",
+        "iterationHash": "ooDWeD3xRHdxMBwtPPLU6KTFghnEV15Yu8KMLjKmhWX51Q5WoNu",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooDWeD3xRHdxMBwtPPLU6KTFghnEV15Yu8KMLjKmhWX51Q5WoNu",
+        "displayUri": "ipfs://QmcUYtx4DZ7MzU5zq3teWyCPJkfaa7HXeVWkR8nvYQgWbG",
+        "thumbnailUri": "ipfs://QmbRaLFqxnkBj1ySyPCeA12anit92Pe8DxBqvGy8JxkmsU",
+        "authenticityHash": "1e2ce657e126a9dde698c22066df544d68c2aafddcace62c52185f05ee6efd42",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 3
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #19",
+      "iteration": 19,
+      "thumbnailUri": "ipfs://QmbRaLFqxnkBj1ySyPCeA12anit92Pe8DxBqvGy8JxkmsU"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #20",
+        "iterationHash": "oo3qKzU1No3cn6SKEstpEoAvMGKUSmHUY1RNTPxhnB9NZvHDqBT",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oo3qKzU1No3cn6SKEstpEoAvMGKUSmHUY1RNTPxhnB9NZvHDqBT",
+        "displayUri": "ipfs://QmPycZw1XiqcfudQaQWzUYUZwniSwd46UKr9G6XH85CWcM",
+        "thumbnailUri": "ipfs://QmQFdrA2Lmf4BNjpu6WNEetJ5ePNeB5PFu6D8WrCA5wib8",
+        "authenticityHash": "5bbfbe81475df3be57984c01418d082b87c60937326ad90badaef7e0f96a594f",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 7
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #20",
+      "iteration": 20,
+      "thumbnailUri": "ipfs://QmQFdrA2Lmf4BNjpu6WNEetJ5ePNeB5PFu6D8WrCA5wib8"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #21",
+        "iterationHash": "opSa7HE2Y1NjvYm6Yuhtcmj1qBYQRP22FJAPALkBdod6yBdxkib",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opSa7HE2Y1NjvYm6Yuhtcmj1qBYQRP22FJAPALkBdod6yBdxkib",
+        "displayUri": "ipfs://QmSSTKt3VsQf4FiYTvXGD683tyjgH6osU2dBjBD6Jc6X2y",
+        "thumbnailUri": "ipfs://QmPp9YK8bSNduawdUij6FowNpsV6q8UhtddjEMCGaq95b7",
+        "authenticityHash": "d24021fb6e5ecbfced4036b9835a41e8d1766554b0bb2fd4151be7dd99322efc",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "low"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #21",
+      "iteration": 21,
+      "thumbnailUri": "ipfs://QmPp9YK8bSNduawdUij6FowNpsV6q8UhtddjEMCGaq95b7"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #22",
+        "iterationHash": "onzAEco2vpi1w8nzK9WJcrubgzWVwabwTYVJTNsNM6VnCt45JUd",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onzAEco2vpi1w8nzK9WJcrubgzWVwabwTYVJTNsNM6VnCt45JUd",
+        "displayUri": "ipfs://QmeHvFnUfjHV7tqoeWn1jcNa9UFgvqBhuLSRCMV39pxkU1",
+        "thumbnailUri": "ipfs://QmYRzsxMze6DnbWUfGNSMfN39eG2NLtqv9wZnpA3Bdsb6h",
+        "authenticityHash": "d57ce14ac0e7f45970309cd34cb98624c1f3679115f5d4e1d67b73e47713b781",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #22",
+      "iteration": 22,
+      "thumbnailUri": "ipfs://QmYRzsxMze6DnbWUfGNSMfN39eG2NLtqv9wZnpA3Bdsb6h"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #23",
+        "iterationHash": "opJCh93RU6HHNGBdBZo9c9hSXkHJSZtC3EGyKSCzudYXS12pUUb",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opJCh93RU6HHNGBdBZo9c9hSXkHJSZtC3EGyKSCzudYXS12pUUb",
+        "displayUri": "ipfs://Qmf6GckfP5d1ZyJB7p2sStsnxNNcU1umPvUoW5pcuMM93W",
+        "thumbnailUri": "ipfs://QmUfSYreXhFd1uCv8Kbkqw6yuAhUUGZXsWputM9m2hctYL",
+        "authenticityHash": "a151d2baef332d62879323e5451591921122bf6c50b3d0ea76b1c791d7696443",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #23",
+      "iteration": 23,
+      "thumbnailUri": "ipfs://QmUfSYreXhFd1uCv8Kbkqw6yuAhUUGZXsWputM9m2hctYL"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #24",
+        "iterationHash": "ooGixPKywU4DBpvLo7VWwep3LN3ttDa8S4zKYXfna5Sn9MFZBHR",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooGixPKywU4DBpvLo7VWwep3LN3ttDa8S4zKYXfna5Sn9MFZBHR",
+        "displayUri": "ipfs://QmNYDiYTpEQejtiCTdRMaeqzmp6YzgqRktqRHod2pHrboF",
+        "thumbnailUri": "ipfs://QmSE9dBXr3oPKPhwHapfUQFsmFXah87oJWuwRbyq84JVGN",
+        "authenticityHash": "affb15ebef19f4c573d047376599a74718412c1fcb2cf8287eb6e9db30135356",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 7
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #24",
+      "iteration": 24,
+      "thumbnailUri": "ipfs://QmSE9dBXr3oPKPhwHapfUQFsmFXah87oJWuwRbyq84JVGN"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #25",
+        "iterationHash": "ooSs6hdnJUygnAPatYDSBx9DxrsL9UbXNqFWHgLCzH1CBw191f9",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooSs6hdnJUygnAPatYDSBx9DxrsL9UbXNqFWHgLCzH1CBw191f9",
+        "displayUri": "ipfs://QmbGrBPjmiNgau94xmNbiQ9NLJTDCod7dM2ArRX4psSN6A",
+        "thumbnailUri": "ipfs://Qmag57gUKpaCug6GwzakXEhiPLDwnj5YnmdpLKy1iuiP1t",
+        "authenticityHash": "2ffaf9c8387849e827c9bb270e6d1bd3ee7ebe93c0c71ab444984bdc6fd15968",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 6
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "low"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #25",
+      "iteration": 25,
+      "thumbnailUri": "ipfs://Qmag57gUKpaCug6GwzakXEhiPLDwnj5YnmdpLKy1iuiP1t"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #26",
+        "iterationHash": "oo9TFfktyxM7hLXkfCiCT4ecYmPnVU73jcVVD9dt63PHUis2nJ9",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oo9TFfktyxM7hLXkfCiCT4ecYmPnVU73jcVVD9dt63PHUis2nJ9",
+        "displayUri": "ipfs://QmQ8s6KDXApCP73XViW9gPoFfUeAQ4LXLTJSfLKgQQiwsk",
+        "thumbnailUri": "ipfs://QmUp5wqe88oe3tQitdj3ATnUeNbZpAezSYteZavXDQ8wMB",
+        "authenticityHash": "a47007e7297bcd7272cf03f247a6159c31f92cfe146b2e0d46ef82880660c884",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "low"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #26",
+      "iteration": 26,
+      "thumbnailUri": "ipfs://QmUp5wqe88oe3tQitdj3ATnUeNbZpAezSYteZavXDQ8wMB"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #27",
+        "iterationHash": "opMB78QVqkBK8rukgF76ij8bLZCu9pKLkGcsn2EHjkgaTLZT39J",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opMB78QVqkBK8rukgF76ij8bLZCu9pKLkGcsn2EHjkgaTLZT39J",
+        "displayUri": "ipfs://QmWkNWFswR3hnsyFpBSVigGtaix6pi9f68dpj6wMpTXDzj",
+        "thumbnailUri": "ipfs://QmX5SGhQ7YnvL3Y6XpygJzD1G7GHF5o1R65tRnmtSAT83F",
+        "authenticityHash": "eb08a98dc683d952179ad91fa723117d93aa6d812341e647e91fe555fe1e0400",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 7
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #27",
+      "iteration": 27,
+      "thumbnailUri": "ipfs://QmX5SGhQ7YnvL3Y6XpygJzD1G7GHF5o1R65tRnmtSAT83F"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #28",
+        "iterationHash": "oovJ8jpMU5NERsLxPp5Xh6Kd4KSNkLx5NKEWnS5Gi1w5k1Tw82B",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oovJ8jpMU5NERsLxPp5Xh6Kd4KSNkLx5NKEWnS5Gi1w5k1Tw82B",
+        "displayUri": "ipfs://QmWJcikrU9N65yU8jwQ76y6TMNzygJuV6XL78XpzGLuFSi",
+        "thumbnailUri": "ipfs://QmezgmCZQHcbTjsh2Xoy8fGgvqtxMKQCYrkXFEmZhyenJM",
+        "authenticityHash": "bbd8ce16cfbd4cc42d88fcf7de552153eb91de162f04fd3d4eef9e3527b405d6",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "low"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #28",
+      "iteration": 28,
+      "thumbnailUri": "ipfs://QmezgmCZQHcbTjsh2Xoy8fGgvqtxMKQCYrkXFEmZhyenJM"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #29",
+        "iterationHash": "op3vv5pYcb3eNdRg1XUpid2Kyxun83ToB2Nq1ntzXdtVUQS1C8q",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=op3vv5pYcb3eNdRg1XUpid2Kyxun83ToB2Nq1ntzXdtVUQS1C8q",
+        "displayUri": "ipfs://QmdUSQkYcz1DDsSd8d8qFergPG1GKS2q9KXUAvAdFGTwP2",
+        "thumbnailUri": "ipfs://QmZEjuWDKsZwfE7V6GpsePr8peV4Z6aNVykWAnsZgZsWAU",
+        "authenticityHash": "3a4f025bd156b12fcc344f5cb5eb19c3a1dfe9bd3841e7629f3c70887954f4ee",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 6
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "low"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #29",
+      "iteration": 29,
+      "thumbnailUri": "ipfs://QmZEjuWDKsZwfE7V6GpsePr8peV4Z6aNVykWAnsZgZsWAU"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #30",
+        "iterationHash": "ony5AxEk5DwTP4UgMrQWY65FS7oyC6pCyNNodLHC9GF4NRVLJjD",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ony5AxEk5DwTP4UgMrQWY65FS7oyC6pCyNNodLHC9GF4NRVLJjD",
+        "displayUri": "ipfs://QmQZg16yhNBDqjVTWAq9pUkibSe7zxiqLFhQDP21FqWnjN",
+        "thumbnailUri": "ipfs://QmP4NqkiGAH99GVAWDd2FFnd6XPors1Mw7Fm2tqKFUiRC7",
+        "authenticityHash": "85e489fa6fb94be6a0e5b5a07f524340afd678d966c2ecb182d112dd2e12d86c",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 1
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #30",
+      "iteration": 30,
+      "thumbnailUri": "ipfs://QmP4NqkiGAH99GVAWDd2FFnd6XPors1Mw7Fm2tqKFUiRC7"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #31",
+        "iterationHash": "oopvjph7PQTgD3HVmDmviXfVxeLq46KHdMgCC2uyN1GpzGmi9FM",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oopvjph7PQTgD3HVmDmviXfVxeLq46KHdMgCC2uyN1GpzGmi9FM",
+        "displayUri": "ipfs://QmNmTi1F2qtk6BYiFJov5sKQRSbN1oxbWzSxcAgkXGVpoJ",
+        "thumbnailUri": "ipfs://QmTYZQuCWkbA61uUKZRnjdFMeW95Etw1rSDNGx1QhPtc4m",
+        "authenticityHash": "b02e67a24bced28a21d51002bf36bbd8ba713b5f7096bec416aa944ba1494552",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 3
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #31",
+      "iteration": 31,
+      "thumbnailUri": "ipfs://QmTYZQuCWkbA61uUKZRnjdFMeW95Etw1rSDNGx1QhPtc4m"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #32",
+        "iterationHash": "ooWDHfaFGhEPYFfZHPDP9BQXV5g6nvEBR4Zz9grVUYcssgU1VqF",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooWDHfaFGhEPYFfZHPDP9BQXV5g6nvEBR4Zz9grVUYcssgU1VqF",
+        "displayUri": "ipfs://QmVwrRxaz2ecBg3vfBFB79jR43eMwJomvTnNMNNbwDfdWN",
+        "thumbnailUri": "ipfs://QmRtntdj6BUXiZNELsmFhJdgsGmKy1KhMXjNZspgyWDhQ5",
+        "authenticityHash": "92db4db0dec16e68e25721650f04f25037e11fa95d797f0fb7f037d92f52bf35",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 3
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "around center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #32",
+      "iteration": 32,
+      "thumbnailUri": "ipfs://QmRtntdj6BUXiZNELsmFhJdgsGmKy1KhMXjNZspgyWDhQ5"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #33",
+        "iterationHash": "onx9oJJr4wLCwRT7zNXKEkVGYFwK7Z31xnG6HkWcYagf9meFedM",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onx9oJJr4wLCwRT7zNXKEkVGYFwK7Z31xnG6HkWcYagf9meFedM",
+        "displayUri": "ipfs://QmfQTVaWpgkJKo2VRMCfKTwAthGV6jP1yJ1jMeeiLyKdwv",
+        "thumbnailUri": "ipfs://QmT3q6CBSy9HH9qMPDMfGiEV246GkPBqFegkAZAqa76a6y",
+        "authenticityHash": "8549fc792d2fe8787ac1da79c7af78513e6c74f8aa28a6437146c5f13fedb5de",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 8
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #33",
+      "iteration": 33,
+      "thumbnailUri": "ipfs://QmT3q6CBSy9HH9qMPDMfGiEV246GkPBqFegkAZAqa76a6y"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #34",
+        "iterationHash": "onz1NvGxfd7Ctj8TCYhwtvBqZc4CS31VG3Gnb6j96qegJiVRdrZ",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onz1NvGxfd7Ctj8TCYhwtvBqZc4CS31VG3Gnb6j96qegJiVRdrZ",
+        "displayUri": "ipfs://Qme28WJnWoP7RokAya4ZPczPLVnZRctNRSBrmNEKk7xyCc",
+        "thumbnailUri": "ipfs://QmaK6hyxF1eEbQ2A9xMXWv2zuLHQvEHYVmniQtFoUjfRRE",
+        "authenticityHash": "19569163b9247b027e3eb1d10da7c7be0699adc861decf43dfcd625ad2384c15",
+        "attributes": [],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #34",
+      "iteration": 34,
+      "thumbnailUri": "ipfs://QmaK6hyxF1eEbQ2A9xMXWv2zuLHQvEHYVmniQtFoUjfRRE"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #35",
+        "iterationHash": "ooSvaaV729fVbSbwXko9AmJ3K2pT37noDzrTye8u6ytJs2goT5e",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooSvaaV729fVbSbwXko9AmJ3K2pT37noDzrTye8u6ytJs2goT5e",
+        "displayUri": "ipfs://QmUy6PrN7CQRkaR6TjMvaJg8p4uXmV9X3HmMW4kpwz9HHk",
+        "thumbnailUri": "ipfs://QmTEhhF7JdzVegKq7VWGzMivDi6scUmMHj9JU14YGHqAhL",
+        "authenticityHash": "48d19c1532da8b4bee98134b1b626d277a9303edb934717f0c5dc459fd6bc3ed",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 3
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #35",
+      "iteration": 35,
+      "thumbnailUri": "ipfs://QmTEhhF7JdzVegKq7VWGzMivDi6scUmMHj9JU14YGHqAhL"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #36",
+        "iterationHash": "oo62EWGgeYdzsMWcqp3HnE4PcQu8qntStnhTv9Xnfu6XiaGvtAY",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oo62EWGgeYdzsMWcqp3HnE4PcQu8qntStnhTv9Xnfu6XiaGvtAY",
+        "displayUri": "ipfs://QmWdPPAprDFANB7Vj7TfMKX1PkKJiaRYJ2WEGubXvVsDJW",
+        "thumbnailUri": "ipfs://QmT8QXa8PDEvFe8QaCwf2ni8g8XGQ8VKCY5EKjH4KHbx5V",
+        "authenticityHash": "daa89d268b8b33214d811a00825e8b94a0e6e00d4ec2c2bd2ce06f1efae81741",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #36",
+      "iteration": 36,
+      "thumbnailUri": "ipfs://QmT8QXa8PDEvFe8QaCwf2ni8g8XGQ8VKCY5EKjH4KHbx5V"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #37",
+        "iterationHash": "ooee9fdtiZmZJL5JHRZEBagfbakDM7ZgDhmYaotUgVv9XjiDufc",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooee9fdtiZmZJL5JHRZEBagfbakDM7ZgDhmYaotUgVv9XjiDufc",
+        "displayUri": "ipfs://QmZHPzmLVp3E9H6fKbXauBdwkwRrgPqzvAsekgjUUUAnPs",
+        "thumbnailUri": "ipfs://QmR6VbrM7HNNV5LCyQDWVUsQgeMdecRKQ4EGyfLVhtfWAT",
+        "authenticityHash": "669e29ec9ce3f1f95755c25d15097954d70bfbaa2dfea22d129121f98a5da510",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #37",
+      "iteration": 37,
+      "thumbnailUri": "ipfs://QmR6VbrM7HNNV5LCyQDWVUsQgeMdecRKQ4EGyfLVhtfWAT"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #38",
+        "iterationHash": "onorFphvgBP2y7v1eyPa7PBqnUk84g2sUZhkyhYNo3XhPePmq84",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onorFphvgBP2y7v1eyPa7PBqnUk84g2sUZhkyhYNo3XhPePmq84",
+        "displayUri": "ipfs://QmSkJmGpTdSxUTDQm2TeXz1QsSkD8TmMnvoYDtr3Nhra3d",
+        "thumbnailUri": "ipfs://QmR7t2paV439qc27LSVpWAeoyge4XN4wsHnyrGnSi4rXGH",
+        "authenticityHash": "e270fd3c5a3097c02568d310c680c40f356a367d194ce6802dd6af1078d56e8c",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 2
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #38",
+      "iteration": 38,
+      "thumbnailUri": "ipfs://QmR7t2paV439qc27LSVpWAeoyge4XN4wsHnyrGnSi4rXGH"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #39",
+        "iterationHash": "oor97BJFkx1dw3A9YHMvTXSRcugGWBf54z4ozqnvVGhTqfpahiM",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oor97BJFkx1dw3A9YHMvTXSRcugGWBf54z4ozqnvVGhTqfpahiM",
+        "displayUri": "ipfs://QmS7rXz7XfS3w1UNt8J7zaWLtci4Vx3uQAvbAjRtspLsoX",
+        "thumbnailUri": "ipfs://QmQ7oNv9AiKZLJTowZpDiSYGsTkGgi46VrgYr1v8DRih3J",
+        "authenticityHash": "e50df16d682284f2d2dbbbc33ed0c76639559cc0ccdf0deecab565eada26bea6",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #39",
+      "iteration": 39,
+      "thumbnailUri": "ipfs://QmQ7oNv9AiKZLJTowZpDiSYGsTkGgi46VrgYr1v8DRih3J"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #40",
+        "iterationHash": "oodNf7yacSTAhzJdBvWSL6U14aF4mHgxqCzwS6Rwa9d6HKUBbCE",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=oodNf7yacSTAhzJdBvWSL6U14aF4mHgxqCzwS6Rwa9d6HKUBbCE",
+        "displayUri": "ipfs://QmZoJPpDk6ryTuYfRzX2JVeoEwJ7EzhZBRNqWm5zRMsFeW",
+        "thumbnailUri": "ipfs://QmZxP3GbaPYh8q1enrw5qRWQkaiT2HVXhgn2DaqoQhePo4",
+        "authenticityHash": "9691230d34f906fce6bcc1559026cb38a25bb9183ec7a3f54791d08c4bf43ccc",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "low"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #40",
+      "iteration": 40,
+      "thumbnailUri": "ipfs://QmZxP3GbaPYh8q1enrw5qRWQkaiT2HVXhgn2DaqoQhePo4"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #41",
+        "iterationHash": "ongoK65JUeKoXBfhAidg4Hg1ZfyUou8YuSvoKiKPAKmXWoxDaPe",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ongoK65JUeKoXBfhAidg4Hg1ZfyUou8YuSvoKiKPAKmXWoxDaPe",
+        "displayUri": "ipfs://QmZMyiyXFDA39SaUab2MfdS89c2TjXe9WJADfbuMDJmbyM",
+        "thumbnailUri": "ipfs://QmaPQceh15wtdE6WYLdhHEkKA13J25WM1ijiPVT8Ankamu",
+        "authenticityHash": "bba26326ed1def60734449d2856883bb6f31be89117b75e413dcab2840a4beca",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 6
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #41",
+      "iteration": 41,
+      "thumbnailUri": "ipfs://QmaPQceh15wtdE6WYLdhHEkKA13J25WM1ijiPVT8Ankamu"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #42",
+        "iterationHash": "op1ctBEG7xTA23YadQgzje6V8dZGjC66mZCQ5dC98DdxdFaQe5Z",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=op1ctBEG7xTA23YadQgzje6V8dZGjC66mZCQ5dC98DdxdFaQe5Z",
+        "displayUri": "ipfs://QmezZc8ZWZLvotZYGrAAvxudEofRgJ3JhkA5tuxYmXeCNV",
+        "thumbnailUri": "ipfs://QmWQWadxwzsEvYA4UJZfqY2JrcSmsirAbihqtafJT1RKyw",
+        "authenticityHash": "5576850ffb0e3d92d50d8ca3244721cd1a8bf501e12b33536e1cfa7ca338d828",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 1
+          },
+          {
+            "name": "Seed Layout",
+            "value": "horizontal"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "random"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #42",
+      "iteration": 42,
+      "thumbnailUri": "ipfs://QmWQWadxwzsEvYA4UJZfqY2JrcSmsirAbihqtafJT1RKyw"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #43",
+        "iterationHash": "onvYQKqSHZFsqM6Dbvh1qKuecGNjFuNYGxj2HV3SotTqBpqGu9G",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onvYQKqSHZFsqM6Dbvh1qKuecGNjFuNYGxj2HV3SotTqBpqGu9G",
+        "displayUri": "ipfs://Qme7KtXvD1F5kccpi7nyRpsbajhg2y4iEXP8HfafCcUZQE",
+        "thumbnailUri": "ipfs://QmWt2jLirJ2PZw7ZgkEc9r3NB3vNwPKnP5qqRXPz47ZJJD",
+        "authenticityHash": "8bb47522ffc5ca421048d35994f6dd6691de1c5b75a5caa5c164bebb614be677",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 4
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "seed nodes"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "high"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #43",
+      "iteration": 43,
+      "thumbnailUri": "ipfs://QmWt2jLirJ2PZw7ZgkEc9r3NB3vNwPKnP5qqRXPz47ZJJD"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #44",
+        "iterationHash": "onkGqPm91wjyiTU8R4BLErbuTdZLMiFmuZQvZDsLcTQP4UubgVL",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=onkGqPm91wjyiTU8R4BLErbuTdZLMiFmuZQvZDsLcTQP4UubgVL",
+        "displayUri": "ipfs://QmRarDBUpGu8yJyeqJPEW4GQhTPsNxtxrrzerWy6FkDy8W",
+        "thumbnailUri": "ipfs://Qmd94WVCvmpBRQaRMqGneCzS1vPzzqK9voaHqhZ3KMebDZ",
+        "authenticityHash": "c78c18c288f94067ad216684dfa46e723334a879a5874096828b7bbdc4571fc7",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 7
+          },
+          {
+            "name": "Seed Layout",
+            "value": "circular"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "increase"
+          },
+          {
+            "name": "Search Center",
+            "value": "center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #44",
+      "iteration": 44,
+      "thumbnailUri": "ipfs://Qmd94WVCvmpBRQaRMqGneCzS1vPzzqK9voaHqhZ3KMebDZ"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #45",
+        "iterationHash": "ooGMMd8Bm3sf3QzToqfenGZfKNb9U2PHkBNbXZfdQaZfXjcjrNN",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=ooGMMd8Bm3sf3QzToqfenGZfKNb9U2PHkBNbXZfdQaZfXjcjrNN",
+        "displayUri": "ipfs://QmWM4stHus1jcuHrHCRsLwr8kiJT1UWnXcGLjxqwjDwqCE",
+        "thumbnailUri": "ipfs://QmZ3P3r51hwA3Te49WGYPt9dtLEBLQmCY48Mx9atCMcMyz",
+        "authenticityHash": "817670e90c709272ebc21fab2b5894bd2bcbf9974f412d164b6140d79483a17e",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 7
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": true
+          },
+          {
+            "name": "Accept Basis",
+            "value": "nodes length"
+          },
+          {
+            "name": "Accept Method",
+            "value": "decrease"
+          },
+          {
+            "name": "Search Center",
+            "value": "center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "counter-clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "wide"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #45",
+      "iteration": 45,
+      "thumbnailUri": "ipfs://QmZ3P3r51hwA3Te49WGYPt9dtLEBLQmCY48Mx9atCMcMyz"
+    },
+    {
+      "metadata": {
+        "name": "Growth One #46",
+        "iterationHash": "opE3mFpv8L6oFLSZMM4bN3zcz2pFmtVTsdJsRVSBrfaXu3Jgdfv",
+        "description": "Growth One\n\nby Daeinc\nMarch 2022\n  \nA growth simulation of a virtual micro organism that follows simple rules. The organism starts with a few seed nodes, and it grows when the seed nodes and search nodes accept each other when they meet certain conditions. The organism loosely resembles structures found in nature such as coral reef or fungus. Do we embrace the beauty of its emerging structure or reject it because of pathogenic associations?  \n  \nInstructions:\n  - The simulation may take some time to finish.\n  - press [spacebar] - start/stop breathing animation\n  - press [b] - alternative grey backgrounds\n  - press [s] - export high resolution PNG image\n  - press [p] - play or pause the entire animation\n  - real time growth mode - You can simulate the growth in real-time by adding \"realtime\" parameter to the end of the URL in live view. (ex. https://ipfs.io/.../?fxhash=...&realtime)\n  \nLicense\nCC-BY-NC 4.0\np5js library was used for html5 canvas codes. No modification other than bundling was made to the library. g.js library was referenced for vector graphics. canvas-sketch was used to build/bundle the project. Please refer to the included LICENSE.md for license information.\n\n",
+        "tags": [
+          "simulation",
+          "artificial life",
+          "growth",
+          "structure"
+        ],
+        "generatorUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh",
+        "artifactUri": "ipfs://QmXgFY27S6VdHyJadfdZCHLpKHQVwa4u3KYprjtWTy5Dnh?fxhash=opE3mFpv8L6oFLSZMM4bN3zcz2pFmtVTsdJsRVSBrfaXu3Jgdfv",
+        "displayUri": "ipfs://Qmeqyv4gUKNaZ3Sn6HcX3Wi4gv5FJAGc7TrZdvY8LwB1rx",
+        "thumbnailUri": "ipfs://QmWW9u13CWUjVsgQqFTBX6zGvoGTDRmygnRaqty8vSXyzD",
+        "authenticityHash": "860c5a2222440880184ef543a15c7f61c50f44cdd6f3db6b2c1358c81f1467a6",
+        "attributes": [
+          {
+            "name": "Number of Seeds",
+            "value": 5
+          },
+          {
+            "name": "Seed Layout",
+            "value": "random"
+          },
+          {
+            "name": "Accept Dynamic",
+            "value": false
+          },
+          {
+            "name": "Accept Basis",
+            "value": "search radius"
+          },
+          {
+            "name": "Accept Method",
+            "value": "constant"
+          },
+          {
+            "name": "Search Center",
+            "value": "center"
+          },
+          {
+            "name": "Search Direction",
+            "value": "clockwise-random"
+          },
+          {
+            "name": "Edge Hue Range",
+            "value": "narrow"
+          },
+          {
+            "name": "Edge Saturation",
+            "value": "medium"
+          },
+          {
+            "name": "Group Behavior",
+            "value": "regular"
+          }
+        ],
+        "decimals": 0,
+        "symbol": "GENTK",
+        "version": "0.2"
+      },
+      "name": "Growth One #46",
+      "iteration": 46,
+      "thumbnailUri": "ipfs://QmWW9u13CWUjVsgQqFTBX6zGvoGTDRmygnRaqty8vSXyzD"
+    }
+  ]
+}
