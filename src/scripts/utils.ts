@@ -2,8 +2,14 @@ export function ipfsToHttps(path: string) {
   return `https://ipfs.io/ipfs/${path.slice(7)}`;
 }
 
+/**
+ * ex. Parse `2023/230500-sequenced` into `sequenced`
+ *
+ * @param path - ex. `2023/230500-sequenced`
+ */
 export function parseSlug(path: string) {
   const subpaths = path.split("/");
+  // ex. 230500-title-title
   const testStr = subpaths[subpaths.length - 1];
   const regex = /^\d{6}-(.+)$/;
   const match = regex.exec(testStr);

@@ -1,0 +1,41 @@
+---
+// really no need to use a separate package but..
+// https://github.com/jonasmerlin/astro-seo
+
+import { SEO } from "astro-seo";
+import { site } from "@data/siteMetadata";
+
+const props = Astro.props;
+
+const title = props.title ? `${props.title} • ${site.title}` : site.title;
+const description = props.description || site.description;
+---
+
+<head>
+  <SEO
+    charset="UTF-8"
+    title={title}
+    description={description}
+    extend={{
+      // extending the default link tags
+      link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+      // extending the default meta tags
+      meta: [
+        // opengraph
+        { name: "og:title", content: title },
+        { name: "og:description", content: description },
+        { name: "og:type", content: "website" },
+        { name: "og:image", content: "" }, // TODO:
+        // twitter
+        { name: "twitter:creator", content: site.author },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+        { name: `twitter:card`, content: `summary_large_image` },
+        { name: "twitter:image", content: "" }, // TODO:
+      ],
+    }}
+  />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <slot />
+</head>
