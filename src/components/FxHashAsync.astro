@@ -29,7 +29,7 @@ const response = await fetch(`https://api.fxhash.xyz/graphql`, {
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
     query: `
-      query getCollection($userId: String) {
+      query getTokens($userId: String) {
         user(id: $userId) {
           name
           generativeTokens {

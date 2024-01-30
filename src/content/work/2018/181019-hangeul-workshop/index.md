@@ -1,11 +1,12 @@
 ---
 title: Hangeul Workshop
+slug: hangeul-workshop
+description: Hangeul as modular design system
 date: 2018-10-19
+category: education
 tags:
   - typography
-  - workshop
-  - teaching
-  - hangeul
+  - education
 featured: false
 cover: "./thumb.png"
 published: false

@@ -1,0 +1,80 @@
+---
+// NOTE:
+// - small layout always use full columns (but can be overriden with { smStart, smEnd })
+//  - this is helpful for video taking up too much space on small horizontal screen.
+// - md layout uses { start, end }. default is { 5, 12 }. there's no default.
+
+// - lg layout uses { lgStart, lgEnd }. it's optional.
+import {
+  mdColEnd,
+  mdColStart,
+  smColStart,
+  smColEnd,
+  lgColStart,
+  lgColEnd,
+} from "@data/tailwindLUT";
+
+type Props = {
+  /** md:col-start-x */
+  start?: keyof typeof mdColStart;
+  /** md:col-end-x */
+  end?: keyof typeof mdColEnd;
+  smStart?: keyof typeof smColStart;
+  smEnd?: keyof typeof smColEnd;
+  /** lg:col-start-x */
+  lgStart?: keyof typeof lgColStart;
+  /** lg:col-end-x */
+  lgEnd?: keyof typeof lgColEnd;
+  bleed?: boolean;
+  mt?: boolean;
+  mb?: boolean;
+  class?: string;
+};
+
+const {
+  start,
+  end,
+  smStart,
+  smEnd,
+  lgStart,
+  lgEnd,
+  bleed,
+  mt,
+  mb,
+  class: className,
+} = Astro.props;
+
+// this is necessary so that custom grid children
+// will have some padding around the edge of window.
+// if they are not edge-touching, gird element should not have any padding.
+// NOTE:
+// - updated from padding to margin b/c i need custom padding style for h2
+const ml = !bleed && start === 1 ? "md:ml-4" : ""; // 1rem == pl-4
+const mr = !bleed && end === 13 ? "md:mr-4" : "";
+
+const smColS = smStart ? smColStart[smStart] : "col-start-1";
+const smColE = smEnd ? smColEnd[smEnd] : "col-end-13";
+const mdColS = mdColStart[start || 5];
+const mdColE = mdColEnd[end || 12];
+const lgColS = lgColStart[lgStart || start || 4];
+const lgColE = lgColEnd[lgEnd || end || 10];
+---
+
+<div
+  class:list={[
+    "md-grid-column",
+    ml,
+    mr,
+    mt && "mt-8",
+    mb && "mb-8",
+    smColS,
+    smColE,
+    mdColS,
+    mdColE,
+    lgColS,
+    lgColE,
+    className,
+  ]}
+>
+  <slot />
+</div>

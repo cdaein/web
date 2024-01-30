@@ -1,5 +1,5 @@
 export const site = {
-  title: "paperdove.com",
+  title: "paperdove",
   description: "I compose motion with code.",
   siteUrl: `https://paperdove.com`,
   author: "Daeinc",
@@ -11,6 +11,8 @@ export const site = {
     instagram: "https://www.instagram.com/daeincc/",
     fxhash: "https://www.fxhash.xyz/u/Daeinc",
     objkt: "https://objkt.com/@daeinc",
+    codecanvas:
+      "https://codecanvas.art/drop/8Dus2SwgbXATR6tGSjcKcFSAkmhpZD17g36kgpVz3Bpk",
     github: "https://github.com/cdaein",
     rss: "", // TODO:
     substack: "", // ..

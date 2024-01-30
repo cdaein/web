@@ -1,104 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 import { parseSlug } from "@scripts/utils";
+import { site } from "@data/siteMetadata";
+import IndexListItem from "@components/IndexListItem.astro";
+import PostHeader from "@components/mdx/PostHeader.astro";
 
-const workPosts = (await getCollection("work"))
+const workPosts = (
+  await getCollection("work", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  })
+)
   // parse slug to simplify intermediate folders
   .map((post) => ({
     ...post,
-    slug: parseSlug(post.slug),
+    // astro default add all intermediate folder into slug. i want top-level routes only.
+    // but transforming slug is giving me an error when used in IndexListItem
+    // workaround is to manually define slug in frontmatter in each post (permalink)
+    // slug: parseSlug(post.slug),
   }))
   // reverse-chronological order
-  .reverse()
-  // only index published posts
-  .filter((post) => post.data.published === true);
+  .reverse();
+// only index published posts
+// .filter((post) => post.data.published === true);
 
 const allPosts = [...workPosts];
 ---
 
-<Layout title="Welcome">
-  <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-
-    <ul>
-      {
-        allPosts.map((post) => (
-          <li>
-            <a href={`/${post.slug}`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
-  </main>
+<Layout title={"Index"}>
+  <ul>
+    {
+      allPosts.map((post) => (
+        <li class="hover:bg-black hover:text-white">
+          <a href={`/${post.slug}`}>
+            <PostHeader post={post} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: black;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
-  }
-</style>

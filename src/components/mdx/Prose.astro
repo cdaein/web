@@ -1,0 +1,83 @@
+---
+// NOTE:
+// - this component defined default Markdown styling.
+// - MDX components used within Markdown files may have their own
+//   styling that overrides this.
+
+// <style> tag doesn't work because of Astro scoping.
+// use either is:global or is:inline (I don't know the difference yet)
+// https://docs.astro.build/en/reference/directives-reference/#script--style-directives
+// https://stackoverflow.com/questions/75090577/how-to-style-slot-elements-in-astro-with-tailwind
+
+// use @apply directive to continue using tailwind classes.
+
+// <div
+//   class="prose dark:prose-invert
+//   max-w-none
+//   prose-h1:font-bold prose-h1:text-xl
+//   prose-a:text-blue-600 prose-img:rounded-lg
+//   prose-headings:underline"
+// >
+//   <slot />
+// </div>
+---
+
+<style is:global>
+  /** keep adding to the list to get default grid placement */
+  /** default grid placement. can be overridden in <GridColumn> */
+  /** these MUST be also set the same in <GridColumn> */
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  ol,
+  figure,
+  blockquote,
+  iframe,
+  section {
+    @apply px-4 col-start-1 col-end-13 
+    md:px-0 md:col-start-5 md:col-end-12
+    lg:col-start-4 lg:col-end-10;
+  }
+  .image-custom,
+  .fxhash-grid,
+  .video-wrapper,
+  .vimeo-wrapper,
+  .objkt-grid,
+  .image-grid {
+    @apply px-0 col-start-1 col-end-13 
+    md:px-0 md:col-start-5 md:col-end-12
+    lg:col-start-4 lg:col-end-10;
+  }
+  h2 {
+    @apply mt-0 mb-2;
+  }
+  h3 {
+    @apply mt-0 pl-12;
+  }
+  p {
+    @apply mb-4 pt-4;
+  }
+  figure p {
+    @apply py-0;
+  }
+  .md-grid-column > p {
+    /* if using custom culumn component, adhere to grid for <GridColumn> */
+    @apply mx-0;
+  }
+  figure {
+    @apply mt-0;
+  }
+  blockquote {
+    @apply pl-4 border-l-2 border-gray-600;
+  }
+</style>
+
+<section
+  class="group px-0
+  grid grid-cols-12 gap-x-8 leading-normal
+  md:grid-cols-12 md:gap-x-8"
+>
+  <slot />
+</section>

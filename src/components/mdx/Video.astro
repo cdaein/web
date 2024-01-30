@@ -1,12 +1,31 @@
 ---
-const { src, width, height } = Astro.props;
+type Props = {
+  /** Path string */
+  src: string;
+  width?: number;
+  height?: number;
+  autoplay?:boolean
+  /** Additional classes to add to the wrapper div */
+  class?: string;
+};
+const { src, width, height, autoplay, class: className } = Astro.props;
+
+{
+  /* <div className="video-wrapper">
+<video controls muted loop>
+{mp4 ? <source type="video/mp4" src={mp4}></source> : null}
+{webm ? <source type="video/webm" src={webm}></source> : null}
+</video>
+</div> */
+}
 ---
 
-<div class="video-wrapper">
+<div class:list={["video-wrapper", className]}>
   <video
     src={src}
     width={width}
     height={height}
+    autoplay={autoplay}
     controls
     loop
     muted
@@ -14,12 +33,3 @@ const { src, width, height } = Astro.props;
   >
   </video>
 </div>
-
-{
-  /* <div className="video-wrapper">
-        <video controls muted loop>
-          {mp4 ? <source type="video/mp4" src={mp4}></source> : null}
-          {webm ? <source type="video/webm" src={webm}></source> : null}
-        </video>
-      </div> */
-}

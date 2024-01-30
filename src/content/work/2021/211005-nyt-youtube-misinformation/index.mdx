@@ -1,6 +1,9 @@
 ---
-title: New York Times Youtube Misinformation
+title: NYTimes Youtube Misinformation
+slug: nyt-youtube-misinformation
+description: Animated illustration for the New York Times
 date: 2021-10-05
+category: commission
 tags:
   - editorial
   - web
@@ -10,9 +13,15 @@ cover: ./thumb.jpg
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
 import vid1 from "./video.mp4";
 
-<Video src={vid1} />
+<GC start={2} end={8} bleed>
+  <Video src={vid1} />
+</GC>
 
-Animated illustration for the New York Times story, [Youtube's Ban on Misinformation](https://www.nytimes.com/2021/10/05/technology/youtube-misinformation.html).
+<GC start={8} end={10}>
+  Animated illustration for the New York Times story, [Youtube's Ban on
+  Misinformation](https://www.nytimes.com/2021/10/05/technology/youtube-misinformation.html).
+</GC>

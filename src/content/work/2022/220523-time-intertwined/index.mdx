@@ -1,6 +1,9 @@
 ---
 title: Time Intertwined
+slug: time-intertwined
+description: Two linear timelines are intertwined to create infinite variations.
 date: 2022-05-23
+category: digital art
 tags:
   - generative
   - software
@@ -13,12 +16,27 @@ published: true
 ---
 
 import FxHash from "@components/FxHash.astro";
+import ActivityList from "@components/mdx/ActivityList.astro";
+import GC from "@components/mdx/GridColumn.astro";
+
+<GC start={1} end={13} bleed mb>
+  <FxHash
+    title="time-intertwined"
+    caption="Click image to view live version"
+    maxCols={8}
+    from={0}
+    to={8}
+    noGap
+    captionClass="text-center"
+  />
+</GC>
 
 [Time Intertwined](https://www.fxhash.xyz/generative/13526) is a generative NFT project that was launched on fxhash, and lives on the Tezos blockchain. There are 256 limited editions, each with unique properties.
 
 Time Intertwined is my exploration into time and motion. Two linear timelines - structural and surficial - are intertwined. By weaving these timelines at different points in time, almost infinite variations can be made. The changing relationship between the two creates dynamic and unique compositions and challenges the visual perception.
 
-- Featured in the NFT section on [Creative Applications](https://www.creativeapplications.net/nft/time-intertwined-daeinc/) website.
-- Exhibited at [the Museum Angewandte Kunst](https://www.museumangewandtekunst.de/en/visit/exhibitions/unblock-gaudi/) in Frankfurt, Germany, as part of [Unblock Gaudi NFT exhibition](https://unblockgaudi.xyz/week-section).
+<ActivityList slug="time-intertwined" />
 
-<FxHash title="time-intertwined" maxCols={6} />
+<GC start={1} end={13} mt>
+  <FxHash title="time-intertwined" maxCols={10} from={0} />
+</GC>

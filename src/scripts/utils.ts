@@ -24,3 +24,10 @@ export function parseSlug(path: string) {
     return testStr;
   }
 }
+
+export function camelcase(str: string) {
+  return str
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.substr(1))
+    .join(" ");
+}

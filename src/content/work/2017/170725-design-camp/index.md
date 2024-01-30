@@ -1,22 +1,26 @@
 ---
 title: 디자인캠프
+slug: design-camp-2017
+description: Cottage industry approach to design
 date: 2017-07-25
+category: education
 tags:
   - workshop
+  - education
 featured: false
-featuredImage: "./files/IMG_3340.jpg"
+featuredImage: "./image-grid/IMG_3340.jpg"
 published: false
 ---
 
-![design camp](./files/IMG_3311.jpg)
-![design camp](./files/IMG_3312.jpg)
-![design camp](./files/IMG_3315.jpg)
-![design camp](./files/IMG_3326.jpg)
-![design camp](./files/IMG_3338.jpg)
-![design camp](./files/IMG_3340.jpg)
-![design camp](./files/IMG_3349.jpg)
-![design camp](./files/IMG_3351.jpg)
-![design camp](./files/IMG_3356.jpg)
+![design camp](./image-grid/IMG_3311.jpg)
+![design camp](./image-grid/IMG_3312.jpg)
+![design camp](./image-grid/IMG_3315.jpg)
+![design camp](./image-grid/IMG_3326.jpg)
+![design camp](./image-grid/IMG_3338.jpg)
+![design camp](./image-grid/IMG_3340.jpg)
+![design camp](./image-grid/IMG_3349.jpg)
+![design camp](./image-grid/IMG_3351.jpg)
+![design camp](./image-grid/IMG_3356.jpg)
 
 2017년 [디자인캠프](https://www.facebook.com/designerschool.net/)는 7월 25일부터 한 주간 서울 필동문화예술공간 예술통에서 열렸다. [이혜진](http://sayhye.net)과 정대인은 9명의 멘티들과 '가내소공업'이라는 주제로 소형 플로터를 사용한 디자인 워크샵을 진행했다.
 
@@ -37,4 +41,3 @@ published: false
 내가 소유한 물건들 중에 가장 아끼는 것은 무엇이며, 쓸모없는 것은 무엇인지, 그 이유는 무엇인지 잠깐 생각해보자.
 나에게, 그리고 다른 사람에게 쓸모있는 컨텐츠를 찾고, 그에 알맞는 아름다운 시각적 형태를 구성한다.
 주어진 시간 내에 10개의 복제본을 생산한다.
-

@@ -1,6 +1,9 @@
 ---
 title: Modular Design System One
+slug: mds1
+description: Alternative approach to motion typography design.
 date: 2022-01-04
+category: creative tool
 tags:
   - app
   - web
@@ -14,17 +17,21 @@ published: true
 ---
 
 import Image from "@components/mdx/Image.astro";
+import Video from "@components/mdx/Video.astro";
+import GC from "@components/mdx/GridColumn.astro";
+
 import process from "./files/process-1.png";
 import diagram from "./files/diagram.png";
 import poster from "./files/poster-1.png";
 
-import Video from "@components/mdx/Video.astro";
 import vid1 from "./files/video-converted.mp4";
 import vid2 from "./files/process-2.mp4";
 import vid3 from "./files/process-3.mp4";
 import vid4 from "./files/process-4.mp4";
 
-<Video src={vid1} />
+<GC smStart={2} smEnd={12} class="mx-8">
+  <Video src={vid1} />
+</GC>
 
 Modular Design System One (MDS1) is a web app built with JavaScript technologies (HTML5 Canvas, p5.js, react.js and material-ui) that enables me to quickly create design compositions.
 

@@ -1,0 +1,33 @@
+---
+type Props = {
+  class?: string;
+};
+
+const { class: className } = Astro.props;
+---
+
+<header
+  class:list={[
+    "fixed top-0 h-12 border-b border-b-black bg-white p-4 py-2 w-full ",
+    className,
+  ]}
+>
+  <nav role="navigation" aria-label="Main" class="m-0 grid grid-cols-12">
+    <a
+      aria-label="Index"
+      class="group col-start-1 col-end-2 flex items-center"
+      href="/"
+    >
+      <span class="block group-hover:hidden">●</span>
+      <span class="hidden group-hover:block">Index</span>
+    </a>
+    <a
+      aria-label="About"
+      class="group col-start-12 col-end-13 flex items-center justify-end"
+      href="/about"
+    >
+      <span class="block group-hover:hidden">●●</span>
+      <span class="hidden group-hover:block">About</span>
+    </a>
+  </nav>
+</header>

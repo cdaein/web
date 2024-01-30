@@ -12,6 +12,8 @@ export default defineConfig({
       // rehypePlugins: [rehypeFigure],
     }),
     tailwind({
+      // tailwind preflight
+      applyBaseStyles: true,
       // Example: Allow writing nested CSS declarations
       // alongside Tailwind's syntax
       nesting: true,

@@ -1,0 +1,40 @@
+---
+// TODO:
+// - combine with <Post Header> (reuse in index list and post header)
+// - and move wrapping <li> into index.astro
+
+import { camelcase } from "@scripts/utils";
+import type { CollectionEntry } from "astro:content";
+import moment from "moment";
+
+type Props = {
+  post: CollectionEntry<"work">;
+};
+
+const { post } = Astro.props;
+const {
+  data: { title, description, date, category, tags, draft },
+} = post;
+---
+
+<li
+  class="group py-[1px] border-b border-b-black first:border-t first:border-t-black leading-snug hover:bg-black hover:text-white"
+>
+  <a href={`/${post.slug}`}>
+    <article class="grid grid-cols-12 gap-8" draggable="false">
+      <h1 class="pl-4 col-start-1 col-end-4 flex justify-start">
+        {draft && "(draft)"}{title}
+      </h1>
+      <h2 class="col-start-4 col-end-9 flex justify-start">{description}</h2>
+      <div class="col-start-10 col-end-12 flex justify-start">
+        {category && camelcase(`${category}`)}
+      </div>
+      <!-- <div class="col-start-10 flex justify-start"> -->
+      <!--   {tags && tags.map((tag) => `${tag}`)} -->
+      <!-- </div> -->
+      <div class="pr-4 col-start-12 flex justify-end">
+        {moment(date).year()}
+      </div>
+    </article>
+  </a>
+</li>

@@ -5,11 +5,11 @@ import type { Activity } from "@data/activities";
 
 type Props = {
   slug: string;
-  /** Separate list per activity type */
-  byType?: boolean;
+  /** Show separate list per activity type */
+  sortByType?: boolean;
 };
 
-const { slug, byType = false } = Astro.props;
+const { slug, sortByType = false } = Astro.props;
 
 const activities = data.filter((act: Activity) => act.slug === slug);
 
@@ -20,14 +20,12 @@ const sortedActivities = activities.reduce(
     acc[type].push(activity);
     return acc;
   },
-  {} as Record<Activity["type"], Activity[]>
+  {} as Record<Activity["type"], Activity[]>,
 );
-
-console.log(sortedActivities);
 
 // all activity types (keys only)
 const activityTypes = Object.keys(
-  sortedActivities
+  sortedActivities,
 ) as (keyof typeof sortedActivities)[];
 
 const typeLUT = {
@@ -38,17 +36,18 @@ const typeLUT = {
   interview: "Interviews",
   lecture: "Lectures",
   publication: "Publications",
+  screening: "Screenings",
 };
 
-const mapHeader = (type: Activity["type"]) => typeLUT[type];
+const mapHeader = (type: keyof typeof typeLUT) => typeLUT[type];
 ---
 
 {
-  byType ? (
+  sortByType ? (
     activityTypes.map((type) => (
       <section>
         <h1>{mapHeader(type)}</h1>
-        <ul>
+        <ul role="list">
           {sortedActivities[type].map((act) => (
             <ActivityListItem data={act} />
           ))}
@@ -57,7 +56,7 @@ const mapHeader = (type: Activity["type"]) => typeLUT[type];
     ))
   ) : (
     <section>
-      <ul>
+      <ul role="list">
         {activities.map((act) => (
           <ActivityListItem data={act} />
         ))}

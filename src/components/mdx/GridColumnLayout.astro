@@ -1,0 +1,41 @@
+---
+// TODO:
+// - how to differentiate each child with <slot>?
+//  - first, second, .. child?
+//  - nth-child
+// - then, apply start and end
+
+import { colEnd, colStart } from "@data/tailwindLUT";
+
+type Props = {
+  columns: [number, number][];
+  bleed?: boolean;
+  className?: string;
+};
+
+const { columns, bleed, className = "" } = Astro.props;
+
+const ml = !bleed && columns[0][0] === 1 ? "ml-4" : ""; // 1rem == pl-4
+const mr = !bleed && columns[columns.length - 1][1] === 13 ? "mr-4" : "";
+
+const start1 = columns[0][0];
+const end1 = columns[0][1];
+const start2 = columns[1][0];
+const end2 = columns[1][1];
+---
+
+<style is:inline define:vars={{ start1, end1, start2, end2 }}>
+  .md-grid-column-layout:first-child {
+    /* FIX: doesn't work!!! */
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .md-grid-column-layout:last-child {
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+</style>
+
+<div class={`md-grid-column-layout ${ml} ${mr} ${className}`.trim()}>
+  <slot />
+</div>

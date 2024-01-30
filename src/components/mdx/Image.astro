@@ -1,22 +1,28 @@
 ---
+// TODO:
+// - object-cover with less height (ie. 50%) leaves empty space at bottom. 
+//  - can be controlled with grid row height, but how do i control from grid child element?
+
 import { Image as AstroImage } from "astro:assets";
 
-// interface Props {
-//   alt: string;
-//   image: string;
-//   caption?: string;
-// }
+interface Props {
+  alt: string;
+  src: ImageMetadata
+  caption?: string;
+  cover?:boolean
+  class?:string;
+  captionClass?:string
+}
 
-const { alt, src, caption } = Astro.props;
+const { alt, src, caption, cover, class:className, captionClass } = Astro.props;
+
 ---
 
-<figure>
-  <AstroImage src={src} alt={alt} />
+<figure class:list={["image-custom", className]}>
+  <AstroImage src={src} alt={alt} class:list={["m-auto",cover && "w-full h-full object-cover"]} />
   {
-    caption ? (
-      <figcaption>{caption}</figcaption>
-    ) : (
-      <figcaption>{alt}</figcaption>
-    )
+    caption && (
+      <figcaption class:list={["text-base mt-2 mx-2", captionClass]}><p>{caption}<p></figcaption>
+    ) 
   }
 </figure>

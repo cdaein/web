@@ -1,0 +1,83 @@
+---
+import moment from "moment";
+import type { CollectionEntry } from "astro:content";
+import { camelcase } from "@scripts/utils";
+
+type Props = {
+  post: CollectionEntry<"work" | "writing">;
+  prevPost: CollectionEntry<"work" | "writing"> | null;
+  nextPost: CollectionEntry<"work" | "writing"> | null;
+  class?: string;
+};
+
+const { post, prevPost, nextPost, class: className } = Astro.props;
+const {
+  data: { title, description, date, category, tags, draft },
+} = post;
+
+console.log(prevPost, nextPost);
+
+// if not root, add page navagation
+const pathname = Astro.url.pathname;
+---
+
+<article
+  draggable={false}
+  class:list={["py-1 border-b border-b-black leading-snug", className]}
+>
+  <div class="grid grid-cols-12 gap-x-2
+    md:gap-x-8">
+    <h1
+      class="pl-4 col-start-1 col-end-10
+      md:pl-4 md:col-end-5
+      lg:col-end-4
+      flex justify-start"
+    >
+      {draft && "(draft)"}{title}
+    </h1>
+    <span
+      class="hidden col-start-4 col-end-9
+      md:col-start-5 md:col-end-11 md:flex
+      lg:col-start-4 lg:col-end-9
+      justify-start"
+      >{description}</span
+    >
+    <span
+      class="hidden col-start-8 col-end-12
+      lg:col-start-10 lg:col-end-12 lg:flex
+      justify-start"
+      >{category && camelcase(`${category}`)}</span
+    >
+    <span
+      class="pr-4 col-start-11 col-end-13
+      lg:col-start-12
+      flex justify-end"
+      >{moment(date).year()}</span
+    >
+    <!-- <span class="col-start-4 col-end-12 flex justify-start" -->
+    <!--   >{tags && tags.map((tag: any) => `${tag}`)}</span -->
+    <!-- > -->
+  </div>
+  {
+    pathname !== "/" && (
+      <div class="grid grid-cols-12 gap-x-2 md:gap-x-8">
+        {prevPost && (
+          <a
+            href={prevPost.slug}
+            class="pl-4 col-start-1 col-end-4 flex justify-start"
+          >
+            {prevPost.data.title}
+          </a>
+        )}
+        {nextPost && (
+          <a
+            href={nextPost.slug}
+            class="pr-4 col-start-8 col-end-13 flex justify-end"
+          >
+            {nextPost.data.title}
+          </a>
+        )}
+      </div>
+    )
+  }
+</article>

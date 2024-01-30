@@ -1,0 +1,72 @@
+---
+// - imported image is ImageMetadata object
+// - imported video is a simple path string
+
+// TODO:
+// - click to expand
+// - play button at bottom right (smaller control button)
+
+import { gridCols } from "@data/tailwindLUT";
+// import Image from "@components/mdx/Image.astro";
+import { Image } from "astro:assets";
+import Video from "./Video.astro";
+
+type Props = {
+  maxCols?: keyof typeof gridCols;
+  media: string[] | ImageMetadata[];
+  caption?: string;
+  noGap?: boolean;
+  controls?: boolean;
+  autoplay?: boolean;
+  class?: string;
+};
+
+const {
+  media,
+  maxCols,
+  caption,
+  noGap,
+  controls = true,
+  autoplay,
+  class: className,
+} = Astro.props;
+
+// If I forget to add the props, defaults to number of images
+const maxColsChecked =
+  gridCols[maxCols || (media.length as keyof typeof gridCols)];
+---
+
+<figure>
+  <div class:list={["image-grid grid", maxColsChecked, className]}>
+    {
+      media.map((content) => {
+        // image returns {src, format, width, height} but video returns a simple string path
+        // - maybe, there is a proper way to handle imported image and video?
+        let ext = null;
+        if (!(content as ImageMetadata).src) {
+          const tokens = (content as unknown as string).split(".");
+          ext = tokens[tokens.length - 1];
+        }
+
+        return ext === "mp4" ? (
+          <video
+            src={content as string}
+            loop
+            muted
+            playsinline
+            controls={controls}
+            autoplay={autoplay}
+            class:list={["w-full h-full object-cover"]}
+          />
+        ) : (
+          <Image
+            src={content as ImageMetadata}
+            alt="test"
+            title="test"
+            class:list={["w-full h-full object-cover"]}
+          />
+        );
+      })
+    }
+  </div>
+</figure>

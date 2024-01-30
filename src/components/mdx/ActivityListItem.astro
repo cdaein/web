@@ -3,12 +3,13 @@
 // - handle multiple links
 
 import type { Activity } from "@data/activities";
+import moment from "moment";
 
 const { data } = Astro.props as { data: Activity };
 const { date, title, role, place, city, country, link } = data;
 ---
 
-<li>
+<li role="listitem">
   {role && <span>{role} at </span>}
   {
     link ? (
@@ -22,5 +23,5 @@ const { date, title, role, place, city, country, link } = data;
   {place && <span>{place}</span>}
   {city && <span>{city}</span>}
   {country && <span>{country}</span>}
-  <span> {new Date(date).getFullYear()}</span>
+  <span> {moment(date).year()}</span>
 </li>
