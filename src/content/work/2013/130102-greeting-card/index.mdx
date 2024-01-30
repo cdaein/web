@@ -12,36 +12,33 @@ cover: ./thumb.jpg
 published: true
 ---
 
+import Vimeo from "@components/mdx/Vimeo.astro";
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Image from "@components/mdx/Image.astro";
+
 import img4 from "./files/04.jpg";
 import img3 from "./files/03.jpg";
 import img5 from "./files/05.jpg";
 import img2 from "./files/02.jpg";
 import img1 from "./files/01.jpg";
 
-<iframe
-  title="vimeo-player"
-  src="https://player.vimeo.com/video/57336062"
-  width="640"
-  height="360"
-  frameborder="0"
-  allowfullscreen
-></iframe>
-
-<Image alt="" src={img3} />
-<Image alt="" src={img4} />
-<Image alt="" src={img5} />
-<Image alt="" src={img2} />
-<Image alt="" src={img1} />
+<Vimeo id="57336062" />
 
 A traditional optical illusion technique meets coding, animation, and experimental typography.
 Thinking about the flood of new technologies in animation/design, and the vast possibilities of using these technologies together to create something new, we instead went back to an optical illusion technique that enabled us to create 8-frame animation cycle only using traditional mediums – paper and transparency film. This does not need any special devices/techniques to view animation other than the card itself.
 
-### Technologies
+## Technologies
 
 Adobe Illustrator, After Effects and Processing were used to aid the process, and quickly realize the ideas.
 
-### Credits
+## Credits
 
 - Design, animation and coding by Dae In Chung
 - Additional design by [Hye Jin Lee](http://sayhye.net)
+
+  <Image alt="" src={img3} />
+  <Image alt="" src={img4} />
+  <Image alt="" src={img5} />
+  <Image alt="" src={img2} />
+  <Image alt="" src={img1} />

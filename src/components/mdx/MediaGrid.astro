@@ -14,6 +14,7 @@ import Video from "./Video.astro";
 type Props = {
   maxCols?: keyof typeof gridCols;
   media: string[] | ImageMetadata[];
+  alts: string[];
   caption?: string;
   noGap?: boolean;
   controls?: boolean;
@@ -23,6 +24,7 @@ type Props = {
 
 const {
   media,
+  alts,
   maxCols,
   caption,
   noGap,
@@ -39,7 +41,7 @@ const maxColsChecked =
 <figure>
   <div class:list={["image-grid grid", maxColsChecked, className]}>
     {
-      media.map((content) => {
+      media.map((content, i) => {
         // image returns {src, format, width, height} but video returns a simple string path
         // - maybe, there is a proper way to handle imported image and video?
         let ext = null;
@@ -51,6 +53,7 @@ const maxColsChecked =
         return ext === "mp4" ? (
           <video
             src={content as string}
+            title={alts[i]}
             loop
             muted
             playsinline
@@ -61,8 +64,8 @@ const maxColsChecked =
         ) : (
           <Image
             src={content as ImageMetadata}
-            alt="test"
-            title="test"
+            alt={alts[i]}
+            title={alts[i]}
             class:list={["w-full h-full object-cover"]}
           />
         );

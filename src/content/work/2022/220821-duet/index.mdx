@@ -51,7 +51,7 @@ Although there are key moments, it is hard to summarize time-based work as a sta
 
 With recent projects, my main motive has been to explore and experiment with ways to represent time and motion with digital media mainly through computer programming. With the Structures series, I used my own software, Modular Design System One, to work with rigid grid structures. The colorful shaded rectangular blocks that look 3-dimensional are fixed in place, and essentially, act like big blown-up pixels. In this limited environment, only the colors change and create an illusion of motion. With my last long-form generative piece Time Intertwined, I explored two inter-connected or intertwined timelines to create an infinite number of fixed-length loops. Duet continues on that idea.
 
-<GC start={2} end={12} mt mb>
+<GC start={2} end={12} mb>
   <Image
     src={prevEx}
     alt="A few examples from Structures and Time Intertwined"
@@ -71,22 +71,23 @@ After Effects is great in its own right, but these days I am exploring alternati
 
 In my previous project, Time Intertwined, I explored two intertwined timelines. I have not yet found a good way to explain the idea but one way to think about it is the Earth rotating on its own axis as well as revolving around the Sun. Essentially, there are two connected timelines — one goes for a day and the other for a whole year. It isn't just the duration of these timelines, but each has a different effect — changing day and night vs. seasons. In Time Intertwined, there are the structural timeline and the surficial timeline. The motion in each is linked just like in the example of the Earth and the Sun, but unlike the Earth-Sun relationship, it can be controlled independently from the other, which results in an almost infinite number of combinations, and creates a fixed-length loop or a cycle. In Duet, I expand this concept to have an infinite-length timeline.
 
-</GC>
-
-<GC lgStart={8} lgEnd={12} class="mt-0">
-  <Image
-    src={loop}
-    alt="Duet #157 looping from 0 to 6."
-    caption="Duet #157 looping from 0 to 6."
-    captionClass="text-center"
-  />
-</GC>
-
 ### Time, Not Frames
 
 In a typical motion-based work, we need to define frame rate or frames per second so that the continuous time can be converted into a discreet set of images. In animation, it is the number of drawings per second. All the key timing and spacing rely on it. In a live-action film, it is how often time is sampled. We still need the frame rate in digital animation because that is how often the screen updates and refreshes the image. 24 or 30 fps has been good enough but with today’s technology, we are reaching the level that is almost indistinguishable from reality, or at least equal to or better than the analog counterpart. To me, there is something transcendental when I can no longer recognize the technology and get immersed in the work. Of course, it is still an illusion after all, but a very convincing one.
 
 A typical computer screen supports up to 60 fps, but more recent monitors support 120fps or even higher. To adapt to different frame rates, I decided to use delta time that adapts to a screen’s refresh rate. This is nothing new to a game developer, by the way. I still use the concept of keyframes or key moments but every parameter of visual elements such as forms, motion paths, and colors are mathematically interpolated with an equation in real-time and the equation can spit out a value at any point in time no matter what frame rate is being used.
+
+</GC>
+
+<GC lgStart={8} lgEnd={12} mb>
+  <Image
+    src={loop}
+    alt="Duet #157 looping from 0 to 6."
+    caption="Duet #157 looping from 0 to 6."
+    captionClass="text-center"
+    class="sticky top-32"
+  />
+</GC>
 
 <GC start={2} end={12} lgStart={1} lgEnd={7} class="my-8">
   <Image
@@ -94,6 +95,7 @@ A typical computer screen supports up to 60 fps, but more recent monitors suppor
     alt="Duet #6 responding to different window sizes."
     caption="Duet #6 responding to different window sizes."
     captionClass="text-center"
+    class="sticky top-32"
   />
 </GC>
 

@@ -15,9 +15,25 @@ cover: "./files/thumb.jpeg"
 published: true
 ---
 
-![reader](./files/01.jpeg)
-![reader](./files/02.jpeg)
-![reader](./files/03.jpeg)
-![reader](./files/04.jpeg)
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+
+import img1 from "./files/01.jpeg";
+import img2 from "./files/02.jpeg";
+import img3 from "./files/03.jpeg";
+import img4 from "./files/04.jpeg";
 
 The typography + computer programming education research conducted with Prof. Jiwon Lee from Kookmin Univ. was published in AIGA Frontier Reader.
+
+<GC start={1} end={13} bleed>
+  <MediaGrid
+    maxCols={2}
+    media={[img1, img2, img3, img4]}
+    alts={[
+      "book cover",
+      "book table of contents",
+      "book spread",
+      "book spread",
+    ]}
+  />
+</GC>

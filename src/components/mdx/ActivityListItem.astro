@@ -1,27 +1,35 @@
 ---
 // TODO:
 // - handle multiple links
+// - get "for" (work title if any)
 
 import type { Activity } from "@data/activities";
+import { getEntry } from "astro:content";
 import moment from "moment";
 
 const { data } = Astro.props as { data: Activity };
-const { date, title, role, place, city, country, link } = data;
+const { slug, date, title, role, place, city, country, link } = data;
+
+const query = slug || "nonenonenone";
+const entry = await getEntry("work", query);
+
+console.log(entry?.data.title);
 ---
 
 <li role="listitem">
+  {entry?.data.title && <span>{entry.data.title} - </span>}
   {role && <span>{role} at </span>}
   {
     link ? (
       <a href={Array.isArray(link) ? link[0] : link}>
-        <span>{title}</span>
+        <span>{title}</span>,
       </a>
     ) : (
-      <span>{title}</span>
+      <span>{title},</span>
     )
   }
-  {place && <span>{place}</span>}
-  {city && <span>{city}</span>}
-  {country && <span>{country}</span>}
+  {place && <span>{place},</span>}
+  {city && <span>{city},</span>}
+  {country && <span>{country},</span>}
   <span> {moment(date).year()}</span>
 </li>

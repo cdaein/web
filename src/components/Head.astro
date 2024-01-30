@@ -9,6 +9,9 @@ const props = Astro.props;
 
 const title = props.title ? `${props.title} • ${site.title}` : site.title;
 const description = props.description || site.description;
+
+// get latest project's thumbnail image
+// it should be placed directly under each post folder with the name ./thumbnail.(jpg|jpeg|png)
 ---
 
 <head>
@@ -21,6 +24,11 @@ const description = props.description || site.description;
       link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
       // extending the default meta tags
       meta: [
+        { httpEquiv: "x-ua-compatible", content: "ie-edge" },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1, shrink-to-fit=no",
+        },
         // opengraph
         { name: "og:title", content: title },
         { name: "og:description", content: description },

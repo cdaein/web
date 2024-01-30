@@ -27,7 +27,24 @@ const workPosts = (
 const allPosts = [...workPosts];
 ---
 
-<Layout title={"Index"}>
+<style is:global>
+  .fadeout:before {
+    content: "";
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background: linear-gradient(to right, transparent 10px, white 80%);
+    overflow: hidden;
+    pointer-events: none;
+  }
+  article:hover .fadeout:before {
+    background: linear-gradient(to right, transparent 10px, black 80%);
+  }
+</style>
+
+<Layout title={"Index"} description={site.description}>
   <ul>
     {
       allPosts.map((post) => (

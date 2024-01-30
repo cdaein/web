@@ -8,7 +8,7 @@ const workCollection = defineCollection({
     /** Work post title */
     title: z.string(),
     /** (optional) post description */
-    description: z.string().optional(),
+    description: z.string(),
     date: z.date(),
     category: z.enum(CATEGORIES).or(z.enum(CATEGORIES).array()).optional(),
     tags: z.enum(TAGS).array().optional(),
@@ -25,7 +25,7 @@ const writingCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    description: z.string().optional(),
+    description: z.string(),
     date: z.date(),
     category: z.enum(CATEGORIES).or(z.enum(CATEGORIES).array()).optional(),
     tags: z.array(z.string()),

@@ -1,7 +1,7 @@
 ---
 title: Happy Holidays
 slug: happy-holidays-2020
-description: Customizable interactive and pen-plotted greeting card.
+description: Interactive and pen-plotted greeting card.
 date: 2019-12-12
 category: poster design
 tags:
@@ -16,17 +16,29 @@ cover: ./thumb.png
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Video from "@components/mdx/Video.astro";
+
 import vid1 from "./video.mp4";
+import img1 from "./01.jpg";
+import img2 from "./02.jpeg";
+import img3 from "./03-digital.png";
 
-<Video src={vid1} />
-
-[Visit Project](https://exp.paperdove.com/happy-holidays-2020/)
+<GC start={1} end={13} bleed mb>
+  <MediaGrid
+    maxCols={3}
+    media={[img3, img1, img2]}
+    alts={["digital card", "plotted card", "plotted cards with sparkly ink"]}
+  />
+</GC>
 
 We wanted to take a traditional holiday card format to digital mobile experience. The original card was printed with Axidraw plotter using glitter pens. We loved the texture and how the light was reflected on the surface. The digital screen is already bright and sharp but it feels very different from ink on paper. Using motion and orientation sensors on mobile devices along with animation was how we decided to translate that physical experience to the web. Now, users can also customize the message and share with others all from their browser.
 
+[Visit Project](https://exp.paperdove.com/happy-holidays-2020/)
+
 Collaboration with [@justsayhye](https://instagram.com/justsayhye).
 
-![card](./03-digital.png)
-![card](./01.jpg)
-![card](./02.jpeg)
+<GC>
+  <Video src={vid1} />
+</GC>

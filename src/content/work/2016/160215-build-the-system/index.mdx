@@ -13,17 +13,25 @@ cover: "./files/poster.png"
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Image from "@components/mdx/Image.astro";
 import img0 from "./files/poster.png";
 import ActivityList from "@components/mdx/ActivityList.astro";
 
-<ActivityList slug="build-the-system" />
+<GC start={3} end={7}>
+  <Image alt="Build the System poster" src={img0} />
+</GC>
 
-<Image alt="Build the System poster" src={img0} />
-
-Designers often work with a system, whether it is a grid on a page or a typographical hierarchy. This poster is an exploration into building and revealing a system by gradually breaking away from it. In my own design practice, I start my process by building a system, usually by means of computer programming. Typography in this poster is first created with Processing programming language with a few simple rules. Changing a few parameters of the rules allows me to explore many forms it can create. But eventually, there comes a time when the rigid rules cannot apply any more, and that is when the instinct and manual interventions are needed.
-
-### Publications and Awards
-
-- The T Magazine, Korea, 2017
-- Gold Winner, Graphis Poster Annual, 2016
+<GC start={7} end={11}>
+  Designers often work with a system, whether it is a grid on a page or a
+  typographical hierarchy. This poster is an exploration into building and
+  revealing a system by gradually breaking away from it. In my own design
+  practice, I start my process by building a system, usually by means of
+  computer programming. Typography in this poster is first created with
+  Processing programming language with a few simple rules. Changing a few
+  parameters of the rules allows me to explore many forms it can create. But
+  eventually, there comes a time when the rigid rules cannot apply any more, and
+  that is when the instinct and manual interventions are needed.
+  <ActivityList slug="build-the-system" sortByType />
+</GC>

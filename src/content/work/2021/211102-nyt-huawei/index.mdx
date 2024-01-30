@@ -1,7 +1,7 @@
 ---
 title: NYTimes Huawei
 slug: nyt-huawei
-description: Animated illustration for the New York Times
+description: Animated editorial illustration
 date: 2021-11-02
 category: commission
 tags:
@@ -15,13 +15,14 @@ published: true
 
 import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import vid1 from "./video.mp4";
 
-<GC start={1} end={7} bleed>
-  <Video src={vid1} />
-</GC>
-
-<GC start={7} end={11}>
+<GC>
   Animated illustration for the New York Times story, [The Strange Saga of
   Huawei](https://www.nytimes.com/2021/11/02/technology/huawei-us-policy.html).
+</GC>
+
+<GC bleed mb>
+  <Video src={vid1} />
 </GC>

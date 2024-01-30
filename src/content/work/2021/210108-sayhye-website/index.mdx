@@ -12,10 +12,20 @@ cover: ./2.jpg
 published: false
 ---
 
-![website image](./1.jpg)
-![website image](./2.jpg)
-![website image](./3.jpg)
+import img1 from "./1.jpg";
+import img2 from "./2.jpg";
+import img3 from "./3.jpg";
+
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import GC from "@components/mdx/GridColumn.astro";
+
+<GC start={1} end={13} bleed mb>
+  <MediaGrid
+    media={[img1, img2, img3]}
+    alts={["website image", "website image", "website image"]}
+  />
+</GC>
 
 Website design & development for [sayhye.net](https://sayhye.net)
 
-I used Gatsby.js (on top of React.js) for performance and easy data management. React-draggable package was used for the experimental yet functioning drag interface. It also works well with multi-touch mobile devices.
+Developed with Gatsby.js for performance and easy data management. React-draggable package was used for the experimental yet functioning drag interface. It also works well with multi-touch mobile devices.

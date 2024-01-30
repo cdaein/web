@@ -16,7 +16,8 @@ const schema = z.object({
    * Same as work post title slug for filtering. (ex. ekstasy-type-club) It may be an array for multiple works
    * TODO: it can accept array of slugs but it is not being handled atm.
    */
-  slug: z.string().or(z.string().array()).optional(),
+  // slug: z.string().or(z.string().array()).optional(),
+  slug: z.string().optional(),
   title: z.string(),
   /** ex. moderator, presenter */
   role: z.string().optional(),
@@ -215,6 +216,12 @@ const activities: Activity[] = [
     place: "Cooper Union",
     city: "New York",
     country: "USA",
+  },
+  {
+    type: "interview",
+    title: "CA Magazine Korea",
+    date: "2016",
+    country: "South Korea",
   },
   {
     type: "featured",

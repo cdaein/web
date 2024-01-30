@@ -1,8 +1,7 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import { parseSlug } from "@scripts/utils";
-import PostHeader from "@components/mdx/PostHeader.astro";
 import Prose from "@components/mdx/Prose.astro";
 
 export async function getStaticPaths() {
@@ -13,7 +12,8 @@ export async function getStaticPaths() {
     return import.meta.env.PROD ? data.draft !== true : true;
   });
 
-  const allPosts = [...workEntries, ...writingEntries];
+  // const allPosts = [...workEntries, ...writingEntries];
+  const allPosts = [...workEntries];
   const numPosts = allPosts.length;
 
   return allPosts.map((post, i) => {
@@ -26,8 +26,8 @@ export async function getStaticPaths() {
       params: { slug },
       props: {
         post,
-        prevPost: i === numPosts - 1 ? null : allPosts[i + 1],
-        nextPost: i === 0 ? null : allPosts[i - 1],
+        prevPost: i === numPosts - 1 ? undefined : allPosts[i + 1],
+        nextPost: i === 0 ? undefined : allPosts[i - 1],
       },
     };
   });
@@ -38,8 +38,13 @@ const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title}>
-  <PostHeader post={post} prevPost={prevPost} nextPost={nextPost} />
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  post={post}
+  prevPost={prevPost}
+  nextPost={nextPost}
+>
   <Prose>
     <Content />
   </Prose>

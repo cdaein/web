@@ -4,11 +4,12 @@ type Props = {
   src: string;
   width?: number;
   height?: number;
-  autoplay?:boolean
+  autoplay?: boolean;
   /** Additional classes to add to the wrapper div */
+  mb?: boolean;
   class?: string;
 };
-const { src, width, height, autoplay, class: className } = Astro.props;
+const { src, width, height, autoplay, mb, class: className } = Astro.props;
 
 {
   /* <div className="video-wrapper">
@@ -20,7 +21,7 @@ const { src, width, height, autoplay, class: className } = Astro.props;
 }
 ---
 
-<div class:list={["video-wrapper", className]}>
+<div class:list={["video-wrapper mb-8", mb && "mb-8", className]}>
   <video
     src={src}
     width={width}

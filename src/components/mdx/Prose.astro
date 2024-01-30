@@ -50,14 +50,21 @@
     md:px-0 md:col-start-5 md:col-end-12
     lg:col-start-4 lg:col-end-10;
   }
+  .content-wrapper {
+    /** compensate for fixed headers */
+    @apply pt-[4.5rem] max-w-screen-2xl m-auto;
+  }
   h2 {
     @apply mt-0 mb-2;
+  }
+  main h2 {
+    @apply pl-12;
   }
   h3 {
     @apply mt-0 pl-12;
   }
   p {
-    @apply mb-4 pt-4;
+    @apply mb-8 pt-0;
   }
   figure p {
     @apply py-0;
@@ -66,8 +73,21 @@
     /* if using custom culumn component, adhere to grid for <GridColumn> */
     @apply mx-0;
   }
+  p a {
+    text-decoration: underline;
+  }
+  p img {
+    @apply w-full;
+  }
+  ul,
+  ol {
+    @apply mb-8;
+  }
   figure {
     @apply mt-0;
+  }
+  video {
+    @apply w-full;
   }
   blockquote {
     @apply pl-4 border-l-2 border-gray-600;
@@ -75,9 +95,11 @@
 </style>
 
 <section
-  class="group px-0
-  grid grid-cols-12 gap-x-8 leading-normal
-  md:grid-cols-12 md:gap-x-8"
+  class:list={[
+    "content-wrapper",
+    "group px-0 grid grid-cols-12 gap-x-8 leading-normal",
+    "md:grid-cols-12 md:gap-x-8",
+  ]}
 >
   <slot />
 </section>

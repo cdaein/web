@@ -15,13 +15,16 @@ cover: "./thumb.png"
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Video from "@components/mdx/Video.astro";
 import vid1 from "./video.mp4";
 import vid2 from "./recording.mp4";
 
-<Video src={vid1} />
-<Video src={vid2} />
+An interactive web poster inspired by Alice's Adventures in Wonderland. Best viewed on mobile with motion sensor enabled.
 
 [https://exp.paperdove.com/rabbithole](https://exp.paperdove.com/rabbithole)
 
-An interactive web poster inspired by Alice's Adventures in Wonderland. Best viewed on mobile with motion sensor enabled.
+<GC start={2} end={12}>
+  <MediaGrid media={[vid1, vid2]} alts={["poster video", "interaction demo"]} />
+</GC>

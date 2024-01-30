@@ -5,25 +5,40 @@ import "@fontsource-variable/karla"; // wider tracking
 import Head from "@components/Head.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import type { CollectionEntry } from "astro:content";
+import PostHeader from "@components/mdx/PostHeader.astro";
+import PageHeader, { type PageProps } from "@components/mdx/PageHeader.astro";
 
 interface Props {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
+  post?: CollectionEntry<"work" | "writing">;
+  prevPost?: CollectionEntry<"work" | "writing">;
+  nextPost?: CollectionEntry<"work" | "writing">;
 }
 
-const { title, description } = Astro.props;
+const { title, description, post, prevPost, nextPost } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const isRoot = pathname === "/";
 ---
 
 <!doctype html>
-<html lang="en">
-  <Head title={title} description={description} />
+<html lang="en" class="h-full">
+  <Head
+    title={title || post?.data.title}
+    description={description || post?.data.description}
+  />
 
-  <body class="text-xl">
-    <Header />
-    <main class="mt-12">
-      <slot />
-    </main>
-    <Footer />
+  <body class="h-full text-xl">
+    <Header prevPost={prevPost} nextPost={nextPost} />
+    {post && <PostHeader post={post} />}
+    <div class="flex flex-col h-full">
+      <main class:list={["grow", isRoot && "mt-9"]}>
+        <slot />
+      </main>
+      <Footer class="" />
+    </div>
 
     <style is:global>
       code {

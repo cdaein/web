@@ -11,17 +11,13 @@ cover: "./files/thumb.jpg"
 published: false
 ---
 
+import Vimeo from "@components/mdx/Vimeo.astro";
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import ActivityList from "@components/mdx/ActivityList.astro";
 
-<iframe
-  title="vimeo-player"
-  src="https://player.vimeo.com/video/4859330"
-  width="640"
-  height="432"
-  frameborder="0"
-  allowfullscreen
-></iframe>
+<Vimeo id="4859330" width="640" height="432" />
 
 Music from Klazz Brothers & Cuba Percussion
 
-<ActivityList slug="don-cajon" />
+<ActivityList slug="don-cajon" sortByType />

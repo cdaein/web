@@ -1,5 +1,25 @@
 ---
-
+import moment from "moment";
+const { class: className } = Astro.props;
 ---
 
-<section>footer</section>
+<footer
+  class:list={[
+    "mt-[6.75rem] px-4 py-9 w-full h-[6.75rem] bg-white text-sm z-10",
+    className,
+  ]}
+>
+  <div class="grid grid-cols-13">
+    <div class="col-start-1">
+      {
+        `© 2024${moment().year() !== 2024 ? -moment().year() : ""} paperdove.com`
+      }
+    </div>
+    <div class="col-start-13 text-right">
+      <a
+        href="https://www.privacypolicygenerator.info/live.php?token=IuUXFahY27PLkblW7tjXFx52KRSrRX4Q"
+        target="_blank">privacy policy</a
+      >
+    </div>
+  </div>
+</footer>

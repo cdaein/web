@@ -13,19 +13,27 @@ cover: ./thumb.jpg
 published: true
 ---
 
+import ActivityList from "@components/mdx/ActivityList.astro";
+import GC from "@components/mdx/GridColumn.astro";
 import Image from "@components/mdx/Image.astro";
+
 import img1 from "./files/01-full.jpg";
 import img2 from "./files/02-feed.jpg";
 import img3 from "./files/03-cu.jpg";
 import img4 from "./files/04-cu.jpg";
 
-<Image alt="full view" src={img1} />
-<Image alt="feed view" src={img2} />
-<Image alt="details" src={img3} />
-<Image alt="details" src={img4} />
+<GC start={1} end={7}>
+  <Image alt="full view" src={img1} />
+  <Image alt="feed view" src={img2} />
+  <Image alt="details" src={img3} />
+  <Image alt="details" src={img4} />
+</GC>
 
+<GC start={7} end={12}>
 I wanted a simple way to track my investment. I don’t want to log in to my broker’s website every time I need to check the total balance. The search engine results distract my focus and show me too much information. I am not a day trader and never will be, but I want to make sure I’m heading in the right direction – that my investment is appreciating over the long-term, and also track the proper asset allocation once in a while.
 
-### Technologies
+## Technologies
 
 The software is developed with Processing, and it gets real-time and historical stock data from Yahoo.
+
+</GC>

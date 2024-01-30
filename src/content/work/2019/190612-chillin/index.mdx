@@ -15,17 +15,16 @@ cover: "./02.png"
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Video from "@components/mdx/Video.astro";
 import vid1 from "./video.mp4";
 import vid2 from "./recording.mp4";
 
-<Video src={vid2} />
-<Video src={vid1} />
+Interactive web poster. You can write your message and save as image. Best viewed on mobile with motion sensor enabled.
 
 [https://exp.paperdove.com/chillin](https://exp.paperdove.com/chillin)
 
-Interactive web poster. You can write your message and save as image. Best viewed on mobile with motion sensor enabled.
-
-### Technologies
-
-p5js in Webgl mode, matterjs for physics simulation
+<GC start={2} end={12}>
+  <MediaGrid media={[vid1, vid2]} alts={["postr video", "interaction demo"]} />
+</GC>

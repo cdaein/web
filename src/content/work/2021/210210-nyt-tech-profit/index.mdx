@@ -1,7 +1,7 @@
 ---
 title: NYTimes Tech Profit
 slug: nyt-tech-profit
-description: Animated illustration for the New York Times
+description: Animated editorial illustration
 date: 2021-02-10
 category: commission
 tags:
@@ -14,9 +14,15 @@ cover: ./thumb.jpg
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
 import vid1 from "./video.mp4";
 
-<Video src={vid1} />
+<GC>
+  Animated illustration for the New York Times story, [Profits Steer Our Digital
+  Future](https://www.nytimes.com/2021/02/10/technology/profits-steer-our-digital-future.html).
+</GC>
 
-Animated illustration for the New York Times story, [Profits Steer Our Digital Future](https://www.nytimes.com/2021/02/10/technology/profits-steer-our-digital-future.html).
+<GC bleed>
+  <Video src={vid1} />
+</GC>

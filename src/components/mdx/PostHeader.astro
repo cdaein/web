@@ -1,47 +1,88 @@
 ---
+// NOTE:
+// - additional style is to gracefully cut off text overflow and to keep on a single line.
+
 import moment from "moment";
 import type { CollectionEntry } from "astro:content";
 import { camelcase } from "@scripts/utils";
 
 type Props = {
   post: CollectionEntry<"work" | "writing">;
-  prevPost: CollectionEntry<"work" | "writing"> | null;
-  nextPost: CollectionEntry<"work" | "writing"> | null;
+  prevPost?: CollectionEntry<"work" | "writing">;
+  nextPost?: CollectionEntry<"work" | "writing">;
   class?: string;
 };
 
-const { post, prevPost, nextPost, class: className } = Astro.props;
+const { post, class: className } = Astro.props;
 const {
   data: { title, description, date, category, tags, draft },
 } = post;
 
-console.log(prevPost, nextPost);
-
 // if not root, add page navagation
 const pathname = Astro.url.pathname;
+const isRoot = pathname === "/";
+
+// {
+// isRoot &&
+// <style is:global>
+//   article:hover .fadeout:before {
+//     background: linear-gradient(to right, transparent 10px, black 80%);
+//   }
+// </style>
+// }
+//
+// <style is:global>
+//   .fadeout:before {
+//     content: "";
+//     width: 10%;
+//     height: 100%;
+//     position: absolute;
+//     right: 0px;
+//     top: 0;
+//     background: linear-gradient(to right, transparent 10px, white 80%);
+//     overflow: hidden;
+//     pointer-events: none;
+//   }
+// </style>
 ---
 
 <article
   draggable={false}
-  class:list={["py-1 border-b border-b-black leading-snug", className]}
+  class:list={[
+    "border-b border-b-black h-18 leading-snug z-10",
+    !isRoot && "fixed top-9 w-full bg-white",
+    className,
+  ]}
 >
-  <div class="grid grid-cols-12 gap-x-2
-    md:gap-x-8">
+  <div
+    class:list={[
+      "py-1 relative grid grid-cols-12 gap-x-2 md:gap-x-8",
+      "max-w-screen-2xl m-auto",
+    ]}
+  >
     <h1
-      class="pl-4 col-start-1 col-end-10
+      class="fadeout relative pl-4 col-start-1 col-end-10
       md:pl-4 md:col-end-5
       lg:col-end-4
+      whitespace-nowrap overflow-hidden
       flex justify-start"
     >
       {draft && "(draft)"}{title}
     </h1>
-    <span
-      class="hidden col-start-4 col-end-9
+    <h2
+      class="fadeout relative m-0
+      hidden col-start-4 col-end-9
       md:col-start-5 md:col-end-11 md:flex
       lg:col-start-4 lg:col-end-9
+      whitespace-nowrap overflow-hidden
       justify-start"
-      >{description}</span
     >
+      {
+        description && description[description.length - 1] === "."
+          ? description?.substring(0, description.length - 1)
+          : description
+      }
+    </h2>
     <span
       class="hidden col-start-8 col-end-12
       lg:col-start-10 lg:col-end-12 lg:flex
@@ -58,26 +99,4 @@ const pathname = Astro.url.pathname;
     <!--   >{tags && tags.map((tag: any) => `${tag}`)}</span -->
     <!-- > -->
   </div>
-  {
-    pathname !== "/" && (
-      <div class="grid grid-cols-12 gap-x-2 md:gap-x-8">
-        {prevPost && (
-          <a
-            href={prevPost.slug}
-            class="pl-4 col-start-1 col-end-4 flex justify-start"
-          >
-            {prevPost.data.title}
-          </a>
-        )}
-        {nextPost && (
-          <a
-            href={nextPost.slug}
-            class="pr-4 col-start-8 col-end-13 flex justify-end"
-          >
-            {nextPost.data.title}
-          </a>
-        )}
-      </div>
-    )
-  }
 </article>

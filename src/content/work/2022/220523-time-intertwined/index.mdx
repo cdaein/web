@@ -13,6 +13,7 @@ tags:
 featured: true
 cover: ./thumb.jpg
 published: true
+draft: true
 ---
 
 import FxHash from "@components/FxHash.astro";
@@ -23,9 +24,8 @@ import GC from "@components/mdx/GridColumn.astro";
   <FxHash
     title="time-intertwined"
     caption="Click image to view live version"
-    maxCols={8}
-    from={0}
-    to={8}
+    maxCols={4}
+    tokens={[27, 74, 122, 229]}
     noGap
     captionClass="text-center"
   />
@@ -35,7 +35,7 @@ import GC from "@components/mdx/GridColumn.astro";
 
 Time Intertwined is my exploration into time and motion. Two linear timelines - structural and surficial - are intertwined. By weaving these timelines at different points in time, almost infinite variations can be made. The changing relationship between the two creates dynamic and unique compositions and challenges the visual perception.
 
-<ActivityList slug="time-intertwined" />
+<ActivityList slug="time-intertwined" sortByType />
 
 <GC start={1} end={13} mt>
   <FxHash title="time-intertwined" maxCols={10} from={0} />

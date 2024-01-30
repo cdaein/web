@@ -1,23 +1,35 @@
 ---
+type Props = {
+  id: string;
+  width?: number;
+  height?: number;
+};
+
 const { id, width, height } = Astro.props;
-const aspectRatio = height / width || 0.5625; // default is 16:9
+
+const aspectRatio = width && height ? height / width : 0.5625; // default is 16:9
 const paddingTop = aspectRatio * 100 + "%";
 ---
 
-<div
-  class="vimeo-wrapper"
-  style={{ paddingTop, position: "relative", backgroundColor: "#c0c0c0" }}
->
+<style is:global define:vars={{ paddingTop }}>
+  div.vimeo-wrapper {
+    padding-top: var(--paddingTop);
+    position: relative;
+    /* backgroundcolor: "#c0c0c0"; */
+  }
+  div.vimeo-wrapper iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<div class="vimeo-wrapper mb-8">
   <iframe
     title="vimeo-player"
     src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0`}
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-    }}
     frameborder="0"
     allow="autoplay; fullscreen; picture-in-picture"
     allowfullscreen></iframe>

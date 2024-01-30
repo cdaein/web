@@ -16,11 +16,21 @@ cover: ./thumb.jpg
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import vid1 from "./video-converted.mp4";
 import vid2 from "./process-converted.mp4";
 
-<Video src={vid1} />
-<Video src={vid2} />
+<GC>
+  A motion poster created with Modular Design System One, a web-based custom
+  software that I made with JavaScript.
+</GC>
 
-A motion poster created with Modular Design System One, a web-based custom software that I made with JavaScript.
+<GC start={1} end={13} bleed>
+  <MediaGrid
+    maxCols={2}
+    media={[vid1, vid2]}
+    alts={["animation loop", "timelapse"]}
+  />
+</GC>

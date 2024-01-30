@@ -17,6 +17,7 @@ published: true
 ---
 
 import Image from "@components/mdx/Image.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Video from "@components/mdx/Video.astro";
 import GC from "@components/mdx/GridColumn.astro";
 
@@ -29,22 +30,34 @@ import vid2 from "./files/process-2.mp4";
 import vid3 from "./files/process-3.mp4";
 import vid4 from "./files/process-4.mp4";
 
-<GC smStart={2} smEnd={12} class="mx-8">
-  <Video src={vid1} />
-</GC>
-
 Modular Design System One (MDS1) is a web app built with JavaScript technologies (HTML5 Canvas, p5.js, react.js and material-ui) that enables me to quickly create design compositions.
 
 I always wanted a more direct way of creating digital animation. The traditional approach is you define keyframes first, render, wait, and go back to more changes. While this approach has its own merit and gives you fine control, I wanted to "feel" the motion more directly while creating. With my software, I can make changes to the composition and typography while it is being played. There is also chance encounters with different color palettes. I have also created a grid-based font specifically designed for this project. It has variable font-like characteristics. Everything is controlled programmatically.
 
-It is a work-in-progress and currently, it is only for my personal use. Check out [examples](/tags/mds1) of motion-typopgraphy compositions created with this software.
+<GC start={3} end={11} lgStart={2} lgEnd={8} class="mx-0" mb>
+  <Video src={vid1} />
+</GC>
+
+<GC lgStart={8} lgEnd={11}>
+
+It is a work-in-progress and currently, only for my personal use. Check out [examples](/tags/mds1) of motion-typopgraphy compositions created with this software.
 
 Below are process images and some of the early examples:
 
-<Image alt="process" src={process} />
-<Image alt="diagram" src={diagram} />
-<Image alt="poster" src={poster} />
+</GC>
 
-<Video src={vid2} />
-<Video src={vid3} />
-<Video src={vid4} />
+<GC start={2} end={12} mt>
+  <MediaGrid
+    maxCols={3}
+    media={[process, diagram, poster, vid2, vid3, vid4]}
+    alts={[
+      "process",
+      "diagram",
+      "poster",
+      "timelapse",
+      "timelapse",
+      "timelapse",
+    ]}
+    class="gap-4"
+  />
+</GC>

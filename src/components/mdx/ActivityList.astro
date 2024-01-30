@@ -7,26 +7,8 @@ type Props = {
   slug: string;
   /** Show separate list per activity type */
   sortByType?: boolean;
+  class?: string;
 };
-
-const { slug, sortByType = false } = Astro.props;
-
-const activities = data.filter((act: Activity) => act.slug === slug);
-
-const sortedActivities = activities.reduce(
-  (acc: Record<Activity["type"], Activity[]>, activity) => {
-    const { type } = activity;
-    acc[type] = acc[type] || [];
-    acc[type].push(activity);
-    return acc;
-  },
-  {} as Record<Activity["type"], Activity[]>,
-);
-
-// all activity types (keys only)
-const activityTypes = Object.keys(
-  sortedActivities,
-) as (keyof typeof sortedActivities)[];
 
 const typeLUT = {
   award: "Awards",
@@ -39,28 +21,50 @@ const typeLUT = {
   screening: "Screenings",
 };
 
+const { slug, sortByType = false, class: className } = Astro.props;
+
+const activities = slug
+  ? data.filter((act: Activity) => act.slug === slug)
+  : data;
+
+const sortedActivities = activities.reduce(
+  (acc: Record<Activity["type"], Activity[]>, activity) => {
+    const { type } = activity;
+
+    acc[type] = acc[type] || [];
+    acc[type].push(activity);
+    return acc;
+  },
+  {} as Record<Activity["type"], Activity[]>,
+);
+
+// all activity types (keys only)
+const activityTypes = Object.keys(
+  sortedActivities,
+) as (keyof typeof sortedActivities)[];
+
 const mapHeader = (type: keyof typeof typeLUT) => typeLUT[type];
 ---
 
-{
-  sortByType ? (
-    activityTypes.map((type) => (
-      <section>
-        <h1>{mapHeader(type)}</h1>
-        <ul role="list">
-          {sortedActivities[type].map((act) => (
-            <ActivityListItem data={act} />
-          ))}
-        </ul>
-      </section>
-    ))
-  ) : (
-    <section>
+<section class:list={[className]}>
+  {
+    sortByType ? (
+      activityTypes.map((type) => (
+        <>
+          <h1 class="pl-0">{mapHeader(type)}</h1>
+          <ul role="list">
+            {sortedActivities[type].map((act) => (
+              <ActivityListItem data={act} />
+            ))}
+          </ul>
+        </>
+      ))
+    ) : (
       <ul role="list">
         {activities.map((act) => (
           <ActivityListItem data={act} />
         ))}
       </ul>
-    </section>
-  )
-}
+    )
+  }
+</section>

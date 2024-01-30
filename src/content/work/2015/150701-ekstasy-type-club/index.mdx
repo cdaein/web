@@ -16,21 +16,33 @@ published: true
 
 import Vimeo from "@components/mdx/Vimeo.astro";
 import ActivityList from "@components/mdx/ActivityList.astro";
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+
+import img1 from "./files/001.jpg";
+import img2 from "./files/002.jpg";
+import img3 from "./files/003.jpg";
+
+Ekstasy Type Club is an interactive typography application and installation. It explores the qualities of typography such as responsiveness and elasticity. Unlike type on paper, type on screen can interact with readers or users. A system with a few parameters generates a wide variety of letter forms. It constantly updates its shape and creates a unique spatial and temporal rhythm.
+
+## Technologies
+
+Ekstasy Type Club is created with [Processing](http://processing.org) programming language with the help of [Geomerative](http://www.ricardmarxer.com/geomerative/) library to get the outline data of the typefaces.
 
 <Vimeo id="132310776" width="640" height="360" />
 
-![screenshot](./files/001.jpg)
-![screenshot](./files/002.jpg)
-![screenshot](./files/003.jpg)
+<GC start={2} end={12}>
+  <MediaGrid media={[img1, img2, img3]} 
+    alts={[
+"screenshot",
+"screenshot",
+"screenshot"
+]} />
+
+</GC>
+
+<ActivityList slug="ekstasy-type-club" sortByType />
 
 <Vimeo id="132337296" width="640" height="400" />
 
 <Vimeo id="132337468" width="640" height="400" />
-
-Ekstasy Type Club is an interactive typography application and installation. It explores the qualities of typography such as responsiveness and elasticity. Unlike type on paper, type on screen can interact with readers or users. A system with a few parameters generates a wide variety of letter forms. It constantly updates its shape and creates a unique spatial and temporal rhythm.
-
-### Technologies
-
-Ekstasy Type Club is created with [Processing](http://processing.org) programming language with the help of [Geomerative](http://www.ricardmarxer.com/geomerative/) library to get the outline data of the typefaces.
-
-<ActivityList slug="ekstasy-type-club" />

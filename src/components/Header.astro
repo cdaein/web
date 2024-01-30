@@ -1,33 +1,91 @@
 ---
+// NOTE:
+// - header is 3-column grid
+// - 1st: my name
+// - 2nd: prev, index, next => inner structure
+// - 3rd: about
+
+import type { CollectionEntry } from "astro:content";
+
 type Props = {
+  prevPost?: CollectionEntry<"work" | "writing">;
+  nextPost?: CollectionEntry<"work" | "writing">;
   class?: string;
 };
 
-const { class: className } = Astro.props;
+const { prevPost, nextPost, class: className } = Astro.props;
 ---
 
 <header
   class:list={[
-    "fixed top-0 h-12 border-b border-b-black bg-white p-4 py-2 w-full ",
+    "fixed top-0 h-9 border-b border-b-black bg-white w-full flex items-center z-10",
     className,
   ]}
 >
-  <nav role="navigation" aria-label="Main" class="m-0 grid grid-cols-12">
+  <nav
+    role="navigation"
+    aria-label="Main"
+    class:list={[
+      "grid grid-cols-3 w-full",
+      "gap-x-2 md:gap-x-2",
+      "max-w-screen-2xl m-auto",
+    ]}
+  >
     <a
-      aria-label="Index"
-      class="group col-start-1 col-end-2 flex items-center"
       href="/"
+      class="group pl-4 col-start-1 col-end-2
+      flex justify-left items-center
+      whitespace-nowrap overflow-hidden"
     >
-      <span class="block group-hover:hidden">●</span>
-      <span class="hidden group-hover:block">Index</span>
+      <span class="hidden md:block">Dae In Chung</span>
+      <span class="block md:hidden">D</span>
     </a>
+    <div class="col-start-2 col-end-3 grid grid-cols-3">
+      {
+        prevPost && (
+          <a
+            href={prevPost.slug}
+            class="group col-start-1 col-end-2 flex 
+            justify-start lg:justify-end"
+          >
+            <span class="relative group-hover:right-1">←</span>&nbsp;
+            <span class="hidden md:inline">Prev</span>
+          </a>
+        )
+      }
+
+      <a
+        aria-label="Index"
+        class="group col-start-2 col-end-3 flex justify-center items-center"
+        href="/"
+      >
+        <span class="">Index</span>
+      </a>
+
+      {
+        nextPost && (
+          <a
+            href={nextPost.slug}
+            class="group col-start-3 col-end-4 flex 
+            justify-end lg:justify-start"
+          >
+            <span class="hidden md:inline">Next</span>&nbsp;
+            <span class="relative group-hover:left-1">→</span>
+          </a>
+        )
+      }
+    </div>
     <a
       aria-label="About"
-      class="group col-start-12 col-end-13 flex items-center justify-end"
+      class:list={[
+        "group pr-4 col-start-3 col-end-4",
+        "flex justify-end",
+        "items-center",
+      ]}
       href="/about"
     >
-      <span class="block group-hover:hidden">●●</span>
-      <span class="hidden group-hover:block">About</span>
+      <span class="block md:hidden">A</span>
+      <span class="hidden md:block">About</span>
     </a>
   </nav>
 </header>
