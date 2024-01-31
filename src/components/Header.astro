@@ -18,7 +18,7 @@ const { prevPost, nextPost, class: className } = Astro.props;
 
 <header
   class:list={[
-    "fixed top-0 h-9 border-b border-b-black bg-white w-full flex items-center z-10",
+    "fixed top-0 h-9 border-b-2 border-b-black bg-white w-full flex items-center z-10",
     "[&_a]:no-underline",
     className,
   ]}
@@ -30,7 +30,6 @@ const { prevPost, nextPost, class: className } = Astro.props;
       "grid grid-cols-3 w-full",
       "gap-x-2 md:gap-x-2",
       "max-w-screen-xl m-auto",
-      "font-semibold",
     ]}
   >
     <a
