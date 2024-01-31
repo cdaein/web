@@ -19,6 +19,7 @@
     "@fontsource-variable/karla": "^5.0.19",
     "@microflash/rehype-figure": "^2.0.0",
     "astro": "^4.2.4",
+    "astro-relative-links": "^0.3.7",
     "astro-seo": "^0.8.0",
     "markdown-it": "^14.0.0",
     "moment": "^2.30.1",
