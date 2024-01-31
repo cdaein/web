@@ -5,6 +5,9 @@ import { parseSlug } from "@scripts/utils";
 import { site } from "@data/siteMetadata";
 import IndexListItem from "@components/IndexListItem.astro";
 import PostHeader from "@components/mdx/PostHeader.astro";
+import RssXml from "@components/rss/RssXml.astro";
+import WriteFile from "@components/rss/WriteFile.astro";
+import path from "path";
 
 const workPosts = (
   await getCollection("work", ({ data }) => {
@@ -24,7 +27,12 @@ const workPosts = (
 // only index published posts
 // .filter((post) => post.data.published === true);
 
+// for RSS, need to send both data to construct all the fields necessary in feed.xml
 const allPosts = [...workPosts];
+const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
+
+// console.log(allPosts[0].data.draft);
+// console.log(allMdx[0].frontmatter.draft);
 ---
 
 <style is:global>
@@ -56,4 +64,8 @@ const allPosts = [...workPosts];
       ))
     }
   </ul>
+
+  <WriteFile fileUrl={"./dist/feed.xml"} slot="rss-writer">
+    <RssXml allPosts={allPosts} allMdx={allMdx} slot="rss-writer" />
+  </WriteFile>
 </Layout>

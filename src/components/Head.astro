@@ -4,6 +4,7 @@
 
 import { SEO } from "astro-seo";
 import { site } from "@data/siteMetadata";
+import { getCollection } from "astro:content";
 
 const props = Astro.props;
 
@@ -12,6 +13,27 @@ const description = props.description || site.description;
 
 // get latest project's thumbnail image
 // it should be placed directly under each post folder with the name ./thumbnail.(jpg|jpeg|png)
+const workPosts = (
+  await getCollection("work", ({ data }) => {
+    return data.draft !== true;
+  })
+)
+  // reverse-chronological order
+  .reverse();
+
+// first, get all thumbnails from all work posts
+const allImagesObj = import.meta.glob<{ default: ImageMetadata }>(
+  `/src/content/work/**/thumb*`,
+);
+
+// filter the one from the latest post.
+// then, use to find the object string key in <Image />
+// https://docs.astro.build/en/recipes/dynamically-importing-images/
+const imagePaths = Object.keys(allImagesObj).filter((key) =>
+  key.includes(workPosts[0].slug),
+);
+
+const cover = (await allImagesObj[imagePaths[0]]()).default.src;
 ---
 
 <head>
@@ -33,13 +55,13 @@ const description = props.description || site.description;
         { name: "og:title", content: title },
         { name: "og:description", content: description },
         { name: "og:type", content: "website" },
-        { name: "og:image", content: "" }, // TODO:
+        { name: "og:image", content: cover },
         // twitter
         { name: "twitter:creator", content: site.author },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
         { name: `twitter:card`, content: `summary_large_image` },
-        { name: "twitter:image", content: "" }, // TODO:
+        { name: "twitter:image", content: cover },
       ],
     }}
   />

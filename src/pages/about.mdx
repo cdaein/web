@@ -12,34 +12,34 @@ import GC from "@components/mdx/GridColumn.astro";
 import ActivityList from "@components/mdx/ActivityList.astro";
 import { site } from "@data/siteMetadata";
 
-<GC start={2} end={4}>
-  <ul role="navigation" aria-label="Social Media">
-    <li>
+<GC start={2} end={4} class="[&_a]:no-underline">
+  <ul role="navigation" aria-label="Social Media" class="mb-0 w-full flex flex-row flex-wrap md:block">
+    <li class="mr-8">
       <a href={site.links.mastodon}>Mastodon</a>
     </li>
-    <li>
+    <li class="mr-8">
       <a href={site.links.threads}>Threads</a>
     </li>
-    <li>
+    <li class="mr-8">
       <a href={site.links.twitter}>Twitter</a>
     </li>
-    <li>
+    <li class="mr-8">
       <a href={site.links.instagram}>Instagram</a>
     </li>
-    <li>
+    <li class="mr-8">
       <a href={site.links.github}>Github</a>
     </li>
   </ul>
 
-  <div class="mt-4">
-    <ul role="navigation" aria-label="Art shop">
-    <li>
+  <div class="mt-2">
+    <ul role="navigation" aria-label="Art shop" class="w-full flex flex-row md:block">
+    <li class="mr-8">
     <a href={site.links.fxhash}>fxhash</a>
     </li>
-    <li>
+    <li class="mr-8">
     <a href={site.links.objkt}>Objkt</a>
     </li>
-    <li>
+    <li class="mr-8">
     <a href={site.links.codecanvas}>CodeCanvas</a>
     </li>
     </ul>
@@ -47,15 +47,19 @@ import { site } from "@data/siteMetadata";
 </GC>
 
 <GC>
-  Dae In Chung is an artist, designer and educator. His main interests lie in
-  exploring and expressing rhythms and movements using a variety of media,
-  including animation, printed forms and interactive applications. He studied
-  Experimental Animation at California Institute of the Arts. His design and
-  animation work has been shown around the world including Centre Pompidou
-  website, the New York Times, and many festivals. He has also worked on various
-  commercial projects in graphic design and motion graphics. His work has been
-  recognized by Type Directors Club, Korean Society of Typography, IdN, CA
-  Magazine Korea, PAGE Magazine, etc.
+  Dae In Chung is an artist, designer and educator who mainly works with
+  computer code as a creative medium. His main interests lie in exploring and
+  expressing rhythms and movements using a variety of media, including
+  animation, printed forms and interactive applications. He studied Experimental
+  Animation at California Institute of the Arts. His design and animation work
+  has been shown around the world including Centre Pompidou website, the New
+  York Times, and many film and media festivals. He has also worked on various
+  graphic design and motion graphics projects for commercial clients. His work
+  has been recognized by Type Directors Club, Korean Society of Typography, IdN,
+  CA Magazine Korea, PAGE Magazine, etc.
+
+[Contact me](mailto:daeinc@paperdove.com) if you have exciting projects or opportunities.
+
 </GC>
 
 <GC>

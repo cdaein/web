@@ -52,7 +52,7 @@
   }
   .content-wrapper {
     /** compensate for fixed headers */
-    @apply pt-[4.5rem] max-w-screen-2xl m-auto;
+    @apply pt-[4.5rem] max-w-screen-xl m-auto;
   }
   h2 {
     @apply mt-0 mb-2;
@@ -73,8 +73,11 @@
     /* if using custom culumn component, adhere to grid for <GridColumn> */
     @apply mx-0;
   }
+  a,
   p a {
     text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: #333;
   }
   p img {
     @apply w-full;

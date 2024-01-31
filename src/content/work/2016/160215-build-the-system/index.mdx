@@ -9,18 +9,28 @@ tags:
   - poster
   - software
 featured: false
-cover: "./files/poster.png"
+cover: "./thumb.png"
 published: true
 ---
 
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Image from "@components/mdx/Image.astro";
-import img0 from "./files/poster.png";
 import ActivityList from "@components/mdx/ActivityList.astro";
 
+import th from "./thumb.png";
+import withbg from "./files/with-bg.png";
+import img1 from "./files/01.png";
+import img2 from "./files/02.png";
+import img3 from "./files/03.png";
+import img4 from "./files/04.png";
+
+<GC start={1} end={13} bleed mb>
+  <Image alt="Build the System poster" src={withbg} cover />
+</GC>
+
 <GC start={3} end={7}>
-  <Image alt="Build the System poster" src={img0} />
+  <Image alt="Build the System poster" src={th} />
 </GC>
 
 <GC start={7} end={11}>
@@ -34,4 +44,12 @@ import ActivityList from "@components/mdx/ActivityList.astro";
   eventually, there comes a time when the rigid rules cannot apply any more, and
   that is when the instinct and manual interventions are needed.
   <ActivityList slug="build-the-system" sortByType />
+</GC>
+
+<GC start={3} end={11}>
+  <MediaGrid
+    media={[img1, img2, img3, img4]}
+    alts={["", "", "", ""]}
+    class="gap-8"
+  />
 </GC>

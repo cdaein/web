@@ -7,7 +7,7 @@ category: animated film
 tags:
   - animation
 featured: false
-cover: "./files/thumb.jpg"
+cover: "./thumb.jpg"
 published: false
 ---
 
@@ -16,7 +16,15 @@ import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import ActivityList from "@components/mdx/ActivityList.astro";
 
-<Vimeo id="4859330" width="640" height="432" />
+import img1 from "./files/01.jpg";
+import img2 from "./files/02.jpg";
+import img3 from "./files/03.jpg";
+
+<GC start={1} end={13} bleed mb>
+  <MediaGrid media={[img1, img2, img3]} alts={["", "", ""]} />
+</GC>
+
+{/* <Vimeo id="4859330" width="640" height="432" /> */}
 
 Music from Klazz Brothers & Cuba Percussion
 

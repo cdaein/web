@@ -7,7 +7,6 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import type { CollectionEntry } from "astro:content";
 import PostHeader from "@components/mdx/PostHeader.astro";
-import PageHeader, { type PageProps } from "@components/mdx/PageHeader.astro";
 
 interface Props {
   title: string;
@@ -29,6 +28,22 @@ const isRoot = pathname === "/";
     title={title || post?.data.title}
     description={description || post?.data.description}
   />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMG01GT004"
+  ></script>
+  <script>
+    //@ts-ignore
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      //@ts-ignore
+      dataLayer.push(arguments);
+    }
+    //@ts-ignore
+    gtag("js", new Date());
+    //@ts-ignore
+    gtag("config", "G-HMG01GT004");
+  </script>
 
   <body class="h-full text-xl">
     <Header prevPost={prevPost} nextPost={nextPost} />
@@ -53,5 +68,6 @@ const isRoot = pathname === "/";
           monospace;
       }
     </style>
+    <slot name="rss-writer" />
   </body>
 </html>

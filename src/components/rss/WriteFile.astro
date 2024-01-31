@@ -1,0 +1,21 @@
+---
+import fs from "node:fs/promises";
+
+export interface Props {
+  fileUrl: string;
+}
+const { fileUrl } = Astro.props;
+
+// TODO:
+// - probably best to check if directory exists, and create one.
+// - can't be certain "dist" will be present all the time.
+
+if (Astro.slots.has("rss-writer")) {
+  const html = await Astro.slots.render("rss-writer");
+  try {
+    await fs.writeFile(fileUrl, html);
+  } catch (e) {
+    console.error(e);
+  }
+}
+---

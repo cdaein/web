@@ -6,6 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://paperdove.com",
   integrations: [
     mdx({
       // extendMarkdownConfig: false,

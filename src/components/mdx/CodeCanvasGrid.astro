@@ -1,0 +1,67 @@
+---
+import { getEntry } from "astro:content";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { gridCols, mdGridCols } from "@data/tailwindLUT";
+
+type Props = {
+  title: string;
+  maxCols?: keyof typeof gridCols;
+  noGap?: boolean;
+  /** Additional styling */
+  class?: string;
+  /** Additional styling for caption */
+  captionClass?: string;
+};
+
+
+const { title, maxCols = 10, noGap, class: className, captionClass } = Astro.props;
+
+// first, get all images in "image-grid" folder of all posts
+const allImagesObj = import.meta.glob<{ default: ImageMetadata }>(
+  `/src/content/work/**/image-grid/*`,
+);
+
+// filter the ones that belong to current token (via props.title)
+// then, use to find the object string key in <Image />
+// https://docs.astro.build/en/recipes/dynamically-importing-images/
+const imagePaths = Object.keys(allImagesObj).filter((key) =>
+  key.includes(title),
+);
+
+const hashes = imagePaths.map(path => {
+  const extSplits = path.split('.')[0]
+  const filenameSplits = extSplits.split('-')
+  return filenameSplits[filenameSplits.length- 1]
+  
+})
+
+// if too many column, use responsive settings for sm/md screen
+const cols =
+  maxCols >= 8 ? [mdGridCols[maxCols], gridCols[4]] : [gridCols[maxCols]];
+---
+
+<figure class:list={["image-grid"]}>
+  <div class:list={["grid", ...cols, !noGap && "gap-1", className]}>
+    {
+      imagePaths.map((_, i) => {
+
+      const liveUrl = `https://cdn.codecanvas.art/daeinc/sequenced/index.html?seed=${hashes[i]}`;
+
+      return (
+        <div class="thumbnail-wrapper block bg-gray-300" id={`${i}`}>
+          <a href={liveUrl} target="_blank">
+            {/* i'm assuming paths are in the correct order of token iterations */}
+            <Image
+              src={allImagesObj[imagePaths[i]]()}
+              alt=`Token #${i}`
+              title={title}
+              class="hover:border-black hover:border-2"
+            />
+          </a>
+        </div>
+        )
+      })
+    }
+  </div>
+</figure>

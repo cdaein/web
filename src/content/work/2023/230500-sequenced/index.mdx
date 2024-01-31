@@ -3,7 +3,7 @@ title: Sequenced
 slug: "sequenced"
 description: Infinitely generated motion compositions.
 date: 2023-05-11
-category: digital art
+category: generative art
 tags:
   - generative
   - software
@@ -11,16 +11,23 @@ tags:
   - interactive
   - NFT
 featured: true
-cover: ./thumb.jpg
+cover: ./thumb.png
 published: true
-draft: true
 ---
 
-**TODO: Get thumbnail images and link to live view**
-**TODO: process images and video recordings**
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import Video from "@components/mdx/Video.astro";
+import CodeCanvasGrid from "@components/mdx/CodeCanvasGrid.astro";
 
-[Sequenced](https://codecanvas.art/drop/8Dus2SwgbXATR6tGSjcKcFSAkmhpZD17g36kgpVz3Bpk) is a generative NFT project that was launched on Code Canvas, and lives on the Solana blockchain.
+import vid1 from "./composition-1.mp4";
+import vid2 from "./composition-2.mp4";
 
+<GC start={1} end={7} class="mb-12">
+  <Video src={vid1} />
+</GC>
+
+<GC start={7} end={12}>
 Sequenced is an exploration of generative motion compositions. Line segments
 are all connected in a loop and move within the constraints of a simple
 2-dimensional grid structure. Each segment is assigned a sequence of motion
@@ -28,3 +35,11 @@ data to follow, including rhythm units and the next positions. Some of the
 data is reused, while others are generated in real-time. Together, they act
 like a musical score but for the visuals. Sequenced falls somewhere between
 predictive sequences of rhythmical motion and endless random permutations.
+
+[Sequenced](https://codecanvas.art/drop/8Dus2SwgbXATR6tGSjcKcFSAkmhpZD17g36kgpVz3Bpk) is available to mint on the Solana blockchain. Click each image below to see live version of the minted tokens.
+
+  </GC>
+
+<GC start={1} end={13}>
+  <CodeCanvasGrid title="sequenced" />
+</GC>

@@ -51,7 +51,7 @@ const mapHeader = (type: keyof typeof typeLUT) => typeLUT[type];
     sortByType ? (
       activityTypes.map((type) => (
         <>
-          <h1 class="pl-0">{mapHeader(type)}</h1>
+          <h2 class="m-0 pl-0 text-base">{mapHeader(type)}</h2>
           <ul role="list">
             {sortedActivities[type].map((act) => (
               <ActivityListItem data={act} />

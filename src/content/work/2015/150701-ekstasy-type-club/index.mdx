@@ -10,7 +10,7 @@ tags:
   - software
   - tool
 featured: true
-cover: "./files/thumb2.png"
+cover: "./thumb.png"
 published: true
 ---
 
@@ -22,6 +22,15 @@ import MediaGrid from "@components/mdx/MediaGrid.astro";
 import img1 from "./files/001.jpg";
 import img2 from "./files/002.jpg";
 import img3 from "./files/003.jpg";
+import img4 from "./files/tdc_badge_1.5.png";
+import th from "./thumb.png";
+
+<GC start={1} end={13} bleed mb>
+  <MediaGrid
+    media={[th]}
+    alts={["TYPES written on black background", "App screenshot"]}
+  />
+</GC>
 
 Ekstasy Type Club is an interactive typography application and installation. It explores the qualities of typography such as responsiveness and elasticity. Unlike type on paper, type on screen can interact with readers or users. A system with a few parameters generates a wide variety of letter forms. It constantly updates its shape and creates a unique spatial and temporal rhythm.
 
@@ -36,7 +45,7 @@ Ekstasy Type Club is created with [Processing](http://processing.org) programmin
     alts={[
 "screenshot",
 "screenshot",
-"screenshot"
+"screenshot",
 ]} />
 
 </GC>
