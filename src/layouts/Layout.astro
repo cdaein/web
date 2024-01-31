@@ -27,6 +27,8 @@ const isRoot = pathname === "/";
   <Head
     title={title || post?.data.title}
     description={description || post?.data.description}
+    id={post?.id}
+    slug={post?.slug}
   />
 
   <!-- Google tag (gtag.js) -->

@@ -1,39 +1,54 @@
 ---
+// https://docs.astro.build/en/recipes/dynamically-importing-images/
+
+// NOTE:
+// - thumbnail for social
+//   - use full url for image path: twitter doesn't support relative path
+//   - becdause of this, the constructed image path is wrong when developing. ex. https://paperdove.com/@fs/..
+//   - doens't really matter as i don't use it while dev, but something to note.
+
 // really no need to use a separate package but..
 // https://github.com/jonasmerlin/astro-seo
 
 import { SEO } from "astro-seo";
 import { site } from "@data/siteMetadata";
 import { getCollection } from "astro:content";
+import path from "node:path";
 
+// title, description, id, slug
+// ex.
+// id: '2022/220309-nodes/index.mdx',
+// slug: 'nodes',
 const props = Astro.props;
 
 const title = props.title ? `${props.title} • ${site.title}` : site.title;
 const description = props.description || site.description;
 
-// get latest project's thumbnail image
-// it should be placed directly under each post folder with the name ./thumbnail.(jpg|jpeg|png)
-const workPosts = (
-  await getCollection("work", ({ data }) => {
-    return data.draft !== true;
-  })
-)
-  // reverse-chronological order
-  .reverse();
-
 // first, get all thumbnails from all work posts
+// ex. '/src/content/work/2021/211006-nyt-wordlist/thumb.jpg'
 const allImagesObj = import.meta.glob<{ default: ImageMetadata }>(
   `/src/content/work/**/thumb*`,
 );
+const latestThumbPath = Object.keys(allImagesObj).sort().reverse().shift()!;
 
-// filter the one from the latest post.
-// then, use to find the object string key in <Image />
-// https://docs.astro.build/en/recipes/dynamically-importing-images/
-const imagePaths = Object.keys(allImagesObj).filter((key) =>
-  key.includes(workPosts[0].slug),
+// ex. default.src:
+// '/@fs/Users/dane/Documents/GitHub/paperdove-2024/src/content/work/2022/220821-duet/thumb.png?origWidth=800&origHeight=800&origFormat=png',
+// const allThumbs = await Astro.glob("@content/work/**/thumb*");
+
+const pathname = Astro.url.pathname;
+const isRoot = pathname === "/";
+
+// from allThumbs, find the one belongs to current post
+const postDirname = props && props.id && path.dirname(props.id); // Get the directory name only (without file)
+const thumbPath = Object.keys(allImagesObj).find((key) =>
+  key.includes(postDirname),
 );
 
-const cover = (await allImagesObj[imagePaths[0]]()).default.src;
+// - if index page, show latest thumb.
+// - if no "thumbnail" found, use the latest.
+// - if thumbnail found, use the correct cover for each post
+const coverPath = isRoot || !thumbPath ? latestThumbPath : thumbPath;
+const cover = (await allImagesObj[coverPath]()).default.src;
 ---
 
 <head>
@@ -55,7 +70,7 @@ const cover = (await allImagesObj[imagePaths[0]]()).default.src;
         { name: "og:title", content: title },
         { name: "og:description", content: description },
         { name: "og:type", content: "website" },
-        { name: "og:image", content: cover },
+        { name: "og:image", content: `${site.siteUrl}${cover}` },
         // twitter
         { name: "twitter:creator", content: site.author },
         { name: "twitter:title", content: title },
