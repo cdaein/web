@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 // @ts-ignore
 // import rehypeFigure from "@microflash/rehype-figure";
 
-import relativeLinks from "astro-relative-links";
+// import relativeLinks from "astro-relative-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,4 +28,3 @@ export default defineConfig({
     // rehypePlugins: [rehypeFigure],
   },
 });
-

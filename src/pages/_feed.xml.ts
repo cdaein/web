@@ -4,9 +4,8 @@
 import rss from "@astrojs/rss";
 import { site } from "@data/siteMetadata";
 import type { APIContext } from "astro";
-import { a11y } from "astro/runtime/client/dev-toolbar/apps/audit/a11y.js";
 import { getCollection } from "astro:content";
-import sanitizeHtml from "sanitize-html";
+// import sanitizeHtml from "sanitize-html";
 import MarkdownIt from "markdown-it";
 
 const parser = new MarkdownIt({

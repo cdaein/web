@@ -1,7 +1,6 @@
 ---
-import moment from "moment";
+// import moment from "moment";
 import type { CollectionEntry } from "astro:content";
-import { camelcase } from "@scripts/utils";
 
 // REVIEW: is there a type for this?
 // - the name should be PostProps
@@ -25,7 +24,7 @@ type Props = {
 
 // const { page, class: className } = Astro.props;
 const {
-  page: { title, description, date, category, tags, draft },
+  page: { title, description, draft },
   class: className,
 } = Astro.props;
 

@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import { parseSlug } from "@scripts/utils";
 import Prose from "@components/mdx/Prose.astro";
@@ -8,9 +8,9 @@ export async function getStaticPaths() {
   const workEntries = await getCollection("work", ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
   });
-  const writingEntries = await getCollection("writing", ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
-  });
+  // const writingEntries = await getCollection("writing", ({ data }) => {
+  //   return import.meta.env.PROD ? data.draft !== true : true;
+  // });
 
   // const allPosts = [...workEntries, ...writingEntries];
   const allPosts = [...workEntries];

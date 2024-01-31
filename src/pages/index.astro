@@ -1,13 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import { parseSlug } from "@scripts/utils";
 import { site } from "@data/siteMetadata";
-import IndexListItem from "@components/IndexListItem.astro";
 import PostHeader from "@components/mdx/PostHeader.astro";
 import RssXml from "@components/rss/RssXml.astro";
 import WriteFile from "@components/rss/WriteFile.astro";
-import path from "path";
 
 const workPosts = (
   await getCollection("work", ({ data }) => {

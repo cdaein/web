@@ -9,7 +9,7 @@
 import { gridCols } from "@data/tailwindLUT";
 // import Image from "@components/mdx/Image.astro";
 import { Image } from "astro:assets";
-import Video from "./Video.astro";
+// import Video from "./Video.astro";
 
 type Props = {
   maxCols?: keyof typeof gridCols;
@@ -20,6 +20,7 @@ type Props = {
   controls?: boolean;
   autoplay?: boolean;
   class?: string;
+  captionClass?: string;
 };
 
 const {
@@ -27,10 +28,11 @@ const {
   alts,
   maxCols,
   caption,
-  noGap,
+  // noGap,
   controls = true,
   autoplay,
   class: className,
+  captionClass,
 } = Astro.props;
 
 // If I forget to add the props, defaults to number of images
@@ -72,4 +74,5 @@ const maxColsChecked =
       })
     }
   </div>
+  {caption && <figcaption class:list={[captionClass]}>{caption}</figcaption>}
 </figure>
