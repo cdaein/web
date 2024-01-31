@@ -23,96 +23,82 @@ const {
 // if not root, add page navagation
 const pathname = Astro.url.pathname;
 const isRoot = pathname === "/";
-
-// {
-// isRoot &&
-// <style is:global>
-//   article:hover .fadeout:before {
-//     background: linear-gradient(to right, transparent 10px, black 80%);
-//   }
-// </style>
-// }
-//
-// <style is:global>
-//   .fadeout:before {
-//     content: "";
-//     width: 10%;
-//     height: 100%;
-//     position: absolute;
-//     right: 0px;
-//     top: 0;
-//     background: linear-gradient(to right, transparent 10px, white 80%);
-//     overflow: hidden;
-//     pointer-events: none;
-//   }
-// </style>
 ---
 
+<style is:global>
+  .fadeout:before {
+    content: "";
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background: linear-gradient(to right, transparent 10px, white 80%);
+    overflow: hidden;
+    pointer-events: none;
+  }
+</style>
+
+{
+  isRoot && <style is:global>
+    article:hover .fadeout:before {
+      background: linear-gradient(to right, transparent 10px, black 80%);
+    }
+  </style>
+}
+
 <article
-  draggable={false}
   class:list={[
     isRoot ? "border-b" : "border-b-2",
     "border-b-black h-18 leading-snug z-10",
     !isRoot && "fixed top-9 w-full bg-white",
+    isRoot && "hover:bg-black hover:text-white",
     className,
   ]}
 >
-  <div
-    class:list={[
-      "py-1 relative grid grid-cols-12 gap-x-2 md:gap-x-8",
-      "max-w-screen-xl m-auto",
-    ]}
-  >
-    <a
-      class="fadeout relative pl-4 col-start-1 col-end-10
-      md:pl-4 md:col-end-5
-      lg:col-end-4
-      whitespace-nowrap overflow-hidden
-      flex justify-start"
-      href={`/${post.slug}`}
+  <div class="group">
+    <div
+      class:list={[
+        "py-1 relative grid grid-cols-12 gap-x-2 md:gap-x-8",
+        "max-w-screen-xl m-auto",
+      ]}
     >
-      <h1>
-        {draft && "(draft)"}{title}
-      </h1>
-    </a>
-    <a 
-      class="fadeout relative m-0
-      hidden col-start-4 col-end-9
-      md:col-start-5 md:col-end-11 md:flex
-      lg:col-start-4 lg:col-end-9
-      whitespace-nowrap overflow-hidden
-      justify-start"
-      href={`/${post.slug}`}>
-      <h2
-      >
-        {
-          description && description[description.length - 1] === "."
-            ? description?.substring(0, description.length - 1)
-            : description
-        }
-      </h2>
-    </a>
-
-    <a 
-      class="hidden col-start-8 col-end-12
-      lg:col-start-10 lg:col-end-12 lg:flex
-      justify-start"
-      href={`/${post.slug}`}>
-    <span
-      >{category && camelcase(`${category}`)}</span
-    >
-      </a>
-    <a 
-      class="pr-4 col-start-11 col-end-13
-      lg:col-start-12
-      flex justify-end"
-      href={`/${post.slug}`}>
-    <span
-      >{moment(date).year()}</span
-    >
-      </a>
-    <!-- <span class="col-start-4 col-end-12 flex justify-start" -->
-    <!--   >{tags && tags.map((tag: any) => `${tag}`)}</span -->
-    <!-- > -->
+        <h1 class:list={[
+          "m-0 whitespace-nowrap overflow-hidden",
+          "fadeout relative pl-4 col-start-1 col-end-10",
+          "md:pl-4 md:col-end-5",
+          "lg:col-end-4",
+          "flex justify-start"
+        ]}>
+          {draft && "(draft)"}{title}
+        </h1>
+        <h2 class:list={[
+          "m-0 whitespace-nowrap overflow-hidden",
+          "fadeout relative",
+          "hidden col-start-4 col-end-9",
+          "md:col-start-5 md:col-end-11 md:flex",
+          "lg:col-start-4 lg:col-end-9",
+          "justify-start"
+        ]}>
+          {
+            description && description[description.length - 1] === "."
+              ? description?.substring(0, description.length - 1)
+              : description
+          }
+        </h2>
+        <span class:list={[
+          "hidden col-start-8 col-end-12",
+          "lg:col-start-10 lg:col-end-12 lg:flex",
+          "justify-start"
+        ]}>{category && camelcase(`${category}`)}</span>
+        <span class:list={[
+          "pr-4 col-start-11 col-end-13",
+          "lg:col-start-12",
+          "flex justify-end"
+        ]}>{moment(date).year()}</span>
+      <!-- <span class="col-start-4 col-end-12 flex justify-start" -->
+      <!--   >{tags && tags.map((tag: any) => `${tag}`)}</span -->
+      <!-- > -->
+    </div>
   </div>
 </article>
