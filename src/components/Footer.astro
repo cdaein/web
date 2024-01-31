@@ -6,20 +6,26 @@ const { class: className } = Astro.props;
 <footer
   class:list={[
     "mt-[6.75rem] px-4 py-9 w-full h-[6.75rem] bg-white text-sm z-10",
+    "max-w-screen-xl m-auto",
     className,
   ]}
 >
-  <div class="grid grid-cols-13">
-    <div class="col-start-1">
+  <div class="grid grid-cols-6 md:grid-cols-12">
+    <div class="col-start-1 col-end-4">
       {
         `© 2024${moment().year() !== 2024 ? -moment().year() : ""} paperdove.com`
       }
     </div>
-    <div class="col-start-13 text-right">
-      <a
-        href="https://www.privacypolicygenerator.info/live.php?token=IuUXFahY27PLkblW7tjXFx52KRSrRX4Q"
-        target="_blank">privacy policy</a
-      >
+    <div class="col-start-4 col-end-7 md:col-start-5 lg:col-start-4">
+      <div>
+        <a href="/feed.xml">rss</a>
+      </div>
+      <div>
+        <a
+          href="https://www.privacypolicygenerator.info/live.php?token=IuUXFahY27PLkblW7tjXFx52KRSrRX4Q"
+          target="_blank">privacy policy</a
+        >
+      </div>
     </div>
   </div>
 </footer>
