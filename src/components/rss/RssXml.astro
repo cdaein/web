@@ -4,6 +4,9 @@
 // This is a workaround I found:
 // https://scottwillsey.com/rss-pt2/
 
+// TODO:
+// - parse date format (RFC 2822)
+
 import path from "node:path";
 import moment from "moment";
 import { site } from "@data/siteMetadata";
@@ -12,8 +15,6 @@ const { allPosts, allMdx } = Astro.props;
 
 const posts = allPosts.filter((post: any) => post.data.draft !== true);
 const mdxs = allMdx.filter((mdx: any) => mdx.frontmatter.draft !== true);
-
-// console.log(posts.length, mdxs.length);
 
 const rssHeaderXml = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="/rss/styles.xsl" type="text/xsl"?>
@@ -42,7 +43,7 @@ const rssFooterXml = `  </channel>
       <link>${new URL(path.join("/", post.slug), site.siteUrl)}</link>
       <guid>${new URL(path.join("/", post.slug), site.siteUrl)}</guid>
       <description><![CDATA[ ${post.data.description}]]></description>
-      <pubDate>${moment(post.data.date)}</pubDate>
+      <pubDate>${moment(posts[0].data.date).format("ddd, DD MMM YYYY")}</pubDate>
       <content:encoded><![CDATA[`}
         />
         <mdx.Content />

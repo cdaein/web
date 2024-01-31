@@ -30,10 +30,6 @@ const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
 
 // console.log(allPosts[0].data.draft);
 // console.log(allMdx[0].frontmatter.draft);
-
-// <WriteFile fileUrl={"./public/feed.xml"} slot="rss-writer">
-//   <RssXml allPosts={allPosts} allMdx={allMdx} slot="rss-writer" />
-//   </WriteFile>
 ---
 
 <style is:global>
@@ -65,4 +61,7 @@ const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
       ))
     }
   </ul>
+  <WriteFile fileUrl={"./dist/feed.xml"} slot="rss-writer">
+    <RssXml allPosts={allPosts} allMdx={allMdx} slot="rss-writer" />
+  </WriteFile>
 </Layout>
