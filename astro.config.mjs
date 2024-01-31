@@ -9,17 +9,23 @@ import relativeLinks from "astro-relative-links";
 // https://astro.build/config
 export default defineConfig({
   site: "https://paperdove.com",
-  integrations: [mdx({
-    // extendMarkdownConfig: false,
-    // rehypePlugins: [rehypeFigure],
-  }), tailwind({
-    // tailwind preflight
-    applyBaseStyles: true,
-    // Example: Allow writing nested CSS declarations
-    // alongside Tailwind's syntax
-    nesting: true
-  }), relativeLinks()],
+  integrations: [
+    mdx({
+      // extendMarkdownConfig: false,
+      // rehypePlugins: [rehypeFigure],
+    }),
+    tailwind({
+      // tailwind preflight
+      applyBaseStyles: true,
+      // Example: Allow writing nested CSS declarations
+      // alongside Tailwind's syntax
+      nesting: true,
+    }),
+    //
+    // relativeLinks(),
+  ],
   markdown: {
     // rehypePlugins: [rehypeFigure],
-  }
+  },
 });
+

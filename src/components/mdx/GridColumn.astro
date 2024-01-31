@@ -49,6 +49,7 @@ const {
 // if they are not edge-touching, gird element should not have any padding.
 // NOTE:
 // - updated from padding to margin b/c i need custom padding style for h2
+// - maybe use another wrapper if this becomes an issue.
 const ml = !bleed && start === 1 ? "md:ml-4" : ""; // 1rem == pl-4
 const mr = !bleed && end === 13 ? "md:mr-4" : "";
 

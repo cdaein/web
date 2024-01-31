@@ -1,4 +1,8 @@
 ---
+// TODO:
+// - apply width and height to figure wrapper to avoid layout shift.
+//  - width and height attributes don't seem to work atm.
+
 type Props = {
   /** Path string */
   src: string;
@@ -19,18 +23,11 @@ const {
   mb,
   class: className,
 } = Astro.props;
-
-{
-  /* <div className="video-wrapper">
-<video controls muted loop>
-{mp4 ? <source type="video/mp4" src={mp4}></source> : null}
-{webm ? <source type="video/webm" src={webm}></source> : null}
-</video>
-</div> */
-}
 ---
 
-<figure class:list={["video-wrapper mb-8", mb && "mb-8", className]}>
+<figure
+  class:list={["video-wrapper mb-8 bg-gray-500", mb && "mb-8", className]}
+>
   <video
     src={src}
     width={width}

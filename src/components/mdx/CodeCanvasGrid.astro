@@ -17,9 +17,9 @@ type Props = {
 
 const { title, maxCols = 10, noGap, class: className, captionClass } = Astro.props;
 
-// first, get all images in "image-grid" folder of all posts
+// first, get all images in "codecanvas-grid" folder of all posts
 const allImagesObj = import.meta.glob<{ default: ImageMetadata }>(
-  `/src/content/work/**/image-grid/*`,
+  `/src/content/work/**/codecanvas-grid/*`,
 );
 
 // filter the ones that belong to current token (via props.title)

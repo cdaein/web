@@ -33,6 +33,13 @@ export type Activity = z.infer<typeof schema>;
 
 const activities: Activity[] = [
   {
+    type: "exhibition",
+    title: "Motion Evolving",
+    date: "2023-09-29",
+    city: "Beijing",
+    country: "China",
+  },
+  {
     type: "featured",
     title: "We Want Art Everywhere",
     date: "2022",
