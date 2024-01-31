@@ -14,6 +14,8 @@ type Props = {
 };
 
 const { prevPost, nextPost, class: className } = Astro.props;
+
+console.log(prevPost);
 ---
 
 <header
@@ -46,7 +48,7 @@ const { prevPost, nextPost, class: className } = Astro.props;
       {
         prevPost && (
           <a
-            href={prevPost.slug}
+            href=`/${prevPost.slug}`
             class="group col-start-1 col-end-2 flex 
             justify-start lg:justify-end"
           >
@@ -67,7 +69,7 @@ const { prevPost, nextPost, class: className } = Astro.props;
       {
         nextPost && (
           <a
-            href={nextPost.slug}
+            href=`/${nextPost.slug}`
             class="group col-start-3 col-end-4 flex 
             justify-end lg:justify-start"
           >
