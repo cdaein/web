@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "astro build && gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
@@ -32,7 +31,6 @@
     "@types/markdown-it": "^13.0.7",
     "@types/node": "^20.11.7",
     "@types/sanitize-html": "^2.9.5",
-    "gh-pages": "^6.1.1",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.13.0",
     "typescript": "^5.3.3"
