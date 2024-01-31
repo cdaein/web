@@ -27,27 +27,27 @@ const { prevPost, nextPost, class: className } = Astro.props;
     role="navigation"
     aria-label="Main"
     class:list={[
-      "grid grid-cols-3 w-full",
+      "grid grid-cols-12 w-full",
       "gap-x-2 md:gap-x-2",
       "max-w-screen-xl m-auto",
     ]}
   >
     <a
       href="/"
-      class="group pl-4 col-start-1 col-end-2
+      class="group pl-4 col-start-1 col-end-3
       flex justify-left items-center
       whitespace-nowrap overflow-hidden"
     >
       <span class="hidden md:block">Dae In Chung</span>
       <span class="block md:hidden">D</span>
     </a>
-    <div class="col-start-2 col-end-3 grid grid-cols-3">
+    <div class="col-start-5 col-end-9 grid grid-cols-3">
       {
         prevPost && (
           <a
             href=`/${prevPost.slug}`
             class="group col-start-1 col-end-2 flex 
-            justify-start lg:justify-end"
+            justify-center lg:justify-end"
           >
             <span class="relative group-hover:right-1">←</span>&nbsp;
             <span class="hidden md:inline">Prev</span>
@@ -68,7 +68,7 @@ const { prevPost, nextPost, class: className } = Astro.props;
           <a
             href=`/${nextPost.slug}`
             class="group col-start-3 col-end-4 flex 
-            justify-end lg:justify-start"
+            justify-center lg:justify-start"
           >
             <span class="hidden md:inline">Next</span>&nbsp;
             <span class="relative group-hover:left-1">→</span>
@@ -79,7 +79,7 @@ const { prevPost, nextPost, class: className } = Astro.props;
     <a
       aria-label="About"
       class:list={[
-        "group pr-4 col-start-3 col-end-4",
+        "group pr-4 col-start-12 col-end-13",
         "flex justify-end",
         "items-center",
       ]}
