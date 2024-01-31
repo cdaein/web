@@ -54,9 +54,7 @@ const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
     {
       allPosts.map((post) => (
         <li class="hover:bg-black hover:text-white">
-          <a href={`/${post.slug}`}>
-            <PostHeader post={post} />
-          </a>
+          <PostHeader post={post} />
         </li>
       ))
     }

@@ -63,41 +63,54 @@ const isRoot = pathname === "/";
       "max-w-screen-xl m-auto",
     ]}
   >
-    <h1
+    <a
       class="fadeout relative pl-4 col-start-1 col-end-10
       md:pl-4 md:col-end-5
       lg:col-end-4
       whitespace-nowrap overflow-hidden
       flex justify-start"
+      href={`/${post.slug}`}
     >
-      {draft && "(draft)"}{title}
-    </h1>
-    <h2
+      <h1>
+        {draft && "(draft)"}{title}
+      </h1>
+    </a>
+    <a 
       class="fadeout relative m-0
       hidden col-start-4 col-end-9
       md:col-start-5 md:col-end-11 md:flex
       lg:col-start-4 lg:col-end-9
       whitespace-nowrap overflow-hidden
       justify-start"
-    >
-      {
-        description && description[description.length - 1] === "."
-          ? description?.substring(0, description.length - 1)
-          : description
-      }
-    </h2>
-    <span
+      href={`/${post.slug}`}>
+      <h2
+      >
+        {
+          description && description[description.length - 1] === "."
+            ? description?.substring(0, description.length - 1)
+            : description
+        }
+      </h2>
+    </a>
+
+    <a 
       class="hidden col-start-8 col-end-12
       lg:col-start-10 lg:col-end-12 lg:flex
       justify-start"
+      href={`/${post.slug}`}>
+    <span
       >{category && camelcase(`${category}`)}</span
     >
-    <span
+      </a>
+    <a 
       class="pr-4 col-start-11 col-end-13
       lg:col-start-12
       flex justify-end"
+      href={`/${post.slug}`}>
+    <span
       >{moment(date).year()}</span
     >
+      </a>
     <!-- <span class="col-start-4 col-end-12 flex justify-start" -->
     <!--   >{tags && tags.map((tag: any) => `${tag}`)}</span -->
     <!-- > -->
