@@ -51,7 +51,7 @@ const activityTypes = Object.keys(
 const mapHeader = (type: keyof typeof typeLUT) => typeLUT[type];
 ---
 
-<section class:list={[className]}>
+<section class:list={["activity-wrapper", className]}>
   {
     sortByType ? (
       activityTypes.map((type) => (
