@@ -62,7 +62,7 @@ const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
     }
   </ul>
 
-  <WriteFile fileUrl={"./dist/feed.xml"} slot="rss-writer">
+  <WriteFile fileUrl={"./public/feed.xml"} slot="rss-writer">
     <RssXml allPosts={allPosts} allMdx={allMdx} slot="rss-writer" />
   </WriteFile>
 </Layout>
