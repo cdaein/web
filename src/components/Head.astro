@@ -61,7 +61,7 @@ const cover = (await allImagesObj[imagePaths[0]]()).default.src;
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
         { name: `twitter:card`, content: `summary_large_image` },
-        { name: "twitter:image", content: cover },
+        { name: "twitter:image", content: `${site.siteUrl}${cover}` },
       ],
     }}
   />
