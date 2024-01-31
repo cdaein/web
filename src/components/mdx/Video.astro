@@ -1,7 +1,12 @@
 ---
 // TODO:
 // - apply width and height to figure wrapper to avoid layout shift.
-//  - width and height attributes don't seem to work atm.
+//  - get-video-dimensions works.
+//  - props passed in don't work. i think it's because of number vs. string in css var.
+//  - what about attr passed to <video>? is it working?
+
+// @ts-ignore
+import getDimensions from "get-video-dimensions";
 
 type Props = {
   /** Path string */
@@ -23,11 +28,21 @@ const {
   mb,
   class: className,
 } = Astro.props;
+
+const dimensions = await getDimensions(`.${src}`);
+
+const w = width || dimensions.width;
+const h = height || dimensions.height;
 ---
 
-<figure
-  class:list={["video-wrapper mb-8 bg-gray-200", mb && "mb-8", className]}
->
+<style is:global define:vars={{ w, h }}>
+  figure.video-wrapper video {
+    width: 100%;
+    aspect-ratio: var(--w) / var(--h);
+  }
+</style>
+
+<figure class:list={["video-wrapper mb-8 bg-black", mb && "mb-8", className]}>
   <video
     src={src}
     width={width}
@@ -37,6 +52,7 @@ const {
     loop
     muted
     playsinline
+    class:list={["w-full h-full object-cover"]}
   >
   </video>
   {caption && <figcaption>{caption}</figcaption>}
