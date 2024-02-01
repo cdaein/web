@@ -11,9 +11,11 @@ import getDimensions from "get-video-dimensions";
 type Props = {
   /** Path string */
   src: string;
+  title?: string;
   caption?: string;
   width?: number;
   height?: number;
+  controls?: boolean;
   autoplay?: boolean;
   /** Additional classes to add to the wrapper div */
   mb?: boolean;
@@ -21,10 +23,12 @@ type Props = {
 };
 const {
   src,
+  title,
   caption,
   width,
   height,
-  autoplay,
+  controls = true,
+  autoplay = false,
   mb,
   class: className,
 } = Astro.props;
@@ -45,13 +49,14 @@ const h = height || dimensions.height;
 <figure class:list={["video-wrapper mb-8 bg-black", mb && "mb-8", className]}>
   <video
     src={src}
+    title={title}
     width={width}
     height={height}
-    autoplay={autoplay}
-    controls
+    controls={controls}
     loop
     muted
     playsinline
+    autoplay={autoplay}
     class:list={["w-full h-full object-cover"]}
   >
   </video>
