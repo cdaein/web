@@ -16,9 +16,10 @@ cover: ./files/thumb.jpg
 published: true
 ---
 
-import Image from "@components/mdx/Image.astro";
+import { Image } from "astro:assets";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Video from "@components/mdx/Video.astro";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 import GC from "@components/mdx/GridColumn.astro";
 
 import process from "./files/process-1.png";
@@ -35,7 +36,7 @@ Modular Design System One (MDS1) is a web app built with JavaScript technologies
 I always wanted a more direct way of creating digital animation. The traditional approach is you define keyframes first, render, wait, and go back to more changes. While this approach has its own merit and gives you fine control, I wanted to "feel" the motion more directly while creating. With my software, I can make changes to the composition and typography while it is being played. There is also chance encounters with different color palettes. I have also created a grid-based font specifically designed for this project. It has variable font-like characteristics. Everything is controlled programmatically.
 
 <GC start={3} end={11} lgStart={2} lgEnd={8} class="mx-0" mb>
-  <Video src={vid1} />
+  <Video src={vid1} width={1200} height={900} />
 </GC>
 
 <GC lgStart={8} lgEnd={11}>
@@ -47,17 +48,12 @@ Below are process images and some of the early examples:
 </GC>
 
 <GC start={2} end={12} mt>
-  <MediaGrid
-    maxCols={3}
-    media={[process, diagram, poster, vid2, vid3, vid4]}
-    alts={[
-      "process",
-      "diagram",
-      "poster",
-      "timelapse",
-      "timelapse",
-      "timelapse",
-    ]}
-    class="gap-4"
-  />
+  <MediaGrid maxCols={3} class="gap-4">
+    <VideoInGrid src={vid2} />
+    <VideoInGrid src={vid3} />
+    <VideoInGrid src={vid4} />
+    <Image src={process} alt="process" />
+    <Image src={diagram} alt="diagram" />
+    <Image src={poster} alt="poster" />
+  </MediaGrid>
 </GC>

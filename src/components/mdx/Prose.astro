@@ -32,7 +32,6 @@
   p,
   ul,
   ol,
-  figure,
   blockquote,
   iframe,
   section {
@@ -40,15 +39,21 @@
     md:px-0 md:col-start-5 md:col-end-12
     lg:col-start-4 lg:col-end-10;
   }
+  /* video-in-grid needs this but inside video-wrapper it can't */
   .image-custom,
   .fxhash-grid,
   .video-wrapper,
+  .video-in-grid,
   .vimeo-wrapper,
   .objkt-grid,
+  .test-grid,
   .image-grid {
     @apply px-0 col-start-1 col-end-13 
     md:px-0 md:col-start-5 md:col-end-12
     lg:col-start-4 lg:col-end-10;
+  }
+  .video-wrapper .video-in-grid {
+    @apply col-start-auto col-end-auto;
   }
   .content-wrapper {
     /** compensate for fixed headers */

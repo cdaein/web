@@ -30,6 +30,8 @@ const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
 
 // console.log(allPosts[0].data.draft);
 // console.log(allMdx[0].frontmatter.draft);
+
+// console.log(import.meta.env.DEV);
 ---
 
 <Layout title={"Index"} description={site.description}>

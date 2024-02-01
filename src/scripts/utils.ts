@@ -31,3 +31,36 @@ export function camelcase(str: string) {
     .map((word) => word[0].toUpperCase() + word.substring(1))
     .join(" ");
 }
+
+/**
+ * Returns the dimensions of a video asynchrounsly.
+ * https://stackoverflow.com/a/45355068/3125961
+ *
+ * @param url - Url of the video to get dimensions from.
+ * @return  Promise which returns the dimensions of the video in 'width' and 'height' properties.
+ */
+export function getVideoDimensionsOf(
+  url: string,
+): Promise<{ width: number; height: number }> {
+  return new Promise((resolve) => {
+    // create the video element
+    const video = document.createElement("video");
+
+    // place a listener on it
+    video.addEventListener(
+      "loadedmetadata",
+      function () {
+        // retrieve dimensions
+        const height = this.videoHeight;
+        const width = this.videoWidth;
+
+        // send back result
+        resolve({ height, width });
+      },
+      false,
+    );
+
+    // start download meta-datas
+    video.src = url;
+  });
+}

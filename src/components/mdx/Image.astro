@@ -19,7 +19,7 @@ const { alt, src, caption, cover, mb, class:className, captionClass } = Astro.pr
 
 ---
 
-<figure class:list={["image-custom mb-8", mb && "mb-8", className]}>
+<figure class:list={["image-custom", mb && "mb-8", className]}>
   <AstroImage src={src} alt={alt} class:list={["m-auto", cover && "w-full h-full"]} />
   {
     caption && (

@@ -17,7 +17,7 @@ published: true
 
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
-import Video from "@components/mdx/Video.astro";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 import vid1 from "./video.mp4";
 import vid2 from "./recording.mp4";
 
@@ -26,5 +26,8 @@ Interactive web poster. You can write your message and save as image. Best viewe
 [https://exp.paperdove.com/chillin](https://exp.paperdove.com/chillin)
 
 <GC start={2} end={12}>
-  <MediaGrid media={[vid1, vid2]} alts={["postr video", "interaction demo"]} />
+  <MediaGrid maxCols={2}>
+    <VideoInGrid src={vid1} width={1080} height={1080} />
+    <VideoInGrid src={vid2} width={720} height={720} />
+  </MediaGrid>
 </GC>

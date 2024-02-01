@@ -17,6 +17,7 @@ published: true
 
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
 
 import img1 from "./files/01.jpeg";
 import img2 from "./files/02.jpeg";
@@ -26,15 +27,10 @@ import img4 from "./files/04.jpeg";
 The typography + computer programming education research conducted with Prof. Jiwon Lee from Kookmin Univ. was published in AIGA Frontier Reader.
 
 <GC start={2} end={12}>
-  <MediaGrid
-    maxCols={2}
-    media={[img1, img2, img3, img4]}
-    alts={[
-      "book cover",
-      "book table of contents",
-      "book spread",
-      "book spread",
-    ]}
-    class="gap-8"
-  />
+  <MediaGrid maxCols={2} class="gap-0">
+    <Image src={img1} alt="book cover" />
+    <Image src={img2} alt="book table of contents" />
+    <Image src={img3} alt="book spread" />
+    <Image src={img4} alt="book spread" />
+  </MediaGrid>
 </GC>

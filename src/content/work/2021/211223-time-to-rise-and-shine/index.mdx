@@ -18,7 +18,7 @@ published: true
 ---
 
 import GC from "@components/mdx/GridColumn.astro";
-import Video from "@components/mdx/Video.astro";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import vid1 from "./video-converted.mp4";
 import vid2 from "./process-converted.mp4";
@@ -30,9 +30,8 @@ import vid2 from "./process-converted.mp4";
 </GC>
 
 <GC start={1} end={13} bleed>
-  <MediaGrid
-    maxCols={2}
-    media={[vid1, vid2]}
-    alts={["animation loop", "timelapse"]}
-  />
+  <MediaGrid maxCols={2}>
+    <VideoInGrid src={vid1} width={1080} height={1080} />
+    <VideoInGrid src={vid2} width={1080} height={1080} />
+  </MediaGrid>
 </GC>

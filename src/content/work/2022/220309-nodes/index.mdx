@@ -14,6 +14,7 @@ cover: ./thumb.jpg
 published: true
 ---
 
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
@@ -24,11 +25,11 @@ import vid2 from "./files/02.mp4";
 import vid3 from "./files/03.mp4";
 
 <GC start={1} end={13} bleed mb>
-  <MediaGrid
-    maxCols={3}
-    media={[vid1, vid2, vid3]}
-    alts={["animation", "animation", "animation"]}
-  />
+  <MediaGrid maxCols={3}>
+    <VideoInGrid src={vid1} width={1200} height={1200} />
+    <VideoInGrid src={vid2} width={1200} height={1200} />
+    <VideoInGrid src={vid3} width={1200} height={1200} />
+  </MediaGrid>
 </GC>
 
 A series of experiments exploring motion and connections. I created a network

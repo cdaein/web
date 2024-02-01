@@ -13,7 +13,7 @@ cover: "./image-grid/IMG_2161.jpg"
 published: true
 ---
 
-import Image from "@components/mdx/Image.astro";
+import { Image } from "astro:assets";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import GC from "@components/mdx/GridColumn.astro";
 
@@ -23,12 +23,12 @@ import img2 from "./image-grid/IMG_2160.jpg";
 import img3 from "./image-grid/IMG_2159.jpg";
 
 <GC start={1} end={7} bleed mb>
-  <MediaGrid
-    maxCols={1}
-    media={[img0, img1, img2, img3]}
-    alts={["book spread", "book spread", "book spread", "book spread"]}
-    class="m-[0%] gap-[0%]"
-  />
+  <MediaGrid maxCols={1} class="m-[0%] gap-[0%]">
+    <Image src={img0} alt="book spread" />
+    <Image src={img1} alt="book spread" />
+    <Image src={img2} alt="book spread" />
+    <Image src={img3} alt="book spread" />
+  </MediaGrid>
 </GC>
 
 <GC start={7} end={12}>

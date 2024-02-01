@@ -14,6 +14,7 @@ published: false
 
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
 
 import img1 from "./image-grid/IMG_3311.jpg";
 import img2 from "./image-grid/IMG_3312.jpg";
@@ -46,20 +47,15 @@ import img9 from "./image-grid/IMG_3356.jpg";
 주어진 시간 내에 10개의 복제본을 생산한다.
 
 <GC start={1} end={13}>
-  <MediaGrid
-    maxCols={3}
-    media={[img1, img2, img3, img4, img5, img6, img7, img8, img9]}
-    alts={[
-      "design camp",
-      "design camp",
-      "design camp",
-      "design camp",
-      "design camp",
-      "design camp",
-      "design camp",
-      "design camp",
-      "design camp",
-    ]}
-    class="gap-4"
-  />
+  <MediaGrid maxCols={3} class="gap-4">
+    <Image src={img1} alt="design camp" />
+    <Image src={img2} alt="design camp" />
+    <Image src={img3} alt="design camp" />
+    <Image src={img4} alt="design camp" />
+    <Image src={img5} alt="design camp" />
+    <Image src={img6} alt="design camp" />
+    <Image src={img7} alt="design camp" />
+    <Image src={img8} alt="design camp" />
+    <Image src={img9} alt="design camp" />
+  </MediaGrid>
 </GC>

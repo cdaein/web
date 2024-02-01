@@ -11,6 +11,7 @@ cover: "./thumb.jpg"
 published: false
 ---
 
+import { Image } from "astro:assets";
 import Vimeo from "@components/mdx/Vimeo.astro";
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
@@ -21,7 +22,11 @@ import img2 from "./files/02.jpg";
 import img3 from "./files/03.jpg";
 
 <GC start={1} end={13} bleed mb>
-  <MediaGrid media={[img1, img2, img3]} alts={["", "", ""]} />
+  <MediaGrid maxCols={3}>
+    <Image src={img1} alt="screenshot of the film" />
+    <Image src={img2} alt="screenshot of the film" />
+    <Image src={img3} alt="screenshot of the film" />
+  </MediaGrid>
 </GC>
 
 {/* <Vimeo id="4859330" width="640" height="432" /> */}

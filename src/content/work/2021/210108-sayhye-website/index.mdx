@@ -16,14 +16,16 @@ import img1 from "./1.jpg";
 import img2 from "./2.jpg";
 import img3 from "./3.jpg";
 
+import { Image } from "astro:assets";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import GC from "@components/mdx/GridColumn.astro";
 
 <GC start={1} end={13} bleed mb>
-  <MediaGrid
-    media={[img1, img2, img3]}
-    alts={["website image", "website image", "website image"]}
-  />
+  <MediaGrid maxCols={3}>
+    <Image src={img1} alt="website image" />
+    <Image src={img2} alt="website image" />
+    <Image src={img3} alt="website image" />
+  </MediaGrid>
 </GC>
 
 Website design & development for [sayhye.net](https://sayhye.net)

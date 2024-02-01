@@ -14,6 +14,7 @@ published: false
 
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
 
 import img1 from "./01.png";
 import img2 from "./02.png";
@@ -27,16 +28,12 @@ A two-day Hangeul Workshop was held at Maryland Institute College of Art. The wo
 Taught by Dae In Chung and [Minsun Eo](http://minsuneo.nyc).
 
 <GC start={2} end={12}>
-  <MediaGrid
-    maxCols={3}
-    media={[img1, img2, img3, img4, img5, img6]}
-    alts={[
-      "student work",
-      "student work",
-      "student work",
-      "student work",
-      "student work",
-      "student work",
-    ]}
-  />
+  <MediaGrid maxCols={3}>
+    <Image src={img1} alt="studen work" />
+    <Image src={img2} alt="studen work" />
+    <Image src={img3} alt="studen work" />
+    <Image src={img4} alt="studen work" />
+    <Image src={img5} alt="studen work" />
+    <Image src={img6} alt="studen work" />
+  </MediaGrid>
 </GC>

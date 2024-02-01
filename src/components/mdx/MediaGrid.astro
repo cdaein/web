@@ -1,114 +1,28 @@
 ---
-// - imported image is ImageMetadata object
-// - imported video is a simple path string
-
-// TODO:
-// - click to expand
-// - play button at bottom right (smaller control button)
-
-import getDimensions from "get-video-dimensions";
-import sizeOf from "image-size";
-
 import { gridCols } from "@data/tailwindLUT";
-// import Image from "@components/mdx/Image.astro";
-import { Image } from "astro:assets";
-import Video from "./Video.astro";
 
 type Props = {
-  maxCols?: keyof typeof gridCols;
-  media: string[] | ImageMetadata[];
-  alts: string[];
+  maxCols: keyof typeof gridCols;
+  /** caption for the whole grid */
   caption?: string;
-  noGap?: boolean;
-  controls?: boolean;
-  autoplay?: boolean;
   class?: string;
   captionClass?: string;
 };
 
-const {
-  media,
-  alts,
-  maxCols,
-  caption,
-  // noGap,
-  controls = true,
-  autoplay,
-  class: className,
-  captionClass,
-} = Astro.props;
-
-// If I forget to add the props, defaults to number of images
-const maxColsChecked =
-  gridCols[maxCols || (media.length as keyof typeof gridCols)];
-
-// TODO:
-// - instead of getting video dimensions here (kinda awkward when also handling images)
-//   replace <video> with <Video> component (it handles dimensions and aspect ratio internally)
-//   i tried but there were some issues with nested structure and styling.
-const videoDimensions = await Promise.all(
-  media.map(async (content) => {
-    let ext = null;
-    if (!(content as ImageMetadata).src) {
-      const tokens = (content as unknown as string).split(".");
-      ext = tokens[tokens.length - 1];
-    }
-
-    if (ext === "mp4") {
-      try {
-        const dims = await getDimensions(`.${content}`);
-        return dims;
-      } catch (e) {
-        console.error(e);
-      }
-    } else {
-      return { width: undefined, height: undefined };
-    }
-  }),
-);
+const { maxCols, caption, class: className, captionClass } = Astro.props;
+const maxColsChecked = gridCols[maxCols];
 ---
 
-<figure>
-  <div class:list={["image-grid grid", maxColsChecked, className]}>
-    {
-      media.map(async (content, i) => {
-        // image returns {src, format, width, height} but video returns a simple string path
-        // - maybe, there is a proper way to handle imported image and video?
-        let ext = null;
-        if (!(content as ImageMetadata).src) {
-          const tokens = (content as unknown as string).split(".");
-          ext = tokens[tokens.length - 1];
-        }
-
-        const videoDimensions =
-          ext === "mp4" && (await getDimensions(`.${content}`));
-        const { width, height } = videoDimensions;
-
-        return ext === "mp4" ? (
-          <>
-            <video
-              src={content as string}
-              title={alts[i]}
-              width={width}
-              height={height}
-              loop
-              muted
-              playsinline
-              controls={controls}
-              autoplay={autoplay}
-              class:list={["w-full h-full object-cover", "bg-gray-500"]}
-            />
-          </>
-        ) : (
-          <Image
-            src={content as ImageMetadata}
-            alt={alts[i]}
-            title={alts[i]}
-            class:list={["w-full h-full object-cover"]}
-          />
-        );
-      })
-    }
+<figure class:list={["video-wrapper"]}>
+  <div
+    class:list={[
+      "image-grid grid",
+      "[&_img]:object-cover [&_img]:w-full [&_img]:h-full",
+      maxColsChecked,
+      className,
+    ]}
+  >
+    <slot />
   </div>
   {caption && <figcaption class:list={[captionClass]}>{caption}</figcaption>}
 </figure>

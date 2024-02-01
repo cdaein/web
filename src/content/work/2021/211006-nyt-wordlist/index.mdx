@@ -16,6 +16,7 @@ published: true
 
 import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import vid1 from "./video.mp4";
 import vid2 from "./process-1.mp4";
@@ -27,7 +28,7 @@ import vid3 from "./process-2.mp4";
   Puzzles](https://www.nytimes.com/2021/10/06/crosswords/wordlists-for-constructing-puzzles.html).
 </GC>
 
-<Video src={vid1} mb />
+<VideoInGrid src={vid1} width={1619} height={1080} mb />
 
 I had a generous lead time for this assignment, so I thought I would develop a proper design system as the crossword puzzle itself is based on a solid grid system. I had a lot of fun developing this software which can take various numbers of columns and rows, word lists and different types of transition animation.
 
