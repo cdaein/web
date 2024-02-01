@@ -12,6 +12,7 @@ type Props = {
   slug: string;
   /** Show separate list per activity type */
   sortByType?: boolean;
+  showWorkTitle?: boolean;
   class?: string;
 };
 
@@ -26,7 +27,12 @@ const typeLUT = {
   screening: "Screenings",
 };
 
-const { slug, sortByType = false, class: className } = Astro.props;
+const {
+  slug,
+  sortByType = false,
+  showWorkTitle = false,
+  class: className,
+} = Astro.props;
 
 const activities = slug
   ? data.filter((act: Activity) => act.slug === slug)
@@ -59,7 +65,7 @@ const mapHeader = (type: keyof typeof typeLUT) => typeLUT[type];
           <h2 class="m-0 pl-0 text-base">{mapHeader(type)}</h2>
           <ul role="list">
             {sortedActivities[type].map((act) => (
-              <ActivityListItem data={act} />
+              <ActivityListItem data={act} showWorkTitle={showWorkTitle} />
             ))}
           </ul>
         </>
@@ -67,7 +73,7 @@ const mapHeader = (type: keyof typeof typeLUT) => typeLUT[type];
     ) : (
       <ul role="list">
         {activities.map((act) => (
-          <ActivityListItem data={act} />
+          <ActivityListItem data={act} showWorkTitle={showWorkTitle} />
         ))}
       </ul>
     )

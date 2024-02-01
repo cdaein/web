@@ -6,15 +6,19 @@ import type { Activity } from "@data/activities";
 import { getEntry } from "astro:content";
 import moment from "moment";
 
-const { data } = Astro.props as { data: Activity };
+const { data, showWorkTitle = false } = Astro.props as {
+  data: Activity;
+  showWorkTitle?: boolean;
+};
 const { slug, date, title, role, place, city, country, link } = data;
 
 const query = slug || "nonenonenone";
 const entry = await getEntry("work", query);
+const workTitle = entry?.data.title;
 ---
 
 <li role="listitem" class="">
-  {entry?.data.title && <span>{entry.data.title} - </span>}
+  {showWorkTitle && workTitle && <span>{workTitle} - </span>}
   {role && <span>{role} at </span>}
   {
     link ? (
