@@ -11,12 +11,24 @@ cover: "./files/01.jpg"
 published: true
 ---
 
-import Vimeo from "@components/mdx/Vimeo.astro";
 import GC from "@components/mdx/GridColumn.astro";
+import { Image } from "astro:assets";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import ActivityList from "@components/mdx/ActivityList.astro";
 
-<Vimeo id="869300" width="640" height="360" />
+import img1 from "./files/01.jpg";
+import img2 from "./files/02.jpg";
+import img3 from "./files/03.jpg";
+import img4 from "./files/04.jpg";
+
+<GC start={1} end={13} mb>
+  <MediaGrid maxCols={2}>
+    <Image src={img1} alt="film screenshot" />
+    <Image src={img2} alt="film screenshot" />
+    <Image src={img3} alt="film screenshot" />
+    <Image src={img4} alt="film screenshot" />
+  </MediaGrid>
+</GC>
 
 Aluminum bars with resonators and motor driven fans. This is the vibraphone, a keyboard percussion instrument played with mallets and bows. With vibraphone sounds combined with abstract images, Hypervibes invites you to a 3 minute-long journey into your subconsciousness.
 
@@ -24,8 +36,3 @@ Aluminum bars with resonators and motor driven fans. This is the vibraphone, a k
 - Music by Jay Garrett
 
 <ActivityList slug="hypervibes" sortByType />
-
-![screenshot](./files/01.jpg)
-![screenshot](./files/02.jpg)
-![screenshot](./files/03.jpg)
-![screenshot](./files/04.jpg)

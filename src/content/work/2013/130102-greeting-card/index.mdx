@@ -15,7 +15,7 @@ published: true
 import Vimeo from "@components/mdx/Vimeo.astro";
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
-import Image from "@components/mdx/Image.astro";
+import { Image } from "astro:assets";
 
 import img4 from "./files/04.jpg";
 import img3 from "./files/03.jpg";
@@ -37,8 +37,12 @@ Adobe Illustrator, After Effects and Processing were used to aid the process, an
 - Design, animation and coding by Dae In Chung
 - Additional design by [Hye Jin Lee](http://sayhye.net)
 
-  <Image alt="" src={img3} />
-  <Image alt="" src={img4} />
-  <Image alt="" src={img5} />
-  <Image alt="" src={img2} />
-  <Image alt="" src={img1} />
+<GC start={1} end={13} mb>
+  <MediaGrid maxCols={3} class="gap-4">
+    <Image alt="" src={img3} />
+    <Image alt="" src={img4} />
+    <Image alt="" src={img5} />
+    <Image alt="" src={img2} />
+    <Image alt="" src={img1} />
+  </MediaGrid>
+</GC>

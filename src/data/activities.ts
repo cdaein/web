@@ -310,6 +310,7 @@ const activities: Activity[] = [
     date: "2008",
     city: "Oxford, MS",
     country: "USA",
+    link: "https://www.ox-film.com/festival-archive/2lrgqvfer3y3z4oq8q2r4yso02phoj",
   },
   {
     type: "screening",
@@ -352,6 +353,7 @@ const activities: Activity[] = [
     date: "2007",
     city: "New York",
     country: "USA",
+    link: "https://www.animationblock.com/summerfest2007",
   },
   {
     type: "screening",

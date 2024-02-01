@@ -47,7 +47,7 @@ const { prevPost, nextPost, class: className } = Astro.props;
           <a
             href=`/${prevPost.slug}`
             class="group col-start-1 col-end-2 flex 
-            justify-center lg:justify-end"
+            justify-start lg:justify-end"
           >
             <span class="relative group-hover:right-1">←</span>&nbsp;
             <span class="hidden md:inline">Prev</span>
@@ -68,7 +68,7 @@ const { prevPost, nextPost, class: className } = Astro.props;
           <a
             href=`/${nextPost.slug}`
             class="group col-start-3 col-end-4 flex 
-            justify-center lg:justify-start"
+            justify-end lg:justify-start"
           >
             <span class="hidden md:inline">Next</span>&nbsp;
             <span class="relative group-hover:left-1">→</span>
