@@ -127,9 +127,15 @@ const activities: Activity[] = [
   },
   {
     type: "lecture",
+    title: "Hangeul Lettering Online Workshop",
+    date: "2020-06-16",
+    link: "https://www.instagram.com/p/CCHWVyKB16h/?img_index=1",
+  },
+  {
+    type: "lecture",
     title: "AICAD Symposium: Include Me!",
     role: "Presenter",
-    date: "2019",
+    date: "2019-11-07",
     place: "Otis College of Art and Design",
     city: "Los Angeles",
     country: "USA",
@@ -153,6 +159,15 @@ const activities: Activity[] = [
     type: "publication",
     title: "AIGA Frontier Reader",
     date: "2019-04",
+  },
+  {
+    type: "lecture",
+    title: "Hangeul Typography Workshop I & II",
+    date: "2018-11",
+    place: "MICA",
+    city: "Baltimore",
+    country: "USA",
+    link: "https://www.instagram.com/p/Bp6ykh1FT0m/",
   },
   {
     type: "featured",
@@ -328,6 +343,7 @@ const activities: Activity[] = [
     date: "2007",
     city: "Seoul",
     country: "South Korea",
+    link: "https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&wr_id=208&page=54&ckattempt=1",
   },
   {
     type: "screening",

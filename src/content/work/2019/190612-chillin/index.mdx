@@ -18,12 +18,15 @@ published: true
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import VideoInGrid from "@components/mdx/VideoInGrid.astro";
+import ActivityList from "@components/mdx/ActivityList.astro";
 import vid1 from "./video.mp4";
 import vid2 from "./recording.mp4";
 
 Interactive web poster. You can write your message and save as image. Best viewed on mobile with motion sensor enabled.
 
 [https://exp.paperdove.com/chillin](https://exp.paperdove.com/chillin)
+
+<ActivityList slug="chillin" sortByType />
 
 <GC start={2} end={12}>
   <MediaGrid maxCols={2}>
