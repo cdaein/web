@@ -11,7 +11,16 @@ const aspectRatio = width && height ? height / width : 0.5625; // default is 16:
 const paddingTop = aspectRatio * 100 + "%";
 ---
 
-<style is:global define:vars={{ paddingTop }}>
+<div class="vimeo-wrapper mb-8">
+  <iframe
+    title="vimeo-player"
+    src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0`}
+    allow="autoplay; fullscreen; picture-in-picture"
+    class=""
+    allowfullscreen></iframe>
+</div>
+
+<style define:vars={{ paddingTop }}>
   div.vimeo-wrapper {
     padding-top: var(--paddingTop);
     position: relative;
@@ -23,13 +32,6 @@ const paddingTop = aspectRatio * 100 + "%";
     top: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 </style>
-
-<div class="vimeo-wrapper mb-8">
-  <iframe
-    title="vimeo-player"
-    src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0`}
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen></iframe>
-</div>
