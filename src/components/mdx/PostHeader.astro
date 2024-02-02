@@ -3,6 +3,7 @@
 // - additional style is to gracefully cut off text overflow and to keep on a single line.
 // TODO:
 // - if text cut off, scroll left and right when hovered.
+//  - or, use script to calc element height and add margin top to the content.
 
 import moment from "moment";
 import type { CollectionEntry } from "astro:content";
@@ -87,11 +88,13 @@ const isRoot = pathname === "/";
           }
         </h2>
         <span class:list={[
+          "whitespace-nowrap overflow-hidden",
           "hidden col-start-8 col-end-12",
           "lg:col-start-10 lg:col-end-12 lg:flex",
           "justify-start"
         ]}>{category && camelcase(`${category}`)}</span>
         <span class:list={[
+          "whitespace-nowrap overflow-hidden",
           "pr-4 col-start-11 col-end-13",
           "lg:col-start-12",
           "flex justify-end"
