@@ -66,7 +66,7 @@ const isRoot = pathname === "/";
     >
         <h1 class:list={[
           "m-0 whitespace-nowrap overflow-hidden",
-          "fadeout relative pl-4 col-start-1 col-end-10",
+          "fadeout relative pl-4 col-start-1 col-end-9",
           "md:pl-4 md:col-end-5",
           "lg:col-end-4",
           "flex justify-start"
@@ -95,7 +95,8 @@ const isRoot = pathname === "/";
         ]}>{category && camelcase(`${category}`)}</span>
         <span class:list={[
           "whitespace-nowrap overflow-hidden",
-          "pr-4 col-start-11 col-end-13",
+          "pr-4 col-start-10 col-end-13",
+          "md:col-start-11",
           "lg:col-start-12",
           "flex justify-end"
         ]}>{moment(date).year()}</span>
