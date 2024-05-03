@@ -22,9 +22,7 @@ const workTitle = entry?.data.title;
   {role && <span>{role} at </span>}
   {
     link ? (
-      <a href={Array.isArray(link) ? link[0] : link} target="_blank">
-        {title},
-      </a>
+      <a href={Array.isArray(link) ? link[0] : link} target="_blank">{title},</a>
     ) : (
       <span>{title},</span>
     )
