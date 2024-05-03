@@ -35,6 +35,23 @@ export type Activity = z.infer<typeof schema>;
 const activities: Activity[] = [
   {
     type: "exhibition",
+    slug: "sequenced",
+    title: "Processing Community Day 2024 at Porto",
+    date: "2024-05-02",
+    city: "Porto",
+    country: "Portugal",
+    link: "https://pcd.fba.up.pt/2024/exhibition/sequenced.htm",
+  },
+  {
+    type: "lecture",
+    title: "Creative Jam",
+    place: "Hush Studios",
+    date: "2024-03-27",
+    city: "New York",
+    link: "https://www.instagram.com/p/C5moEbpNeCe/?img_index=1",
+  },
+  {
+    type: "exhibition",
     title: "Motion Evolving",
     date: "2023-09-29",
     city: "Beijing",
@@ -185,6 +202,13 @@ const activities: Activity[] = [
     link: "https://frontier.aiga.org",
   },
   {
+    type: "teaching",
+    title: "Maryland Institute College of Art",
+    role: "Full-time Faculty",
+    date: ["2016", "2021"],
+    city: "Baltimore, MD",
+  },
+  {
     type: "publication",
     title: "LetterSeed 13 Typography Journal",
     date: "2016-07-15",
@@ -196,7 +220,6 @@ const activities: Activity[] = [
     slug: "build-the-system",
     title: "Graphis Poster Annual Gold Winner",
     date: "2016",
-    country: "South Korea",
   },
   {
     type: "featured",
@@ -247,6 +270,13 @@ const activities: Activity[] = [
     country: "South Korea",
   },
   {
+    type: "teaching",
+    title: "Boston University",
+    role: "Full-time Lecturer",
+    date: ["2015", "2016"],
+    city: "Boston, MA",
+  },
+  {
     type: "featured",
     slug: "ekstasy-type-club",
     title: "IdN Pick of the Month",
@@ -272,6 +302,14 @@ const activities: Activity[] = [
     link: "http://koreantypography.org/ko/archives/journal_view.asp?board_num=15&key=title&keyword=&table_nm=exhibit&page=1",
   },
   {
+    type: "teaching",
+    title: "Kookmin University",
+    role: "Part-time Instructor",
+    date: "2015",
+    city: "Seoul",
+    country: "South Korea",
+  },
+  {
     type: "screening",
     slug: "don-cajon",
     title: "Animascope Kid #2",
@@ -279,6 +317,13 @@ const activities: Activity[] = [
     place: "La Gare Saint Sauveur",
     city: "Lille",
     country: "France",
+  },
+  {
+    type: "teaching",
+    title: "Santa Fe University of Art and Design",
+    role: "Full-time Faculty",
+    date: ["2011", "2014"],
+    city: "Santa Fe, NM",
   },
   {
     type: "screening",
