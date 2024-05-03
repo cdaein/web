@@ -30,5 +30,5 @@ const workTitle = entry?.data.title;
   {place && <span>{place},</span>}
   {city && <span>{city},</span>}
   {country && <span>{country},</span>}
-  <span>{moment(date).year()}</span>
+  <span>{Array.isArray(date) ? `${moment(date[0]).year()}-${moment(date[1]).year()}` : moment(date).year()}</span>
 </li>

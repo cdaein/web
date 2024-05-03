@@ -11,6 +11,7 @@ const schema = z.object({
     "lecture",
     "publication",
     "screening",
+    "teaching",
   ]),
   /**
    * Same as work post title slug for filtering. (ex. ekstasy-type-club) It may be an array for multiple works
@@ -21,7 +22,7 @@ const schema = z.object({
   title: z.string(),
   /** ex. moderator, presenter */
   role: z.string().optional(),
-  date: z.string(),
+  date: z.string().or(z.string().array()),
   /** Place of exhibition (ie. museum name) */
   place: z.string().optional(),
   city: z.string().optional(),
