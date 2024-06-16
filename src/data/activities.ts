@@ -35,6 +35,20 @@ export type Activity = z.infer<typeof schema>;
 const activities: Activity[] = [
   {
     type: "exhibition",
+    slug: "time-intertwined",
+    title: "Digital Art Mile",
+    date: "2024-06-10",
+    place: "Basel Art Center Space 31",
+    city: "Basel",
+    country: "Switzerland",
+    link: [
+      "https://x.com/fx_hash_/status/1800605168809210358",
+      // TODO: 2nd link is not supported yet.
+      "https://baselartcenter.ch/event/the-digital-art-mile/?event_date=2024-06-10",
+    ],
+  },
+  {
+    type: "exhibition",
     slug: "sequenced",
     title: "Processing Community Day 2024 at Porto",
     date: "2024-05-02",
