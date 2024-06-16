@@ -1,7 +1,4 @@
 ---
-// TODO:
-// - handle multiple links
-
 import type { Activity } from "@data/activities";
 import { getEntry } from "astro:content";
 import moment from "moment";
@@ -22,7 +19,10 @@ const workTitle = entry?.data.title;
   {role && <span>{role} at </span>}
   {
     link ? (
-      <a href={Array.isArray(link) ? link[0] : link} target="_blank">{title},</a>
+      <a href={Array.isArray(link) ? link[0] : link} 
+         target="_blank"
+         class:list={["italic no-underline"]}
+      >{title},</a>
     ) : (
       <span>{title},</span>
     )
@@ -31,4 +31,14 @@ const workTitle = entry?.data.title;
   {city && <span>{city},</span>}
   {country && <span>{country},</span>}
   <span>{Array.isArray(date) ? `${moment(date[0]).year()}-${moment(date[1]).year()}` : moment(date).year()}</span>
+  { 
+    Array.isArray(link) && link.length > 1 && 
+    <span>(more
+      {link.map((l, i) => {
+        if (i === 0) return
+        return <a href={l} target="_blank" style={{textDecoration:"none"}}>
+          <span style={{textDecoration:"underline"}}>link{i !== link.length -1 && ","}</span></a>
+        })
+      })</span>
+  }
 </li>
