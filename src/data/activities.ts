@@ -171,6 +171,7 @@ const activities: Activity[] = [
     place: "Otis College of Art and Design",
     city: "Los Angeles",
     country: "USA",
+    link: "https://www.aicad.org/wp-content/uploads/AICAD-Symposium-Schedule-11-4.pdf",
   },
   {
     type: "event",
