@@ -72,6 +72,15 @@ const activities: Activity[] = [
     country: "China",
   },
   {
+    slug: "sequenced",
+    type: "exhibition",
+    title: "Taipei Hacker House",
+    date: "2023-05-10",
+    city: "Taipei",
+    country: "Taiwan",
+    link: "https://blog.exchange.art/taipei-hacker-house/",
+  },
+  {
     type: "featured",
     title: "We Want Art Everywhere",
     date: "2022",
