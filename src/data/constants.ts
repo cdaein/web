@@ -9,6 +9,7 @@ export const TAGS = [
   "illustration",
   "interactive",
   "MDS1",
+  "ml",
   "motion",
   "NFT",
   "poster",
