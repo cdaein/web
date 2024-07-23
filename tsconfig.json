@@ -9,7 +9,21 @@
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@scripts/*": ["src/scripts/*"],
-      "@assets/*": ["src/assets/*"],
+      "@assets/*": ["src/assets/*"]
     },
-  },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+      {
+        "name": "@astrojs/tailwind"
+      },
+      {
+        "name": "@astrojs/mdx"
+      },
+      {
+        "name": "@astrojs/language-server"
+      }
+    ]
+  }
 }

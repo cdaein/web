@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@astrojs/language-server": "^2.12.1",
     "@astrojs/mdx": "^3.0.1",
     "@astrojs/rss": "^4.0.6",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.9.0",
     "@fontsource-variable/karla": "^5.0.21",
     "astro": "^4.9.3",
     "astro-relative-links": "^0.3.9",
