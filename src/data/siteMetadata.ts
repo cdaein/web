@@ -5,10 +5,11 @@ export const site = {
   author: "Daeinc",
   email: "daeinc@paperdove.com", // TODO: use simple login instead
   links: {
-    twitter: "https://twitter.com/cdaein",
     mastodon: "https://genart.social/@daeinc",
     threads: "https://www.threads.net/@daeincc",
     instagram: "https://www.instagram.com/daeincc/",
+    bluesky: "https://bsky.app/profile/daeinc.bsky.social",
+    twitter: "https://twitter.com/cdaein",
     fxhash: "https://www.fxhash.xyz/u/Daeinc",
     objkt: "https://objkt.com/@daeinc",
     codecanvas:
