@@ -20,9 +20,9 @@ const workPosts = (
     // slug: parseSlug(post.slug),
   }))
   // reverse-chronological order
-  .reverse();
-// only index published posts
-// .filter((post) => post.data.published === true);
+  .reverse()
+  // only index published posts
+  .filter((post) => post.data.published === true);
 
 // for RSS, need to send both data to construct all the fields necessary in feed.xml
 const allPosts = [...workPosts];
