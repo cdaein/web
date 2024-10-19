@@ -35,6 +35,14 @@ export type Activity = z.infer<typeof schema>;
 const activities: Activity[] = [
   {
     type: "exhibition",
+    title: "Bideotikan Digital Art Festival",
+    date: "2024-10-24",
+    city: "Bilbao",
+    country: "Spain",
+    link: ["https://bideotikan.art/artistas/daenic/"],
+  },
+  {
+    type: "exhibition",
     slug: "time-intertwined",
     title: "Digital Art Mile",
     date: "2024-06-10",
