@@ -46,7 +46,7 @@ const activities: Activity[] = [
     date: "2024-10-24",
     city: "Bilbao",
     country: "Spain",
-    link: ["https://bideotikan.art/artistas/daenic/"],
+    link: ["https://bideotikan.art/artistas/daeinc-en/"],
   },
   {
     type: "exhibition",
