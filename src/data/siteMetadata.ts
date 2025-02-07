@@ -3,7 +3,7 @@ export const site = {
   description: "Motion composed with code",
   siteUrl: `https://paperdove.com`,
   author: "Daeinc",
-  email: "daeinc@paperdove.com", // TODO: use simple login instead
+  email: "daeinc@paperdove.com", // TODO: use simple login instead (with reply-to)
   links: {
     mastodon: "https://genart.social/@daeinc",
     threads: "https://www.threads.net/@daeincc",
