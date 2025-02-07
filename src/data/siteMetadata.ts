@@ -11,7 +11,7 @@ export const site = {
     bluesky: "https://bsky.app/profile/daeinc.bsky.social",
     twitter: "https://twitter.com/cdaein",
     fxhash: "https://www.fxhash.xyz/u/Daeinc",
-    objkt: "https://objkt.com/@daeinc",
+    objkt: "https://objkt.com/users/tz1WXTdGdwD6g24vJp7vpjWVR8LuFpisUcoc",
     codecanvas:
       "https://codecanvas.art/drop/8Dus2SwgbXATR6tGSjcKcFSAkmhpZD17g36kgpVz3Bpk",
     github: "https://github.com/cdaein",
