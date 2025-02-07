@@ -23,13 +23,20 @@ const props = Astro.props;
 
 const title = props.title ? `${props.title} • ${site.title}` : site.title;
 const description = props.description || site.description;
+// NOTE: "writing" post is not yet handled
+const postType: "work" | "page" = props.postType;
 
 // first, get all thumbnails from all work posts
 // ex. '/src/content/work/2021/211006-nyt-wordlist/thumb.jpg'
-const allImagesObj = import.meta.glob<{ default: ImageMetadata }>(
+const allWorkThumbsObj = import.meta.glob<{ default: ImageMetadata }>(
   `/src/content/work/**/thumb*`,
 );
-const latestThumbPath = Object.keys(allImagesObj).sort().reverse().shift()!;
+const latestThumbPath = Object.keys(allWorkThumbsObj).sort().reverse().shift()!;
+
+// get page default thumb as object
+const pageThumbObj = import.meta.glob<{ default: ImageMetadata }>(
+  `/src/pages/thumb.png`,
+);
 
 // ex. default.src:
 // '/@fs/Users/dane/Documents/GitHub/paperdove-2024/src/content/work/2022/220821-duet/thumb.png?origWidth=800&origHeight=800&origFormat=png',
@@ -40,15 +47,22 @@ const isRoot = pathname === "/";
 
 // from allThumbs, find the one belongs to current post
 const postDirname = props && props.id && path.dirname(props.id); // Get the directory name only (without file)
-const thumbPath = Object.keys(allImagesObj).find((key) =>
+const thumbPath = Object.keys(allWorkThumbsObj).find((key) =>
   key.includes(postDirname),
 );
 
 // - if index page, show latest thumb.
+// for work posts:
 // - if no "thumbnail" found, use the latest.
 // - if thumbnail found, use the correct cover for each post
+// for page posts:
+// - use default thumb
+// - NOTE: consider each page has its own thumb. change page structure to have sub-directory.
 const coverPath = isRoot || !thumbPath ? latestThumbPath : thumbPath;
-const cover = (await allImagesObj[coverPath]()).default.src;
+const cover =
+  postType === "work"
+    ? (await allWorkThumbsObj[coverPath]()).default.src
+    : (await pageThumbObj[`/src/pages/thumb.png`]()).default.src;
 ---
 
 <head>

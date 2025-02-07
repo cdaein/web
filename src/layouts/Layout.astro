@@ -20,6 +20,8 @@ const { title, description, post, prevPost, nextPost } = Astro.props;
 
 const pathname = Astro.url.pathname;
 const isRoot = pathname === "/";
+
+// REVIEW: for now postType is set to "work" only, no "writing"
 ---
 
 <!doctype html>
@@ -29,6 +31,7 @@ const isRoot = pathname === "/";
     description={description || post?.data.description}
     id={post?.id}
     slug={post?.slug}
+    postType={"work"}
   />
 
   <body class="h-full text-xl">
