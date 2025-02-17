@@ -210,7 +210,8 @@ const activities: Activity[] = [
     slug: "chillin",
     title: "p5js Website Showcase",
     date: "2019",
-    link: "https://p5js.org/showcase/featuring/daein-chung.html",
+    // link: "https://p5js.org/showcase/featuring/daein-chung.html",
+    link: "https://web.archive.org/web/20230205094313/https://p5js.org/showcase/featuring/daein-chung.html",
   },
   {
     type: "publication",
