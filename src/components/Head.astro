@@ -33,11 +33,6 @@ const allWorkThumbsObj = import.meta.glob<{ default: ImageMetadata }>(
 );
 const latestThumbPath = Object.keys(allWorkThumbsObj).sort().reverse().shift()!;
 
-// get page default thumb as object
-const pageThumbObj = import.meta.glob<{ default: ImageMetadata }>(
-  `/src/pages/thumb.png`,
-);
-
 // ex. default.src:
 // '/@fs/Users/dane/Documents/GitHub/paperdove-2024/src/content/work/2022/220821-duet/thumb.png?origWidth=800&origHeight=800&origFormat=png',
 // const allThumbs = await Astro.glob("@content/work/**/thumb*");
@@ -62,7 +57,8 @@ const coverPath = isRoot || !thumbPath ? latestThumbPath : thumbPath;
 const cover =
   postType === "work"
     ? (await allWorkThumbsObj[coverPath]()).default.src
-    : (await pageThumbObj[`/src/pages/thumb.png`]()).default.src;
+    : //  : (await pageThumbObj[`/thumb_default_page.png`]()).default.src;
+      `/thumb_default_page.png`;
 ---
 
 <head>
