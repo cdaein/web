@@ -9,9 +9,9 @@ const { data, showWorkTitle = false } = Astro.props as {
 };
 const { slug, date, title, role, place, city, country, link } = data;
 
-const query = slug || "nonenonenone";
-const entry = await getEntry("work", query);
-const workTitle = entry?.data.title;
+// some entries may not have corresponding post slug.
+const entry = slug && (await getEntry("work", slug));
+const workTitle = entry && entry?.data.title;
 ---
 
 <li role="listitem" class="">
@@ -19,10 +19,13 @@ const workTitle = entry?.data.title;
   {role && <span>{role} at </span>}
   {
     link ? (
-      <a href={Array.isArray(link) ? link[0] : link} 
-         target="_blank"
-         class:list={["italic no-underline"]}
-      >{title},</a>
+      <a
+        href={Array.isArray(link) ? link[0] : link}
+        target="_blank"
+        class:list={["italic no-underline"]}
+      >
+        {title},
+      </a>
     ) : (
       <span>{title},</span>
     )
@@ -30,15 +33,29 @@ const workTitle = entry?.data.title;
   {place && <span>{place},</span>}
   {city && <span>{city},</span>}
   {country && <span>{country},</span>}
-  <span>{Array.isArray(date) ? `${moment(date[0]).year()}-${moment(date[1]).year()}` : moment(date).year()}</span>
-  { 
-    Array.isArray(link) && link.length > 1 && 
-    <span>(more
-      {link.map((l, i) => {
-        if (i === 0) return
-        return <a href={l} target="_blank" style={{textDecoration:"none"}}>
-          <span style={{textDecoration:"underline"}}>link{i !== link.length -1 && ","}</span></a>
-        })
-      })</span>
+  <span
+    >{
+      Array.isArray(date)
+        ? `${moment(date[0]).year()}-${moment(date[1]).year()}`
+        : moment(date).year()
+    }</span
+  >
+  {
+    Array.isArray(link) && link.length > 1 && (
+      <span>
+        (more
+        {link.map((l, i) => {
+          if (i === 0) return;
+          return (
+            <a href={l} target="_blank" style={{ textDecoration: "none" }}>
+              <span style={{ textDecoration: "underline" }}>
+                link{i !== link.length - 1 && ","}
+              </span>
+            </a>
+          );
+        })}
+        )
+      </span>
+    )
   }
 </li>
