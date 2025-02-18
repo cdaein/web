@@ -26,7 +26,15 @@ const workPosts = (
 
 // for RSS, need to send both data to construct all the fields necessary in feed.xml
 const allPosts = [...workPosts];
-const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
+
+// Astro.glob() is deprecated
+// https://docs.astro.build/en/guides/upgrade-to/v5/#what-should-i-do-3
+// NOTE: consider using collections in the future
+
+// const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
+const allMdx = Object.values(
+  import.meta.glob("@content/work/**/*.mdx", { eager: true }),
+).reverse();
 
 // console.log(allPosts[0].data.draft);
 // console.log(allMdx[0].frontmatter.draft);
