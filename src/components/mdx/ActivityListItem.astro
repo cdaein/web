@@ -37,7 +37,7 @@ const workTitle = entry && entry?.data.title;
     >{
       Array.isArray(date)
         ? `${moment(date[0]).year()}-${moment(date[1]).year()}`
-        : moment(date).year()
+        : moment(new Date(date)).year()
     }</span
   >
   {
