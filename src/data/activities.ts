@@ -38,7 +38,7 @@ const activities: Activity[] = [
     title: "Demo Festival 2025 Cities Edition",
     date: "2025-01-30",
     country: "The Netherlands",
-    link: ["https://demofestival.com/designers"],
+    link: ["https://demofestival.com/designers/daeinc"],
   },
   {
     type: "exhibition",
