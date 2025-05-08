@@ -5,6 +5,10 @@
 //  - props passed in don't work. i think it's because of number vs. string in css var.
 //  - what about attr passed to <video>? is it working?
 
+// NOTE:
+// - `#t=0.001` is to advance video time slightly to force iOS Safari to display video poster image.
+//   another way to handle poster is to define poster image path in frontmatter of each post, but there may be multiple videos that need posters.
+
 type Props = {
   /** Path string */
   src: string;
@@ -30,9 +34,6 @@ const {
   class: className,
 } = Astro.props;
 
-const lastDotIndex = src.lastIndexOf(".");
-const videoPoster = src.slice(0, lastDotIndex) + ".png";
-
 const w = width || 1080;
 const h = height || 1080;
 ---
@@ -46,8 +47,7 @@ const h = height || 1080;
 
 <div class:list={["video-wrapper bg-gray-500", mb && "mb-8", className]}>
   <video
-    src={src}
-    poster={videoPoster}
+    src={`${src}#t=0.001`}
     title={title}
     width={width}
     height={height}
