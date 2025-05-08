@@ -13,7 +13,7 @@ type Props = {
 
 const { post } = Astro.props;
 const {
-  data: { title, description, date, category, draft },
+  data: { title, description, date, category, published },
 } = post;
 ---
 
@@ -23,7 +23,7 @@ const {
   <a href={`/${post.slug}`}>
     <article class="grid grid-cols-12 gap-8" draggable="false">
       <h1 class="pl-4 col-start-1 col-end-4 flex justify-start">
-        {draft && "(draft)"}{title}
+        {!published && "(not published)"}{title}
       </h1>
       <h2 class="col-start-4 col-end-9 flex justify-start">{description}</h2>
       <div class="col-start-10 col-end-12 flex justify-start">

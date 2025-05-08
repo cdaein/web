@@ -18,7 +18,7 @@ type Props = {
 
 const { post, class: className } = Astro.props;
 const {
-  data: { title, description, date, category, draft },
+  data: { title, description, date, category, published },
 } = post;
 
 // if not root, add page navagation
@@ -72,7 +72,7 @@ const isRoot = pathname === "/";
           "lg:col-end-4",
           "flex justify-start"
         ]}>
-          {draft && "(draft)"}{title}
+          {!published && "(not published)"}{title}
         </h1>
         <h2 class:list={[
           "m-0 whitespace-nowrap overflow-hidden",
