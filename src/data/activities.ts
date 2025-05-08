@@ -42,6 +42,10 @@ const activities: Activity[] = [
   },
   {
     type: "exhibition",
+    // TODO: support multiple slugs
+    //       then, update each mdx to include <ActivityList>
+    // slugs: ["duet", "time-intertwined"],
+    slug: "duet",
     title: "Bideotikan Digital Art Festival",
     date: "2024-10-24",
     city: "Bilbao",
@@ -58,7 +62,6 @@ const activities: Activity[] = [
     country: "Switzerland",
     link: [
       "https://x.com/fx_hash_/status/1800605168809210358",
-      // TODO: 2nd link is not supported yet.
       "https://baselartcenter.ch/event/the-digital-art-mile/?event_date=2024-06-10",
     ],
   },
