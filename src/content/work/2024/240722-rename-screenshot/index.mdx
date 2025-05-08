@@ -17,7 +17,7 @@ import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Video from "@components/mdx/Video.astro";
 import vid1 from "./demo.mp4";
-
+import vid1poster from "./demo.png";
 
 Rename and organize Mac screenshots by their contents with the help of AI. This tool watches for any new screenshots, renames it to describe its content, moves it to one of the pre-defined categorical directories.
 
@@ -26,13 +26,9 @@ The default Mac screenshot file names are not formatted well in my opinion. It d
 Below is a demo video showing how newly added screenshots are processed, renamed and moved to a user-defined folder:
 
 <GC start={3} end={11} class="mb-12">
-<Video src={vid1} width="640" height="480" />
+  <Video src={vid1} poster={vid1poster} width="640" height="480" />
 </GC>
-
 
 The program watches any new screenshots added to your Desktop. When it detects one, it sends the image to your chosen API provider (either local Ollama or ChatGPT) to get a new filename suggestion. Once the response is received, the screenshot is renamed and moved to the pre-defined directory `~/Desktop/Screenshots`. If there are categories set, it will be moved to a corresponding sub-directory. For example, any code screenshots can be saved to `code` directory. The original screenshot is kept as a backup, which you can later review and delete. It will continue to run in the background monitoring any new screenshots or you can just run it for existing images only.
 
-
 The credit goes to [Charlie Holtz](https://x.com/charliebholtz/status/1737667912784134344?s=20) for the original project and inspiration. It was such an interesting idea so I thought I'd make my own version. You can download [Rename Screenshot](https://github.com/cdaein/rename-screenshot) on the Github repo. It only works as a CLI app at the moment.
-
-

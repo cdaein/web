@@ -7,11 +7,12 @@
 
 // NOTE:
 // - `#t=0.001` is to advance video time slightly to force iOS Safari to display video poster image.
-//   another way to handle poster is to define poster image path in frontmatter of each post, but there may be multiple videos that need posters.
+//   reference: https://www.sitelint.com/blog/fixing-html-video-autoplay-blank-poster-first-frame-and-improving-performance-in-safari-and-ios-devices
 
 type Props = {
   /** Path string */
   src: string;
+  poster?: string;
   title?: string;
   caption?: string;
   width?: number;
@@ -24,6 +25,7 @@ type Props = {
 };
 const {
   src,
+  poster,
   title,
   // caption,
   width,
@@ -48,6 +50,7 @@ const h = height || 1080;
 <div class:list={["video-wrapper bg-gray-500", mb && "mb-8", className]}>
   <video
     src={`${src}#t=0.001`}
+    poster={poster}
     title={title}
     width={width}
     height={height}
