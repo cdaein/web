@@ -30,6 +30,9 @@ const {
   class: className,
 } = Astro.props;
 
+const lastDotIndex = src.lastIndexOf(".");
+const videoPoster = src.slice(0, lastDotIndex) + ".png";
+
 const w = width || 1080;
 const h = height || 1080;
 ---
@@ -44,6 +47,7 @@ const h = height || 1080;
 <div class:list={["video-wrapper bg-gray-500", mb && "mb-8", className]}>
   <video
     src={src}
+    poster={videoPoster}
     title={title}
     width={width}
     height={height}
