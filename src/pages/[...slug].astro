@@ -6,7 +6,6 @@ import Prose from "@components/mdx/Prose.astro";
 
 export async function getStaticPaths() {
   const workEntries = await getCollection("work", ({ data }) => {
-    // return import.meta.env.PROD ? data.draft !== true : true;
     // include only published posts in build. for dev, include all posts
     return import.meta.env.PROD ? data.published === true : true;
   });
@@ -15,7 +14,10 @@ export async function getStaticPaths() {
   // });
 
   // const allPosts = [...workEntries, ...writingEntries];
-  const allPosts = [...workEntries];
+  const allPosts = [...workEntries].sort(
+    (a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime(),
+  );
+
   const numPosts = allPosts.length;
 
   return allPosts.map((post, i) => {
