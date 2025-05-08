@@ -17,7 +17,8 @@ const workCollection = defineCollection({
     cover: z.string().optional(),
     published: z.boolean(),
     /** Draft is visible on dev, but not included in build */
-    draft: z.boolean().optional(),
+    // REVIEW: just use data.published?
+    // draft: z.boolean().optional(),
   }),
 });
 
@@ -33,7 +34,7 @@ const writingCollection = defineCollection({
     cover: z.string(),
     published: z.boolean(),
     /** Draft is visible on dev, but not included in build */
-    draft: z.boolean().optional(),
+    // draft: z.boolean().optional(),
   }),
 });
 
