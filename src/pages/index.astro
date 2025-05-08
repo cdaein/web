@@ -3,8 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { site } from "@data/siteMetadata";
 import PostHeader from "@components/mdx/PostHeader.astro";
-// import RssXml from "@components/rss/RssXml.astro";
-// import WriteFile from "@components/rss/WriteFile.astro";
 
 const workPosts = (
   await getCollection("work", ({ data }) => {
@@ -29,18 +27,6 @@ const workPosts = (
 
 // for RSS, need to send both data to construct all the fields necessary in feed.xml
 const allPosts = [...workPosts];
-
-// Astro.glob() is deprecated
-// https://docs.astro.build/en/guides/upgrade-to/v5/#what-should-i-do-3
-// NOTE: consider using collections in the future
-
-// const allMdx = (await Astro.glob("@content/work/**/*.mdx")).reverse();
-// const allMdx = Object.values(
-//   import.meta.glob("@content/work/**/*.mdx", { eager: true }),
-// ).reverse();
-
-// console.log(allPosts[0].data.draft);
-// console.log(allMdx[0].frontmatter.draft);
 ---
 
 <Layout title={"Index"} description={site.description}>
@@ -55,7 +41,4 @@ const allPosts = [...workPosts];
       ))
     }
   </ul>
-  <!-- <WriteFile fileUrl={"./dist/feed.xml"} slot="rss-writer"> -->
-  <!--   <RssXml allPosts={allPosts} allMdx={allMdx} slot="rss-writer" /> -->
-  <!-- </WriteFile> -->
 </Layout>
