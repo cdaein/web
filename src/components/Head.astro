@@ -68,7 +68,10 @@ const cover =
     description={description}
     extend={{
       // extending the default link tags
-      link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+      link: [
+        // { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "icon", href: "/favicon.ico" },
+      ],
       // extending the default meta tags
       meta: [
         { httpEquiv: "x-ua-compatible", content: "ie-edge" },
