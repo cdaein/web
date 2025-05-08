@@ -8,7 +8,6 @@ import PostHeader from "@components/mdx/PostHeader.astro";
 
 const workPosts = (
   await getCollection("work", ({ data }) => {
-    // return import.meta.env.PROD ? data.draft !== true : true;
     return import.meta.env.PROD ? data.published === true : true;
   })
 )
@@ -24,9 +23,9 @@ const workPosts = (
   // so manual sorting is necessary
   .sort((a, b) => {
     return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-  })
-  // only index published posts
-  .filter((post) => post.data.published === true);
+  });
+// only index published posts
+// .filter((post) => post.data.published === true);
 
 // for RSS, need to send both data to construct all the fields necessary in feed.xml
 const allPosts = [...workPosts];
