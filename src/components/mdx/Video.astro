@@ -1,4 +1,6 @@
 ---
+import type { ImgAttributes } from "astro:assets";
+
 // TODO:
 // - apply width and height to figure wrapper to avoid layout shift.
 //  - get-video-dimensions works but needs ffprobe binary.
@@ -12,7 +14,7 @@
 type Props = {
   /** Path string */
   src: string;
-  poster?: string;
+  poster?: { src: string; width: number; height: number; format: string };
   title?: string;
   caption?: string;
   width?: number;
@@ -49,8 +51,8 @@ const h = height || 1080;
 
 <div class:list={["video-wrapper bg-gray-500", mb && "mb-8", className]}>
   <video
-    src={`${src}#t=0.001`}
-    poster={poster}
+    src={poster ? src : `${src}#t=0.001`}
+    poster={poster?.src}
     title={title}
     width={width}
     height={height}
