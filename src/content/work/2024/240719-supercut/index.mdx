@@ -18,15 +18,16 @@ import MediaGrid from "@components/mdx/MediaGrid.astro";
 import Video from "@components/mdx/Video.astro";
 import vid1 from "./a-bronx-morning.mp4";
 import vid2 from "./silent-anims.mp4";
+import vid1poster from "./a-bronx-morning.png";
 
-[Supercut](https://github.com/cdaein/supercut) is a tool that creates a montage video with Google Gemini large language model. You can ask it to search video contents (ex. "Find sections of street signages") and it will respond with timestamps. Then, corresponding video clips are extracted and stitched together to create a montage video. 
+[Supercut](https://github.com/cdaein/supercut) is a tool that creates a montage video with Google Gemini large language model. You can ask it to search video contents (ex. "Find sections of street signages") and it will respond with timestamps. Then, corresponding video clips are extracted and stitched together to create a montage video.
 
-The Gemini model responds to a request with timestamps from the input video. Supercut then creates video clips according to the timestamps and stitch them together to create a montage, automating the process for quick and easy review. In case of getting unsatisfying results from the full automation, Supercut also provides several sub-commands to give user more control over the process such as uploading, encoding, timestamping, video clip generation and video concatenation. 
+The Gemini model responds to a request with timestamps from the input video. Supercut then creates video clips according to the timestamps and stitch them together to create a montage, automating the process for quick and easy review. In case of getting unsatisfying results from the full automation, Supercut also provides several sub-commands to give user more control over the process such as uploading, encoding, timestamping, video clip generation and video concatenation.
 
 <GC start={2} end={7} class="mb-12">
   I uploaded a 13-minute long public domain documentary [A Bronx Morning (1931)](https://www.loc.gov/item/2021604036/) found in the Library of Congress collection and asked to find street signages. Supercut created the following montage video:
 
-  <Video src={vid1} width="640" height="480" />
+  <Video src={vid1} poster={vid1poster} width="640" height="480" />
 </GC>
 
 <GC start={7} end={12} class="mb-12">
@@ -35,12 +36,12 @@ The Gemini model responds to a request with timestamps from the input video. Sup
   <Video src={vid2} width="640" height="480" />
 </GC>
 
-In addition to the examples above, I used the batch processing feature of Supercut to process multiple movie trailers to extract typography shots to get a quick sense of what styles are being used. Supercut saves each video clip before making a montage, so if there are any unwanted clips, I can manually remove or bring them into an external software for further editing. 
+In addition to the examples above, I used the batch processing feature of Supercut to process multiple movie trailers to extract typography shots to get a quick sense of what styles are being used. Supercut saves each video clip before making a montage, so if there are any unwanted clips, I can manually remove or bring them into an external software for further editing.
 
-I also used prompts such as "find scenes where red is the dominant color" to generate a montage of shots that had interesting use of the color. The answer was not always as good as I hoped but I still liked how it presented the materials in a way that I've never seen before or been able to assemble in my head. These are the things that I would probably have never tried if it weren't for such tools because of the amount of manual work involved without a guarantee that I'd get something interesting at the end. Now, I can save time with the initial gathering and generation of the materials. This is where AI can be useful in my creative process at the moment. I can also imagine researchers and historians using a similar approach when dealing with a large amount of historical video recordings. 
+I also used prompts such as "find scenes where red is the dominant color" to generate a montage of shots that had interesting use of the color. The answer was not always as good as I hoped but I still liked how it presented the materials in a way that I've never seen before or been able to assemble in my head. These are the things that I would probably have never tried if it weren't for such tools because of the amount of manual work involved without a guarantee that I'd get something interesting at the end. Now, I can save time with the initial gathering and generation of the materials. This is where AI can be useful in my creative process at the moment. I can also imagine researchers and historians using a similar approach when dealing with a large amount of historical video recordings.
 
-While making the tool, I found the responses from Gemini were not accurate in some cases. It's hard for me to tell whether it is because of the model architecture or training data or both. A reason I can think of is that it only looks at video at 1 frame per second and thus, missing any action happening in-between the interval. Also, because of that, it does not understand the continuity of movement. It also gave wrong answers on questions about color or composition especially on longer videos. 
+While making the tool, I found the responses from Gemini were not accurate in some cases. It's hard for me to tell whether it is because of the model architecture or training data or both. A reason I can think of is that it only looks at video at 1 frame per second and thus, missing any action happening in-between the interval. Also, because of that, it does not understand the continuity of movement. It also gave wrong answers on questions about color or composition especially on longer videos.
 
-As long as we don't trust its answers blindly as facts (bad idea) or attempt to create a finished film with just one click (another bad idea), I believe it can still be a useful research tool or even a creative tool for quick iterative experiments.  
+As long as we don't trust its answers blindly as facts (bad idea) or attempt to create a finished film with just one click (another bad idea), I believe it can still be a useful research tool or even a creative tool for quick iterative experiments.
 
 The executable code is available to download from [the Github repo](https://github.com/cdaein/supercut/) and it is currently only available as a CLI app.
