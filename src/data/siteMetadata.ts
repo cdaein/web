@@ -4,6 +4,7 @@ export const site = {
   siteUrl: `https://paperdove.com`,
   author: "Daeinc",
   email: "daeinc@paperdove.com", // TODO: use simple login instead (with reply-to)
+  rss: "https://paperdove.com/feed.xml",
   links: {
     mastodon: "https://genart.social/@daeinc",
     threads: "https://www.threads.net/@daeincc",
@@ -15,7 +16,6 @@ export const site = {
     codecanvas:
       "https://codecanvas.art/drop/8Dus2SwgbXATR6tGSjcKcFSAkmhpZD17g36kgpVz3Bpk",
     github: "https://github.com/cdaein",
-    rss: "https://paperdove.com/feed.xml",
     substack: "", // ..
   },
 };
