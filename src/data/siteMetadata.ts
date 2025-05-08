@@ -15,7 +15,7 @@ export const site = {
     codecanvas:
       "https://codecanvas.art/drop/8Dus2SwgbXATR6tGSjcKcFSAkmhpZD17g36kgpVz3Bpk",
     github: "https://github.com/cdaein",
-    rss: "", // TODO:
+    rss: "https://paperdove.com/feed.xml",
     substack: "", // ..
   },
 };
