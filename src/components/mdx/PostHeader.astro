@@ -72,7 +72,8 @@ const isRoot = pathname === "/";
           "lg:col-end-4",
           "flex justify-start"
         ]}>
-          {!published && "(not published)"}{title}
+        {!published && <span class="text-red-500 font-semibold">(NOT PUBLISHED)</span>}
+        {title}
         </h1>
         <h2 class:list={[
           "m-0 whitespace-nowrap overflow-hidden",
