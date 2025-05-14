@@ -19,13 +19,20 @@ const workTitle = entry && entry?.data.title;
   {role && <span>{role} at </span>}
   {
     link ? (
-      <a
-        href={Array.isArray(link) ? link[0] : link}
-        target="_blank"
-        class:list={["italic no-underline"]}
-      >
-        {title},
-      </a>
+      <span>
+        <>
+          <>
+            <>
+              <!-- prettier-ignore -->
+              <a
+                href={Array.isArray(link) ? link[0] : link}
+                target="_blank"
+                class:list={["italic no-underline"]}
+              >{title}</a><span>,</span>
+            </>
+          </>
+        </>
+      </span>
     ) : (
       <span>{title},</span>
     )
