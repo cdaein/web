@@ -35,6 +35,14 @@ export type Activity = z.infer<typeof schema>;
 const activities: Activity[] = [
   {
     type: "exhibition",
+    title: "Constellations 2025: Uncertainty",
+    date: "2025-05-16",
+    city: "Portland, OR",
+    country: "USA",
+    link: ["https://ceti.institute/event/constellations-uncertainty/"],
+  },
+  {
+    type: "exhibition",
     title: "Demo Festival 2025 Cities Edition",
     date: "2025-01-30",
     country: "The Netherlands",
