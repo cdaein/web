@@ -37,6 +37,7 @@ const activities: Activity[] = [
     type: "exhibition",
     title: "Constellations 2025: Uncertainty",
     date: "2025-05-16",
+    place: "CETI Institute",
     city: "Portland, OR",
     country: "USA",
     link: ["https://ceti.institute/event/constellations-uncertainty/"],
