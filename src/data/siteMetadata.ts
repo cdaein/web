@@ -7,10 +7,8 @@ export const site = {
   rss: "https://paperdove.com/feed.xml",
   links: {
     mastodon: "https://genart.social/@daeinc",
-    threads: "https://www.threads.net/@daeincc",
     instagram: "https://www.instagram.com/daeincc/",
     bluesky: "https://bsky.app/profile/daeinc.bsky.social",
-    twitter: "https://twitter.com/cdaein",
     fxhash: "https://www.fxhash.xyz/u/Daeinc",
     objkt: "https://objkt.com/users/tz1WXTdGdwD6g24vJp7vpjWVR8LuFpisUcoc",
     codecanvas:
