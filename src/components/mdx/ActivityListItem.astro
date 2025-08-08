@@ -10,6 +10,7 @@ const { data, showWorkTitle = false } = Astro.props as {
 const { slug, date, title, role, place, city, country, link } = data;
 
 // some entries may not have corresponding post slug.
+// FIX: first check if slug is a string or an array
 const entry = slug && (await getEntry("work", slug));
 const workTitle = entry && entry?.data.title;
 ---

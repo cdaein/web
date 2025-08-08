@@ -15,10 +15,8 @@ const schema = z.object({
   ]),
   /**
    * Same as work post title slug for filtering. (ex. ekstasy-type-club) It may be an array for multiple works
-   * TODO: it can accept array of slugs but it is not being handled atm.
    */
-  // slug: z.string().or(z.string().array()).optional(),
-  slug: z.string().optional(),
+  slug: z.string().or(z.string().array()).optional(),
   title: z.string(),
   /** ex. moderator, presenter */
   role: z.string().optional(),
@@ -53,8 +51,7 @@ const activities: Activity[] = [
     type: "exhibition",
     // TODO: support multiple slugs
     //       then, update each mdx to include <ActivityList>
-    // slugs: ["duet", "time-intertwined"],
-    slug: "duet",
+    slug: ["duet", "time-intertwined"],
     title: "Bideotikan Digital Art Festival",
     date: "2024-10-24",
     city: "Bilbao",

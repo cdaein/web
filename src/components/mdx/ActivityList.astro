@@ -9,7 +9,7 @@ import ActivityListItem from "@components/mdx/ActivityListItem.astro";
 import type { Activity } from "@data/activities";
 
 type Props = {
-  slug: string;
+  slug: string | string[];
   /** Show separate list per activity type */
   sortByType?: boolean;
   showWorkTitle?: boolean;
@@ -17,15 +17,15 @@ type Props = {
 };
 
 const typeLUT = {
-  award: "Award",
-  event: "Event",
-  exhibition: "Exhibition",
+  award: "Selected Awards",
+  event: "Events",
+  exhibition: "Selected Exhibitions",
   featured: "Featured",
   interview: "Interview",
-  lecture: "Talk/Lecture",
-  publication: "Publication",
-  screening: "Screening",
-  teaching: "Teaching"
+  lecture: "Talks/Lectures",
+  publication: "Publications",
+  screening: "Selected Screenings",
+  teaching: "Teaching",
 };
 
 const {
@@ -35,6 +35,7 @@ const {
   class: className,
 } = Astro.props;
 
+// FIX: accommodate slug[]
 const activities = slug
   ? data.filter((act: Activity) => act.slug === slug)
   : data;
