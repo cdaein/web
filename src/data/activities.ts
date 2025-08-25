@@ -264,12 +264,12 @@ const activities: Activity[] = [
     country: "South Korea",
     link: "https://agbook.co.kr/books/letterseed-13",
   },
-  {
-    type: "award",
-    slug: "build-the-system",
-    title: "Graphis Poster Annual Gold Winner",
-    date: "2016",
-  },
+  // {
+  //   type: "award",
+  //   slug: "build-the-system",
+  //   title: "Graphis Poster Annual Gold Winner",
+  //   date: "2016",
+  // },
   {
     type: "featured",
     slug: "ekstasy-type-club",
