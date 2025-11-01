@@ -317,6 +317,7 @@ const activities: Activity[] = [
     title: "CA Magazine Korea",
     date: "2016",
     country: "South Korea",
+    link: "https://www.cabooks.co.kr/product/215",
   },
   {
     type: "teaching",
