@@ -14,9 +14,11 @@ published: true
 import GC from "@components/mdx/GridColumn.astro";
 import MediaGrid from "@components/mdx/MediaGrid.astro";
 import { Image } from "astro:assets";
+import ImageComponent from "@components/mdx/Image.astro";
 import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 
 import thumb from "./thumb.png";
+import figure1 from "./figure-1.png";
 import keycap1 from "./keycap-1.jpeg";
 import keycapVid from "./keycap-2.mp4";
 import scarfA1 from "./scarf-a-1.jpeg";
@@ -31,15 +33,24 @@ I taught a 10-week course called Visual Tactility at [Design School](https://www
 The course emphasized the direct experience from the primary source. This feels more important than ever when we spend most of our days looking at a flat screen watching short-forms or talking to AI with no real engagement with reality.
 
 <GC lgStart={3} lgEnd={11} mb>
-  <Image
-    src={thumb}
-    alt="A figure showing the design process that involves tactile experience"
-    caption=""
+  <ImageComponent
+    src={figure1}
+    alt="A diagram"
+    caption="experience to language/concept to image/text/video/etc"
     captionClass="text-center"
   />
 </GC>
 
 We explored design possibilities that engage our sense of touch, from creating tactile boxes inspired by Moholy-Nagy at Bauhaus to producing objects that connect users and the world as an extension of our body. Tactility is multi-sensory, which may include all five (or eight) senses. When we consider not only the sense on our skin, but also weight, pressure, temperature, spatial and atmospheric expriences, there emerge interesting possibilities to create a rich experience. As Kenya Hara puts it, we can "awaken" the senses.
+
+<GC lgStart={3} lgEnd={11} mb>
+  <ImageComponent
+    src={thumb}
+    alt="A diagram showing the design process that involves tactile experience"
+    caption="From top to bottom; continuum between direct (primary) exprience and visual (secondary) experience; From idea to handicraft to digital and the space between them; the parametric space of visual expression"
+    captionClass="text-center"
+  />
+</GC>
 
 The final project prompted students to consider tactile experience of the 2-dimensional graphics they create as well as the physical object itself. Below are a few examples of the student work:
 
