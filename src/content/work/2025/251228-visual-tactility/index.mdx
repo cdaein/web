@@ -1,0 +1,57 @@
+---
+title: "Visual Tactility"
+slug: visual-tactility
+description: Tactile Experience in Graphic Design
+date: 2025-12-27
+category: education
+tags:
+  - education
+featured: false
+cover: ./thumb.png
+published: true
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
+
+import thumb from "./thumb.png";
+import keycap1 from "./keycap-1.jpeg";
+import keycapVid from "./keycap-2.mp4";
+import scarfA1 from "./scarf-a-1.jpeg";
+import scarfA2 from "./scarf-a-2.jpeg";
+import scarfB1 from "./scarf-b-1.jpeg";
+import scarfB2 from "./scarf-b-2.jpeg";
+import scarfC1 from "./scarf-c-1.jpeg";
+import scarfC2 from "./scarf-c-2.jpeg";
+
+I taught a 10-week course called Visual Tactility at [Design School](https://www.instagram.com/designschool.kr/) in Seoul with a small group of students with minimal design background.
+
+The course emphasized the direct experience from the primary source. This feels more important than ever when we spend most of our days looking at a flat screen watching short-forms or talking to AI with no real engagement with reality.
+
+<GC lgStart={3} lgEnd={11} mb>
+  <Image
+    src={thumb}
+    alt="A figure showing the design process that involves tactile experience"
+    caption=""
+    captionClass="text-center"
+  />
+</GC>
+
+We explored design possibilities that engage our sense of touch, from creating tactile boxes inspired by Moholy-Nagy at Bauhaus to producing objects that connect users and the world as an extension of our body. Tactility is multi-sensory, which may include all five (or eight) senses. When we consider not only the sense on our skin, but also weight, pressure, temperature, spatial and atmospheric expriences, there emerge interesting possibilities to create a rich experience. As Kenya Hara puts it, we can "awaken" the senses.
+
+The final project prompted students to consider tactile experience of the 2-dimensional graphics they create as well as the physical object itself. Below are a few examples of the student work:
+
+<GC start={1} end={13}>
+  <MediaGrid maxCols={4} class="">
+    <VideoInGrid src={keycapVid} />
+    <Image src={keycap1} alt="keycap design" />
+    <Image src={scarfA1} alt="scarf design" />
+    <Image src={scarfA2} alt="scarf design" />
+    <Image src={scarfB1} alt="scarf design" />
+    <Image src={scarfB2} alt="scarf design" />
+    <Image src={scarfC1} alt="scarf design" />
+    <Image src={scarfC2} alt="scarf design" />
+  </MediaGrid>
+</GC>
