@@ -2,23 +2,53 @@
 title: "Posting Web"
 slug: posting-web
 description: ""
-date: 2026-01-16
+date: 2026-01-18
 category: tool
 tags:
   - app
   - software
   - web
 featured: false
-cover: ./thumb.png
+cover: ./posting-web-demo.png
 published: false
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import ImageComponent from "@components/mdx/Image.astro";
+import Video from "@components/mdx/Video.astro";
+
+import thumb from "./thumb.png";
+import vid1 from "./posting-web-demo.mp4";
+import vid1poster from "./posting-web-demo.png";
+import igStat from "./instagram-stat.PNG";
+
+<GC start={4} end={10} class="mb-12">
+  <Video src={vid1} poster={vid1poster} width="1280" height="720" />
+</GC>
+
 Posting Web improves upon [Posting](/posting) app that I created last year by running on a remote server 24/7 and adding the web interface for better usability.
 
-The goal is the same as the last version — help users spend as little time as possible on the social media platforms while still maintaing their presence. When I upload posts directly on each platform, I tend to get distracted by viral posts recommended by algorithm and waste time without realizing. These companies spend millions of dollars to keep you hooked in so it is a game I cannot win. I also become self-conscious on how well my post is doing. I now use my app to schedule ahead and it is especially helpful to publish posts while I sleep. This obviously doesn't solve any inherent issues of social media, but has helped me regulate my use on a personal level.
+The goal is the same as the last version — help users spend as little time as possible on social media platforms while still maintaining their online presence. A user may be an artist who needs to promote their work or a small business owner who has a regular posting schedule.
 
-I also added a few helpful features. The app protects privacy by stripping metadata of any attached media files. It removes any sensitive data such as GPS location or device used, etc. before uploading to the platform servers. It also checks for file size and image dimensions to meet each platform requirements, thus, saving user's time on preparing them. The UI is simple and minimal to keep the time spent on scheduling as little as possible.
+<GC start={4} end={10} lgStart={4} lgEnd={10} class="">
 
-Currently, the app is only available behind VPN for a small closed group of people.
+When I upload posts directly on each platform, I tend to get distracted by viral posts recommended by algorithm and waste time scrolling without realizing. These companies spend millions of dollars to keep you hooked in so it is a game I cannot win. I also become self-conscious on how well my post is doing. I now use my app to schedule ahead without interacting directly with the platforms and it is especially helpful to publish posts while I sleep. This obviously doesn't solve any inherent issues of social media, but has helped me regulate my own use.
 
-For this version, I got a lot of help from AI coding agent. Last summer, I tried Cursor and although it was quite impressive, it also made mistakes that made it quite frustrating to use. I gave another try by using Claude Code this time and I was surprised at how much better it became. I am still skeptical about the overall AI landscape. There are so many things to be concerned about - environmental costs, economic collapse, the consolidation of political power, no compensation to creative people, etc.
+</GC>
+
+<GC start={10} end={12} lgStart={10} lgEnd={12}>
+  <ImageComponent
+    src={igStat}
+    alt="A screnshot of Instagram usage stat"
+    caption="My Instagram usage stat, totalling 3 minutes in the past week"
+    captionClass="text-center"
+    class=""
+  />
+</GC>
+
+I also added a few helpful features. The app protects privacy by stripping metadata of any attached media files. It removes any sensitive data such as GPS location or device used, etc. before uploading to each platform server. It also checks for file size and image dimensions to meet each platform requirements, thus, saving user's time on preparing them. The UI is simple and minimal to keep the time spent on scheduling as little as possible. I simply write a message, attach a few images or videos, hit the schedule button and forget.
+
+Currently, the app is only available behind VPN for a small closed group of people around me.
+
+I set out to solve one problem and I am quite satisfied with the result, but in doing so, I neglected another problem that is the use of AI. For this web version of the posting app, I got a lot of help from AI coding agent. Last summer, I tried Cursor for the first time and although it was quite impressive, it also made mistakes that made it quite frustrating to use. I gave another try by using Claude Code this time and was surprised at how much better it became. I am still skeptical about the overall AI landscape. There are so many things to be concerned about — environmental costs, economic collapse, weaponization of the tech, consolidation of political power, no compensation to creative people, just to name a few. So, it leaves me a bitter taste in my mouth even after I found a good use of the LLM coding agent in this project. I am still struggling with how I should feel about all of it. I have zero reason to defend any of the big AI companies. All I can say is that in this very narrow context of the project, it was helpful.
