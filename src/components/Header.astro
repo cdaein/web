@@ -17,26 +17,39 @@ const { prevPost, nextPost, class: className } = Astro.props;
 const pathname = Astro.url.pathname;
 const isIndexPage = pathname === "/";
 
+const DEFAULT_VIEW = "list";
+
 const viewToggleScript = /*javascript*/ `
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('view-toggle');
-    if (toggleBtn) {
-      const listView = document.getElementById('index-list-view');
-      const gridView = document.getElementById('index-grid-view');
+  (function() {
+    const DEFAULT_VIEW = '${DEFAULT_VIEW}';
+    const gridIcon = document.getElementById('icon-grid');
+    const listIcon = document.getElementById('icon-list');
+    const savedView = localStorage.getItem('indexView') || DEFAULT_VIEW;
 
-      // Initialize button text from localStorage
-      const savedView = localStorage.getItem('indexView') || 'list';
-
-      // Toggle on click
-      toggleBtn.addEventListener('click', () => {
-        const current = localStorage.getItem('indexView') || 'list';
-        const newView = current === 'list' ? 'grid' : 'list';
-        localStorage.setItem('indexView', newView);
-        listView?.classList.toggle('hidden', newView === 'grid');
-        gridView?.classList.toggle('hidden', newView === 'list');
-      });
+    // Flip icons if localStorage differs from default
+    if (savedView !== DEFAULT_VIEW) {
+      gridIcon?.classList.remove('opacity-30');
+      listIcon?.classList.add('opacity-30');
     }
-  });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('view-toggle');
+      if (toggleBtn) {
+        const listView = document.getElementById('index-list-view');
+        const gridView = document.getElementById('index-grid-view');
+
+        toggleBtn.addEventListener('click', () => {
+          const current = localStorage.getItem('indexView') || DEFAULT_VIEW;
+          const newView = current === 'list' ? 'grid' : 'list';
+          localStorage.setItem('indexView', newView);
+          listView?.classList.toggle('hidden', newView === 'grid');
+          gridView?.classList.toggle('hidden', newView === 'list');
+          gridIcon?.classList.toggle('opacity-30', newView === 'list');
+          listIcon?.classList.toggle('opacity-30', newView === 'grid');
+        });
+      }
+    });
+  })();
 `;
 ---
 
@@ -61,10 +74,12 @@ const viewToggleScript = /*javascript*/ `
         id="view-toggle"
         class="group pl-4 col-start-1 col-end-3 flex justify-start items-center whitespace-nowrap cursor-pointer"
       >
-        <!-- https://www.shadcn.io/icon/lucide-grid-2x2 -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1;"><path d="M12 3v18m-9-9h18"/><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
-        <!-- https://www.shadcn.io/icon/lucide-list -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:1;"><path fill="none"     d="M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13"/></svg>
+        <span id="icon-grid" class="opacity-30">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18m-9-9h18"/><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
+        </span>
+        <span id="icon-list">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" d="M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13"/></svg>
+        </span>
       </button>
 
       <div class="col-start-5 col-end-9 grid grid-cols-3">

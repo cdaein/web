@@ -28,18 +28,23 @@ const workPosts = (
 
 const allPosts = [...workPosts];
 
-const initViewScript = /*javascript*/ `
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedView = localStorage.getItem('indexView') || 'list';
-    document.getElementById('index-list-view')?.classList.toggle('hidden', savedView === 'grid');
-    document.getElementById('index-grid-view')?.classList.toggle('hidden', savedView === 'list');
-  });
-`;
+const DEFAULT_VIEW = "list";
 ---
 
 <Layout title={"Index"} description={site.description}>
-  <IndexListView posts={allPosts} />
+  <IndexListView posts={allPosts} class="hidden" />
   <IndexGridView posts={allPosts} coverImages={coverImages} class="hidden" />
 </Layout>
 
-<script is:inline set:html={initViewScript} />
+<script is:inline define:vars={{ DEFAULT_VIEW }}>
+  (function() {
+    const view = localStorage.getItem('indexView') || DEFAULT_VIEW;
+    const listView = document.getElementById('index-list-view');
+    const gridView = document.getElementById('index-grid-view');
+    if (view === 'list') {
+      listView?.classList.remove('hidden');
+    } else {
+      gridView?.classList.remove('hidden');
+    }
+  })();
+</script>

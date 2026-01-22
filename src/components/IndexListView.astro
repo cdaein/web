@@ -4,12 +4,13 @@ import PostHeader from "@components/mdx/PostHeader.astro";
 
 type Props = {
   posts: CollectionEntry<"work">[];
+  class?: string;
 };
 
-const { posts } = Astro.props;
+const { posts, class: className } = Astro.props;
 ---
 
-<ul id="index-list-view">
+<ul id="index-list-view" class:list={[className]}>
   {
     posts.map((post) => (
       <li>
