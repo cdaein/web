@@ -1,7 +1,7 @@
 ---
 // NOTE:
 // - header is 3-column grid
-// - 1st: my name
+// - 1st: view toggle (on index) or name (on other pages)
 // - 2nd: prev, index, next => inner structure
 // - 3rd: about
 
@@ -15,9 +15,31 @@ type Props = {
 
 const { prevPost, nextPost, class: className } = Astro.props;
 const pathname = Astro.url.pathname;
-const isIndexPage = pathname === "/" || pathname === "/index-thumb";
-const isListView = pathname === "/";
-const isGridView = pathname === "/index-thumb";
+const isIndexPage = pathname === "/";
+
+const viewToggleScript = /*javascript*/ `
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('view-toggle');
+    if (toggleBtn) {
+      const listView = document.getElementById('index-list-view');
+      const gridView = document.getElementById('index-grid-view');
+
+      // Initialize button text from localStorage
+      const savedView = localStorage.getItem('indexView') || 'list';
+      // toggleBtn.textContent = savedView === 'list' ? 'Grid' : 'List';
+
+      // Toggle on click
+      toggleBtn.addEventListener('click', () => {
+        const current = localStorage.getItem('indexView') || 'list';
+        const newView = current === 'list' ? 'grid' : 'list';
+        localStorage.setItem('indexView', newView);
+        // toggleBtn.textContent = newView === 'list' ? 'Grid' : 'List';
+        listView?.classList.toggle('hidden', newView === 'grid');
+        gridView?.classList.toggle('hidden', newView === 'list');
+      });
+    }
+  });
+`;
 ---
 
 <header
@@ -36,24 +58,28 @@ const isGridView = pathname === "/index-thumb";
       "max-w-screen-xl m-auto",
     ]}
   >
-    <span class="group pl-4 col-start-1 col-end-3 flex justify-start items-center whitespace-nowrap">
-      {isListView ? (
-      <a href="/index-thumb">
-        <span class="bock md:hidden">Grid</span>
-        <span class="hidden md:block">View Grid</span>
-      </a>
-      ) : (
-        <a href="/">View List</a>
-      )}
-    </span>
-
     {isIndexPage ? (
+      <button
+        id="view-toggle"
+        class="group pl-4 col-start-1 col-end-3 flex justify-start items-center whitespace-nowrap cursor-pointer"
+      >
+      Grid / List
+      </button>
+
       <div class="col-start-5 col-end-9 grid grid-cols-3">
         <span class="col-start-2 col-end-3 flex justify-center items-center">
           Index
         </span>
       </div>
     ) : (
+      <a
+        href="/"
+        class="group pl-4 col-start-1 col-end-3 flex justify-start items-center whitespace-nowrap"
+      >
+        <span class="hidden md:block">paperdove.com</span>
+        <span class="block md:hidden">pd</span>
+      </a>
+
       <div class="col-start-5 col-end-9 grid grid-cols-3">
         {prevPost && (
           <a
@@ -74,7 +100,7 @@ const isGridView = pathname === "/index-thumb";
         {nextPost && (
           <a
             href=`/${nextPost.slug}`
-            class="group col-start-3 col-end-4 flex justify-end lg:justify-start items-center"
+            class="group col-start-3 col-end-4 flex justify-end items-center"
           >
             <span class="hidden md:inline">Next</span>&nbsp;
             <span class="relative group-hover:left-1">→</span>
@@ -93,3 +119,5 @@ const isGridView = pathname === "/index-thumb";
     </a>
   </nav>
 </header>
+
+<script is:inline set:html={viewToggleScript} />
