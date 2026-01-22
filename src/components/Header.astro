@@ -14,6 +14,10 @@ type Props = {
 };
 
 const { prevPost, nextPost, class: className } = Astro.props;
+const pathname = Astro.url.pathname;
+const isIndexPage = pathname === "/" || pathname === "/index-thumb";
+const isListView = pathname === "/";
+const isGridView = pathname === "/index-thumb";
 ---
 
 <header
@@ -55,13 +59,39 @@ const { prevPost, nextPost, class: className } = Astro.props;
         )
       }
 
-      <a
-        aria-label="Index"
-        class="group col-start-2 col-end-3 flex justify-center items-center"
-        href="/"
-      >
-        <span class="">Index</span>
-      </a>
+      <div class="col-start-2 col-end-3 flex justify-center items-center gap-1">
+        <a
+          aria-label="Index"
+          class="group"
+          href="/"
+        >
+          <span>Index</span>
+        </a>
+        {isIndexPage && (
+          <span class="flex gap-0.5 ml-1">
+            <a
+              href="/"
+              aria-label="List view"
+              class:list={[
+                "px-1 text-xs leading-none",
+                isListView ? "text-black" : "text-gray-400 hover:text-black",
+              ]}
+            >
+              ☰
+            </a>
+            <a
+              href="/index-thumb"
+              aria-label="Grid view"
+              class:list={[
+                "px-1 text-xs leading-none",
+                isGridView ? "text-black" : "text-gray-400 hover:text-black",
+              ]}
+            >
+              ▦
+            </a>
+          </span>
+        )}
+      </div>
 
       {
         nextPost && (

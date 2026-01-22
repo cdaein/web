@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { site } from "@data/siteMetadata";
+import IndexThumbnailItem from "@components/IndexThumbnailItem.astro";
+
+// Load all images from work content at build time
+const allWorkImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/content/work/**/*.{png,jpg,jpeg,gif,webp}",
+  { eager: true },
+);
+
+// Helper to find cover image for a post
+function findCoverImage(
+  postId: string,
+  cover?: string,
+): ImageMetadata | undefined {
+  if (!cover) return undefined;
+
+  // postId is like "2024/240719-supercut/index.mdx"
+  // cover is relative path like "./thumb.png"
+  const postDir = postId.replace(/\/[^/]+$/, ""); // removes "/index.mdx"
+  const coverPath = cover.replace(/^\.\//, "");
+  const expectedPath = `/src/content/work/${postDir}/${coverPath}`;
+
+  return allWorkImages[expectedPath]?.default;
+}
+
+const workPosts = (
+  await getCollection("work", ({ data }) => {
+    return import.meta.env.PROD ? data.published === true : true;
+  })
+).sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+
+const allPosts = [...workPosts];
+---
+
+<Layout title={"Index"} description={site.description}>
+  <div
+    class:list={[
+      "grid gap-1 px-0",
+      "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8",
+      "max-w-[3840px] m-auto",
+    ]}
+  >
+    {
+      allPosts.map((post) => (
+        <IndexThumbnailItem
+          post={post}
+          thumbnail={findCoverImage(post.id, post.data.cover)}
+        />
+      ))
+    }
+  </div>
+</Layout>

@@ -1,0 +1,74 @@
+---
+import { Image as AstroImage } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  post: CollectionEntry<"work" | "writing">;
+  thumbnail?: ImageMetadata;
+  class?: string;
+};
+
+const { post, thumbnail, class: className } = Astro.props;
+const {
+  data: { title, published },
+} = post;
+---
+
+<a href={`/${post.slug}`} class:list={["group block mb-0", className]}>
+  <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-0">
+    {
+      thumbnail ? (
+        <AstroImage
+          src={thumbnail}
+          alt={title}
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+        />
+      ) : (
+        <div class="w-full h-full relative bg-transparent">
+          <svg
+            class="absolute inset-0 w-full h-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="99"
+              height="99"
+              fill="none"
+              stroke="black"
+              stroke-width="1"
+              vector-effect="non-scaling-stroke"
+            />
+            <line
+              x1="0"
+              y1="0"
+              x2="100"
+              y2="100"
+              stroke="black"
+              stroke-width="1"
+              vector-effect="non-scaling-stroke"
+            />
+            <line
+              x1="100"
+              y1="0"
+              x2="0"
+              y2="100"
+              stroke="black"
+              stroke-width="1"
+              vector-effect="non-scaling-stroke"
+            />
+          </svg>
+        </div>
+      )
+    }
+  </div>
+  <!-- <h2 class="leading-snug m-0"> -->
+  <!--   { -->
+  <!--     !published && ( -->
+  <!--       <span class="text-red-500 font-semibold">(NOT PUBLISHED) </span> -->
+  <!--     ) -->
+  <!--   } -->
+  <!--   {title} -->
+  <!-- </h2> -->
+</a>
