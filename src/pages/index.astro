@@ -27,6 +27,53 @@ const workPosts = (
 });
 
 const allPosts = [...workPosts];
+
+const indexViewScript = /*javascript*/ `
+  const view = localStorage.getItem("indexView") || "${DEFAULT_VIEW}";
+  const listView = document.getElementById("index-list-view");
+  const gridView = document.getElementById("index-grid-view");
+  if (view === "list") {
+    listView?.classList.remove("hidden");
+  } else {
+    gridView?.classList.remove("hidden");
+  }
+
+  // Mark visited posts with checkmark
+  const visited = JSON.parse(localStorage.getItem("visitedPosts") || "[]");
+
+  // List view: find h1 inside each visited post and append checkmark
+  document
+    .querySelectorAll("#index-list-view [data-post-slug]")
+    .forEach((li) => {
+      if (visited.includes(li.dataset.postSlug)) {
+        const h1 = li.querySelector("h1");
+        if (h1) {
+          const check = document.createElement("span");
+          check.textContent = " ✓";
+          check.className = "text-cyan-500";
+          check.title = "Visited";
+          h1.append(check);
+        }
+      }
+    });
+
+  // Grid view: find title span in hover overlay and append checkmark
+  document
+    .querySelectorAll("#index-grid-view [data-post-slug]")
+    .forEach((a) => {
+      if (visited.includes(a.dataset.postSlug)) {
+        const spans = a.querySelectorAll("span");
+        const titleSpan = spans[spans.length - 2]; // title is second-to-last span
+        if (titleSpan) {
+          const check = document.createElement("span");
+          check.textContent = " ✓";
+          check.className = "text-cyan-500";
+          check.title = "Visited";
+          titleSpan.append(check);
+        }
+      }
+    });
+`;
 ---
 
 <Layout title={"Index"} description={site.description}>
@@ -34,15 +81,4 @@ const allPosts = [...workPosts];
   <IndexGridView posts={allPosts} coverImages={coverImages} class="hidden" />
 </Layout>
 
-<script is:inline define:vars={{ DEFAULT_VIEW }}>
-  (function () {
-    const view = localStorage.getItem("indexView") || DEFAULT_VIEW;
-    const listView = document.getElementById("index-list-view");
-    const gridView = document.getElementById("index-grid-view");
-    if (view === "list") {
-      listView?.classList.remove("hidden");
-    } else {
-      gridView?.classList.remove("hidden");
-    }
-  })();
-</script>
+<script is:inline set:html={indexViewScript} />

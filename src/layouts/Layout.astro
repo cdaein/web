@@ -47,6 +47,17 @@ const imageModalScript = /*javascript*/ `
   });
 `;
 
+const visitedPostsScript = /*javascript*/ `
+  const slug = window.location.pathname.replace(/^\\/|\\/$/g, '');
+  if (slug && slug !== 'about') {
+    const visited = JSON.parse(localStorage.getItem('visitedPosts') || '[]');
+    if (!visited.includes(slug)) {
+      visited.push(slug);
+      localStorage.setItem('visitedPosts', JSON.stringify(visited));
+    }
+  }
+`;
+
 // REVIEW: for now postType is set to "work" only, no "writing"
 ---
 
@@ -99,5 +110,6 @@ const imageModalScript = /*javascript*/ `
       />
     </div>
     <script is:inline set:html={imageModalScript} />
+    <script is:inline set:html={visitedPostsScript} />
   </body>
 </html>

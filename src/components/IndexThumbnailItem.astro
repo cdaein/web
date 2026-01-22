@@ -17,6 +17,7 @@ const year = new Date(date).getFullYear();
 
 <a
   href={`/${post.slug}`}
+  data-post-slug={post.slug}
   class:list={["group block mb-0 border-r border-b border-black", className]}
 >
   <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-0 relative">
