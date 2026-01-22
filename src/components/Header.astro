@@ -26,11 +26,9 @@ const viewToggleScript = /*javascript*/ `
     const listIcon = document.getElementById('icon-list');
     const savedView = localStorage.getItem('indexView') || DEFAULT_VIEW;
 
-    // Flip icons if localStorage differs from default
-    if (savedView !== DEFAULT_VIEW) {
-      gridIcon?.classList.remove('opacity-30');
-      listIcon?.classList.add('opacity-30');
-    }
+    // Set icons based on actual saved view
+    gridIcon?.classList.toggle('opacity-30', savedView === 'list');
+    listIcon?.classList.toggle('opacity-30', savedView === 'grid');
 
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('view-toggle');
