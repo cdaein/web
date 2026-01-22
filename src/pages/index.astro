@@ -41,19 +41,19 @@ const indexViewScript = /*javascript*/ `
   // Mark visited posts with checkmark
   const visited = JSON.parse(localStorage.getItem("visitedPosts") || "[]");
 
-  // List view: find h1 inside each visited post and append checkmark
+  // List view: find all h1s inside each visited post and append checkmark
+  // (PostHeader has two h1s for different breakpoints)
   document
     .querySelectorAll("#index-list-view [data-post-slug]")
     .forEach((li) => {
       if (visited.includes(li.dataset.postSlug)) {
-        const h1 = li.querySelector("h1");
-        if (h1) {
+        li.querySelectorAll("h1").forEach((h1) => {
           const check = document.createElement("span");
-          check.textContent = " ✓";
-          check.className = "text-cyan-500";
+          check.textContent = "✓";
+          check.className = "text-cyan-500 ml-2";
           check.title = "Visited";
           h1.append(check);
-        }
+        });
       }
     });
 
