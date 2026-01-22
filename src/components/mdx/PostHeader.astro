@@ -56,7 +56,7 @@ const isRoot = pathname === "/";
     "border-b-black leading-snug z-10",
     isRoot && "h-18",
     !isRoot && !spacer && "fixed top-9 w-full",
-    spacer && "invisible",
+    !isRoot && spacer && "invisible w-full",
     isRoot && "hover:bg-black hover:text-white",
     className,
   ]}
@@ -80,12 +80,14 @@ const isRoot = pathname === "/";
         {title}
         </h1>
         <h2 class:list={[
+          // this is too differentiate from main h2 of the actual content
+          "post-header",
           "m-0 overflow-hidden",
           isRoot && "whitespace-nowrap fadeout",
           "relative",
-          "hidden col-start-4 col-end-9",
+          "hidden col-start-4 col-end-10",
           "md:col-start-5 md:col-end-11 md:flex",
-          "lg:col-start-4 lg:col-end-9",
+          "lg:col-start-4 lg:col-end-10",
           "justify-start"
         ]}>
           {
