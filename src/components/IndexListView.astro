@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from "astro:content";
+import PostHeader from "@components/mdx/PostHeader.astro";
+
+type Props = {
+  posts: CollectionEntry<"work">[];
+};
+
+const { posts } = Astro.props;
+---
+
+<ul id="index-list-view">
+  {
+    posts.map((post) => (
+      <li>
+        <a href={`/${post.slug}`}>
+          <PostHeader post={post} />
+        </a>
+      </li>
+    ))
+  }
+</ul>

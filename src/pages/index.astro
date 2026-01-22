@@ -2,43 +2,44 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { site } from "@data/siteMetadata";
-import PostHeader from "@components/mdx/PostHeader.astro";
+import IndexListView from "@components/IndexListView.astro";
+import IndexGridView from "@components/IndexGridView.astro";
+
+// Load all images from work content at build time
+const allWorkImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/content/work/**/*.{png,jpg,jpeg,gif,webp}",
+  { eager: true },
+);
+
+// Convert to simple record of path -> ImageMetadata
+const coverImages: Record<string, ImageMetadata> = {};
+for (const [path, module] of Object.entries(allWorkImages)) {
+  coverImages[path] = module.default;
+}
 
 const workPosts = (
   await getCollection("work", ({ data }) => {
     return import.meta.env.PROD ? data.published === true : true;
   })
 )
-  // parse slug to simplify intermediate folders
-  .map((post) => ({
-    ...post,
-    // astro default add all intermediate folder into slug. i want top-level routes only.
-    // but transforming slug is giving me an error when used in IndexListItem
-    // workaround is to manually define slug in frontmatter in each post (permalink)
-    // slug: parseSlug(post.slug),
-  }))
-  // at some point getCollection() return order changed to be not chronological..
-  // so manual sorting is necessary
   .sort((a, b) => {
     return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
   });
-// only index published posts
-// .filter((post) => post.data.published === true);
 
-// for RSS, need to send both data to construct all the fields necessary in feed.xml
 const allPosts = [...workPosts];
+
+const initViewScript = /*javascript*/ `
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedView = localStorage.getItem('indexView') || 'list';
+    document.getElementById('index-list-view')?.classList.toggle('hidden', savedView === 'grid');
+    document.getElementById('index-grid-view')?.classList.toggle('hidden', savedView === 'list');
+  });
+`;
 ---
 
 <Layout title={"Index"} description={site.description}>
-  <ul>
-    {
-      allPosts.map((post) => (
-        <li>
-          <a href={`/${post.slug}`}>
-            <PostHeader post={post} />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  <IndexListView posts={allPosts} />
+  <IndexGridView posts={allPosts} coverImages={coverImages} class="hidden" />
 </Layout>
+
+<script is:inline set:html={initViewScript} />
