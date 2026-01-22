@@ -13,14 +13,15 @@ interface Props {
   mb?:boolean;
   class?:string;
   captionClass?:string
+  zoomable?:boolean
 }
 
-const { alt, src, caption, cover, mb, class:className, captionClass } = Astro.props;
+const { alt, src, caption, cover, mb, class:className, captionClass, zoomable = true } = Astro.props;
 
 ---
 
-<figure class:list={["image-custom", mb && "mb-8", className]}>
-  <AstroImage src={src} alt={alt} class:list={["m-auto", cover && "w-full h-full"]} />
+<figure class:list={["image-custom", mb && "mb-8", className]} data-zoomable={zoomable}>
+  <AstroImage src={src} alt={alt} class:list={["m-auto", cover && "w-full h-full", zoomable && "cursor-pointer"]} />
   {
     caption && (
       <figcaption class:list={["text-base mt-2 mx-2", captionClass]}><p>{caption}<p></figcaption>
