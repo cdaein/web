@@ -32,87 +32,60 @@ const isGridView = pathname === "/index-thumb";
     aria-label="Main"
     class:list={[
       "grid grid-cols-12 w-full",
-      "gap-x-2 md:gap-x-2",
+      "gap-x-2 md:gap-x-8",
       "max-w-screen-xl m-auto",
     ]}
   >
-    <a
-      href="/"
-      class="group pl-4 col-start-1 col-end-3
-      flex justify-left items-center
-      whitespace-nowrap overflow-hidden"
-    >
-      <span class="hidden md:block">Dae In Chung</span>
-      <span class="block md:hidden">D</span>
-    </a>
-    <div class="col-start-5 col-end-9 grid grid-cols-3">
-      {
-        prevPost && (
+    <span class="group pl-4 col-start-1 col-end-3 flex justify-start items-center whitespace-nowrap">
+      {isListView ? (
+      <a href="/index-thumb">
+        <span class="bock md:hidden">Grid</span>
+        <span class="hidden md:block">View Grid</span>
+      </a>
+      ) : (
+        <a href="/">View List</a>
+      )}
+    </span>
+
+    {isIndexPage ? (
+      <div class="col-start-5 col-end-9 grid grid-cols-3">
+        <span class="col-start-2 col-end-3 flex justify-center items-center">
+          Index
+        </span>
+      </div>
+    ) : (
+      <div class="col-start-5 col-end-9 grid grid-cols-3">
+        {prevPost && (
           <a
             href=`/${prevPost.slug}`
-            class="group col-start-1 col-end-2 flex 
-            justify-start lg:justify-end"
+            class="group col-start-1 col-end-2 flex justify-start lg:justify-end items-center"
           >
             <span class="relative group-hover:right-1">←</span>&nbsp;
             <span class="hidden md:inline">Prev</span>
           </a>
-        )
-      }
-
-      <div class="col-start-2 col-end-3 flex justify-center items-center gap-1">
+        )}
         <a
           aria-label="Index"
-          class="group"
+          class="group col-start-2 col-end-3 flex justify-center items-center"
           href="/"
         >
           <span>Index</span>
         </a>
-        {isIndexPage && (
-          <span class="flex gap-0.5 ml-1">
-            <a
-              href="/"
-              aria-label="List view"
-              class:list={[
-                "px-1 text-xs leading-none",
-                isListView ? "text-black" : "text-gray-400 hover:text-black",
-              ]}
-            >
-              ☰
-            </a>
-            <a
-              href="/index-thumb"
-              aria-label="Grid view"
-              class:list={[
-                "px-1 text-xs leading-none",
-                isGridView ? "text-black" : "text-gray-400 hover:text-black",
-              ]}
-            >
-              ▦
-            </a>
-          </span>
-        )}
-      </div>
-
-      {
-        nextPost && (
+        {nextPost && (
           <a
             href=`/${nextPost.slug}`
-            class="group col-start-3 col-end-4 flex 
-            justify-end lg:justify-start"
+            class="group col-start-3 col-end-4 flex justify-end lg:justify-start items-center"
           >
             <span class="hidden md:inline">Next</span>&nbsp;
             <span class="relative group-hover:left-1">→</span>
           </a>
-        )
-      }
-    </div>
+        )}
+      </div>
+    )}
+
     <a
       aria-label="About"
-      class:list={[
-        "group pr-4 col-start-12 col-end-13",
-        "flex justify-end",
-        "items-center",
-      ]}
+      class="group pr-4 col-start-12 col-end-13 flex justify-end items-center"
       href="/about"
     >
       <span class="block md:hidden">A</span>
