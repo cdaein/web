@@ -70,7 +70,7 @@ const isRoot = pathname === "/";
     >
         <h1 class:list={[
           "m-0 overflow-hidden",
-          isRoot && "whitespace-nowrap fadeout",
+          // isRoot && "whitespace-nowrap fadeout",
           "relative pl-4 col-start-1 col-end-9",
           "md:pl-4 md:col-end-5",
           "lg:col-end-4",
@@ -83,7 +83,7 @@ const isRoot = pathname === "/";
           // this is too differentiate from main h2 of the actual content
           "post-header",
           "m-0 overflow-hidden",
-          isRoot && "whitespace-nowrap fadeout",
+          // isRoot && "whitespace-nowrap fadeout",
           "relative",
           "hidden col-start-4 col-end-10",
           "md:col-start-5 md:col-end-11 md:flex",
@@ -103,7 +103,7 @@ const isRoot = pathname === "/";
           "justify-start"
         ]}>{category && camelcase(`${category}`)}</span>
         <span class:list={[
-          "whitespace-nowrap overflow-hidden",
+          "whitespace-nowrap",
           "pr-4 col-start-10 col-end-13",
           "md:col-start-11",
           "lg:col-start-12",
