@@ -69,24 +69,38 @@ const isRoot = pathname === "/";
       ]}
     >
         <h1 class:list={[
+          "block md:hidden lg:block",
           "m-0 overflow-hidden",
-          // isRoot && "whitespace-nowrap fadeout",
           "relative pl-4 col-start-1 col-end-9",
-          "md:pl-4 md:col-end-5",
+          "md:pl-4 md:col-end-3",
           "lg:col-end-4",
           "flex justify-start"
         ]}>
         {!published && <span class="text-red-500 font-semibold">(NOT PUBLISHED)</span>}
         {title}
         </h1>
+
+        <h1 class:list={[
+          "hidden md:block lg:hidden",
+          "m-0 overflow-hidden",
+          "relative",
+          "hidden col-start-4 col-end-10",
+          "md:col-start-3 md:col-end-11 md:flex",
+          "lg:col-start-4 lg:col-end-10",
+          "justify-start"
+        ]}>
+        {!published && <span class="text-red-500 font-semibold">(NOT PUBLISHED)</span>}
+        {title}
+        </h1>
+
         <h2 class:list={[
+          "block md:hidden lg:block",
           // this is too differentiate from main h2 of the actual content
           "post-header",
           "m-0 overflow-hidden",
-          // isRoot && "whitespace-nowrap fadeout",
           "relative",
           "hidden col-start-4 col-end-10",
-          "md:col-start-5 md:col-end-11 md:flex",
+          "md:col-start-3 md:col-end-11 md:flex",
           "lg:col-start-4 lg:col-end-10",
           "justify-start"
         ]}>
