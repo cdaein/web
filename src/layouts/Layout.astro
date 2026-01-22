@@ -21,6 +21,32 @@ const { title, description, post, prevPost, nextPost } = Astro.props;
 const pathname = Astro.url.pathname;
 const isRoot = pathname === "/";
 
+const imageModalScript = `
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-image');
+
+  document.querySelectorAll('[data-zoomable="true"] img').forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      modal.classList.remove('invisible', 'opacity-0');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.classList.add('invisible', 'opacity-0');
+    document.body.style.overflow = '';
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('invisible')) {
+      modal.classList.add('invisible', 'opacity-0');
+      document.body.style.overflow = '';
+    }
+  });
+`;
+
 const postHeaderMarginScript = `
   function updatePostHeaderMargin() {
     const postHeader = document.getElementById('post-header');
@@ -73,6 +99,20 @@ const postHeaderMarginScript = `
       }
     </style>
     <slot name="rss-writer" />
-    {!isRoot && <script set:html={postHeaderMarginScript} />}
+    {!isRoot && <script is:inline set:html={postHeaderMarginScript} />}
+
+    <!-- Image zoom modal -->
+    <div
+      id="image-modal"
+      class="invisible opacity-0 fixed inset-0 z-50 bg-black/90 flex items-center justify-center cursor-pointer"
+    >
+      <img
+        id="modal-image"
+        class="max-w-[90vw] max-h-[90vh] object-contain"
+        src=""
+        alt=""
+      />
+    </div>
+    <script is:inline set:html={imageModalScript} />
   </body>
 </html>

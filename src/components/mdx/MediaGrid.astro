@@ -7,9 +7,11 @@ type Props = {
   caption?: string;
   class?: string;
   captionClass?: string;
+  /** enable click-to-zoom modal for images */
+  zoomable?: boolean;
 };
 
-const { maxCols, caption, class: className, captionClass } = Astro.props;
+const { maxCols, caption, class: className, captionClass, zoomable = true } = Astro.props;
 const maxColsChecked = gridCols[maxCols];
 ---
 
@@ -18,9 +20,11 @@ const maxColsChecked = gridCols[maxCols];
     class:list={[
       "image-grid grid",
       "[&_img]:object-cover [&_img]:w-full [&_img]:h-full",
+      zoomable && "[&_img]:cursor-pointer",
       maxColsChecked,
       className,
     ]}
+    data-zoomable={zoomable}
   >
     <slot />
   </div>
