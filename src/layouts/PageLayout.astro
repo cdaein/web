@@ -42,7 +42,8 @@ const {
     <Header />
     <PageHeader page={Astro.props.frontmatter} />
     <div class="flex flex-col h-full">
-      <main class="mt-0 grow">
+      <main class="mt-9 grow">
+        <PageHeader page={Astro.props.frontmatter} spacer />
         <Prose>
           <slot />
         </Prose>

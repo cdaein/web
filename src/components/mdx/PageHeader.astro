@@ -20,12 +20,15 @@ type Props = {
   prevPost?: CollectionEntry<"work" | "writing">;
   nextPost?: CollectionEntry<"work" | "writing">;
   class?: string;
+  /** Render as invisible spacer in document flow */
+  spacer?: boolean;
 };
 
 // const { page, class: className } = Astro.props;
 const {
   page: { title, description, draft },
   class: className,
+  spacer = false,
 } = Astro.props;
 
 // if not root, add page navagation
@@ -38,7 +41,8 @@ const isRoot = pathname === "/";
   class:list={[
     isRoot ? "border-b" : "border-b-2",
     "border-b-black h-18 leading-snug z-10",
-    !isRoot && "fixed top-9 w-full bg-white",
+    !isRoot && !spacer && "fixed top-9 w-full bg-white",
+    spacer && "invisible",
     className,
   ]}
 >
