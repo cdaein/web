@@ -47,21 +47,6 @@ const imageModalScript = /*javascript*/ `
   });
 `;
 
-const postHeaderMarginScript = /*javascript*/ `
-  function updatePostHeaderMargin() {
-    const postHeader = document.getElementById('post-header');
-    const main = document.querySelector('main');
-    if (postHeader && main) {
-      const headerHeight = 36;
-      const postHeaderHeight = postHeader.offsetHeight;
-      main.style.marginTop = (headerHeight + postHeaderHeight) + 'px';
-    }
-  }
-  // wait until the web font is loaded to correctly calculate height
-  document.fonts.ready.then(updatePostHeaderMargin);
-  window.addEventListener('resize', updatePostHeaderMargin);
-`;
-
 // REVIEW: for now postType is set to "work" only, no "writing"
 ---
 
@@ -79,7 +64,8 @@ const postHeaderMarginScript = /*javascript*/ `
     <Header prevPost={prevPost} nextPost={nextPost} />
     {post && <PostHeader post={post} />}
     <div class="flex flex-col h-full">
-      <main class:list={["grow", isRoot && "mt-9"]}>
+      <main class="grow mt-9">
+        {post && <PostHeader post={post} spacer />}
         <slot />
       </main>
       <Footer class="" />
@@ -99,7 +85,6 @@ const postHeaderMarginScript = /*javascript*/ `
       }
     </style>
     <slot name="rss-writer" />
-    {!isRoot && <script is:inline set:html={postHeaderMarginScript} />}
 
     <!-- Image zoom modal -->
     <div
