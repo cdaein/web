@@ -21,6 +21,21 @@ const { title, description, post, prevPost, nextPost } = Astro.props;
 const pathname = Astro.url.pathname;
 const isRoot = pathname === "/";
 
+const postHeaderMarginScript = `
+  function updatePostHeaderMargin() {
+    const postHeader = document.getElementById('post-header');
+    const main = document.querySelector('main');
+    if (postHeader && main) {
+      const headerHeight = 36;
+      const postHeaderHeight = postHeader.offsetHeight;
+      main.style.marginTop = (headerHeight + postHeaderHeight) + 'px';
+    }
+  }
+  // wait until the web font is loaded to correctly calculate height
+  document.fonts.ready.then(updatePostHeaderMargin);
+  window.addEventListener('resize', updatePostHeaderMargin);
+`;
+
 // REVIEW: for now postType is set to "work" only, no "writing"
 ---
 
@@ -58,5 +73,6 @@ const isRoot = pathname === "/";
       }
     </style>
     <slot name="rss-writer" />
+    {!isRoot && <script set:html={postHeaderMarginScript} />}
   </body>
 </html>

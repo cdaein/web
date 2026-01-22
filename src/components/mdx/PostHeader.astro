@@ -1,9 +1,7 @@
 ---
 // NOTE:
-// - additional style is to gracefully cut off text overflow and to keep on a single line.
-// TODO:
-// - if text cut off, scroll left and right when hovered.
-//  - or, use script to calc element height and add margin top to the content.
+// - On index page: single line with fadeout for overflow, fixed height
+// - On post pages: full title display, fixed positioning, dynamic height (JS sets margin)
 
 import moment from "moment";
 import type { CollectionEntry } from "astro:content";
@@ -49,10 +47,12 @@ const isRoot = pathname === "/";
 }
 
 <article
+  id={!isRoot ? "post-header" : undefined}
   class:list={[
     "bg-white",
     isRoot ? "border-b" : "border-b-2",
-    "border-b-black h-18 leading-snug z-10",
+    "border-b-black leading-snug z-10",
+    isRoot && "h-18",
     !isRoot && "fixed top-9 w-full",
     isRoot && "hover:bg-black hover:text-white",
     className,
@@ -66,8 +66,9 @@ const isRoot = pathname === "/";
       ]}
     >
         <h1 class:list={[
-          "m-0 whitespace-nowrap overflow-hidden",
-          "fadeout relative pl-4 col-start-1 col-end-9",
+          "m-0 overflow-hidden",
+          isRoot && "whitespace-nowrap fadeout",
+          "relative pl-4 col-start-1 col-end-9",
           "md:pl-4 md:col-end-5",
           "lg:col-end-4",
           "flex justify-start"
@@ -76,8 +77,9 @@ const isRoot = pathname === "/";
         {title}
         </h1>
         <h2 class:list={[
-          "m-0 whitespace-nowrap overflow-hidden",
-          "fadeout relative",
+          "m-0 overflow-hidden",
+          isRoot && "whitespace-nowrap fadeout",
+          "relative",
           "hidden col-start-4 col-end-9",
           "md:col-start-5 md:col-end-11 md:flex",
           "lg:col-start-4 lg:col-end-9",
