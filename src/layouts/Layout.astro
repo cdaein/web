@@ -21,7 +21,7 @@ const { title, description, post, prevPost, nextPost } = Astro.props;
 const pathname = Astro.url.pathname;
 const isRoot = pathname === "/";
 
-const imageModalScript = `
+const imageModalScript = /*javascript*/ `
   const modal = document.getElementById('image-modal');
   const modalImg = document.getElementById('modal-image');
 
@@ -47,7 +47,7 @@ const imageModalScript = `
   });
 `;
 
-const postHeaderMarginScript = `
+const postHeaderMarginScript = /*javascript*/ `
   function updatePostHeaderMargin() {
     const postHeader = document.getElementById('post-header');
     const main = document.querySelector('main');
