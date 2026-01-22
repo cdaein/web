@@ -1,3 +1,6 @@
+/** The default view for index page posts list */
+export const DEFAULT_VIEW: "grid" | "list" = "grid";
+
 export const TAGS = [
   "app",
   "animation",

@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import { site } from "@data/siteMetadata";
 import IndexListView from "@components/IndexListView.astro";
 import IndexGridView from "@components/IndexGridView.astro";
+import { DEFAULT_VIEW } from "@data/constants";
 
 // Load all images from work content at build time
 const allWorkImages = import.meta.glob<{ default: ImageMetadata }>(
@@ -21,14 +22,11 @@ const workPosts = (
   await getCollection("work", ({ data }) => {
     return import.meta.env.PROD ? data.published === true : true;
   })
-)
-  .sort((a, b) => {
-    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-  });
+).sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
 
 const allPosts = [...workPosts];
-
-const DEFAULT_VIEW = "list";
 ---
 
 <Layout title={"Index"} description={site.description}>
@@ -37,14 +35,14 @@ const DEFAULT_VIEW = "list";
 </Layout>
 
 <script is:inline define:vars={{ DEFAULT_VIEW }}>
-  (function() {
-    const view = localStorage.getItem('indexView') || DEFAULT_VIEW;
-    const listView = document.getElementById('index-list-view');
-    const gridView = document.getElementById('index-grid-view');
-    if (view === 'list') {
-      listView?.classList.remove('hidden');
+  (function () {
+    const view = localStorage.getItem("indexView") || DEFAULT_VIEW;
+    const listView = document.getElementById("index-list-view");
+    const gridView = document.getElementById("index-grid-view");
+    if (view === "list") {
+      listView?.classList.remove("hidden");
     } else {
-      gridView?.classList.remove('hidden');
+      gridView?.classList.remove("hidden");
     }
   })();
 </script>

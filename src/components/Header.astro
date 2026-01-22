@@ -6,6 +6,7 @@
 // - 3rd: about
 
 import type { CollectionEntry } from "astro:content";
+import { DEFAULT_VIEW } from "@data/constants"
 
 type Props = {
   prevPost?: CollectionEntry<"work" | "writing">;
@@ -17,7 +18,6 @@ const { prevPost, nextPost, class: className } = Astro.props;
 const pathname = Astro.url.pathname;
 const isIndexPage = pathname === "/";
 
-const DEFAULT_VIEW = "list";
 
 const viewToggleScript = /*javascript*/ `
   (function() {
@@ -74,10 +74,10 @@ const viewToggleScript = /*javascript*/ `
         id="view-toggle"
         class="group pl-4 col-start-1 col-end-3 flex justify-start items-center whitespace-nowrap cursor-pointer"
       >
-        <span id="icon-grid" class="opacity-30">
+        <span id="icon-grid" class:list={[DEFAULT_VIEW === 'list' && 'opacity-30']}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18m-9-9h18"/><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
         </span>
-        <span id="icon-list">
+        <span id="icon-list" class:list={[DEFAULT_VIEW === 'grid' && 'opacity-30']}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" d="M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13"/></svg>
         </span>
       </button>
