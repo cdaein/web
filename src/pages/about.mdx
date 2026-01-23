@@ -13,37 +13,6 @@ import GC from "@components/mdx/GridColumn.astro";
 import ActivityList from "@components/mdx/ActivityList.astro";
 import { site } from "@data/siteMetadata";
 
-<GC start={1} end={3} class="[&_a]:no-underline">
-  <ul role="navigation" aria-label="Social Media" class="mb-0 w-full flex flex-row flex-wrap md:block list-none">
-    <li class="mr-8">
-      <a href={site.links.mastodon}>Mastodon</a>
-    </li>
-    <li class="mr-8">
-      <a href={site.links.bluesky}>Bluesky</a>
-    </li>
-    <li class="mr-8">
-      <a href={site.links.instagram}>Instagram</a>
-    </li>
-    <li class="mr-8">
-      <a href={site.links.github}>Github</a>
-    </li>
-  </ul>
-
-  <div class="mt-2">
-    <ul role="navigation" aria-label="Art shop" class="w-full flex flex-row md:block list-none">
-    <li class="mr-8">
-    <a href={site.links.fxhash}>fxhash</a>
-    </li>
-    <li class="mr-8">
-    <a href={site.links.objkt}>Objkt</a>
-    </li>
-    <li class="mr-8">
-    <a href={site.links.codecanvas}>CodeCanvas</a>
-    </li>
-    </ul>
-  </div>
-</GC>
-
 <GC>
   Dae In Chung is an artist, designer and educator who mainly works with
   computer code as a creative medium. His main interests lie in exploring and
@@ -58,6 +27,51 @@ import { site } from "@data/siteMetadata";
 
 If you'd like to work with me, please [get in touch](mailto:daeinc@paperdove.com?subject=[Business%20Inquiry]).
 
+</GC>
+
+<GC>
+  <section>
+    <h2 class="m-0 pl-0 text-base">Social Media</h2>
+    <ul
+      role="navigation"
+      aria-label="Social Media"
+      class="mb-4 pl-0 w-full flex flex-row flex-wrap list-none"
+    >
+      <li class="mr-4">
+        <a href={site.links.mastodon}>Mastodon</a>
+      </li>
+      <li class="mr-4">
+        <a href={site.links.bluesky}>Bluesky</a>
+      </li>
+      <li class="mr-4">
+        <a href={site.links.instagram}>Instagram</a>
+      </li>
+      <li class="mr-4">
+        <a href={site.links.github}>Github</a>
+      </li>
+    </ul>
+  </section>
+</GC>
+
+<GC>
+  <section class="mt-0">
+    <h2 class="m-0 pl-0 text-base">Digital Art Shops</h2>
+    <ul
+      role="navigation"
+      aria-label="Digital Art shops"
+      class="pl-0 w-full flex flex-row flex-wrap list-none"
+    >
+      <li class="mr-4">
+        <a href={site.links.fxhash}>fxhash</a>
+      </li>
+      <li class="mr-4">
+        <a href={site.links.objkt}>Objkt</a>
+      </li>
+      <li class="mr-4">
+        <a href={site.links.codecanvas}>CodeCanvas</a>
+      </li>
+    </ul>
+  </section>
 </GC>
 
 <GC>
