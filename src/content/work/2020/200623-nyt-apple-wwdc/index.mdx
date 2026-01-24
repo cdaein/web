@@ -18,10 +18,10 @@ import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
 import vid1 from "./video.mp4";
 
+<GC start={3} end={11} mb>
+  <Video src={vid1} width={1080} height={1080} />
+</GC>
+
 Animated illustration for the New York Times story, [Apple Announces New Privacy Features](https://www.nytimes.com/2020/06/23/technology/apple-announces-new-privacy-features.html).
 
 I sampled the Apple logo to determine the size of each cube, and added sine-based animation on top. Created with Processing programming language.
-
-<GC mb>
-  <Video src={vid1} width={1080} height={1080} />
-</GC>

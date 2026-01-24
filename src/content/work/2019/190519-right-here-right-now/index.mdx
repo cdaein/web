@@ -15,6 +15,12 @@ cover: "./thumb.png"
 published: true
 ---
 
-![gif](./animated.gif)
+import GC from "@components/mdx/GridColumn.astro";
+import Video from "@components/mdx/Video.astro";
+import vid1 from "./animated.mp4";
+
+<GC start={2} end={12} mb>
+  <Video src={vid1} width={800} height={600} />
+</GC>
 
 You can purchase the poster as [a limited edition digital NFT](https://teia.art/objkt/23756).

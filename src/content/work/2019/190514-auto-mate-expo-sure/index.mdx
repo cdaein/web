@@ -14,9 +14,10 @@ cover: "./thumb.png"
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
-import vid from "./video.mp4";
+import vid1 from "./animated.mp4";
 
-![gif](./animated.gif)
-
-<Video src={vid} width={1080} height={1080} />
+<GC start={2} end={12}>
+  <Video src={vid1} width={800} height={600} />
+</GC>

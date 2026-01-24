@@ -15,13 +15,20 @@ cover: "./thumb2.jpg"
 published: true
 ---
 
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 import Video from "@components/mdx/Video.astro";
 import vid1 from "./recording.mp4";
+import vid2 from "./video.mp4";
 
 An interactive web poster using a variable font concept. To maximize the expressiveness of the letter form, I created a custom software that controls a variable letter with a set of parameters. This web poster is the result of the experiment.
 
 [https://exp.paperdove.com/why](https://exp.paperdove.com/why)
 
-![gif](./animated.gif)
-
-<Video src={vid1} width={720} height={720} />
+<GC start={2} end={12}>
+  <MediaGrid maxCols={2}>
+    <VideoInGrid src={vid2} width={720} height={720} />
+    <VideoInGrid src={vid1} width={720} height={720} />
+  </MediaGrid>
+</GC>
