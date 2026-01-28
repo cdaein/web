@@ -9,6 +9,14 @@ import type { APIContext } from "astro";
 // reference for Astro v5
 // https://blog.damato.design/posts/astro-rss-mdx/
 export async function GET(context: APIContext) {
+  const contextSite = context.site;
+
+  if (!contextSite) {
+    throw new Error(
+      "Missing 'site' in astro.config.mjs. RSS feed requires a base URL.",
+    );
+  }
+
   const renderers = await loadRenderers([getMDXRenderer()]);
   const container = await AstroContainer.create({ renderers });
   const workCollection = (
@@ -41,7 +49,7 @@ export async function GET(context: APIContext) {
     description: site.description,
     // Pull in your project "site" from the endpoint context
     // https://docs.astro.build/en/reference/api-reference/#site
-    site: context.site!,
+    site: contextSite,
     // Array of `<item>`s in output xml
     // See "Generating items" section for examples using content collections and glob imports
     items,
