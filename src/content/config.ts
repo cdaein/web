@@ -10,7 +10,8 @@ const workCollection = defineCollection({
     /** (optional) post description */
     description: z.string(),
     date: z.date(),
-    category: z.enum(CATEGORIES).or(z.enum(CATEGORIES).array()).optional(),
+    // category: z.enum(CATEGORIES).or(z.enum(CATEGORIES).array()).optional(),
+    category: z.enum(CATEGORIES).or(z.enum(CATEGORIES).array()),
     tags: z.enum(TAGS).array().optional(),
     featured: z.boolean(),
     /** Cover image URL */

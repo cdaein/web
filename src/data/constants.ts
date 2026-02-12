@@ -5,6 +5,7 @@ export const TAGS = [
   "app",
   "animation",
   "blockchain",
+  "commission",
   "editorial",
   "education",
   "generative",
@@ -34,13 +35,14 @@ export const TAGS = [
 export const CATEGORIES = [
   "animated film",
   "app",
-  "commission",
   "creative tool",
   "digital art",
   "education",
   "generative art",
+  "illustration",
   "poster design",
   "print",
   "publication",
   "tool",
+  "website",
 ] as const;
