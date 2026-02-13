@@ -1,0 +1,44 @@
+---
+title: "Cube-as-a-Service"
+slug: cube-as-a-service
+description: Create 3D preview of your design
+date: 2026-02-12
+category: creative tool
+tags:
+  - app
+  - software
+  - web
+featured: false
+cover: ./thumb2.png
+published: true
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
+import { Image } from "astro:assets";
+import ImageComponent from "@components/mdx/Image.astro";
+import Video from "@components/mdx/Video.astro";
+
+import img1 from "./gerstner-grid.png";
+import img2 from "./voronoi.png";
+import img3 from "./raymarch.png";
+import img4 from "./a-b-c-d.png";
+
+import vid1 from "./kg.mp4";
+import vid1poster from "./kg-0001.png";
+
+<GC start={1} end={13} bleed mb>
+  <MediaGrid maxCols={4}>
+    <Image src={img1} alt="" />
+    <Image src={img2} alt="" />
+    <Image src={img3} alt="" />
+    <Image src={img4} alt="" />
+  </MediaGrid>
+</GC>
+
+[Cube-as-a-Service](https://caas.paperdove.com) (BETA) is a personal experiment that was built with the help of AI coding tools. You can upload your cover artwork images, add effects and adjust lighting to create a 3d preview. The original inspiration comes from [Bookup](https://bookup.marco.land).
+
+I approach the AI with both curiosity and skepticism. I am beginning to find it useful in the narrow context of building software tools for myself and others especially in the area that big tech companies have zero or negative interests. I am also aware of the underlying issues surrounding LLMs. I am trying but struggling to navigate this new landscape just like many others are. Where do you draw the lines? Is there a way to make peace with this technology? Do small tools like this change your perception?
+
+<Video src={vid1} poster={vid1poster} width="1354" height="1346" />
