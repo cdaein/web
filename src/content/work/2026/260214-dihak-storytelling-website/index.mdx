@@ -1,0 +1,30 @@
+---
+title: Dihak Storytelling
+slug: dihak-storytelling
+description: Website design and development
+date: 2026-02-14
+category: website
+tags:
+  - web
+  - commission
+featured: false
+cover: ./thumb.jpg
+published: false
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
+import ImageComponent from "@components/mdx/Image.astro";
+
+import img1 from "./index.png";
+import img2 from "./work1.png";
+import img3 from "./work2.png";
+
+<GC start={3} end={11} bleed mb>
+  <ImageComponent src={img1} alt="" />
+  <ImageComponent src={img2} alt="" />
+  <ImageComponent src={img3} alt="" />
+</GC>
+
+The website for [the Dihak Storytelling course](https://dihak-storytelling.netlify.app).
