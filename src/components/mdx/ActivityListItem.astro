@@ -2,7 +2,9 @@
 import type { Activity } from "@data/activities";
 import { getEntry } from "astro:content";
 import moment from "moment";
+import { parseSlug } from "@scripts/utils";
 
+// showWorkTitle is false for filtered list in each post
 const { data, showWorkTitle = false } = Astro.props as {
   data: Activity;
   showWorkTitle?: boolean;
@@ -13,16 +15,25 @@ const { slug, date, title, role, place, city, country, link } = data;
 // some activity may have multiple slugs associated with it
 const slugArray = slug ? (Array.isArray(slug) ? slug : [slug]) : [];
 const entries = await Promise.all(slugArray.map((s) => getEntry("work", s)));
-const workTitles = entries.filter(Boolean).map((e) => e!.data.title);
-const workTitleDisplay =
-  workTitles.length === 0 ? "" :
-  workTitles.length === 1 ? workTitles[0] :
-  workTitles.length === 2 ? `${workTitles[0]} and ${workTitles[1]}` :
-  `${workTitles.slice(0, -1).join(", ")}, and ${workTitles[workTitles.length - 1]}`;
+const filteredEntries = entries.filter(Boolean);
+const workTitles = filteredEntries.map((e) => e!.data.title);
+const postLinks = filteredEntries.map((e) => `/${parseSlug(e!.slug)}`);
 ---
 
 <li role="listitem" class="">
-  {showWorkTitle && workTitleDisplay && <span>{workTitleDisplay} - </span>}
+  {showWorkTitle && workTitles.length > 0 && (
+    <span>
+      {workTitles.map((t, i) => (
+        <>
+          {i > 0 && i === workTitles.length - 1 && workTitles.length > 2 && <span>, and </span>}
+          {i > 0 && i === workTitles.length - 1 && workTitles.length === 2 && <span> and </span>}
+          {i > 0 && i < workTitles.length - 1 && <span>, </span>}
+          <a href={postLinks[i]} class="no-underline hover:underline hover:decoration-dotted">{t}</a>
+        </>
+      ))}
+      <span> - </span>
+    </span>
+  )}
   {role && <span>{role} at </span>}
   {
     link ? (
@@ -34,7 +45,7 @@ const workTitleDisplay =
               <a
                 href={Array.isArray(link) ? link[0] : link}
                 target="_blank"
-                class:list={["italic no-underline"]}
+                class:list={["italic"]}
               >{title}</a><span>,</span>
             </>
           </>
@@ -61,10 +72,8 @@ const workTitleDisplay =
         {link.map((l, i) => {
           if (i === 0) return;
           return (
-            <a href={l} target="_blank" style={{ textDecoration: "none" }}>
-              <span style={{ textDecoration: "underline" }}>
-                link{i !== link.length - 1 && ","}
-              </span>
+            <a href={l} target="_blank">
+              link{i !== link.length - 1 && ","}
             </a>
           );
         })}
