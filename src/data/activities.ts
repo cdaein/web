@@ -60,6 +60,14 @@ const activities: Activity[] = [
   },
   {
     type: "exhibition",
+    title: "Fubar Glitch Art Festival",
+    date: "2024-10-05",
+    city: "Zagreb",
+    country: "Croatia",
+    link: ["https://fubar.space/2024/artist-list/#0047"],
+  },
+  {
+    type: "exhibition",
     slug: "time-intertwined",
     title: "Digital Art Mile",
     date: "2024-06-10",
