@@ -1,9 +1,4 @@
 ---
-// TODO:
-// - handle multiple slugs (array)
-//  - if multiple works are exhibited in a single event type,
-//  - don't show work title in the list, but show them in individual posting multiple times.
-
 import data from "@data/activities";
 import ActivityListItem from "@components/mdx/ActivityListItem.astro";
 import type { Activity } from "@data/activities";
@@ -35,9 +30,14 @@ const {
   class: className,
 } = Astro.props;
 
-// FIX: accommodate slug[]
+// support multiple slugs for a single event
 const activities = slug
-  ? data.filter((act: Activity) => act.slug === slug)
+  ? data.filter((act: Activity) => {
+      if (!act.slug) return false;
+      const actSlugs = Array.isArray(act.slug) ? act.slug : [act.slug];
+      const pageSlugs = Array.isArray(slug) ? slug : [slug];
+      return actSlugs.some((s) => pageSlugs.includes(s));
+    })
   : data;
 
 const sortedActivities = activities.reduce(

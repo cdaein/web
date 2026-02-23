@@ -10,12 +10,19 @@ const { data, showWorkTitle = false } = Astro.props as {
 const { slug, date, title, role, place, city, country, link } = data;
 
 // some entries may not have corresponding post slug.
-const entry = slug && (await getEntry("work", Array.isArray(slug) ? slug[0] : slug));
-const workTitle = entry && entry?.data.title;
+// some activity may have multiple slugs associated with it
+const slugArray = slug ? (Array.isArray(slug) ? slug : [slug]) : [];
+const entries = await Promise.all(slugArray.map((s) => getEntry("work", s)));
+const workTitles = entries.filter(Boolean).map((e) => e!.data.title);
+const workTitleDisplay =
+  workTitles.length === 0 ? "" :
+  workTitles.length === 1 ? workTitles[0] :
+  workTitles.length === 2 ? `${workTitles[0]} and ${workTitles[1]}` :
+  `${workTitles.slice(0, -1).join(", ")}, and ${workTitles[workTitles.length - 1]}`;
 ---
 
 <li role="listitem" class="">
-  {showWorkTitle && workTitle && <span>{workTitle} - </span>}
+  {showWorkTitle && workTitleDisplay && <span>{workTitleDisplay} - </span>}
   {role && <span>{role} at </span>}
   {
     link ? (

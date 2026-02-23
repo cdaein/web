@@ -49,8 +49,6 @@ const activities: Activity[] = [
   },
   {
     type: "exhibition",
-    // TODO: support multiple slugs
-    //       then, update each mdx to include <ActivityList>
     slug: ["duet", "time-intertwined"],
     title: "Bideotikan Digital Art Festival",
     date: "2024-10-24",
