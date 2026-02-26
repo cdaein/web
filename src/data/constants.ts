@@ -38,6 +38,7 @@ export const CATEGORIES = [
   "creative tool",
   "digital art",
   "education",
+  "exhibition",
   "generative art",
   "illustration",
   "poster design",
