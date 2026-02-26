@@ -14,10 +14,19 @@ const { slug, date, title, role, place, city, country, link } = data;
 // some entries may not have corresponding post slug.
 // some activity may have multiple slugs associated with it
 const slugArray = slug ? (Array.isArray(slug) ? slug : [slug]) : [];
-const entries = await Promise.all(slugArray.map((s) => getEntry("work", s)));
+const entries = await Promise.all(
+  slugArray.map(async (s) => {
+    const workEntry = await getEntry("work", s);
+    if (workEntry) return workEntry;
+    return await getEntry("documentation", s) ?? null;
+  })
+);
 const filteredEntries = entries.filter(Boolean);
 const workTitles = filteredEntries.map((e) => e!.data.title);
-const postLinks = filteredEntries.map((e) => `/${parseSlug(e!.slug)}`);
+const postLinks = filteredEntries.map((e) => {
+  const prefix = e!.collection === "documentation" ? "/documentation/" : "/";
+  return `${prefix}${parseSlug(e!.slug)}`;
+});
 ---
 
 <li role="listitem" class="">

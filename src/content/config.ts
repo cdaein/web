@@ -49,10 +49,21 @@ const objktCollection = defineCollection({
   // TODO: define schema (but it's a lot!!)
 });
 
+const documentationCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    date: z.date(),
+    published: z.boolean(),
+  }),
+});
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   work: workCollection,
   writing: writingCollection,
   fxhash: fxhashCollection,
   objkt: objktCollection,
+  documentation: documentationCollection,
 };

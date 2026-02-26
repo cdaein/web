@@ -9,9 +9,9 @@ import type { CollectionEntry } from "astro:content";
 import { camelcase } from "@scripts/utils";
 
 type Props = {
-  post: CollectionEntry<"work" | "writing">;
-  prevPost?: CollectionEntry<"work" | "writing">;
-  nextPost?: CollectionEntry<"work" | "writing">;
+  post: CollectionEntry<"work" | "writing" | "documentation">;
+  prevPost?: CollectionEntry<"work" | "writing" | "documentation">;
+  nextPost?: CollectionEntry<"work" | "writing" | "documentation">;
   class?: string;
   /** Render as invisible spacer in document flow */
   spacer?: boolean;
@@ -19,8 +19,9 @@ type Props = {
 
 const { post, class: className, spacer = false } = Astro.props;
 const {
-  data: { title, description, date, category, published },
+  data: { title, description, date, published },
 } = post;
+const category = "category" in post.data ? post.data.category : undefined;
 
 // if not root, add page navagation
 const pathname = Astro.url.pathname;

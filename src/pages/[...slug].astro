@@ -13,14 +13,18 @@ export async function getStaticPaths() {
   //   return import.meta.env.PROD ? data.draft !== true : true;
   // });
 
+  const documentationEntries = await getCollection("documentation", ({ data }) => {
+    return import.meta.env.PROD ? data.published === true : true;
+  });
+
   // const allPosts = [...workEntries, ...writingEntries];
-  const allPosts = [...workEntries].sort(
+  const allWorkPosts = [...workEntries].sort(
     (a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime(),
   );
 
-  const numPosts = allPosts.length;
+  const numPosts = allWorkPosts.length;
 
-  return allPosts.map((post, i) => {
+  const workPaths = allWorkPosts.map((post, i) => {
     // entry.slug format: YYYY/YYMMDD-work-title
     const slug = parseSlug(post.slug);
 
@@ -30,11 +34,18 @@ export async function getStaticPaths() {
       params: { slug },
       props: {
         post,
-        prevPost: i === numPosts - 1 ? undefined : allPosts[i + 1],
-        nextPost: i === 0 ? undefined : allPosts[i - 1],
+        prevPost: i === numPosts - 1 ? undefined : allWorkPosts[i + 1],
+        nextPost: i === 0 ? undefined : allWorkPosts[i - 1],
       },
     };
   });
+
+  const documentationPaths = documentationEntries.map((post) => ({
+    params: { slug: `documentation/${parseSlug(post.slug)}` },
+    props: { post, prevPost: undefined, nextPost: undefined },
+  }));
+
+  return [...workPaths, ...documentationPaths];
 }
 
 const { post, prevPost, nextPost } = Astro.props;
@@ -44,7 +55,7 @@ const { Content } = await post.render();
 
 <Layout
   title={post.data.title}
-  description={post.data.description}
+  description={post.data.description ?? post.data.title}
   post={post}
   prevPost={prevPost}
   nextPost={nextPost}
