@@ -13,7 +13,6 @@ const workCollection = defineCollection({
     // category: z.enum(CATEGORIES).or(z.enum(CATEGORIES).array()).optional(),
     category: z.enum(CATEGORIES).or(z.enum(CATEGORIES).array()),
     tags: z.enum(TAGS).array().optional(),
-    featured: z.boolean(),
     /** Cover image URL */
     cover: z.string().optional(),
     published: z.boolean(),
@@ -31,7 +30,6 @@ const writingCollection = defineCollection({
     date: z.date(),
     category: z.enum(CATEGORIES).or(z.enum(CATEGORIES).array()).optional(),
     tags: z.array(z.string()),
-    featured: z.boolean(),
     cover: z.string(),
     published: z.boolean(),
     /** Draft is visible on dev, but not included in build */
