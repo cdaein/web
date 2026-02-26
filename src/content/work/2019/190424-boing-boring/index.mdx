@@ -15,8 +15,11 @@ published: true
 
 import GC from "@components/mdx/GridColumn.astro";
 import Video from "@components/mdx/Video.astro";
+import ActivityList from "@components/mdx/ActivityList.astro";
 import vid1 from "./animated.mp4";
 
-<GC start={2} end={12}>
+<GC start={2} end={12} mb>
   <Video src={vid1} width={800} height={600} />
 </GC>
+
+<ActivityList slug="boing-boring" sortByType />
