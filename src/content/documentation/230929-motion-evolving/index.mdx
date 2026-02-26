@@ -1,0 +1,28 @@
+---
+title: Motion Evolving Exhibition
+slug: motion-evolving-exhibition
+description: ""
+date: 2023-09-29
+category: exhibition
+cover: DAN04692.jpg
+published: true
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import { Image } from "astro:assets";
+
+import img1 from "./DAN04493.jpg";
+import img2 from "./DAN04497.jpg";
+import img3 from "./DAN04499.jpg";
+import img4 from "./DAN04500.jpg";
+import img5 from "./DAN04692.jpg";
+
+<GC start={1} end={13} mb>
+  <Image src={img1} alt="exhibition image" className="mb-4" />
+  <Image src={img2} alt="exhibition image" className="mb-4" />
+  <Image src={img3} alt="exhibition image" className="mb-4" />
+  <Image src={img4} alt="exhibition image" className="mb-4" />
+  <Image src={img5} alt="exhibition image" />
+</GC>
+
+Photos courtesy of Motion Evolving

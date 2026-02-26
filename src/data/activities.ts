@@ -96,10 +96,12 @@ const activities: Activity[] = [
   },
   {
     type: "exhibition",
+    slug: ["boing-boring", "dont-look-back", "why", "time-intertwined"],
     title: "Motion Evolving",
     date: "2023-09-29",
     city: "Beijing",
     country: "China",
+    link: "/documentation/motion-evolving-exhibition",
   },
   {
     slug: "sequenced",
@@ -123,7 +125,10 @@ const activities: Activity[] = [
     title: "Demo Festival",
     date: "2022-10-06",
     country: "The Netherlands",
-    link: ["https://demofestival.com/past-festivals/demofestival2022"],
+    link: [
+      "https://demofestival.com/past-festivals/demofestival2022",
+      "/documentation/demo-festival-2022",
+    ],
   },
   {
     type: "interview",

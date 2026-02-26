@@ -1,0 +1,34 @@
+---
+title: Demo Festival 2022 Exhibition
+slug: demo-festival-2022
+description: ""
+date: 2022-10-06
+category: exhibition
+cover: Demo_ExtraBatch_ShotByMeesterwerk_186.jpg
+published: true
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import { Image } from "astro:assets";
+
+import img1 from "Demo_ExtraBatch_ShotByMeesterwerk_162.jpg";
+import img2 from "Demo_ExtraBatch_ShotByMeesterwerk_170.jpg";
+import img3 from "Demo_ExtraBatch_ShotByMeesterwerk_186.jpg";
+import img4 from "Demo_ExtraBatch_ShotByMeesterwerk_73.jpg";
+import img5 from "Demo_ExtraBatch_ShotByMeesterwerk_82.jpg";
+import img6 from "Demo_ExtraBatch_ShotByMeesterwerk_85.jpg";
+import img7 from "DemoFestival_StudioDumBar_06.10.2022_ShotByMeesterwerk_64.jpg";
+import img8 from "DemoFestival_StudioDumBar_06.10.2022_ShotByMeesterwerk_84.jpg";
+
+<GC start={1} end={13} mb>
+  <Image src={img1} alt="exhibition image" className="mb-4" />
+  <Image src={img2} alt="exhibition image" className="mb-4" />
+  <Image src={img3} alt="exhibition image" className="mb-4" />
+  <Image src={img4} alt="exhibition image" className="mb-4" />
+  <Image src={img5} alt="exhibition image" className="mb-4" />
+  <Image src={img6} alt="exhibition image" className="mb-4" />
+  <Image src={img7} alt="exhibition image" className="mb-4" />
+  <Image src={img8} alt="exhibition image" />
+</GC>
+
+Photos courtesy of Meesterwerk and Demo Festival
