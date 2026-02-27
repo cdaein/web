@@ -24,3 +24,5 @@ pnpm-debug.log*
 draft*
 
 *CLAUDE*
+
+prompt.md
