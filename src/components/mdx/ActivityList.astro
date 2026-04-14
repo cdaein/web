@@ -11,17 +11,18 @@ type Props = {
   class?: string;
 };
 
+// Display order follows this object's key order
 const typeLUT = {
-  award: "Selected Awards",
-  event: "Events",
+  service: "Service",
   exhibition: "Selected Exhibitions",
-  featured: "Featured",
-  interview: "Interview",
-  lecture: "Talks/Lectures",
-  publication: "Publications",
   screening: "Selected Screenings",
   teaching: "Teaching",
-  service: "Service",
+  lecture: "Talks/Lectures",
+  event: "Events",
+  award: "Selected Awards",
+  publication: "Publications",
+  featured: "Featured",
+  interview: "Interview",
 } as const;
 
 const {
@@ -52,10 +53,10 @@ const sortedActivities = activities.reduce(
   {} as Record<Activity["type"], Activity[]>,
 );
 
-// all activity types (keys only)
-const activityTypes = Object.keys(
-  sortedActivities,
-) as (keyof typeof sortedActivities)[];
+// order activity types per typeLUT, skipping any with no entries
+const activityTypes = (Object.keys(typeLUT) as (keyof typeof typeLUT)[]).filter(
+  (type) => sortedActivities[type]?.length,
+);
 
 const mapHeader = (type: keyof typeof typeLUT) => typeLUT[type];
 ---
