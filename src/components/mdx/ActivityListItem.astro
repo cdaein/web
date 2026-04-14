@@ -67,13 +67,11 @@ const postLinks = filteredEntries.map((e) => {
   {place && <span>{place},</span>}
   {city && <span>{city},</span>}
   {country && <span>{country},</span>}
-  <span
-    >{
-      Array.isArray(date)
-        ? `${moment(date[0]).year()}-${moment(date[1]).year()}`
-        : moment(new Date(date)).year()
-    }</span
-  >
+  <span>{
+    Array.isArray(date)
+      ? `${moment(date[0]).year()}-${date[1] === "present" ? "Present" : moment(date[1]).year()}`
+      : moment(new Date(date)).year()
+  }</span>
   {
     Array.isArray(link) && link.length > 1 && (
       <span>

@@ -12,6 +12,7 @@ const schema = z.object({
     "publication",
     "screening",
     "teaching",
+    "service",
   ]),
   /**
    * Same as work post title slug for filtering. (ex. ekstasy-type-club) It may be an array for multiple works
@@ -20,7 +21,9 @@ const schema = z.object({
   title: z.string(),
   /** ex. moderator, presenter */
   role: z.string().optional(),
-  date: z.string().or(z.string().array()),
+  date: z
+    .string()
+    .or(z.tuple([z.string(), z.string().or(z.literal("present"))])),
   /** Place of exhibition (ie. museum name) */
   place: z.string().optional(),
   city: z.string().optional(),
@@ -31,6 +34,14 @@ const schema = z.object({
 export type Activity = z.infer<typeof schema>;
 
 const activities: Activity[] = [
+  {
+    type: "service",
+    title: "Design History Society of Korea",
+    role: "Director of Education",
+    date: ["2026", "present"],
+    country: "South Korea",
+    link: "https://designhistory.kr/member",
+  },
   {
     type: "exhibition",
     title: "Constellations 2025: Uncertainty",
