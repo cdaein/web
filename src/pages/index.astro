@@ -32,11 +32,8 @@ const indexViewScript = /*javascript*/ `
   const view = localStorage.getItem("indexView") || "${DEFAULT_VIEW}";
   const listView = document.getElementById("index-list-view");
   const gridView = document.getElementById("index-grid-view");
-  if (view === "list") {
-    listView?.classList.remove("hidden");
-  } else {
-    gridView?.classList.remove("hidden");
-  }
+  listView?.classList.toggle("hidden", view !== "list");
+  gridView?.classList.toggle("hidden", view !== "grid");
 
   // Mark visited posts with checkmark
   const visited = JSON.parse(localStorage.getItem("visitedPosts") || "[]");
@@ -77,8 +74,8 @@ const indexViewScript = /*javascript*/ `
 ---
 
 <Layout title={"Index"} description={site.description}>
-  <IndexListView posts={allPosts} class="hidden" />
-  <IndexGridView posts={allPosts} coverImages={coverImages} class="hidden" />
+  <IndexListView posts={allPosts} class={DEFAULT_VIEW === "list" ? "" : "hidden"} />
+  <IndexGridView posts={allPosts} coverImages={coverImages} class={DEFAULT_VIEW === "grid" ? "" : "hidden"} />
 </Layout>
 
 <script is:inline set:html={indexViewScript} />
