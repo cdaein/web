@@ -247,7 +247,7 @@ const activities: Activity[] = [
   {
     type: "publication",
     title: "AIGA Frontier Reader",
-    date: "2019-04-00",
+    date: "2018-01-01",
   },
   {
     type: "lecture",
