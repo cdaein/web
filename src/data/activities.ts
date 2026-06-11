@@ -246,8 +246,11 @@ const activities: Activity[] = [
   },
   {
     type: "publication",
+    slug: "aiga-frontier-reader",
     title: "AIGA Frontier Reader",
-    date: "2018-01-01",
+    date: "2019-05-01",
+    city: "New York",
+    link: "https://www.landl.us/work/frontier",
   },
   {
     type: "lecture",
@@ -270,7 +273,7 @@ const activities: Activity[] = [
     title: "AIGA Frontier Conference",
     role: "Presenter",
     date: "2016-10-7",
-    link: "https://frontier.aiga.org",
+    link: "https://web.archive.org/web/20161111040107/http://frontier.aiga.org/",
   },
   {
     type: "teaching",
