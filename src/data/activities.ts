@@ -40,7 +40,7 @@ const activities: Activity[] = [
     role: "Director of Education",
     date: ["2026", "present"],
     country: "South Korea",
-    link: "https://designhistory.kr/member",
+    link: "https://designhistory.kr/member#:~:text=%EC%A0%95%EB%8C%80%EC%9D%B8",
   },
   {
     type: "exhibition",
@@ -49,14 +49,16 @@ const activities: Activity[] = [
     place: "CETI Institute",
     city: "Portland, OR",
     country: "USA",
-    link: ["https://ceti.institute/event/constellations-uncertainty/"],
+    link: [
+      "https://ceti.institute/event/constellations-uncertainty/#:~:text=Daeinc",
+    ],
   },
   {
     type: "exhibition",
     title: "Demo Festival 2025 Cities Edition",
     date: "2025-01-30",
     country: "The Netherlands",
-    link: ["https://demofestival.com/designers/daeinc"],
+    link: ["https://2025.demofestival.com/designers/daeinc"],
   },
   {
     type: "exhibition",
@@ -137,7 +139,7 @@ const activities: Activity[] = [
     date: "2022-10-06",
     country: "The Netherlands",
     link: [
-      "https://demofestival.com/past-festivals/demofestival2022",
+      "https://2022.demofestival.com/designers/daeinc",
       "/documentation/demo-festival-2022",
     ],
   },
@@ -168,7 +170,7 @@ const activities: Activity[] = [
     place: "Mains D'oeuvres",
     city: "Saint-Ouen",
     country: "France",
-    link: "https://cjcinema.org/agenda/2021/septembre/cinematheque-temporaire-du-cjc-27/",
+    link: "https://cjcinema.org/agenda/2021/septembre/cinematheque-temporaire-du-cjc-27/#:~:text=don%20cajon",
   },
   {
     type: "screening",
@@ -178,7 +180,10 @@ const activities: Activity[] = [
     place: "Instants Chavirés",
     city: "Montreuil",
     country: "France",
-    link: "https://www.facebook.com/collectif.jeunecinema.7/posts/2014776958821784",
+    link: [
+      "https://www.facebook.com/collectif.jeunecinema.7/posts/2014776958821784",
+      "https://studiowalter.com/experiment120/#:~:text=dae%20in%20chung",
+    ],
   },
   {
     type: "screening",
@@ -196,7 +201,10 @@ const activities: Activity[] = [
     date: "2019-11-07",
     city: "Amsterdam",
     country: "The Netherlands",
-    link: ["https://demofestival.com/past-festivals/demofestival2019"],
+    link: [
+      "https://demofestival.com/past-festivals/demofestival2019",
+      "https://www.facebook.com/designinmotionfestival/videos/demo-festival-dae-in-chung/1666673676796483/",
+    ],
   },
   {
     type: "featured",
@@ -229,7 +237,7 @@ const activities: Activity[] = [
     link: "https://www.aicad.org/wp-content/uploads/AICAD-Symposium-Schedule-11-4.pdf",
   },
   {
-    type: "event",
+    type: "lecture",
     title: "Convergence Festival: AI and Creativity",
     role: "Moderator",
     date: "2019-01-11",
@@ -301,7 +309,7 @@ const activities: Activity[] = [
     title: "Page Magazine",
     date: "2016-05-09",
     country: "Germany",
-    link: "https://page-online.de/typografie/der-type-directors-club-hat-entschieden-das-best-of-type-design-2016-teil-3/",
+    link: "https://page-online.de/typografie/der-type-directors-club-hat-entschieden-das-best-of-type-design-2016-teil-3/#:~:text=ekstasy%20type%20club",
   },
   {
     type: "award",
@@ -310,6 +318,7 @@ const activities: Activity[] = [
     date: "2016",
     city: "New York",
     country: "USA",
+    link: "https://archive.tdc.org/competitionwriteup/tdc-communication-design-winners-2016/#:~:text=ekstasy%20type%20club",
   },
   {
     type: "award",
@@ -318,6 +327,7 @@ const activities: Activity[] = [
     date: "2016",
     city: "New York",
     country: "USA",
+    link: "https://archive.tdc.org/competitionwriteup/tdc-communication-design-winners-2016/#:~:text=enhance%20hangul",
   },
   {
     type: "exhibition",
@@ -374,7 +384,7 @@ const activities: Activity[] = [
     date: "2015-06-27",
     city: "Seoul",
     country: "South Korea",
-    link: "http://koreantypography.org/ko/archives/journal_view.asp?board_num=15&key=title&keyword=&table_nm=exhibit&page=1",
+    link: "https://koreantypography.org/ko/archives/journal_view.asp?board_num=15&key=title&keyword=&table_nm=exhibit&page=1#:~:text=정대인",
   },
   {
     type: "teaching",
@@ -423,6 +433,7 @@ const activities: Activity[] = [
     date: "2008",
     city: "Rome",
     country: "Italy",
+    link: "https://www.romacinemafest.it/wp-content/uploads/2016/09/Catalogue-Rome-Film-Fest-2008-eng.pdf",
   },
   {
     type: "screening",
@@ -431,7 +442,7 @@ const activities: Activity[] = [
     date: "2008",
     city: "Oxford, MS",
     country: "USA",
-    link: "https://www.ox-film.com/festival-archive/2lrgqvfer3y3z4oq8q2r4yso02phoj",
+    link: "https://www.ox-film.com/festival-archive/2lrgqvfer3y3z4oq8q2r4yso02phoj#:~:text=hypervibes",
   },
   {
     type: "screening",
@@ -474,7 +485,10 @@ const activities: Activity[] = [
     date: "2007",
     city: "New York",
     country: "USA",
-    link: "https://www.animationblock.com/summerfest2007",
+    link: [
+      "https://www.animationblock.com/summerfest2007#:~:text=hypervibes",
+      "https://www.animationblock.com/films-2009-2007#:~:text=hypervibes",
+    ],
   },
   {
     type: "screening",
