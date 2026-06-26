@@ -9,7 +9,9 @@ published: true
 ---
 
 import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
 import { Image } from "astro:assets";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 
 import img1 from "Demo_ExtraBatch_ShotByMeesterwerk_162.jpg";
 import img2 from "Demo_ExtraBatch_ShotByMeesterwerk_170.jpg";
@@ -19,16 +21,31 @@ import img5 from "Demo_ExtraBatch_ShotByMeesterwerk_82.jpg";
 import img6 from "Demo_ExtraBatch_ShotByMeesterwerk_85.jpg";
 import img7 from "DemoFestival_StudioDumBar_06.10.2022_ShotByMeesterwerk_64.jpg";
 import img8 from "DemoFestival_StudioDumBar_06.10.2022_ShotByMeesterwerk_84.jpg";
+import dnlsmm02 from "dnlsmm02.mp4";
+import dnlsmm03 from "dnlsmm03.mp4";
+import kerimSafa from "kerim-safa.mp4";
 
-<GC start={1} end={13} mb>
-  <Image src={img1} alt="exhibition image" className="mb-4" />
-  <Image src={img2} alt="exhibition image" className="mb-4" />
-  <Image src={img3} alt="exhibition image" className="mb-4" />
-  <Image src={img4} alt="exhibition image" className="mb-4" />
-  <Image src={img5} alt="exhibition image" className="mb-4" />
-  <Image src={img6} alt="exhibition image" className="mb-4" />
-  <Image src={img7} alt="exhibition image" className="mb-4" />
-  <Image src={img8} alt="exhibition image" />
+<GC start={1} end={13}>
+  <MediaGrid maxCols={4} class="gap-2">
+    <Image src={img1} alt="exhibition image" className="mb-4" />
+    <Image src={img2} alt="exhibition image" className="mb-4" />
+    <Image src={img3} alt="exhibition image" className="mb-4" />
+    <Image src={img4} alt="exhibition image" className="mb-4" />
+    <Image src={img5} alt="exhibition image" className="mb-4" />
+    <Image src={img6} alt="exhibition image" className="mb-4" />
+    <Image src={img7} alt="exhibition image" className="mb-4" />
+    <Image src={img8} alt="exhibition image" />
+  </MediaGrid>
 </GC>
 
-Photos courtesy of Meesterwerk and Demo Festival
+Photos above courtesy of Meesterwerk and Demo Festival
+
+<GC start={1} end={13}>
+  <MediaGrid maxCols={3} class="gap-2">
+    <VideoInGrid src={dnlsmm02} />
+    <VideoInGrid src={dnlsmm03} />
+    <VideoInGrid src={kerimSafa} />
+  </MediaGrid>
+</GC>
+
+Videos above courtesy of @dnlsmm (left and center) and Kerim Safa (right)
