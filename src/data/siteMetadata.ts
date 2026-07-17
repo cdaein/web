@@ -4,7 +4,7 @@ export const site = {
   siteUrl: `https://paperdove.com`,
   author: "Daeinc",
   email: "daeinc@paperdove.com", // TODO: use simple login instead (with reply-to)
-  rss: "https://paperdove.com/feed.xml",
+  rss: "/feed.xml",
   links: {
     mastodon: "https://genart.social/@daeinc",
     instagram: "https://www.instagram.com/daeincc/",
