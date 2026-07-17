@@ -1,9 +1,14 @@
 import { CATEGORIES, TAGS } from "@data/constants";
-import { z, defineCollection } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
+
+// NOTE: ensure each collection has a loader defined.
 
 // Define a `type` and `schema` for each collection
 const workCollection = defineCollection({
-  type: "content",
+  // type: "content",
+  loader: glob({ base: "./src/content/work", pattern: "**/*.{md,mdx}" }),
   schema: z.object({
     /** Work post title */
     title: z.string(),
@@ -23,7 +28,8 @@ const workCollection = defineCollection({
 });
 
 const writingCollection = defineCollection({
-  type: "content",
+  // type: "content",
+  loader: glob({ base: "./src/content/writing", pattern: "**/*.{md,mdx}" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -38,17 +44,23 @@ const writingCollection = defineCollection({
 });
 
 const fxhashCollection = defineCollection({
-  type: "data",
+  // type: "data",
+  loader: glob({ base: "./src/content/fxhash", pattern: "**/*.json" }),
   // TODO: define schema (but it's a lot!!)
 });
 
 const objktCollection = defineCollection({
-  type: "data",
+  // type: "data",
+  loader: glob({ base: "./src/content/objkt", pattern: "**/*.json" }),
   // TODO: define schema (but it's a lot!!)
 });
 
 const documentationCollection = defineCollection({
-  type: "content",
+  // type: "content",
+  loader: glob({
+    base: "./src/content/documentation",
+    pattern: "**/*.{md,mdx}",
+  }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),

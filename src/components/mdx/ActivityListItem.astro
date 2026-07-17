@@ -25,7 +25,7 @@ const filteredEntries = entries.filter(Boolean);
 const workTitles = filteredEntries.map((e) => e!.data.title);
 const postLinks = filteredEntries.map((e) => {
   const prefix = e!.collection === "documentation" ? "/documentation/" : "/";
-  return `${prefix}${parseSlug(e!.slug)}`;
+  return `${prefix}${parseSlug(e!.id)}`;
 });
 ---
 

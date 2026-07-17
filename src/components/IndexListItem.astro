@@ -18,11 +18,11 @@ const {
 ---
 
 <li
-  class="group py-[1px] border-b border-b-black first:border-t first:border-t-black leading-snug hover:bg-black hover:text-white"
+  class="group border-b border-b-black py-[1px] leading-snug first:border-t first:border-t-black hover:bg-black hover:text-white"
 >
-  <a href={`/${post.slug}`}>
+  <a href={`/${post.id}`}>
     <article class="grid grid-cols-12 gap-8" draggable="false">
-      <h1 class="pl-4 col-start-1 col-end-4 flex justify-start">
+      <h1 class="col-start-1 col-end-4 flex justify-start pl-4">
         {!published && <span>NOT PUBLISHED</span>}
         {title}
       </h1>
@@ -33,7 +33,7 @@ const {
       <!-- <div class="col-start-10 flex justify-start"> -->
       <!--   {tags && tags.map((tag) => `${tag}`)} -->
       <!-- </div> -->
-      <div class="pr-4 col-start-12 flex justify-end">
+      <div class="col-start-12 flex justify-end pr-4">
         {moment(date).year()}
       </div>
     </article>

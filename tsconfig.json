@@ -14,13 +14,13 @@
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
-      },
-      {
-        "name": "@astrojs/mdx"
-      },
-      {
-        "name": "@astrojs/language-server"
       }
+      // {
+      //   "name": "@astrojs/mdx"
+      // },
+      // {
+      //   "name": "@astrojs/language-server"
+      // }
     ]
   }
 }

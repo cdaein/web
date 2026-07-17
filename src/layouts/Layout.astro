@@ -69,15 +69,14 @@ const visitedPostsScript = /*javascript*/ `
     title={title || post?.data.title}
     description={description || post?.data.description}
     id={post?.id}
-    slug={post?.slug}
     postType={"work"}
   />
 
-  <body class="h-full text-xl bg-white">
+  <body class="h-full bg-white text-xl">
     <Header prevPost={prevPost} nextPost={nextPost} />
     {post && <PostHeader post={post} />}
-    <div class="flex flex-col h-full">
-      <main class="grow mt-9">
+    <div class="flex h-full flex-col">
+      <main class="mt-9 grow">
         {post && <PostHeader post={post} spacer />}
         <slot />
       </main>
@@ -102,11 +101,11 @@ const visitedPostsScript = /*javascript*/ `
     <!-- Image zoom modal -->
     <div
       id="image-modal"
-      class="invisible opacity-0 fixed inset-0 z-50 bg-black/90 flex items-center justify-center cursor-pointer"
+      class="invisible fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-black/90 opacity-0"
     >
       <img
         id="modal-image"
-        class="max-w-[90vw] max-h-[90vh] object-contain"
+        class="max-h-[90vh] max-w-[90vw] object-contain"
         src=""
         alt=""
       />

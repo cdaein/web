@@ -13,8 +13,8 @@ const { posts, class: className } = Astro.props;
 <ul id="index-list-view" class:list={[className]}>
   {
     posts.map((post) => (
-      <li data-post-slug={post.slug}>
-        <a href={`/${post.slug}`}>
+      <li data-post-slug={post.id}>
+        <a href={`/${post.id}`}>
           <PostHeader post={post} />
         </a>
       </li>

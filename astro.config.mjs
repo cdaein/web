@@ -6,16 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://paperdove.com",
   vite: {
-    plugins: [
-      tailwindcss({
-        // NOTE: can i use these tw v3 astro plugin options below?
-        //   // tailwind preflight
-        //   applyBaseStyles: true,
-        //   // Example: Allow writing nested CSS declarations
-        //   // alongside Tailwind's syntax
-        //   nesting: true,
-      }),
-    ],
+    plugins: [tailwindcss()],
   },
   integrations: [
     mdx({

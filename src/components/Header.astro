@@ -105,7 +105,7 @@ const viewToggleScript = /*javascript*/ `
       <div class="col-start-5 col-end-9 grid grid-cols-3">
         {prevPost && (
           <a
-            href=`/${prevPost.slug}`
+            href=`/${prevPost.id}`
             class="group col-start-1 col-end-2 flex justify-start items-center"
           >
             <span class="relative group-hover:right-1">←</span>&nbsp;
@@ -121,7 +121,7 @@ const viewToggleScript = /*javascript*/ `
         </a>
         {nextPost && (
           <a
-            href=`/${nextPost.slug}`
+            href=`/${nextPost.id}`
             class="group col-start-3 col-end-4 flex justify-end items-center"
           >
             <span class="hidden md:inline">Next</span>&nbsp;

@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import { parseSlug } from "@scripts/utils";
 import Prose from "@components/mdx/Prose.astro";
@@ -13,9 +13,12 @@ export async function getStaticPaths() {
   //   return import.meta.env.PROD ? data.draft !== true : true;
   // });
 
-  const documentationEntries = await getCollection("documentation", ({ data }) => {
-    return import.meta.env.PROD ? data.published === true : true;
-  });
+  const documentationEntries = await getCollection(
+    "documentation",
+    ({ data }) => {
+      return import.meta.env.PROD ? data.published === true : true;
+    },
+  );
 
   // const allPosts = [...workEntries, ...writingEntries];
   const allWorkPosts = [...workEntries].sort(
@@ -26,7 +29,7 @@ export async function getStaticPaths() {
 
   const workPaths = allWorkPosts.map((post, i) => {
     // entry.slug format: YYYY/YYMMDD-work-title
-    const slug = parseSlug(post.slug);
+    const slug = parseSlug(post.id);
 
     // console.log(post);
 
@@ -41,7 +44,7 @@ export async function getStaticPaths() {
   });
 
   const documentationPaths = documentationEntries.map((post) => ({
-    params: { slug: `documentation/${parseSlug(post.slug)}` },
+    params: { slug: `documentation/${parseSlug(post.id)}` },
     props: { post, prevPost: undefined, nextPost: undefined },
   }));
 
@@ -50,7 +53,7 @@ export async function getStaticPaths() {
 
 const { post, prevPost, nextPost } = Astro.props;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <Layout
