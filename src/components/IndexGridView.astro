@@ -12,16 +12,17 @@ const { posts, coverImages, class: className } = Astro.props;
 
 // Helper to find cover image for a post
 function findCoverImage(
-  postId: string,
+  filePath?: string,
   cover?: string,
 ): ImageMetadata | undefined {
-  if (!cover) return undefined;
+  if (!cover || !filePath) return undefined;
 
-  // postId is like "2024/240719-supercut/index.mdx"
+  // filePath is the source path, e.g. "src/content/work/2024/240719-supercut/index.mdx"
+  // (post.id can't be used: with a `slug` frontmatter it's just the slug, not the path)
   // cover is relative path like "./thumb.png"
-  const postDir = postId.replace(/\/[^/]+$/, ""); // removes "/index.mdx"
+  const postDir = filePath.replace(/\/[^/]+$/, ""); // removes "/index.mdx"
   const coverPath = cover.replace(/^\.\//, "");
-  const expectedPath = `/src/content/work/${postDir}/${coverPath}`;
+  const expectedPath = `/${postDir}/${coverPath}`;
 
   return coverImages[expectedPath];
 }
@@ -40,7 +41,7 @@ function findCoverImage(
     posts.map((post) => (
       <IndexThumbnailItem
         post={post}
-        thumbnail={findCoverImage(post.id, post.data.cover)}
+        thumbnail={findCoverImage(post.filePath, post.data.cover)}
       />
     ))
   }
