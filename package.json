@@ -10,14 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/language-server": "^2.16.3",
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.15",
-    "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.6",
     "@fontsource-variable/karla": "^5.2.8",
-    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.3",
     "astro": "^5.16.15",
     "astro-relative-links": "^0.4.2",
     "astro-seo": "^1.1.0",
@@ -26,7 +23,8 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/language-server": "^2.16.3",
     "@types/node": "^25.0.10",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",

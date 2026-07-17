@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Karla Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  /** keep adding to the list to get default grid placement */
+  /** default grid placement. can be overridden in <GridColumn> */
+  /** these MUST be also set the same in <GridColumn> */
+  .md-content :is(h1, h2, h3, p, ul, ol, blockquote, iframe, section) {
+    @apply col-start-1 col-end-13 px-4 md:col-start-3 md:col-end-11 md:px-0 lg:col-start-4 lg:col-end-10;
+  }
+
+  /* video-in-grid needs this but inside video-wrapper it can't */
+  .md-content
+    :is(
+      .image-custom,
+      .fxhash-grid,
+      .video-wrapper,
+      .video-in-grid,
+      .vimeo-wrapper,
+      .objkt-grid,
+      .test-grid,
+      .image-grid
+    ) {
+    @apply col-start-1 col-end-13 px-0 md:col-start-3 md:col-end-11 md:px-0 lg:col-start-4 lg:col-end-10;
+  }
+
+  .md-content .video-wrapper .video-in-grid {
+    @apply col-start-auto col-end-auto;
+  }
+
+  .md-content h2 {
+    @apply mt-0 mb-2 pl-12;
+  }
+  .md-content h3 {
+    @apply mt-0 pl-12;
+  }
+
+  .md-content p {
+    @apply mb-8 pt-1;
+  }
+  .md-content p:has(img) {
+    @apply pt-0;
+  }
+  .md-content figure p {
+    @apply py-0;
+  }
+  .md-content p img {
+    @apply w-full;
+  }
+
+  /* if using custom column component, adhere to grid for <GridColumn> */
+  .md-content .md-grid-column > p {
+    @apply mx-0;
+  }
+
+  .md-content a {
+    text-decoration: underline;
+  }
+  .md-content ul,
+  .md-content ol {
+    @apply mb-8 list-disc;
+  }
+  .md-content code {
+    @apply mx-0 p-1 text-base;
+  }
+  .md-content figure {
+    @apply mt-0;
+  }
+  .md-content video {
+    @apply w-full;
+  }
+  .md-content blockquote {
+    @apply border-l-2 border-gray-600 pl-4;
+  }
+}

@@ -55,7 +55,7 @@ const isRoot = pathname === "/";
     "bg-white",
     isRoot ? "border-b" : "border-b-2",
     "border-b-black leading-snug z-10",
-    isRoot && "h-18",
+    // isRoot && "h-18",
     !isRoot && !spacer && "fixed top-9 w-full",
     !isRoot && spacer && "invisible w-full",
     isRoot && "hover:bg-black hover:text-white",
@@ -93,6 +93,14 @@ const isRoot = pathname === "/";
         {!published && <span class="text-red-500 font-semibold">(NOT PUBLISHED)</span>}
         {title}
         </h1>
+
+<!-- <h2 class:list={[ -->
+<!--   "hidden lg:flex", -->
+<!--   "post-header", -->
+<!--   "m-0 overflow-hidden relative", -->
+<!--   "lg:col-start-4 lg:col-end-10", -->
+<!--   "justify-start" -->
+<!-- ]}> -->
 
         <h2 class:list={[
           "block md:hidden lg:block",

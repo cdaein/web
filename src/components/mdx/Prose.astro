@@ -1,118 +1,16 @@
 ---
-// NOTE:
-// - this component defined default Markdown styling.
-// - MDX components used within Markdown files may have their own
-//   styling that overrides this.
+// Default Markdown styling lives in styles/global.css (`.md-content` rules).
+// MDX components used within Markdown may override these.
 
-// <style> tag doesn't work because of Astro scoping.
-// use either is:global or is:inline (I don't know the difference yet)
-// https://docs.astro.build/en/reference/directives-reference/#script--style-directives
-// https://stackoverflow.com/questions/75090577/how-to-style-slot-elements-in-astro-with-tailwind
-
-// use @apply directive to continue using tailwind classes.
-
-// <div
-//   class="prose dark:prose-invert
-//   max-w-none
-//   prose-h1:font-bold prose-h1:text-xl
-//   prose-a:text-blue-600 prose-img:rounded-lg
-//   prose-headings:underline"
-// >
-//   <slot />
-// </div>
+// Deliberately not using @tailwindcss/typography — `prose` fights the 12-col grid.
 ---
 
-<style is:global>
-  /** keep adding to the list to get default grid placement */
-  /** default grid placement. can be overridden in <GridColumn> */
-  /** these MUST be also set the same in <GridColumn> */
-  h1,
-  h2,
-  h3,
-  p,
-  ul,
-  ol,
-  blockquote,
-  iframe,
-  section {
-    @apply px-4 col-start-1 col-end-13 
-    md:px-0 md:col-start-3 md:col-end-11
-    lg:col-start-4 lg:col-end-10;
-  }
-  /* video-in-grid needs this but inside video-wrapper it can't */
-  .image-custom,
-  .fxhash-grid,
-  .video-wrapper,
-  .video-in-grid,
-  .vimeo-wrapper,
-  .objkt-grid,
-  .test-grid,
-  .image-grid {
-    @apply px-0 col-start-1 col-end-13 
-    md:px-0 md:col-start-3 md:col-end-11
-    lg:col-start-4 lg:col-end-10;
-  }
-  .video-wrapper .video-in-grid {
-    @apply col-start-auto col-end-auto;
-  }
-  .content-wrapper {
-    @apply max-w-screen-xl m-auto;
-  }
-  h2 {
-    @apply mt-0 mb-2;
-  }
-  main h2 {
-    @apply pl-12;
-  }
-  main h2.post-header {
-    @apply pl-0;
-  }
-  h3 {
-    @apply mt-0 pl-12;
-  }
-  p {
-    @apply mb-8 pt-1;
-  }
-  p:has(img) {
-    @apply pt-0;
-  }
-  figure p {
-    @apply py-0;
-  }
-  .md-grid-column > p {
-    /* if using custom culumn component, adhere to grid for <GridColumn> */
-    @apply mx-0;
-  }
-  a {
-    text-decoration: underline;
-    /* text-decoration-thickness: 1.5px; */
-    /* text-decoration-color: #666; */
-  }
-  p img {
-    @apply w-full;
-  }
-  ul,
-  ol {
-    @apply mb-8 list-disc;
-  }
-  code {
-    @apply mx-0 p-1 text-base;
-  }
-  figure {
-    @apply mt-0;
-  }
-  video {
-    @apply w-full;
-  }
-  blockquote {
-    @apply pl-4 border-l-2 border-gray-600;
-  }
-</style>
-
+<!-- <style is:global> --><!--   /** keep adding to the list to get default grid placement */ --><!--   /** default grid placement. can be overridden in <GridColumn> */ --><!--   /** these MUST be also set the same in <GridColumn> */ --><!--   h1, --><!--   h2, --><!--   h3, --><!--   p, --><!--   ul, --><!--   ol, --><!--   blockquote, --><!--   iframe, --><!--   section { --><!--     @apply px-4 col-start-1 col-end-13  --><!--     md:px-0 md:col-start-3 md:col-end-11 --><!--     lg:col-start-4 lg:col-end-10; --><!--   } --><!--   /* video-in-grid needs this but inside video-wrapper it can't */ --><!--   .image-custom, --><!--   .fxhash-grid, --><!--   .video-wrapper, --><!--   .video-in-grid, --><!--   .vimeo-wrapper, --><!--   .objkt-grid, --><!--   .test-grid, --><!--   .image-grid { --><!--     @apply px-0 col-start-1 col-end-13  --><!--     md:px-0 md:col-start-3 md:col-end-11 --><!--     lg:col-start-4 lg:col-end-10; --><!--   } --><!--   .video-wrapper .video-in-grid { --><!--     @apply col-start-auto col-end-auto; --><!--   } --><!--   .content-wrapper { --><!--     @apply max-w-screen-xl m-auto; --><!--   } --><!--   h2 { --><!--     @apply mt-0 mb-2; --><!--   } --><!--   main h2 { --><!--     @apply pl-12; --><!--   } --><!--   main h2.post-header { --><!--     @apply pl-0; --><!--   } --><!--   h3 { --><!--     @apply mt-0 pl-12; --><!--   } --><!--   p { --><!--     @apply mb-8 pt-1; --><!--   } --><!--   p:has(img) { --><!--     @apply pt-0; --><!--   } --><!--   figure p { --><!--     @apply py-0; --><!--   } --><!--   .md-grid-column > p { --><!--     /* if using custom culumn component, adhere to grid for <GridColumn> */ --><!--     @apply mx-0; --><!--   } --><!--   a { --><!--     text-decoration: underline; --><!--     /* text-decoration-thickness: 1.5px; */ --><!--     /* text-decoration-color: #666; */ --><!--   } --><!--   p img { --><!--     @apply w-full; --><!--   } --><!--   ul, --><!--   ol { --><!--     @apply mb-8 list-disc; --><!--   } --><!--   code { --><!--     @apply mx-0 p-1 text-base; --><!--   } --><!--   figure { --><!--     @apply mt-0; --><!--   } --><!--   video { --><!--     @apply w-full; --><!--   } --><!--   blockquote { --><!--     @apply pl-4 border-l-2 border-gray-600; --><!--   } --><!-- </style> -->
 <section
   class:list={[
-    "content-wrapper",
-    "group px-0 grid grid-cols-12 gap-x-8 leading-normal",
+    "md-content",
+    "m-auto max-w-7xl",
+    "group grid grid-cols-12 gap-x-8 px-0 leading-normal",
     "md:grid-cols-12 md:gap-x-8",
   ]}
 >

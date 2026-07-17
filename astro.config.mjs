@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
+
 // @ts-ignore
 // import rehypeFigure from "@microflash/rehype-figure";
 
@@ -9,18 +10,21 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: "https://paperdove.com",
+  vite: {
+    plugins: [tailwindcss()],
+  },
   integrations: [
     mdx({
       // extendMarkdownConfig: false,
       // rehypePlugins: [rehypeFigure],
     }),
-    tailwind({
-      // tailwind preflight
-      applyBaseStyles: true,
-      // Example: Allow writing nested CSS declarations
-      // alongside Tailwind's syntax
-      nesting: true,
-    }),
+    // tailwind({
+    //   // tailwind preflight
+    //   applyBaseStyles: true,
+    //   // Example: Allow writing nested CSS declarations
+    //   // alongside Tailwind's syntax
+    //   nesting: true,
+    // }),
     //
     // relativeLinks(),
   ],

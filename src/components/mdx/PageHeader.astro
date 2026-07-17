@@ -40,7 +40,7 @@ const isRoot = pathname === "/";
   draggable={false}
   class:list={[
     isRoot ? "border-b" : "border-b-2",
-    "border-b-black h-18 leading-snug z-10",
+    "border-b-black leading-snug z-10",
     !isRoot && !spacer && "fixed top-9 w-full bg-white",
     spacer && "invisible",
     className,
@@ -49,7 +49,7 @@ const isRoot = pathname === "/";
   <div
     class:list={[
       "py-1 grid grid-cols-12 gap-x-2 md:gap-x-8",
-      "max-w-screen-xl m-auto",
+      "max-w-7xl m-auto",
     ]}
   >
     <h1
