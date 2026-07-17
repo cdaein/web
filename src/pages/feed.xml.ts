@@ -1,5 +1,5 @@
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
-import { getContainerRenderer as getMDXRenderer } from "@astrojs/mdx";
+import { getContainerRenderer } from "@astrojs/mdx/container-renderer";
 import { loadRenderers } from "astro:container";
 import { getCollection, render } from "astro:content";
 import rss, { type RSSFeedItem } from "@astrojs/rss";
@@ -17,7 +17,15 @@ export async function GET(context: APIContext) {
     );
   }
 
-  const renderers = await loadRenderers([getMDXRenderer()]);
+  // run this command after build. it should be empty:
+  // grep -oE '(src|href|poster)="[^"]*"' dist/feed.xml | grep -v 'https\?://'
+  const absolutize = (html: string) =>
+    html.replace(
+      /(src|href|poster)="(\/[^\/][^"]*)"/g,
+      (_m, attr, path) => `${attr}="${new URL(path, contextSite).href}"`,
+    );
+
+  const renderers = await loadRenderers([getContainerRenderer()]);
   const container = await AstroContainer.create({ renderers });
   const workCollection = (
     await getCollection("work", ({ data }) => {
@@ -31,13 +39,14 @@ export async function GET(context: APIContext) {
   const items: RSSFeedItem[] = [];
   for (const post of workCollection) {
     const { Content } = await render(post);
-    const content = await container.renderToString(Content);
+    const content = absolutize(await container.renderToString(Content));
 
     items.push({
       title: post.data.title,
       description: post.data.description,
       pubDate: post.data.date,
-      link: new URL(`/${post.id}`, context.url.origin).toString(),
+      // link: new URL(`/${post.id}`, context.url.origin).toString(),
+      link: new URL(`/${post.id}`, contextSite).toString(),
       content,
     });
   }

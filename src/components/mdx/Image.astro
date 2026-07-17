@@ -1,30 +1,51 @@
 ---
 // TODO:
-// - object-cover with less height (ie. 50%) leaves empty space at bottom. 
+// - object-cover with less height (ie. 50%) leaves empty space at bottom.
 //  - can be controlled with grid row height, but how do i control from grid child element?
 
 import { Image as AstroImage } from "astro:assets";
 
 interface Props {
   alt: string;
-  src: ImageMetadata
+  src: ImageMetadata;
   caption?: string;
-  cover?:boolean
-  mb?:boolean;
-  class?:string;
-  captionClass?:string
-  zoomable?:boolean
+  cover?: boolean;
+  mb?: boolean;
+  class?: string;
+  captionClass?: string;
+  zoomable?: boolean;
 }
 
-const { alt, src, caption, cover, mb, class:className, captionClass, zoomable = true } = Astro.props;
-
+const {
+  alt,
+  src,
+  caption,
+  cover,
+  mb,
+  class: className,
+  captionClass,
+  zoomable = true,
+} = Astro.props;
 ---
 
-<figure class:list={["image-custom", mb && "mb-8", className]} data-zoomable={zoomable}>
-  <AstroImage src={src} alt={alt} class:list={["m-auto", cover && "w-full h-full", zoomable && "cursor-pointer"]} />
+<figure
+  class:list={["image-custom", mb && "mb-8", className]}
+  data-zoomable={zoomable}
+>
+  <AstroImage
+    src={src}
+    alt={alt}
+    class:list={[
+      "m-auto",
+      cover && "h-full w-full",
+      zoomable && "cursor-pointer",
+    ]}
+  />
   {
     caption && (
-      <figcaption class:list={["text-base mt-2 mx-2", captionClass]}><p>{caption}<p></figcaption>
-    ) 
+      <figcaption class:list={["mx-2 mt-2 text-base", captionClass]}>
+        <p>{caption}</p>
+      </figcaption>
+    )
   }
 </figure>
