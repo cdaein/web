@@ -16,9 +16,6 @@
         "name": "@astrojs/ts-plugin"
       },
       {
-        "name": "@astrojs/tailwind"
-      },
-      {
         "name": "@astrojs/mdx"
       },
       {
