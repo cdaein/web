@@ -287,6 +287,7 @@ const activities: Activity[] = [
     date: "2019-01-11",
     city: "Seoul",
     country: "South Korea",
+    link: ["/documentation/convergence-fest"],
   },
   {
     type: "interview",
