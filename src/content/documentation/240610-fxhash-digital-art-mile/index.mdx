@@ -1,0 +1,24 @@
+---
+title: fxHash Digital Art Mile
+slug: fxhash-digital-art-mile
+description: ""
+date: 2024-06-10
+category: exhibition
+cover: ./thumb.jpg
+published: true
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
+
+import img1 from "kiosk-41.jpeg";
+import img2 from "cover.jpeg";
+
+<GC start={1} end={13}>
+  <MediaGrid maxCols={1} class="gap-2">
+    <Image src={img2} alt="exhibition" className="mb-4" />
+    <Image src={img1} alt="exhibition" className="mb-4" />
+  </MediaGrid>
+</GC>
