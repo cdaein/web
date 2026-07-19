@@ -1,0 +1,26 @@
+---
+title: TDC Exhibition 2016
+slug: tdc-exhibition-2016
+description: ""
+date: 2016-07-12
+category: exhibition
+cover: ./thumb.jpg
+published: true
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
+
+import img1 from "IMG_1731.jpeg";
+import img2 from "IMG_1737.jpeg";
+import img3 from "IMG_1780.jpeg";
+
+<GC start={1} end={13}>
+  <MediaGrid maxCols={1} class="gap-2">
+    <Image src={img1} alt="exhibition" className="mb-4" />
+    <Image src={img2} alt="exhibition" className="mb-4" />
+    <Image src={img3} alt="exhibition" className="mb-4" />
+  </MediaGrid>
+</GC>
