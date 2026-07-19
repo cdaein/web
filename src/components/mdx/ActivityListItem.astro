@@ -55,18 +55,18 @@ const postLinks = filteredEntries.map((e) => {
                 href={Array.isArray(link) ? link[0] : link}
                 target="_blank"
                 class:list={["italic"]}
-              >{title}</a><span>,</span>
+              >{title}</a><span>, </span>
             </>
           </>
         </>
       </span>
     ) : (
-      <span>{title},</span>
+      <span>{title}, </span>
     )
   }
-  {place && <span>{place},</span>}
-  {city && <span>{city},</span>}
-  {country && <span>{country},</span>}
+  {place && <span>{place}, </span>}
+  {city && <span>{city}, </span>}
+  {country && <span>{country}, </span>}
   <span>{
     Array.isArray(date)
       ? `${moment(date[0]).year()}-${date[1] === "present" ? "Present" : moment(date[1]).year()}`
@@ -75,12 +75,12 @@ const postLinks = filteredEntries.map((e) => {
   {
     Array.isArray(link) && link.length > 1 && (
       <span>
-        (more
+        {" "}(more{" "}
         {link.map((l, i) => {
           if (i === 0) return;
           return (
             <a href={l} target="_blank">
-              link{i !== link.length - 1 && ","}
+              link{i !== link.length - 1 && ", "}
             </a>
           );
         })}
