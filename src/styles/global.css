@@ -76,3 +76,13 @@
     @apply border-l-2 border-gray-600 pl-4;
   }
 }
+
+/* object-fit: cover persists into fullscreen and crops the video; undo it there.
+   must stay OUTSIDE @layer: tailwind's .object-cover lives in the utilities layer,
+   which beats any layered rule — unlayered rules beat all layers. */
+video:fullscreen {
+  object-fit: contain;
+}
+video:-webkit-full-screen {
+  object-fit: contain;
+}
