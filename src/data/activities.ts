@@ -74,7 +74,10 @@ const activities: Activity[] = [
     title: "Demo Festival 2025 Cities Edition",
     date: "2025-01-30",
     country: "The Netherlands",
-    link: ["https://2025.demofestival.com/designers/daeinc"],
+    link: [
+      "/documentation/demo-festival-2025",
+      "https://2025.demofestival.com/designers/daeinc",
+    ],
   },
   {
     type: "exhibition",
@@ -83,7 +86,10 @@ const activities: Activity[] = [
     date: "2024-10-24",
     city: "Bilbao",
     country: "Spain",
-    link: ["https://bideotikan.art/artistas/daeinc-en/"],
+    link: [
+      "/documentation/bideotikan",
+      "https://bideotikan.art/artistas/daeinc-en/",
+    ],
   },
   {
     type: "exhibition",
@@ -102,10 +108,14 @@ const activities: Activity[] = [
     city: "Basel",
     country: "Switzerland",
     link: [
-      { href: "https://x.com/fx_hash_/status/1800605168809210358", label: "post" },
+      "/documentation/fxhash-digital-art-mile",
+      {
+        href: "https://x.com/fx_hash_/status/1800605168809210358",
+        label: "Twitter",
+      },
       {
         href: "https://baselartcenter.ch/event/the-digital-art-mile/?event_date=2024-06-10",
-        label: "event",
+        label: "Basel Art Center",
       },
     ],
   },
@@ -158,7 +168,10 @@ const activities: Activity[] = [
     date: "2022-10-06",
     country: "The Netherlands",
     link: [
-      "https://2022.demofestival.com/designers/daeinc",
+      {
+        href: "https://2022.demofestival.com/designers/daeinc",
+        label: "Official Website",
+      },
       "/documentation/demo-festival-2022",
     ],
   },
@@ -177,8 +190,14 @@ const activities: Activity[] = [
     city: "Frankfurt",
     country: "Germany",
     link: [
-      "https://www.museumangewandtekunst.de/en/visit/exhibitions/unblock-gaudi/",
-      "https://unblockgaudi.xyz/week-section",
+      {
+        href: "https://www.museumangewandtekunst.de/en/visit/exhibitions/unblock-gaudi/",
+        label: "Museum",
+      },
+      {
+        href: "https://web.archive.org/web/20220628235257/https://unblockgaudi.xyz/week-section",
+        label: "Archive",
+      },
     ],
   },
   {
@@ -253,7 +272,13 @@ const activities: Activity[] = [
     place: "Otis College of Art and Design",
     city: "Los Angeles",
     country: "USA",
-    link: "https://www.aicad.org/wp-content/uploads/AICAD-Symposium-Schedule-11-4.pdf",
+    link: [
+      "/documentation/aicad-symposium",
+      {
+        href: "https://www.aicad.org/wp-content/uploads/AICAD-Symposium-Schedule-11-4.pdf",
+        label: "Official",
+      },
+    ],
   },
   {
     type: "lecture",
@@ -395,6 +420,7 @@ const activities: Activity[] = [
     date: "2015-06-27",
     city: "Seoul",
     country: "South Korea",
+    link: ["/documentation/society-korean-typography-award"],
   },
   {
     type: "exhibition",
