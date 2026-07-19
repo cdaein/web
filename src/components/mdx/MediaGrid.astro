@@ -2,7 +2,11 @@
 import { gridCols } from "@data/tailwindLUT";
 
 type Props = {
-  maxCols: keyof typeof gridCols;
+  maxCols?: keyof typeof gridCols;
+  /** "grid" (default): uniform cells, items cropped to fit. "justified": rows share height, widths follow each item's aspect ratio, no cropping. */
+  layout?: "grid" | "justified";
+  /** target row height for justified layout, any CSS length */
+  rowHeight?: string;
   /** caption for the whole grid */
   caption?: string;
   class?: string;
@@ -11,22 +15,49 @@ type Props = {
   zoomable?: boolean;
 };
 
-const { maxCols, caption, class: className, captionClass, zoomable = true } = Astro.props;
+const {
+  maxCols = 3,
+  layout = "grid",
+  rowHeight = "16rem",
+  caption,
+  class: className,
+  captionClass,
+  zoomable = true,
+} = Astro.props;
 const maxColsChecked = gridCols[maxCols];
 ---
 
 <figure class:list={["video-wrapper"]}>
   <div
     class:list={[
-      "image-grid grid",
-      "[&_img]:object-cover [&_img]:w-full [&_img]:h-full",
+      "image-grid",
+      "[&_img]:w-full",
       zoomable && "[&_img]:cursor-pointer",
-      maxColsChecked,
+      layout === "grid" && ["grid", "[&_img]:object-cover [&_img]:h-full", maxColsChecked],
+      layout === "justified" && "justified flex flex-wrap",
       className,
     ]}
+    style={layout === "justified" ? `--row-h: ${rowHeight}` : undefined}
     data-zoomable={zoomable}
   >
     <slot />
   </div>
   {caption && <figcaption class:list={[captionClass]}>{caption}</figcaption>}
 </figure>
+
+<style>
+  /* justified layout: flex-grow and flex-basis both proportional to the item's
+     aspect ratio, so every item in a row resolves to the same height with no crop.
+     children advertise their ratio via --w/--h custom properties. */
+  .justified > :global(*) {
+    --ar: calc(var(--w, 1) / var(--h, 1));
+    flex-grow: var(--ar);
+    flex-basis: calc(var(--ar) * var(--row-h, 16rem));
+    min-width: 0;
+  }
+  /* spacer: keeps a partial last row at natural size instead of stretching full width */
+  .justified::after {
+    content: "";
+    flex-grow: 1000000;
+  }
+</style>
