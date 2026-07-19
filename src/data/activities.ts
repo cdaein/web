@@ -1,5 +1,16 @@
 import { z } from "zod";
 
+// A link is either a bare URL string, or an object with an optional label.
+// The label is shown as the link icon's hover tooltip (external links only).
+const linkSchema = z.union([
+  z.string(),
+  z.object({
+    href: z.string(),
+    /** Hover label shown on the external-link icon */
+    label: z.string().optional(),
+  }),
+]);
+
 const schema = z.object({
   /** Type of exhibitions */
   type: z.enum([
@@ -28,7 +39,12 @@ const schema = z.object({
   place: z.string().optional(),
   city: z.string().optional(),
   country: z.string().optional(),
-  link: z.string().or(z.string().array()).optional(),
+  /**
+   * One or more links. A bare URL string, or { href, label } where label is the
+   * external-link icon's hover tooltip. Internal paths (starting with "/") keep
+   * an underlined text link on the title instead of an icon.
+   */
+  link: linkSchema.or(linkSchema.array()).optional(),
 });
 
 export type Activity = z.infer<typeof schema>;
@@ -86,8 +102,11 @@ const activities: Activity[] = [
     city: "Basel",
     country: "Switzerland",
     link: [
-      "https://x.com/fx_hash_/status/1800605168809210358",
-      "https://baselartcenter.ch/event/the-digital-art-mile/?event_date=2024-06-10",
+      { href: "https://x.com/fx_hash_/status/1800605168809210358", label: "post" },
+      {
+        href: "https://baselartcenter.ch/event/the-digital-art-mile/?event_date=2024-06-10",
+        label: "event",
+      },
     ],
   },
   {
