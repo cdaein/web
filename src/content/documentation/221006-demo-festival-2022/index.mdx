@@ -26,7 +26,7 @@ import dnlsmm03 from "dnlsmm03-converted.mp4";
 import kerimSafa from "kerim-safa-converted.mp4";
 
 <GC start={1} end={13}>
-  <MediaGrid maxCols={4} class="gap-2">
+  <MediaGrid maxCols={3} class="gap-2">
     <Image src={img1} alt="exhibition image" className="mb-4" />
     <Image src={img2} alt="exhibition image" className="mb-4" />
     <Image src={img3} alt="exhibition image" className="mb-4" />
@@ -41,10 +41,10 @@ import kerimSafa from "kerim-safa-converted.mp4";
 Photos above courtesy of Meesterwerk and Demo Festival
 
 <GC start={1} end={13}>
-  <MediaGrid maxCols={3} class="gap-2">
-    <VideoInGrid src={dnlsmm02} />
-    <VideoInGrid src={dnlsmm03} />
-    <VideoInGrid src={kerimSafa} />
+  <MediaGrid layout="justified" rowHeight="18rem" class="gap-2">
+    <VideoInGrid src={dnlsmm02} width={1080} height={1920} />
+    <VideoInGrid src={dnlsmm03} width={1920} height={1080} />
+    <VideoInGrid src={kerimSafa} width={1920} height={1080} />
   </MediaGrid>
 </GC>
 
