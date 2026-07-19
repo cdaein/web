@@ -18,8 +18,8 @@ const entries = await Promise.all(
   slugArray.map(async (s) => {
     const workEntry = await getEntry("work", s);
     if (workEntry) return workEntry;
-    return await getEntry("documentation", s) ?? null;
-  })
+    return (await getEntry("documentation", s)) ?? null;
+  }),
 );
 const filteredEntries = entries.filter(Boolean);
 const workTitles = filteredEntries.map((e) => e!.data.title);
@@ -27,65 +27,93 @@ const postLinks = filteredEntries.map((e) => {
   const prefix = e!.collection === "documentation" ? "/documentation/" : "/";
   return `${prefix}${parseSlug(e!.id)}`;
 });
+
+// Normalize `link` (a single URL, or an array of URLs) into a flat list.
+// External links (http/https) render as an out-pointing icon opening a new tab.
+// Internal links (e.g. /documentation/...) keep an underlined text link on the title.
+type ActivityLink = { href: string; label?: string };
+const linkList: ActivityLink[] = link
+  ? (Array.isArray(link) ? link : [link]).map((l) =>
+      typeof l === "string" ? { href: l } : l,
+    )
+  : [];
+const isExternal = (href: string) => /^https?:\/\//i.test(href);
+const internalLinks = linkList.filter((l) => !isExternal(l.href));
+const externalLinks = linkList.filter((l) => isExternal(l.href));
+const titleLink = internalLinks[0];
+const extraInternalLinks = internalLinks.slice(1);
 ---
 
 <li role="listitem" class="">
-  {showWorkTitle && workTitles.length > 0 && (
-    <span>
-      {workTitles.map((t, i) => (
-        <>
-          {i > 0 && i === workTitles.length - 1 && workTitles.length > 2 && <span>, and </span>}
-          {i > 0 && i === workTitles.length - 1 && workTitles.length === 2 && <span> and </span>}
-          {i > 0 && i < workTitles.length - 1 && <span>, </span>}
-          <a href={postLinks[i]} class="no-underline hover:underline hover:decoration-dotted">{t}</a>
-        </>
-      ))}
-      <span> - </span>
-    </span>
-  )}
-  {role && <span>{role} at </span>}
   {
-    link ? (
+    showWorkTitle && workTitles.length > 0 && (
       <span>
-        <>
+        {workTitles.map((t, i) => (
           <>
-            <>
-              <!-- prettier-ignore -->
-              <a
-                href={Array.isArray(link) ? link[0] : link}
-                target="_blank"
-                class:list={["italic"]}
-              >{title}</a><span>, </span>
-            </>
+            {i > 0 && i === workTitles.length - 1 && workTitles.length > 2 && (
+              <span>, and </span>
+            )}
+            {i > 0 &&
+              i === workTitles.length - 1 &&
+              workTitles.length === 2 && <span> and </span>}
+            {i > 0 && i < workTitles.length - 1 && <span>, </span>}
+            <a
+              href={postLinks[i]}
+              class="no-underline hover:underline hover:decoration-dotted"
+            >
+              {t}
+            </a>
           </>
-        </>
+        ))}
+        <span> - </span>
       </span>
-    ) : (
-      <span>{title}, </span>
     )
   }
+  {role && <span>{role} at </span>}
+  {
+    titleLink ? (
+      <a
+        href={titleLink.href}
+        title={titleLink.label}
+        class="italic underline underline-offset-2"
+      >
+        {title}
+      </a>
+    ) : (
+      <span class="italic">{title}</span>
+    )
+  }{
+    externalLinks.map((l) => (
+      <a
+        href={l.href}
+        title={l.label}
+        aria-label={l.label ?? `${title} (external link)`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ml-2 inline-flex items-center align-middle no-underline opacity-100 hover:opacity-60"
+      >
+        {/* prettier-ignore */}
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><><><><><><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" /></></></></></></svg>
+      </a>
+    ))
+  }{
+    extraInternalLinks.map((l) => (
+      <>
+        {" "}
+        <a href={l.href} title={l.label} class="underline underline-offset-2">
+          {l.label ?? "link"}
+        </a>
+      </>
+    ))
+  }<span>, </span>
   {place && <span>{place}, </span>}
   {city && <span>{city}, </span>}
   {country && <span>{country}, </span>}
-  <span>{
-    Array.isArray(date)
-      ? `${moment(date[0]).year()}-${date[1] === "present" ? "Present" : moment(date[1]).year()}`
-      : moment(new Date(date)).year()
-  }</span>
-  {
-    Array.isArray(link) && link.length > 1 && (
-      <span>
-        {" "}(more{" "}
-        {link.map((l, i) => {
-          if (i === 0) return;
-          return (
-            <a href={l} target="_blank">
-              link{i !== link.length - 1 && ", "}
-            </a>
-          );
-        })}
-        )
-      </span>
-    )
-  }
+  <span
+    >{
+      Array.isArray(date)
+        ? `${moment(date[0]).year()}-${date[1] === "present" ? "Present" : moment(date[1]).year()}`
+        : moment(new Date(date)).year()
+    }</span
+  >
 </li>
