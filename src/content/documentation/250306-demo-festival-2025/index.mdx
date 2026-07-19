@@ -1,0 +1,22 @@
+---
+title: Demo Festival 2025
+slug: demo-festival-2025
+description: ""
+date: 2025-03-06
+category: exhibition
+cover: ./thumb.jpg
+published: true
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
+
+import img1 from "Demo-Amsterdam-2025-397.jpeg";
+
+<GC start={1} end={13}>
+  <MediaGrid maxCols={1} class="gap-2">
+    <Image src={img1} alt="exhibition" className="mb-4" />
+  </MediaGrid>
+</GC>
