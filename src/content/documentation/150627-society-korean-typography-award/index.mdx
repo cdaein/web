@@ -1,0 +1,24 @@
+---
+title: Society of Korean Typography Award
+slug: society-korean-typography-award
+description: ""
+date: 2015-06-27
+category: award
+cover: ./thumb.jpg
+published: true
+---
+
+import GC from "@components/mdx/GridColumn.astro";
+import MediaGrid from "@components/mdx/MediaGrid.astro";
+import { Image } from "astro:assets";
+import VideoInGrid from "@components/mdx/VideoInGrid.astro";
+
+import img1 from "award-1.jpeg";
+import img2 from "award-2.jpeg";
+
+<GC start={1} end={13}>
+  <MediaGrid maxCols={1} class="gap-2">
+    <Image src={img1} alt="exhibition image" className="mb-4" />
+    <Image src={img2} alt="exhibition image" className="mb-4" />
+  </MediaGrid>
+</GC>
