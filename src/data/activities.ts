@@ -334,6 +334,7 @@ const activities: Activity[] = [
     role: "Full-time Faculty",
     date: ["2016", "2021"],
     city: "Baltimore, MD",
+    link: "https://web.archive.org/web/20190919103727/https://www.mica.edu/undergraduate-majors-minors/graphic-design-major/dae-in-chung/",
   },
   {
     type: "publication",
@@ -407,6 +408,7 @@ const activities: Activity[] = [
     role: "Full-time Lecturer",
     date: ["2015", "2016"],
     city: "Boston, MA",
+    link: "https://web.archive.org/web/20160430131731/http://www.bu.edu/cfa/profile/dae-in-chung/",
   },
   {
     type: "featured",
