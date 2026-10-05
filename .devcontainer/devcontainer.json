@@ -12,17 +12,13 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "runArgs": [
-    "--cap-add=NET_ADMIN",
-    "--cap-add=NET_RAW"
-  ],
+  "runArgs": ["--cap-add=NET_ADMIN", "--cap-add=NET_RAW"],
+  "appPort": ["127.0.0.1:4321-4330:4321"],
   "init": true,
   "updateRemoteUserUID": true,
   "customizations": {
     "vscode": {
-      "extensions": [
-        "anthropic.claude-code"
-      ],
+      "extensions": ["anthropic.claude-code"],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
         "terminal.integrated.profiles.linux": {
