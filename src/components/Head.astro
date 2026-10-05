@@ -12,8 +12,8 @@
 
 import { SEO } from "astro-seo";
 import { site } from "@data/siteMetadata";
-// import { getCollection } from "astro:content";
-import path from "node:path";
+import { getCollection } from "astro:content";
+import { parseCoverPath } from "@scripts/utils";
 
 // title, description, id, slug
 // ex.
@@ -26,39 +26,44 @@ const description = props.description || site.description;
 // NOTE: "writing" post is not yet handled
 const postType: "work" | "page" = props.postType;
 
-// first, get all thumbnails from all work posts
+// all images that sit next to content, keyed by source path. one glob for every
+// collection: `cover` frontmatter is the single source of truth for a social image,
+// so work and documentation need no separate handling.
 // ex. '/src/content/work/2021/211006-nyt-wordlist/thumb.jpg'
-const allWorkThumbsObj = import.meta.glob<{ default: ImageMetadata }>(
-  `/src/content/work/**/thumb*`,
+const contentImagesObj = import.meta.glob<{ default: ImageMetadata }>(
+  `/src/content/**/*.{png,jpg,jpeg,gif,webp}`,
 );
-const latestThumbPath = Object.keys(allWorkThumbsObj).sort().reverse().shift()!;
 
 // ex. default.src:
 // '/@fs/Users/dane/Documents/GitHub/paperdove-2024/src/content/work/2022/220821-duet/thumb.png?origWidth=800&origHeight=800&origFormat=png',
 // const allThumbs = await Astro.glob("@content/work/**/thumb*");
 
-const pathname = Astro.url.pathname;
-const isRoot = pathname === "/";
+// fallback for the index and for posts without a usable `cover`: the newest work post.
+// sorted by `date`, not by filename, so it follows what the site actually calls latest.
+const [latestWorkPost] = (
+  await getCollection("work", ({ data }) => {
+    return import.meta.env.PROD ? data.published === true : true;
+  })
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-// from allThumbs, find the one belongs to current post
-const postDirname = props && props.id && path.dirname(props.id); // Get the directory name only (without file)
-const thumbPath = Object.keys(allWorkThumbsObj).find((key) =>
-  key.includes(postDirname),
-);
-
-// - if index page, show latest thumb.
-// for work posts:
-// - if no "thumbnail" found, use the latest.
-// - if thumbnail found, use the correct cover for each post
-// for page posts:
-// - use default thumb
+// one rule: a post's social image is its `cover`, resolved against its own directory.
+// - post with a cover -> that image
+// - post without one, and the index -> the latest work post's cover
+// - pages -> default thumb
 // - NOTE: consider each page has its own thumb. change page structure to have sub-directory.
-const coverPath = isRoot || !thumbPath ? latestThumbPath : thumbPath;
-const cover =
-  postType === "work"
-    ? (await allWorkThumbsObj[coverPath]()).default.src
-    : //  : (await pageThumbObj[`/thumb_default_page.png`]()).default.src;
-      `/thumb_default_page.png`;
+const coverImage =
+  postType === "page"
+    ? undefined
+    : (contentImagesObj[parseCoverPath(props.filePath, props.cover) ?? ""] ??
+      contentImagesObj[
+        parseCoverPath(latestWorkPost?.filePath, latestWorkPost?.data.cover) ??
+          ""
+      ]);
+
+const cover = coverImage
+  ? (await coverImage()).default.src
+  : //  : (await pageThumbObj[`/thumb_default_page.png`]()).default.src;
+    `/thumb_default_page.png`;
 ---
 
 <head>

@@ -65,6 +65,8 @@ const documentationCollection = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     date: z.date(),
+    /** (optional) cover image, relative to the post directory. used as social thumbnail */
+    cover: z.string().optional(),
     published: z.boolean(),
   }),
 });

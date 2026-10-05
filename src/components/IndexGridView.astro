@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import IndexThumbnailItem from "@components/IndexThumbnailItem.astro";
+import { parseCoverPath } from "@scripts/utils";
 
 type Props = {
   posts: CollectionEntry<"work">[];
@@ -10,21 +11,14 @@ type Props = {
 
 const { posts, coverImages, class: className } = Astro.props;
 
-// Helper to find cover image for a post
+// Helper to find cover image for a post.
+// path resolution is shared with Head.astro (social image) via parseCoverPath.
 function findCoverImage(
   filePath?: string,
   cover?: string,
 ): ImageMetadata | undefined {
-  if (!cover || !filePath) return undefined;
-
-  // filePath is the source path, e.g. "src/content/work/2024/240719-supercut/index.mdx"
-  // (post.id can't be used: with a `slug` frontmatter it's just the slug, not the path)
-  // cover is relative path like "./thumb.png"
-  const postDir = filePath.replace(/\/[^/]+$/, ""); // removes "/index.mdx"
-  const coverPath = cover.replace(/^\.\//, "");
-  const expectedPath = `/${postDir}/${coverPath}`;
-
-  return coverImages[expectedPath];
+  const coverPath = parseCoverPath(filePath, cover);
+  return coverPath ? coverImages[coverPath] : undefined;
 }
 ---
 

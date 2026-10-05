@@ -69,6 +69,8 @@ const visitedPostsScript = /*javascript*/ `
     title={title || post?.data.title}
     description={description || post?.data.description}
     id={post?.id}
+    filePath={post?.filePath}
+    cover={post && "cover" in post.data ? post.data.cover : undefined}
     postType={"work"}
   />
 

@@ -25,6 +25,26 @@ export function parseSlug(path: string) {
   }
 }
 
+/**
+ * Resolve a post's `cover` frontmatter into the image's source path, so it can be
+ * looked up in an `import.meta.glob` of content images.
+ *
+ * Takes `filePath` (not `id`): with a custom `slug` in the frontmatter, `id` is just
+ * the slug, not the path.
+ *
+ * ex. (`src/content/work/2022/220821-duet/index.mdx`, `./thumb.png`)
+ *     -> `/src/content/work/2022/220821-duet/thumb.png`
+ *
+ * @param filePath - Source path of the post, ex. `src/content/work/2022/220821-duet/index.mdx`
+ * @param cover - `cover` frontmatter, relative to the post directory. ex. `./thumb.png`
+ */
+export function parseCoverPath(filePath?: string, cover?: string) {
+  if (!filePath || !cover) return undefined;
+
+  const postDir = filePath.replace(/\/[^/]+$/, ""); // removes "/index.mdx"
+  return `/${postDir}/${cover.replace(/^\.\//, "")}`;
+}
+
 export function camelcase(str: string) {
   return str
     .split(" ")
