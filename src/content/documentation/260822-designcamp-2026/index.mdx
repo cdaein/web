@@ -1,9 +1,9 @@
 ---
-title: Demo Festival 2025
-slug: demo-festival-2025
+title: "Designcamp 2026"
+slug: designcamp-2026
 description: ""
-date: 2025-03-06
-category: exhibition
+date: 2026-08-22
+category: talk
 # cover: ./thumb.jpg
 published: true
 ---
@@ -13,10 +13,12 @@ import MediaGrid from "@components/mdx/MediaGrid.astro";
 import { Image } from "astro:assets";
 import VideoInGrid from "@components/mdx/VideoInGrid.astro";
 
-import img1 from "Demo-Amsterdam-2025-397.jpeg";
+import img1 from "IMG_2271.jpeg";
+import img2 from "IMG_2274.JPG";
 
 <GC start={1} end={13}>
-  <MediaGrid maxCols={1} class="gap-2">
-    <Image src={img1} alt="exhibition" className="mb-4" />
+  <MediaGrid maxCols={2} class="gap-2">
+    <Image src={img1} alt="event" className="mb-4" />
+    <Image src={img2} alt="event" className="mb-4" />
   </MediaGrid>
 </GC>

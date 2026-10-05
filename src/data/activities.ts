@@ -51,6 +51,27 @@ export type Activity = z.infer<typeof schema>;
 
 const activities: Activity[] = [
   {
+    type: "lecture",
+    title: "전시기획 아카데미 초청강연",
+    place: "Gwangju National Science Museum",
+    date: "2026-08-27",
+    city: "광주",
+    country: "South Korea",
+    link: [
+      "/documentation/gwangju-national-science-museum",
+      "https://www.namdonews.com/news/articleView.html?idxno=921562",
+      "https://www.etnews.com/20260830000019",
+    ],
+  },
+  {
+    type: "lecture",
+    title: "Designcamp 2026",
+    date: "2026-08-22",
+    city: "Seoul",
+    country: "South Korea",
+    link: "/documentation/designcamp-2026",
+  },
+  {
     type: "service",
     title: "Design History Society of Korea",
     role: "Director of Education",
